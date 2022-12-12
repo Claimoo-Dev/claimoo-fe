@@ -2,4 +2,4 @@
 deployment:
 tasks:
 - export DEPLOYPATH=/home/intx1571/public_html/
-- /bin/cp -R * $DEPLOYPATH
+- /bin/cp -R images $DEPLOYPATH
