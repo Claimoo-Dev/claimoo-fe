@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/intx1571/public_html/repositories/
+- export DEPLOYPATH=/home/intx1571/public_html/git
 - /bin/cp -r * $DEPLOYPATH
