@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/intx1571/public_html/repositories/git
+- export DEPLOYPATH=/home/intx1571/public_html/repositories/claimoo-fe
 - /bin/cp -r * $DEPLOYPATH
