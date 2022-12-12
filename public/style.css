@@ -31,7 +31,9 @@ video {
 .controls {
     position: fixed;
     bottom: 20px;
-    rotate: 90deg;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    /* rotate: 90deg; */
 }
 
 .controls > button {
@@ -100,9 +102,13 @@ video {
     position: fixed;
     top: 50px;
     left: -25px;
-    rotate: 90deg;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    /* rotate: 90deg; */
 }
 
 .modal {
-    rotate: 90deg;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    /* rotate: 90deg; */
 }
