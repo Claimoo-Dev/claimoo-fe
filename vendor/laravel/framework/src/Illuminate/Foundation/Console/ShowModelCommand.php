@@ -10,7 +10,14 @@ use Illuminate\Console\Command;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Database\Console\DatabaseInspectionCommand;
 use Illuminate\Database\Eloquent\Relations\Relation;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Gate;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Gate;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Illuminate\Support\Str;
 use ReflectionClass;
 use ReflectionMethod;
@@ -90,8 +97,16 @@ class ShowModelCommand extends DatabaseInspectionCommand
 
         try {
             $model = $this->laravel->make($class);
+<<<<<<< HEAD
 
             $class = get_class($model);
+=======
+<<<<<<< HEAD
+=======
+
+            $class = get_class($model);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         } catch (BindingResolutionException $e) {
             return $this->components->error($e->getMessage());
         }
@@ -104,14 +119,30 @@ class ShowModelCommand extends DatabaseInspectionCommand
             $class,
             $model->getConnection()->getName(),
             $model->getConnection()->getTablePrefix().$model->getTable(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $this->getAttributes($model),
+            $this->getRelations($model),
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $this->getPolicy($model),
             $this->getAttributes($model),
             $this->getRelations($model),
             $this->getObservers($model),
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         );
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get the first policy associated with this model.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
@@ -126,6 +157,10 @@ class ShowModelCommand extends DatabaseInspectionCommand
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get the column attributes for the given model.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
@@ -243,6 +278,11 @@ class ShowModelCommand extends DatabaseInspectionCommand
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get the Observers watching this model.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
@@ -277,11 +317,29 @@ class ShowModelCommand extends DatabaseInspectionCommand
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Render the model information.
      *
      * @param  string  $class
      * @param  string  $database
      * @param  string  $table
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  \Illuminate\Support\Collection  $attributes
+     * @param  \Illuminate\Support\Collection  $relations
+     * @return void
+     */
+    protected function display($class, $database, $table, $attributes, $relations)
+    {
+        $this->option('json')
+            ? $this->displayJson($class, $database, $table, $attributes, $relations)
+            : $this->displayCli($class, $database, $table, $attributes, $relations);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  string  $policy
      * @param  \Illuminate\Support\Collection  $attributes
      * @param  \Illuminate\Support\Collection  $relations
@@ -293,6 +351,10 @@ class ShowModelCommand extends DatabaseInspectionCommand
         $this->option('json')
             ? $this->displayJson($class, $database, $table, $policy, $attributes, $relations, $observers)
             : $this->displayCli($class, $database, $table, $policy, $attributes, $relations, $observers);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -301,6 +363,16 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * @param  string  $class
      * @param  string  $database
      * @param  string  $table
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  \Illuminate\Support\Collection  $attributes
+     * @param  \Illuminate\Support\Collection  $relations
+     * @return void
+     */
+    protected function displayJson($class, $database, $table, $attributes, $relations)
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  string  $policy
      * @param  \Illuminate\Support\Collection  $attributes
      * @param  \Illuminate\Support\Collection  $relations
@@ -308,16 +380,31 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * @return void
      */
     protected function displayJson($class, $database, $table, $policy, $attributes, $relations, $observers)
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $this->output->writeln(
             collect([
                 'class' => $class,
                 'database' => $database,
                 'table' => $table,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                'attributes' => $attributes,
+                'relations' => $relations,
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 'policy' => $policy,
                 'attributes' => $attributes,
                 'relations' => $relations,
                 'observers' => $observers,
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             ])->toJson()
         );
     }
@@ -328,6 +415,16 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * @param  string  $class
      * @param  string  $database
      * @param  string  $table
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  \Illuminate\Support\Collection  $attributes
+     * @param  \Illuminate\Support\Collection  $relations
+     * @return void
+     */
+    protected function displayCli($class, $database, $table, $attributes, $relations)
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  string  $policy
      * @param  \Illuminate\Support\Collection  $attributes
      * @param  \Illuminate\Support\Collection  $relations
@@ -335,6 +432,10 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * @return void
      */
     protected function displayCli($class, $database, $table, $policy, $attributes, $relations, $observers)
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $this->newLine();
 
@@ -342,10 +443,19 @@ class ShowModelCommand extends DatabaseInspectionCommand
         $this->components->twoColumnDetail('Database', $database);
         $this->components->twoColumnDetail('Table', $table);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($policy) {
             $this->components->twoColumnDetail('Policy', $policy);
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $this->newLine();
 
         $this->components->twoColumnDetail(
@@ -390,6 +500,11 @@ class ShowModelCommand extends DatabaseInspectionCommand
         }
 
         $this->newLine();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         $this->components->twoColumnDetail('<fg=green;options=bold>Observers</>');
 
@@ -403,6 +518,10 @@ class ShowModelCommand extends DatabaseInspectionCommand
         }
 
         $this->newLine();
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**

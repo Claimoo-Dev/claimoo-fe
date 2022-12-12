@@ -83,6 +83,15 @@ final class PseudoLocalizationTranslator implements TranslatorInterface
         $this->localizableHTMLAttributes = $options['localizable_html_attributes'] ?? [];
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function trans(string $id, array $parameters = [], string $domain = null, string $locale = null): string
     {
         $trans = '';

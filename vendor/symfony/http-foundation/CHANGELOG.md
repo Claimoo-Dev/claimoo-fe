@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 6.2
 ---
 
@@ -10,12 +15,23 @@ CHANGELOG
  * Deprecate `RequestMatcher` in favor of `ChainRequestMatcher`
  * Deprecate `Symfony\Component\HttpFoundation\ExpressionRequestMatcher` in favor of `Symfony\Component\HttpFoundation\RequestMatcher\ExpressionRequestMatcher`
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 6.1
 ---
 
  * Add stale while revalidate and stale if error cache header
  * Allow dynamic session "ttl" when using a remote storage
+<<<<<<< HEAD
  * Deprecate `Request::getContentType()`, use `Request::getContentTypeFormat()` instead
+=======
+<<<<<<< HEAD
+=======
+ * Deprecate `Request::getContentType()`, use `Request::getContentTypeFormat()` instead
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 6.0
 ---
@@ -104,7 +120,15 @@ CHANGELOG
    make sure to run `ALTER TABLE sessions MODIFY sess_lifetime INTEGER UNSIGNED NOT NULL` to
    update your database.
  * `PdoSessionHandler` now precalculates the expiry timestamp in the lifetime column,
+<<<<<<< HEAD
     make sure to run `CREATE INDEX expiry ON sessions (sess_lifetime)` to update your database
+=======
+<<<<<<< HEAD
+    make sure to run `CREATE INDEX EXPIRY ON sessions (sess_lifetime)` to update your database
+=======
+    make sure to run `CREATE INDEX expiry ON sessions (sess_lifetime)` to update your database
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     to speed up garbage collection of expired sessions.
  * added `SessionHandlerFactory` to create session handlers with a DSN
  * added `IpUtils::anonymize()` to help with GDPR compliance.

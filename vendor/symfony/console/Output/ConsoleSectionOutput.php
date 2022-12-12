@@ -25,7 +25,14 @@ class ConsoleSectionOutput extends StreamOutput
     private int $lines = 0;
     private array $sections;
     private Terminal $terminal;
+<<<<<<< HEAD
     private int $maxHeight = 0;
+=======
+<<<<<<< HEAD
+=======
+    private int $maxHeight = 0;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /**
      * @param resource               $stream
@@ -40,6 +47,11 @@ class ConsoleSectionOutput extends StreamOutput
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Defines a maximum number of lines for this section.
      *
      * When more lines are added, the section will automatically scroll to the
@@ -57,6 +69,10 @@ class ConsoleSectionOutput extends StreamOutput
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Clears previous output for this section.
      *
      * @param int $lines Number of lines to clear. If null, then the entire output of this section is cleared
@@ -68,7 +84,15 @@ class ConsoleSectionOutput extends StreamOutput
         }
 
         if ($lines) {
+<<<<<<< HEAD
             array_splice($this->content, -$lines);
+=======
+<<<<<<< HEAD
+            array_splice($this->content, -($lines * 2)); // Multiply lines by 2 to cater for each new line added between content
+=======
+            array_splice($this->content, -$lines);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         } else {
             $lines = $this->lines;
             $this->content = [];
@@ -76,7 +100,15 @@ class ConsoleSectionOutput extends StreamOutput
 
         $this->lines -= $lines;
 
+<<<<<<< HEAD
         parent::doWrite($this->popStreamContentUntilCurrentSection($this->maxHeight ? min($this->maxHeight, $lines) : $lines), false);
+=======
+<<<<<<< HEAD
+        parent::doWrite($this->popStreamContentUntilCurrentSection($lines), false);
+=======
+        parent::doWrite($this->popStreamContentUntilCurrentSection($this->maxHeight ? min($this->maxHeight, $lines) : $lines), false);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -93,6 +125,26 @@ class ConsoleSectionOutput extends StreamOutput
         return implode('', $this->content);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * @internal
+     */
+    public function addContent(string $input)
+    {
+        foreach (explode(\PHP_EOL, $input) as $lineContent) {
+            $this->lines += ceil($this->getDisplayLength($lineContent) / $this->terminal->getWidth()) ?: 1;
+            $this->content[] = $lineContent;
+            $this->content[] = \PHP_EOL;
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getVisibleContent(): string
     {
         if (0 === $this->maxHeight) {
@@ -149,6 +201,10 @@ class ConsoleSectionOutput extends StreamOutput
         return $linesAdded;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     protected function doWrite(string $message, bool $newline)
     {
         if (!$this->isDecorated()) {
@@ -157,6 +213,16 @@ class ConsoleSectionOutput extends StreamOutput
             return;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $erasedContent = $this->popStreamContentUntilCurrentSection();
+
+        $this->addContent($message);
+
+        parent::doWrite($message, true);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         // Check if the previous line (last entry of `$this->content`) needs to be continued
         // (i.e. does not end with a line break). In which case, it needs to be erased first.
         $linesToClear = $deleteLastLine = ($lastLine = end($this->content) ?: '') && !str_ends_with($lastLine, \PHP_EOL) ? 1 : 0;
@@ -179,6 +245,10 @@ class ConsoleSectionOutput extends StreamOutput
         // if the last line was removed, re-print its content together with the new content.
         // otherwise, just print the new content.
         parent::doWrite($deleteLastLine ? $lastLine.$message : $message, true);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         parent::doWrite($erasedContent, false);
     }
 
@@ -197,12 +267,22 @@ class ConsoleSectionOutput extends StreamOutput
             }
 
             $numberOfLinesToClear += $section->lines;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $erasedContent[] = $section->getContent();
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             if ('' !== $sectionContent = $section->getVisibleContent()) {
                 if (!str_ends_with($sectionContent, \PHP_EOL)) {
                     $sectionContent .= \PHP_EOL;
                 }
                 $erasedContent[] = $sectionContent;
             }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         if ($numberOfLinesToClear > 0) {

@@ -1,5 +1,11 @@
 # Release Notes for 9.x
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## [Unreleased](https://github.com/laravel/framework/compare/v9.38.0...9.x)
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 ## [Unreleased](https://github.com/laravel/framework/compare/v9.42.0...9.x)
 
 
@@ -103,6 +109,10 @@
 - Apply force flag when necessary in `Illuminate/Queue/Listener` ([#44862](https://github.com/laravel/framework/pull/44862))
 - De-couple Console component from framework ([#44864](https://github.com/laravel/framework/pull/44864))
 - Update Vite mock to return empty array for preloadedAssets ([#44858](https://github.com/laravel/framework/pull/44858))
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 
 ## [v9.38.0](https://github.com/laravel/framework/compare/v9.37.0...v9.38.0) - 2022-11-01

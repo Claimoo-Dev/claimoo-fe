@@ -83,9 +83,21 @@ trait Difference
      *
      * @return CarbonInterval
      */
+<<<<<<< HEAD
     protected static function fixDiffInterval(DateInterval $diff, $absolute, array $skip = [])
     {
         $diff = CarbonInterval::instance($diff, $skip);
+=======
+<<<<<<< HEAD
+    protected static function fixDiffInterval(DateInterval $diff, $absolute)
+    {
+        $diff = CarbonInterval::instance($diff);
+=======
+    protected static function fixDiffInterval(DateInterval $diff, $absolute, array $skip = [])
+    {
+        $diff = CarbonInterval::instance($diff, $skip);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         // Work-around for https://bugs.php.net/bug.php?id=77145
         // @codeCoverageIgnoreStart
@@ -148,9 +160,21 @@ trait Difference
      *
      * @return CarbonInterval
      */
+<<<<<<< HEAD
     public function diffAsCarbonInterval($date = null, $absolute = true, array $skip = [])
     {
         return static::fixDiffInterval($this->diff($this->resolveCarbon($date), $absolute), $absolute, $skip);
+=======
+<<<<<<< HEAD
+    public function diffAsCarbonInterval($date = null, $absolute = true)
+    {
+        return static::fixDiffInterval($this->diff($this->resolveCarbon($date), $absolute), $absolute);
+=======
+    public function diffAsCarbonInterval($date = null, $absolute = true, array $skip = [])
+    {
+        return static::fixDiffInterval($this->diff($this->resolveCarbon($date), $absolute), $absolute, $skip);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -189,6 +213,14 @@ trait Difference
      */
     public function diffInMonths($date = null, $absolute = true)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $date = $this->resolveCarbon($date);
+
+        return $this->diffInYears($date, $absolute) * static::MONTHS_PER_YEAR + (int) $this->diff($date, $absolute)->format('%r%m');
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $date = $this->resolveCarbon($date)->avoidMutation()->tz($this->tz);
 
         [$yearStart, $monthStart, $dayStart] = explode('-', $this->format('Y-m-dHisu'));
@@ -204,6 +236,10 @@ trait Difference
         }
 
         return $absolute ? abs($diff) : $diff;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -842,9 +878,20 @@ trait Difference
         $intSyntax = $intSyntax === static::DIFF_RELATIVE_AUTO && $other === null ? static::DIFF_RELATIVE_TO_NOW : $intSyntax;
 
         $parts = min(7, max(1, (int) $parts));
+<<<<<<< HEAD
         $skip = \is_array($syntax) ? ($syntax['skip'] ?? []) : [];
 
         return $this->diffAsCarbonInterval($other, false, $skip)
+=======
+<<<<<<< HEAD
+
+        return $this->diffAsCarbonInterval($other, false)
+=======
+        $skip = \is_array($syntax) ? ($syntax['skip'] ?? []) : [];
+
+        return $this->diffAsCarbonInterval($other, false, $skip)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             ->setLocalTranslator($this->getLocalTranslator())
             ->forHumans($syntax, (bool) $short, $parts, $options ?? $this->localHumanDiffOptions ?? static::getHumanDiffOptions());
     }

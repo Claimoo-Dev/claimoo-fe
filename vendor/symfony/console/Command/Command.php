@@ -19,7 +19,14 @@ use Symfony\Component\Console\Completion\Suggestion;
 use Symfony\Component\Console\Exception\ExceptionInterface;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 use Symfony\Component\Console\Exception\LogicException;
+<<<<<<< HEAD
 use Symfony\Component\Console\Helper\HelperInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\Console\Helper\HelperInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputDefinition;
@@ -149,9 +156,18 @@ class Command
 
     public function setApplication(Application $application = null)
     {
+<<<<<<< HEAD
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
         }
+=======
+<<<<<<< HEAD
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $this->application = $application;
         if ($application) {
             $this->setHelperSet($application->getHelperSet());
@@ -442,9 +458,21 @@ class Command
      * @param $default The default value (for InputArgument::OPTIONAL mode only)
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      *
+<<<<<<< HEAD
      * @return $this
      *
      * @throws InvalidArgumentException When argument mode is not valid
+=======
+<<<<<<< HEAD
+     * @throws InvalidArgumentException When argument mode is not valid
+     *
+     * @return $this
+=======
+     * @return $this
+     *
+     * @throws InvalidArgumentException When argument mode is not valid
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function addArgument(string $name, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = null */): static
     {
@@ -466,9 +494,21 @@ class Command
      * @param $default  The default value (must be null for InputOption::VALUE_NONE)
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      *
+<<<<<<< HEAD
      * @return $this
      *
      * @throws InvalidArgumentException If option mode is invalid or incompatible
+=======
+<<<<<<< HEAD
+     * @throws InvalidArgumentException If option mode is invalid or incompatible
+     *
+     * @return $this
+=======
+     * @return $this
+     *
+     * @throws InvalidArgumentException If option mode is invalid or incompatible
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function addOption(string $name, string|array $shortcut = null, int $mode = null, string $description = '', mixed $default = null /* array|\Closure $suggestedValues = [] */): static
     {
@@ -681,8 +721,16 @@ class Command
     /**
      * Gets a helper instance by name.
      *
+<<<<<<< HEAD
      * @return HelperInterface
      *
+=======
+<<<<<<< HEAD
+=======
+     * @return HelperInterface
+     *
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws LogicException           if no HelperSet is defined
      * @throws InvalidArgumentException if the helper is not defined
      */

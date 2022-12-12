@@ -218,7 +218,15 @@ class SplCaster
 
         if (!($flags & \ArrayObject::STD_PROP_LIST)) {
             $c->setFlags(\ArrayObject::STD_PROP_LIST);
+<<<<<<< HEAD
             $a = Caster::castObject($c, $c::class, method_exists($c, '__debugInfo'), $stub->class);
+=======
+<<<<<<< HEAD
+            $a = Caster::castObject($c, \get_class($c), method_exists($c, '__debugInfo'), $stub->class);
+=======
+            $a = Caster::castObject($c, $c::class, method_exists($c, '__debugInfo'), $stub->class);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $c->setFlags($flags);
         }
         $a += [

@@ -18,8 +18,16 @@ use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
  * Responsible for resolving the value of an argument based on its metadata.
  *
  * @author Iltar van der Berg <kjarli@gmail.com>
+<<<<<<< HEAD
  *
  * @deprecated since Symfony 6.2, implement ValueResolverInterface instead
+=======
+<<<<<<< HEAD
+=======
+ *
+ * @deprecated since Symfony 6.2, implement ValueResolverInterface instead
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  */
 interface ArgumentValueResolverInterface
 {

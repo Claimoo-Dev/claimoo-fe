@@ -12,8 +12,16 @@
 namespace Symfony\Component\Mailer\Event;
 
 use Symfony\Component\Mailer\Envelope;
+<<<<<<< HEAD
 use Symfony\Component\Mailer\Exception\LogicException;
 use Symfony\Component\Messenger\Stamp\StampInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\Mailer\Exception\LogicException;
+use Symfony\Component\Messenger\Stamp\StampInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\Mime\RawMessage;
 use Symfony\Contracts\EventDispatcher\Event;
 
@@ -29,9 +37,18 @@ final class MessageEvent extends Event
     private string $transport;
     private bool $queued;
 
+<<<<<<< HEAD
     /** @var StampInterface[] */
     private array $stamps = [];
 
+=======
+<<<<<<< HEAD
+=======
+    /** @var StampInterface[] */
+    private array $stamps = [];
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function __construct(RawMessage $message, Envelope $envelope, string $transport, bool $queued = false)
     {
         $this->message = $message;
@@ -69,6 +86,11 @@ final class MessageEvent extends Event
     {
         return $this->queued;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     public function addStamp(StampInterface $stamp): void
     {
@@ -90,4 +112,8 @@ final class MessageEvent extends Event
 
         return $this->stamps;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }

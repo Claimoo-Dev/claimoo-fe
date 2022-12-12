@@ -24,7 +24,14 @@ class ListenCommand extends Command
                             {--memory=128 : The memory limit in megabytes}
                             {--queue= : The queue to listen on}
                             {--sleep=3 : Number of seconds to sleep when no job is available}
+<<<<<<< HEAD
                             {--rest=0 : Number of seconds to rest between jobs}
+=======
+<<<<<<< HEAD
+=======
+                            {--rest=0 : Number of seconds to rest between jobs}
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                             {--timeout=60 : The number of seconds a child process can run}
                             {--tries=1 : Number of times to attempt a job before logging it failed}';
 
@@ -114,6 +121,19 @@ class ListenCommand extends Command
                 : $this->option('delay');
 
         return new ListenerOptions(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $this->option('name'),
+            $this->option('env'),
+            $backoff,
+            $this->option('memory'),
+            $this->option('timeout'),
+            $this->option('sleep'),
+            $this->option('tries'),
+            $this->option('force')
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             name: $this->option('name'),
             environment: $this->option('env'),
             backoff: $backoff,
@@ -123,6 +143,10 @@ class ListenCommand extends Command
             rest: $this->option('rest'),
             maxTries: $this->option('tries'),
             force: $this->option('force')
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         );
     }
 

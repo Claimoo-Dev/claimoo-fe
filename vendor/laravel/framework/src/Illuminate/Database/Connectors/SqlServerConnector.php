@@ -29,6 +29,12 @@ class SqlServerConnector extends Connector implements ConnectorInterface
     {
         $options = $this->getOptions($config);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        return $this->createConnection($this->getDsn($config), $config, $options);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $connection = $this->createConnection($this->getDsn($config), $config, $options);
 
         $this->configureIsolationLevel($connection, $config);
@@ -54,6 +60,10 @@ class SqlServerConnector extends Connector implements ConnectorInterface
         $connection->prepare(
             "SET TRANSACTION ISOLATION LEVEL {$config['isolation_level']}"
         )->execute();
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**

@@ -2,7 +2,14 @@
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Illuminate\Support\Str;
 
 trait HasUuids
@@ -44,6 +51,11 @@ trait HasUuids
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Retrieve the model for a bound value.
      *
      * @param  \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Relations\Relation  $query
@@ -67,6 +79,10 @@ trait HasUuids
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get the auto-incrementing key type.
      *
      * @return string

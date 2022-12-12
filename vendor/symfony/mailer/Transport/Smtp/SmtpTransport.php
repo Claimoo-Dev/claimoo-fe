@@ -38,7 +38,14 @@ class SmtpTransport extends AbstractTransport
     private int $pingThreshold = 100;
     private float $lastMessageTime = 0;
     private AbstractStream $stream;
+<<<<<<< HEAD
     private string $mtaResult = '';
+=======
+<<<<<<< HEAD
+=======
+    private string $mtaResult = '';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private string $domain = '[127.0.0.1]';
 
     public function __construct(AbstractStream $stream = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
@@ -147,15 +154,29 @@ class SmtpTransport extends AbstractTransport
             throw $e;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($this->mtaResult && $messageId = $this->parseMessageId($this->mtaResult)) {
             $message->setMessageId($messageId);
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $this->checkRestartThreshold();
 
         return $message;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     protected function parseMessageId(string $mtaResult): string
     {
         $regexps = [
@@ -172,6 +193,10 @@ class SmtpTransport extends AbstractTransport
         return '';
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function __toString(): string
     {
         if ($this->stream instanceof SocketStream) {
@@ -234,7 +259,15 @@ class SmtpTransport extends AbstractTransport
                 $this->getLogger()->debug(sprintf('Email transport "%s" stopped', __CLASS__));
                 throw $e;
             }
+<<<<<<< HEAD
             $this->mtaResult = $this->executeCommand("\r\n.\r\n", [250]);
+=======
+<<<<<<< HEAD
+            $this->executeCommand("\r\n.\r\n", [250]);
+=======
+            $this->mtaResult = $this->executeCommand("\r\n.\r\n", [250]);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $message->appendDebug($this->stream->getDebug());
             $this->lastMessageTime = microtime(true);
         } catch (TransportExceptionInterface $e) {

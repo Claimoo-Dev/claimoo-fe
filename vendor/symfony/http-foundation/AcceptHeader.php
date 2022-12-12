@@ -127,7 +127,15 @@ class AcceptHeader
     {
         $this->sort();
 
+<<<<<<< HEAD
         return $this->items ? reset($this->items) : null;
+=======
+<<<<<<< HEAD
+        return !empty($this->items) ? reset($this->items) : null;
+=======
+        return $this->items ? reset($this->items) : null;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**

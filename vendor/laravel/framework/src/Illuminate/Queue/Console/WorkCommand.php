@@ -13,7 +13,14 @@ use Illuminate\Queue\Worker;
 use Illuminate\Queue\WorkerOptions;
 use Illuminate\Support\Carbon;
 use Symfony\Component\Console\Attribute\AsCommand;
+<<<<<<< HEAD
 use Symfony\Component\Console\Terminal;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\Console\Terminal;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use function Termwind\terminal;
 
 #[AsCommand(name: 'queue:work')]
@@ -82,6 +89,19 @@ class WorkCommand extends Command
     protected $latestStartedAt;
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * Holds the status of the last processed job, if any.
+     *
+     * @var string|null
+     */
+    protected $latestStatus;
+
+    /**
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Create a new queue work command.
      *
      * @param  \Illuminate\Queue\Worker  $worker
@@ -120,11 +140,23 @@ class WorkCommand extends Command
         // connection being run for the queue operation currently being executed.
         $queue = $this->getQueue($connection);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $this->components->info(
+            sprintf('Processing jobs from the [%s] %s.', $queue, str('queue')->plural(explode(',', $queue)))
+        );
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (Terminal::hasSttyAvailable()) {
             $this->components->info(
                 sprintf('Processing jobs from the [%s] %s.', $queue, str('queue')->plural(explode(',', $queue)))
             );
         }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         return $this->runWorker(
             $connection, $queue
@@ -204,6 +236,28 @@ class WorkCommand extends Command
      */
     protected function writeOutput(Job $job, $status)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if ($status == 'starting') {
+            $this->latestStartedAt = microtime(true);
+            $this->latestStatus = $status;
+
+            $formattedStartedAt = Carbon::now()->format('Y-m-d H:i:s');
+
+            return $this->output->write("  <fg=gray>{$formattedStartedAt}</> {$job->resolveName()}");
+        }
+
+        if ($this->latestStatus && $this->latestStatus != 'starting') {
+            $formattedStartedAt = Carbon::createFromTimestamp($this->latestStartedAt)->format('Y-m-d H:i:s');
+
+            $this->output->write("  <fg=gray>{$formattedStartedAt}</> {$job->resolveName()}");
+        }
+
+        $runTime = number_format((microtime(true) - $this->latestStartedAt) * 1000, 2).'ms';
+        $dots = max(terminal()->width() - mb_strlen($job->resolveName()) - mb_strlen($runTime) - 31, 0);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $this->output->write(sprintf(
             '  <fg=gray>%s</> %s%s',
             Carbon::now()->format('Y-m-d H:i:s'),
@@ -230,11 +284,23 @@ class WorkCommand extends Command
         $dots = max(terminal()->width() - mb_strlen($job->resolveName()) - (
             $this->output->isVerbose() ? (mb_strlen($job->getJobId()) + 1) : 0
         ) - mb_strlen($runTime) - 31, 0);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         $this->output->write(' '.str_repeat('<fg=gray>.</>', $dots));
         $this->output->write(" <fg=gray>$runTime</>");
 
+<<<<<<< HEAD
         $this->output->writeln(match ($status) {
+=======
+<<<<<<< HEAD
+        $this->output->writeln(match ($this->latestStatus = $status) {
+=======
+        $this->output->writeln(match ($status) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             'success' => ' <fg=green;options=bold>DONE</>',
             'released_after_exception' => ' <fg=yellow;options=bold>FAIL</>',
             default => ' <fg=red;options=bold>FAIL</>',

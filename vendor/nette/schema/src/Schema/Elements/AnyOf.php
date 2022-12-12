@@ -32,7 +32,14 @@ final class AnyOf implements Schema
 		if (!$set) {
 			throw new Nette\InvalidStateException('The enumeration must not be empty.');
 		}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 		$this->set = $set;
 	}
 
@@ -73,7 +80,14 @@ final class AnyOf implements Schema
 			unset($value[Helpers::PREVENT_MERGING]);
 			return $value;
 		}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 		return Helpers::merge($value, $base);
 	}
 
@@ -90,7 +104,14 @@ final class AnyOf implements Schema
 					$context->warnings = array_merge($context->warnings, $dolly->warnings);
 					return $this->doFinalize($res, $context);
 				}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 				foreach ($dolly->errors as $error) {
 					if ($error->path !== $context->path || empty($error->variables['expected'])) {
 						$innerErrors[] = $error;
@@ -102,7 +123,14 @@ final class AnyOf implements Schema
 				if ($item === $value) {
 					return $this->doFinalize($value, $context);
 				}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 				$expecteds[] = Nette\Schema\Helpers::formatValue($item);
 			}
 		}
@@ -131,11 +159,23 @@ final class AnyOf implements Schema
 			);
 			return null;
 		}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		if ($this->default instanceof Schema) {
+			return $this->default->completeDefault($context);
+		}
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 		if ($this->default instanceof Schema) {
 			return $this->default->completeDefault($context);
 		}
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 		return $this->default;
 	}
 }

@@ -456,7 +456,15 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
         $request->setDefaultRequestLocale($from->getDefaultLocale());
 
+<<<<<<< HEAD
         $request->setJson($from->json());
+=======
+<<<<<<< HEAD
+        $request->setJson(clone $from->json());
+=======
+        $request->setJson($from->json());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if ($from->hasSession() && $session = $from->session()) {
             $request->setLaravelSession($session);

@@ -16,8 +16,16 @@ use Iterator;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
+<<<<<<< HEAD
  *
  * @template-implements Iterator<int, Constant>
+=======
+<<<<<<< HEAD
+=======
+ *
+ * @template-implements Iterator<int, Constant>
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  */
 final class ConstantCollectionIterator implements Countable, Iterator
 {

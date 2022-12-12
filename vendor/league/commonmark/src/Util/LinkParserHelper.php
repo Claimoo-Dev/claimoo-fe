@@ -58,7 +58,15 @@ final class LinkParserHelper
             return 0;
         }
 
+<<<<<<< HEAD
         $length = \mb_strlen($match, 'UTF-8');
+=======
+<<<<<<< HEAD
+        $length = \mb_strlen($match, 'utf-8');
+=======
+        $length = \mb_strlen($match, 'UTF-8');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if ($length > 1001) {
             return 0;

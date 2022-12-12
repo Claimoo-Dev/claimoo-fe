@@ -49,7 +49,14 @@ final class ProgressBar
     private float $maxSecondsBetweenRedraws = 1;
     private OutputInterface $output;
     private int $step = 0;
+<<<<<<< HEAD
     private int $startingStep = 0;
+=======
+<<<<<<< HEAD
+=======
+    private int $startingStep = 0;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private ?int $max = null;
     private int $startTime;
     private int $stepWidth;
@@ -200,11 +207,25 @@ final class ProgressBar
 
     public function getEstimated(): float
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (!$this->step) {
+            return 0;
+        }
+
+        return round((time() - $this->startTime) / $this->step * $this->max);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (0 === $this->step || $this->step === $this->startingStep) {
             return 0;
         }
 
         return round((time() - $this->startTime) / ($this->step - $this->startingStep) * $this->max);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     public function getRemaining(): float
@@ -213,7 +234,15 @@ final class ProgressBar
             return 0;
         }
 
+<<<<<<< HEAD
         return round((time() - $this->startTime) / ($this->step - $this->startingStep) * ($this->max - $this->step));
+=======
+<<<<<<< HEAD
+        return round((time() - $this->startTime) / $this->step * ($this->max - $this->step));
+=======
+        return round((time() - $this->startTime) / ($this->step - $this->startingStep) * ($this->max - $this->step));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     public function setBarWidth(int $size)
@@ -303,6 +332,18 @@ final class ProgressBar
     /**
      * Starts the progress output.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param int|null $max Number of steps to complete the bar (0 if indeterminate), null to leave unchanged
+     */
+    public function start(int $max = null)
+    {
+        $this->startTime = time();
+        $this->step = 0;
+        $this->percent = 0.0;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param int|null $max     Number of steps to complete the bar (0 if indeterminate), null to leave unchanged
      * @param int      $startAt The starting point of the bar (useful e.g. when resuming a previously started bar)
      */
@@ -313,6 +354,10 @@ final class ProgressBar
         $this->startingStep = $startAt;
 
         $startAt > 0 ? $this->setProgress($startAt) : $this->percent = 0.0;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if (null !== $max) {
             $this->setMaxSteps($max);
@@ -470,6 +515,15 @@ final class ProgressBar
                     }
                     $this->output->clear($lineCount);
                 } else {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    for ($i = 0; $i < $this->formatLineCount; ++$i) {
+                        $this->cursor->moveToColumn(1);
+                        $this->cursor->clearLine();
+                        $this->cursor->moveUp();
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     if ('' !== $this->previousMessage) {
                         // only clear upper lines when last call was not a clear
                         for ($i = 0; $i < $this->formatLineCount; ++$i) {
@@ -477,6 +531,10 @@ final class ProgressBar
                             $this->cursor->clearLine();
                             $this->cursor->moveUp();
                         }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     }
 
                     $this->cursor->moveToColumn(1);

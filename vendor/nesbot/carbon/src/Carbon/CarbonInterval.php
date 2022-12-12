@@ -22,7 +22,14 @@ use Carbon\Exceptions\UnknownSetterException;
 use Carbon\Exceptions\UnknownUnitException;
 use Carbon\Traits\IntervalRounding;
 use Carbon\Traits\IntervalStep;
+<<<<<<< HEAD
 use Carbon\Traits\MagicParameter;
+=======
+<<<<<<< HEAD
+=======
+use Carbon\Traits\MagicParameter;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Carbon\Traits\Mixin;
 use Carbon\Traits\Options;
 use Carbon\Traits\ToStringFormat;
@@ -186,7 +193,14 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
 {
     use IntervalRounding;
     use IntervalStep;
+<<<<<<< HEAD
     use MagicParameter;
+=======
+<<<<<<< HEAD
+=======
+    use MagicParameter;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     use Mixin {
         Mixin::mixin as baseMixin;
     }
@@ -889,7 +903,15 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         return static::fromString(Carbon::translateTimeString($interval, $locale ?: static::getLocale(), 'en'));
     }
 
+<<<<<<< HEAD
     private static function castIntervalToClass(DateInterval $interval, string $className, array $skip = [])
+=======
+<<<<<<< HEAD
+    private static function castIntervalToClass(DateInterval $interval, string $className)
+=======
+    private static function castIntervalToClass(DateInterval $interval, string $className, array $skip = [])
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $mainClass = DateInterval::class;
 
@@ -898,7 +920,15 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         }
 
         $microseconds = $interval->f;
+<<<<<<< HEAD
         $instance = new $className(static::getDateIntervalSpec($interval, false, $skip));
+=======
+<<<<<<< HEAD
+        $instance = new $className(static::getDateIntervalSpec($interval));
+=======
+        $instance = new $className(static::getDateIntervalSpec($interval, false, $skip));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if ($microseconds) {
             $instance->f = $microseconds;
@@ -950,9 +980,21 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      *
      * @return static
      */
+<<<<<<< HEAD
     public static function instance(DateInterval $interval, array $skip = [])
     {
         return self::castIntervalToClass($interval, static::class, $skip);
+=======
+<<<<<<< HEAD
+    public static function instance(DateInterval $interval)
+    {
+        return self::castIntervalToClass($interval, static::class);
+=======
+    public static function instance(DateInterval $interval, array $skip = [])
+    {
+        return self::castIntervalToClass($interval, static::class, $skip);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -1362,6 +1404,16 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         }
 
         if (preg_match('/^(?<method>add|sub)(?<unit>[A-Z].*)$/', $method, $match)) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            return $this->{$match['method']}($parameters[0], $match['unit']);
+        }
+
+        try {
+            $this->set($method, \count($parameters) === 0 ? 1 : $parameters[0]);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $value = $this->getMagicParameter($parameters, 0, Carbon::pluralUnit($match['unit']), 0);
 
             return $this->{$match['method']}($value, $match['unit']);
@@ -1371,6 +1423,10 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
 
         try {
             $this->set($method, $value);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         } catch (UnknownSetterException $exception) {
             if ($this->localStrictModeEnabled ?? Carbon::isStrictModeEnabled()) {
                 throw new BadFluentSetterException($method, 0, $exception);
@@ -1421,9 +1477,21 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
         $minimumUnit = 's';
         $skip = [];
         extract($this->getForHumansInitialVariables($syntax, $short));
+<<<<<<< HEAD
         $skip = array_map('strtolower', array_filter((array) $skip, static function ($value) {
             return \is_string($value) && $value !== '';
         }));
+=======
+<<<<<<< HEAD
+        $skip = array_filter((array) $skip, static function ($value) {
+            return \is_string($value) && $value !== '';
+        });
+=======
+        $skip = array_map('strtolower', array_filter((array) $skip, static function ($value) {
+            return \is_string($value) && $value !== '';
+        }));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if ($syntax === null) {
             $syntax = CarbonInterface::DIFF_ABSOLUTE;
@@ -2161,7 +2229,15 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
      *
      * @return string
      */
+<<<<<<< HEAD
     public static function getDateIntervalSpec(DateInterval $interval, bool $microseconds = false, array $skip = [])
+=======
+<<<<<<< HEAD
+    public static function getDateIntervalSpec(DateInterval $interval, bool $microseconds = false)
+=======
+    public static function getDateIntervalSpec(DateInterval $interval, bool $microseconds = false, array $skip = [])
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $date = array_filter([
             static::PERIOD_YEARS => abs($interval->y),
@@ -2169,6 +2245,11 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             static::PERIOD_DAYS => abs($interval->d),
         ]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (
             $interval->days >= CarbonInterface::DAYS_PER_WEEK * CarbonInterface::WEEKS_PER_MONTH &&
             (!isset($date[static::PERIOD_YEARS]) || \count(array_intersect(['y', 'year', 'years'], $skip))) &&
@@ -2179,6 +2260,10 @@ class CarbonInterval extends DateInterval implements CarbonConverterInterface
             ];
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $seconds = abs($interval->s);
         if ($microseconds && $interval->f > 0) {
             $seconds = sprintf('%d.%06d', $seconds, abs($interval->f) * 1000000);

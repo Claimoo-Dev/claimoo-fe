@@ -143,7 +143,15 @@ class Worker
                 $status = $this->pauseWorker($options, $lastRestart);
 
                 if (! is_null($status)) {
+<<<<<<< HEAD
                     return $this->stop($status, $options);
+=======
+<<<<<<< HEAD
+                    return $this->stop($status);
+=======
+                    return $this->stop($status, $options);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 }
 
                 continue;
@@ -191,7 +199,15 @@ class Worker
             );
 
             if (! is_null($status)) {
+<<<<<<< HEAD
                 return $this->stop($status, $options);
+=======
+<<<<<<< HEAD
+                return $this->stop($status);
+=======
+                return $this->stop($status, $options);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             }
         }
     }
@@ -223,7 +239,15 @@ class Worker
                 );
             }
 
+<<<<<<< HEAD
             $this->kill(static::EXIT_ERROR, $options);
+=======
+<<<<<<< HEAD
+            $this->kill(static::EXIT_ERROR);
+=======
+            $this->kill(static::EXIT_ERROR, $options);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         });
 
         pcntl_alarm(
@@ -579,7 +603,15 @@ class Worker
      */
     protected function failJob($job, Throwable $e)
     {
+<<<<<<< HEAD
         $job->fail($e);
+=======
+<<<<<<< HEAD
+        return $job->fail($e);
+=======
+        $job->fail($e);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -676,10 +708,34 @@ class Worker
     {
         pcntl_async_signals(true);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        pcntl_signal(SIGQUIT, function () {
+            $this->shouldQuit = true;
+        });
+
+        pcntl_signal(SIGTERM, function () {
+            $this->shouldQuit = true;
+        });
+
+        pcntl_signal(SIGUSR2, function () {
+            $this->paused = true;
+        });
+
+        pcntl_signal(SIGCONT, function () {
+            $this->paused = false;
+        });
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         pcntl_signal(SIGQUIT, fn () => $this->shouldQuit = true);
         pcntl_signal(SIGTERM, fn () => $this->shouldQuit = true);
         pcntl_signal(SIGUSR2, fn () => $this->paused = true);
         pcntl_signal(SIGCONT, fn () => $this->paused = false);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -707,12 +763,26 @@ class Worker
      * Stop listening and bail out of the script.
      *
      * @param  int  $status
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @return int
+     */
+    public function stop($status = 0)
+    {
+        $this->events->dispatch(new WorkerStopping($status));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  WorkerOptions|null  $options
      * @return int
      */
     public function stop($status = 0, $options = null)
     {
         $this->events->dispatch(new WorkerStopping($status, $options));
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         return $status;
     }
@@ -721,12 +791,26 @@ class Worker
      * Kill the process.
      *
      * @param  int  $status
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @return never
+     */
+    public function kill($status = 0)
+    {
+        $this->events->dispatch(new WorkerStopping($status));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  \Illuminate\Queue\WorkerOptions|null  $options
      * @return never
      */
     public function kill($status = 0, $options = null)
     {
         $this->events->dispatch(new WorkerStopping($status, $options));
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if (extension_loaded('posix')) {
             posix_kill(getmypid(), SIGKILL);
@@ -808,7 +892,15 @@ class Worker
     /**
      * Get the queue manager instance.
      *
+<<<<<<< HEAD
      * @return \Illuminate\Contracts\Queue\Factory
+=======
+<<<<<<< HEAD
+     * @return \Illuminate\Queue\QueueManager
+=======
+     * @return \Illuminate\Contracts\Queue\Factory
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function getManager()
     {

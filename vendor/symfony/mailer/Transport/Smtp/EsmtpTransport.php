@@ -83,7 +83,15 @@ class EsmtpTransport extends SmtpTransport
     /**
      * @return $this
      */
+<<<<<<< HEAD
     public function setPassword(#[\SensitiveParameter] string $password): static
+=======
+<<<<<<< HEAD
+    public function setPassword(string $password): static
+=======
+    public function setPassword(#[\SensitiveParameter] string $password): static
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $this->password = $password;
 
@@ -180,15 +188,30 @@ class EsmtpTransport extends SmtpTransport
                 continue;
             }
 
+<<<<<<< HEAD
             $code = null;
+=======
+<<<<<<< HEAD
+=======
+            $code = null;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $authNames[] = $authenticator->getAuthKeyword();
             try {
                 $authenticator->authenticate($this);
 
                 return;
             } catch (TransportExceptionInterface $e) {
+<<<<<<< HEAD
                 $code = $e->getCode();
 
+=======
+<<<<<<< HEAD
+=======
+                $code = $e->getCode();
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 try {
                     $this->executeCommand("RSET\r\n", [250]);
                 } catch (TransportExceptionInterface) {
@@ -201,7 +224,15 @@ class EsmtpTransport extends SmtpTransport
         }
 
         if (!$authNames) {
+<<<<<<< HEAD
             throw new TransportException(sprintf('Failed to find an authenticator supported by the SMTP server, which currently supports: "%s".', implode('", "', $modes)), $code ?: 504);
+=======
+<<<<<<< HEAD
+            throw new TransportException(sprintf('Failed to find an authenticator supported by the SMTP server, which currently supports: "%s".', implode('", "', $modes)));
+=======
+            throw new TransportException(sprintf('Failed to find an authenticator supported by the SMTP server, which currently supports: "%s".', implode('", "', $modes)), $code ?: 504);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $message = sprintf('Failed to authenticate on SMTP server with username "%s" using the following authenticators: "%s".', $this->username, implode('", "', $authNames));
@@ -209,6 +240,14 @@ class EsmtpTransport extends SmtpTransport
             $message .= sprintf(' Authenticator "%s" returned "%s".', $name, $error);
         }
 
+<<<<<<< HEAD
         throw new TransportException($message, $code ?: 535);
+=======
+<<<<<<< HEAD
+        throw new TransportException($message);
+=======
+        throw new TransportException($message, $code ?: 535);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

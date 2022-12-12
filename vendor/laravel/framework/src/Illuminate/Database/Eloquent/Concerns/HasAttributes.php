@@ -541,7 +541,15 @@ trait HasAttributes
         }
 
         return method_exists($this, $key) ||
+<<<<<<< HEAD
                $this->relationResolver(static::class, $key);
+=======
+<<<<<<< HEAD
+            (static::$relationResolvers[get_class($this)][$key] ?? null);
+=======
+               $this->relationResolver(static::class, $key);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -2145,16 +2153,44 @@ trait HasAttributes
      */
     public function getMutatedAttributes()
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $class = static::class;
+
+        if (! isset(static::$mutatorCache[$class])) {
+            static::cacheMutatedAttributes($class);
+        }
+
+        return static::$mutatorCache[$class];
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (! isset(static::$mutatorCache[static::class])) {
             static::cacheMutatedAttributes($this);
         }
 
         return static::$mutatorCache[static::class];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
      * Extract and cache all the mutated attributes of a class.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param  string  $class
+     * @return void
+     */
+    public static function cacheMutatedAttributes($class)
+    {
+        static::$getAttributeMutatorCache[$class] =
+            collect($attributeMutatorMethods = static::getAttributeMarkedMutatorMethods($class))
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  object|string  $classOrInstance
      * @return void
      */
@@ -2166,6 +2202,10 @@ trait HasAttributes
 
         static::$getAttributeMutatorCache[$class] =
             collect($attributeMutatorMethods = static::getAttributeMarkedMutatorMethods($classOrInstance))
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     ->mapWithKeys(function ($match) {
                         return [lcfirst(static::$snakeAttributes ? Str::snake($match) : $match) => true];
                     })->all();

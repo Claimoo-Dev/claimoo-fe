@@ -240,7 +240,23 @@ class ByteString extends AbstractString
 
         try {
             if (false === $match($regexp, $this->string, $matches, $flags | \PREG_UNMATCHED_AS_NULL, $offset)) {
+<<<<<<< HEAD
                 throw new RuntimeException('Matching failed with error: '.preg_last_error_msg());
+=======
+<<<<<<< HEAD
+                $lastError = preg_last_error();
+
+                foreach (get_defined_constants(true)['pcre'] as $k => $v) {
+                    if ($lastError === $v && str_ends_with($k, '_ERROR')) {
+                        throw new RuntimeException('Matching failed with '.$k.'.');
+                    }
+                }
+
+                throw new RuntimeException('Matching failed with unknown error code.');
+=======
+                throw new RuntimeException('Matching failed with error: '.preg_last_error_msg());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             }
         } finally {
             restore_error_handler();

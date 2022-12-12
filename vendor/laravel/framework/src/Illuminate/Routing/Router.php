@@ -369,6 +369,11 @@ class Router implements BindingRegistrar, RegistrarContract
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Register an array of singleton resource controllers.
      *
      * @param  array  $singletons
@@ -440,6 +445,10 @@ class Router implements BindingRegistrar, RegistrarContract
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Create a route group with shared attributes.
      *
      * @param  array  $attributes

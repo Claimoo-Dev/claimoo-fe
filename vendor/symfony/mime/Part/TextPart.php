@@ -40,7 +40,15 @@ class TextPart extends AbstractPart
     private $seekable;
 
     /**
+<<<<<<< HEAD
      * @param resource|string|File $body Use a File instance to defer loading the file until rendering
+=======
+<<<<<<< HEAD
+     * @param resource|string $body
+=======
+     * @param resource|string|File $body Use a File instance to defer loading the file until rendering
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function __construct($body, ?string $charset = 'utf-8', string $subtype = 'plain', string $encoding = null)
     {
@@ -48,6 +56,13 @@ class TextPart extends AbstractPart
 
         parent::__construct();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (!\is_string($body) && !\is_resource($body)) {
+            throw new \TypeError(sprintf('The body of "%s" must be a string or a resource (got "%s").', self::class, get_debug_type($body)));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (!\is_string($body) && !\is_resource($body) && !$body instanceof File) {
             throw new \TypeError(sprintf('The body of "%s" must be a string, a resource, or an instance of "%s" (got "%s").', self::class, File::class, get_debug_type($body)));
         }
@@ -57,6 +72,10 @@ class TextPart extends AbstractPart
             if ((is_file($path) && !is_readable($path)) || is_dir($path)) {
                 throw new InvalidArgumentException(sprintf('Path "%s" is not readable.', $path));
             }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $this->body = $body;
@@ -109,7 +128,15 @@ class TextPart extends AbstractPart
     }
 
     /**
+<<<<<<< HEAD
      * Gets the name of the file.
+=======
+<<<<<<< HEAD
+     * Gets the name of the file (used by FormDataPart).
+=======
+     * Gets the name of the file.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function getName(): ?string
     {
@@ -118,10 +145,19 @@ class TextPart extends AbstractPart
 
     public function getBody(): string
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($this->body instanceof File) {
             return file_get_contents($this->body->getPath());
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (null === $this->seekable) {
             return $this->body;
         }
@@ -140,6 +176,12 @@ class TextPart extends AbstractPart
 
     public function bodyToIterable(): iterable
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (null !== $this->seekable) {
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($this->body instanceof File) {
             $path = $this->body->getPath();
             if (false === $handle = @fopen($path, 'r', false)) {
@@ -148,6 +190,10 @@ class TextPart extends AbstractPart
 
             yield from $this->getEncoder()->encodeByteStream($handle);
         } elseif (null !== $this->seekable) {
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             if ($this->seekable) {
                 rewind($this->body);
             }
@@ -196,6 +242,19 @@ class TextPart extends AbstractPart
     private function getEncoder(): ContentEncoderInterface
     {
         if ('8bit' === $this->encoding) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            return self::$encoders[$this->encoding] ?? (self::$encoders[$this->encoding] = new EightBitContentEncoder());
+        }
+
+        if ('quoted-printable' === $this->encoding) {
+            return self::$encoders[$this->encoding] ?? (self::$encoders[$this->encoding] = new QpContentEncoder());
+        }
+
+        return self::$encoders[$this->encoding] ?? (self::$encoders[$this->encoding] = new Base64ContentEncoder());
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return self::$encoders[$this->encoding] ??= new EightBitContentEncoder();
         }
 
@@ -204,6 +263,10 @@ class TextPart extends AbstractPart
         }
 
         return self::$encoders[$this->encoding] ??= new Base64ContentEncoder();
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     private function chooseEncoding(): string
@@ -218,7 +281,15 @@ class TextPart extends AbstractPart
     public function __sleep(): array
     {
         // convert resources to strings for serialization
+<<<<<<< HEAD
         if (null !== $this->seekable || $this->body instanceof File) {
+=======
+<<<<<<< HEAD
+        if (null !== $this->seekable) {
+=======
+        if (null !== $this->seekable || $this->body instanceof File) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $this->body = $this->getBody();
             $this->seekable = null;
         }

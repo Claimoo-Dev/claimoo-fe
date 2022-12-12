@@ -66,9 +66,19 @@ final class Message
 	{
 		$vars = $this->variables;
 		$vars['label'] = empty($vars['isKey']) ? 'item' : 'key of item';
+<<<<<<< HEAD
 		$vars['path'] = $this->path
 			? "'" . implode("\u{a0}›\u{a0}", $this->path) . "'"
 			: null;
+=======
+<<<<<<< HEAD
+		$vars['path'] = $this->path ? "'" . implode(' › ', $this->path) . "'" : null;
+=======
+		$vars['path'] = $this->path
+			? "'" . implode("\u{a0}›\u{a0}", $this->path) . "'"
+			: null;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 		$vars['value'] = Helpers::formatValue($vars['value'] ?? null);
 
 		return preg_replace_callback('~( ?)%(\w+)%~', function ($m) use ($vars) {

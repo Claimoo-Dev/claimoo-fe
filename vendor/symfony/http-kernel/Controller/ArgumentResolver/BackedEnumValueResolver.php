@@ -13,7 +13,14 @@ namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -22,6 +29,16 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * leading to a 404 Not Found if the attribute value isn't a valid backing value for the enum type.
  *
  * @author Maxime Steinhausser <maxime.steinhausser@gmail.com>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ */
+class BackedEnumValueResolver implements ArgumentValueResolverInterface
+{
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  *
  * @final since Symfony 6.2
  */
@@ -34,6 +51,10 @@ class BackedEnumValueResolver implements ArgumentValueResolverInterface, ValueRe
     {
         @trigger_deprecation('symfony/http-kernel', '6.2', 'The "%s()" method is deprecated, use "resolve()" instead.', __METHOD__);
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (!is_subclass_of($argument->getType(), \BackedEnum::class)) {
             return false;
         }
@@ -51,6 +72,27 @@ class BackedEnumValueResolver implements ArgumentValueResolverInterface, ValueRe
 
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $value = $request->attributes->get($argument->getName());
+
+        if (null === $value) {
+            yield null;
+
+            return;
+        }
+
+        if ($value instanceof \BackedEnum) {
+            yield $value;
+
+            return;
+        }
+
+        if (!\is_int($value) && !\is_string($value)) {
+            throw new \LogicException(sprintf('Could not resolve the "%s $%s" controller argument: expecting an int or string, got %s.', $argument->getType(), $argument->getName(), get_debug_type($value)));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (!is_subclass_of($argument->getType(), \BackedEnum::class)) {
             return [];
         }
@@ -79,15 +121,31 @@ class BackedEnumValueResolver implements ArgumentValueResolverInterface, ValueRe
 
         if (!\is_int($value) && !\is_string($value)) {
             throw new \LogicException(sprintf('Could not resolve the "%s $%s" controller argument: expecting an int or string, got "%s".', $argument->getType(), $argument->getName(), get_debug_type($value)));
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         /** @var class-string<\BackedEnum> $enumType */
         $enumType = $argument->getType();
 
         try {
+<<<<<<< HEAD
             return [$enumType::from($value)];
         } catch (\ValueError $e) {
             throw new NotFoundHttpException(sprintf('Could not resolve the "%s $%s" controller argument: ', $argument->getType(), $argument->getName()).$e->getMessage(), $e);
+=======
+<<<<<<< HEAD
+            yield $enumType::from($value);
+        } catch (\ValueError $error) {
+            throw new NotFoundHttpException(sprintf('Could not resolve the "%s $%s" controller argument: %s', $argument->getType(), $argument->getName(), $error->getMessage()), $error);
+=======
+            return [$enumType::from($value)];
+        } catch (\ValueError $e) {
+            throw new NotFoundHttpException(sprintf('Could not resolve the "%s $%s" controller argument: ', $argument->getType(), $argument->getName()).$e->getMessage(), $e);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
     }
 }

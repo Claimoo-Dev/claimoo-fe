@@ -1159,6 +1159,11 @@ trait ValidatesAttributes
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Validate that an attribute is lowercase.
      *
      * @param  string  $attribute
@@ -1185,6 +1190,10 @@ trait ValidatesAttributes
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Validate the MIME type of a file is an image MIME type.
      *
      * @param  string  $attribute

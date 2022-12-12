@@ -48,9 +48,18 @@ class VarDumper
 
     public static function setHandler(callable $callable = null): ?callable
     {
+<<<<<<< HEAD
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/var-dumper', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
         }
+=======
+<<<<<<< HEAD
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/var-dumper', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $prevHandler = self::$handler;
 
         // Prevent replacing the handler with expected format as soon as the env var was set:

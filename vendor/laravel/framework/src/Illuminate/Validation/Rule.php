@@ -5,11 +5,22 @@ namespace Illuminate\Validation;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Validation\Rules\Dimensions;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use Illuminate\Validation\Rules\ExcludeIf;
+use Illuminate\Validation\Rules\Exists;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Illuminate\Validation\Rules\Enum;
 use Illuminate\Validation\Rules\ExcludeIf;
 use Illuminate\Validation\Rules\Exists;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Validation\Rules\ImageFile;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Illuminate\Validation\Rules\In;
 use Illuminate\Validation\Rules\NotIn;
 use Illuminate\Validation\Rules\ProhibitedIf;
@@ -34,6 +45,19 @@ class Rule
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * Get a dimensions constraint builder instance.
+     *
+     * @param  array  $constraints
+     * @return \Illuminate\Validation\Rules\Dimensions
+     */
+    public static function dimensions(array $constraints = [])
+    {
+        return new Dimensions($constraints);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Create a new nested rule set.
      *
      * @param  callable  $callback
@@ -54,6 +78,10 @@ class Rule
     public static function unique($table, $column = 'NULL')
     {
         return new Unique($table, $column);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -99,6 +127,23 @@ class Rule
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * Create a new nested rule set.
+     *
+     * @param  callable  $callback
+     * @return \Illuminate\Validation\NestedRules
+     */
+    public static function forEach($callback)
+    {
+        return new NestedRules($callback);
+    }
+
+    /**
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get a required_if constraint builder instance.
      *
      * @param  callable|bool  $callback
@@ -132,6 +177,20 @@ class Rule
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * Get a unique constraint builder instance.
+     *
+     * @param  string  $table
+     * @param  string  $column
+     * @return \Illuminate\Validation\Rules\Unique
+     */
+    public static function unique($table, $column = 'NULL')
+    {
+        return new Unique($table, $column);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get an enum constraint builder instance.
      *
      * @param  string  $type
@@ -171,5 +230,9 @@ class Rule
     public static function dimensions(array $constraints = [])
     {
         return new Dimensions($constraints);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

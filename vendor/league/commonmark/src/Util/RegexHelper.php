@@ -104,13 +104,29 @@ final class RegexHelper
     public static function matchAt(string $regex, string $string, int $offset = 0): ?int
     {
         $matches = [];
+<<<<<<< HEAD
         $string  = \mb_substr($string, $offset, null, 'UTF-8');
+=======
+<<<<<<< HEAD
+        $string  = \mb_substr($string, $offset, null, 'utf-8');
+=======
+        $string  = \mb_substr($string, $offset, null, 'UTF-8');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (! \preg_match($regex, $string, $matches, \PREG_OFFSET_CAPTURE)) {
             return null;
         }
 
         // PREG_OFFSET_CAPTURE always returns the byte offset, not the char offset, which is annoying
+<<<<<<< HEAD
         $charPos = \mb_strlen(\mb_strcut($string, 0, $matches[0][1], 'UTF-8'), 'UTF-8');
+=======
+<<<<<<< HEAD
+        $charPos = \mb_strlen(\mb_strcut($string, 0, $matches[0][1], 'utf-8'), 'utf-8');
+=======
+        $charPos = \mb_strlen(\mb_strcut($string, 0, $matches[0][1], 'UTF-8'), 'UTF-8');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         return $offset + $charPos;
     }

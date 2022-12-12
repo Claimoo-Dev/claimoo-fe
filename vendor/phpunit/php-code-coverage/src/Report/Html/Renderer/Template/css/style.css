@@ -1,9 +1,18 @@
 body {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  font-family: sans-serif;
  font-size: 2em;
  font-kerning: normal;
  font-variant-ligatures: common-ligatures;
  text-rendering: optimizeLegibility;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  padding-top: 10px;
 }
 
@@ -13,8 +22,16 @@ body {
 
 .octicon {
  margin-right:.25em;
+<<<<<<< HEAD
  vertical-align: baseline;
  width: 0.75em;
+=======
+<<<<<<< HEAD
+=======
+ vertical-align: baseline;
+ width: 0.75em;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }
 
 .table-bordered>thead>tr>td {
@@ -64,7 +81,14 @@ body {
 }
 
 td.big {
+<<<<<<< HEAD
  vertical-align: middle;
+=======
+<<<<<<< HEAD
+=======
+ vertical-align: middle;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  width: 117px;
 }
 

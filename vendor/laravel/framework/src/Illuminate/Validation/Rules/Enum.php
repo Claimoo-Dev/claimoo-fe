@@ -34,14 +34,33 @@ class Enum implements Rule
      */
     public function passes($attribute, $value)
     {
-        if ($value instanceof $this->type) {
-            return true;
-        }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
         if (is_null($value) || ! function_exists('enum_exists') || ! enum_exists($this->type) || ! method_exists($this->type, 'tryFrom')) {
             return false;
         }
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
+        if ($value instanceof $this->type) {
+            return true;
+        }
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
+        if (is_null($value) || ! function_exists('enum_exists') || ! enum_exists($this->type) || ! method_exists($this->type, 'tryFrom')) {
+            return false;
+        }
+
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         try {
             return ! is_null($this->type::tryFrom($value));
         } catch (TypeError $e) {

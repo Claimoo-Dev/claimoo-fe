@@ -37,6 +37,14 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Additional available options:
      *
      *  * alt: an alternative URI to render in case of an error
@@ -118,7 +126,17 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
 
         static $setSession;
 
+<<<<<<< HEAD
         $setSession ??= \Closure::bind(static function ($subRequest, $request) { $subRequest->session = $request->session; }, null, Request::class);
+=======
+<<<<<<< HEAD
+        if (null === $setSession) {
+            $setSession = \Closure::bind(static function ($subRequest, $request) { $subRequest->session = $request->session; }, null, Request::class);
+        }
+=======
+        $setSession ??= \Closure::bind(static function ($subRequest, $request) { $subRequest->session = $request->session; }, null, Request::class);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $setSession($subRequest, $request);
 
         if ($request->get('_format')) {
@@ -131,6 +149,15 @@ class InlineFragmentRenderer extends RoutableFragmentRenderer
         return $subRequest;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getName(): string
     {
         return 'inline';

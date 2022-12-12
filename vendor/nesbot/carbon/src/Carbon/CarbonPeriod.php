@@ -1685,6 +1685,52 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
             return $roundedValue;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $first = \count($parameters) >= 1 ? $parameters[0] : null;
+        $second = \count($parameters) >= 2 ? $parameters[1] : null;
+
+        switch ($method) {
+            case 'start':
+            case 'since':
+                return $this->setStartDate($first, $second);
+
+            case 'sinceNow':
+                return $this->setStartDate(new Carbon(), $first);
+
+            case 'end':
+            case 'until':
+                return $this->setEndDate($first, $second);
+
+            case 'untilNow':
+                return $this->setEndDate(new Carbon(), $first);
+
+            case 'dates':
+            case 'between':
+                return $this->setDates($first, $second);
+
+            case 'recurrences':
+            case 'times':
+                return $this->setRecurrences($first);
+
+            case 'options':
+                return $this->setOptions($first);
+
+            case 'toggle':
+                return $this->toggleOptions($first, $second);
+
+            case 'filter':
+            case 'push':
+                return $this->addFilter($first, $second);
+
+            case 'prepend':
+                return $this->prependFilter($first, $second);
+
+            case 'filters':
+                return $this->setFilters($first ?: []);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         switch ($method) {
             case 'start':
             case 'since':
@@ -1752,13 +1798,25 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
                 ]);
 
                 return $this->setFilters(...$parameters);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
             case 'interval':
             case 'each':
             case 'every':
             case 'step':
             case 'stepBy':
+<<<<<<< HEAD
                 return $this->setDateInterval(...$parameters);
+=======
+<<<<<<< HEAD
+                return $this->setDateInterval($first);
+=======
+                return $this->setDateInterval(...$parameters);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
             case 'invert':
                 return $this->invertDateInterval();
@@ -1781,7 +1839,17 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
                 return $this->setDateInterval((
                     // Override default P1D when instantiating via fluent setters.
                     [$this->isDefaultInterval ? new CarbonInterval('PT0S') : $this->dateInterval, $method]
+<<<<<<< HEAD
                 )(...$parameters));
+=======
+<<<<<<< HEAD
+                )(
+                    \count($parameters) === 0 ? 1 : $first
+                ));
+=======
+                )(...$parameters));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         if ($this->localStrictModeEnabled ?? Carbon::isStrictModeEnabled()) {
@@ -2674,6 +2742,11 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
 
         return new $class($date->format('Y-m-d H:i:s.u'), $date->getTimezone());
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     private static function setDefaultParameters(array &$parameters, array $defaults): void
     {
@@ -2683,4 +2756,8 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
             }
         }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }

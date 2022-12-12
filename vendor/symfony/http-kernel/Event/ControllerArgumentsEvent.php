@@ -28,6 +28,19 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  */
 final class ControllerArgumentsEvent extends KernelEvent
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private $controller;
+    private array $arguments;
+
+    public function __construct(HttpKernelInterface $kernel, callable $controller, array $arguments, Request $request, ?int $requestType)
+    {
+        parent::__construct($kernel, $request, $requestType);
+
+        $this->controller = $controller;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private ControllerEvent $controllerEvent;
     private array $arguments;
     private array $namedArguments;
@@ -41,11 +54,26 @@ final class ControllerArgumentsEvent extends KernelEvent
         }
 
         $this->controllerEvent = $controller;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $this->arguments = $arguments;
     }
 
     public function getController(): callable
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        return $this->controller;
+    }
+
+    public function setController(callable $controller)
+    {
+        $this->controller = $controller;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         return $this->controllerEvent->getController();
     }
 
@@ -56,6 +84,10 @@ final class ControllerArgumentsEvent extends KernelEvent
     {
         $this->controllerEvent->setController($controller, $attributes);
         unset($this->namedArguments);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     public function getArguments(): array
@@ -66,6 +98,11 @@ final class ControllerArgumentsEvent extends KernelEvent
     public function setArguments(array $arguments)
     {
         $this->arguments = $arguments;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         unset($this->namedArguments);
     }
 
@@ -99,5 +136,9 @@ final class ControllerArgumentsEvent extends KernelEvent
     public function getAttributes(): array
     {
         return $this->controllerEvent->getAttributes();
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

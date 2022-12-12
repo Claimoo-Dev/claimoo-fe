@@ -15,7 +15,14 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Mailer\Bridge\Amazon\Transport\SesTransportFactory;
 use Symfony\Component\Mailer\Bridge\Google\Transport\GmailTransportFactory;
+<<<<<<< HEAD
 use Symfony\Component\Mailer\Bridge\Infobip\Transport\InfobipTransportFactory;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\Mailer\Bridge\Infobip\Transport\InfobipTransportFactory;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\Mailer\Bridge\Mailchimp\Transport\MandrillTransportFactory;
 use Symfony\Component\Mailer\Bridge\Mailgun\Transport\MailgunTransportFactory;
 use Symfony\Component\Mailer\Bridge\Mailjet\Transport\MailjetTransportFactory;
@@ -45,7 +52,14 @@ final class Transport
 {
     private const FACTORY_CLASSES = [
         GmailTransportFactory::class,
+<<<<<<< HEAD
         InfobipTransportFactory::class,
+=======
+<<<<<<< HEAD
+=======
+        InfobipTransportFactory::class,
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         MailgunTransportFactory::class,
         MailjetTransportFactory::class,
         MandrillTransportFactory::class,

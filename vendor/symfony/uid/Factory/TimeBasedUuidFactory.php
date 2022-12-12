@@ -11,8 +11,19 @@
 
 namespace Symfony\Component\Uid\Factory;
 
+<<<<<<< HEAD
 use Symfony\Component\Uid\TimeBasedUidInterface;
 use Symfony\Component\Uid\Uuid;
+=======
+<<<<<<< HEAD
+use Symfony\Component\Uid\Uuid;
+use Symfony\Component\Uid\UuidV1;
+use Symfony\Component\Uid\UuidV6;
+=======
+use Symfony\Component\Uid\TimeBasedUidInterface;
+use Symfony\Component\Uid\Uuid;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 class TimeBasedUuidFactory
 {
@@ -25,7 +36,15 @@ class TimeBasedUuidFactory
         $this->node = $node;
     }
 
+<<<<<<< HEAD
     public function create(\DateTimeInterface $time = null): Uuid&TimeBasedUidInterface
+=======
+<<<<<<< HEAD
+    public function create(\DateTimeInterface $time = null): UuidV6|UuidV1
+=======
+    public function create(\DateTimeInterface $time = null): Uuid&TimeBasedUidInterface
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $class = $this->class;
 

@@ -14,7 +14,14 @@ namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\MapDateTime;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -24,6 +31,41 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * @author Benjamin Eberlei <kontakt@beberlei.de>
  * @author Tim Goudriaan <tim@codedmonkey.com>
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+final class DateTimeValueResolver implements ArgumentValueResolverInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+        return is_a($argument->getType(), \DateTimeInterface::class, true) && $request->attributes->has($argument->getName());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function resolve(Request $request, ArgumentMetadata $argument): iterable
+    {
+        $value = $request->attributes->get($argument->getName());
+
+        if ($value instanceof \DateTimeInterface) {
+            yield $value;
+
+            return;
+        }
+
+        if ($argument->isNullable() && !$value) {
+            yield null;
+
+            return;
+        }
+
+        $class = \DateTimeInterface::class === $argument->getType() ? \DateTimeImmutable::class : $argument->getType();
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 final class DateTimeValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
 {
     /**
@@ -53,6 +95,10 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
             return [null];
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $format = null;
 
         if ($attributes = $argument->getAttributes(MapDateTime::class, ArgumentMetadata::IS_INSTANCEOF)) {
@@ -60,6 +106,14 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
             $format = $attribute->format;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $date = false;
+
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (null !== $format) {
             $date = $class::createFromFormat($format, $value);
 
@@ -71,7 +125,15 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
                 $value = '@'.$value;
             }
             try {
+<<<<<<< HEAD
                 $date = new $class($value ?? 'now');
+=======
+<<<<<<< HEAD
+                $date = new $class($value);
+=======
+                $date = new $class($value ?? 'now');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             } catch (\Exception) {
                 $date = false;
             }
@@ -81,6 +143,14 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface, Val
             throw new NotFoundHttpException(sprintf('Invalid date given for parameter "%s".', $argument->getName()));
         }
 
+<<<<<<< HEAD
         return [$date];
+=======
+<<<<<<< HEAD
+        yield $date;
+=======
+        return [$date];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

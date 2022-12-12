@@ -11,14 +11,30 @@
 
 namespace Symfony\Component\HttpFoundation;
 
+<<<<<<< HEAD
 trigger_deprecation('symfony/http-foundation', '6.2', 'The "%s" class is deprecated, use "%s" instead.', RequestMatcher::class, ChainRequestMatcher::class);
 
+=======
+<<<<<<< HEAD
+=======
+trigger_deprecation('symfony/http-foundation', '6.2', 'The "%s" class is deprecated, use "%s" instead.', RequestMatcher::class, ChainRequestMatcher::class);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 /**
  * RequestMatcher compares a pre-defined set of checks against a Request instance.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+<<<<<<< HEAD
  *
  * @deprecated since Symfony 6.2, use ChainRequestMatcher instead
+=======
+<<<<<<< HEAD
+=======
+ *
+ * @deprecated since Symfony 6.2, use ChainRequestMatcher instead
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  */
 class RequestMatcher implements RequestMatcherInterface
 {
@@ -143,6 +159,15 @@ class RequestMatcher implements RequestMatcherInterface
         $this->attributes[$key] = $regexp;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function matches(Request $request): bool
     {
         if ($this->schemes && !\in_array($request->getScheme(), $this->schemes, true)) {

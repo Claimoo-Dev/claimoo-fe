@@ -42,6 +42,14 @@ abstract class AbstractSurrogateFragmentRenderer extends RoutableFragmentRendere
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Note that if the current Request has no surrogate capability, this method
      * falls back to use the inline rendering strategy.
      *
@@ -49,7 +57,14 @@ abstract class AbstractSurrogateFragmentRenderer extends RoutableFragmentRendere
      *
      *  * alt: an alternative URI to render in case of an error
      *  * comment: a comment to add when returning the surrogate tag
+<<<<<<< HEAD
      *  * absolute_uri: whether to generate an absolute URI or not. Default is false
+=======
+<<<<<<< HEAD
+=======
+     *  * absolute_uri: whether to generate an absolute URI or not. Default is false
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      *
      * Note, that not all surrogate strategies support all options. For now
      * 'alt' and 'comment' are only supported by ESI.
@@ -66,15 +81,34 @@ abstract class AbstractSurrogateFragmentRenderer extends RoutableFragmentRendere
             return $this->inlineStrategy->render($uri, $request, $options);
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if ($uri instanceof ControllerReference) {
+            $uri = $this->generateSignedFragmentUri($uri, $request);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $absolute = $options['absolute_uri'] ?? false;
 
         if ($uri instanceof ControllerReference) {
             $uri = $this->generateSignedFragmentUri($uri, $request, $absolute);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $alt = $options['alt'] ?? null;
         if ($alt instanceof ControllerReference) {
+<<<<<<< HEAD
             $alt = $this->generateSignedFragmentUri($alt, $request, $absolute);
+=======
+<<<<<<< HEAD
+            $alt = $this->generateSignedFragmentUri($alt, $request);
+=======
+            $alt = $this->generateSignedFragmentUri($alt, $request, $absolute);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $tag = $this->surrogate->renderIncludeTag($uri, $alt, $options['ignore_errors'] ?? false, $options['comment'] ?? '');
@@ -82,9 +116,21 @@ abstract class AbstractSurrogateFragmentRenderer extends RoutableFragmentRendere
         return new Response($tag);
     }
 
+<<<<<<< HEAD
     private function generateSignedFragmentUri(ControllerReference $uri, Request $request, bool $absolute): string
     {
         return (new FragmentUriGenerator($this->fragmentPath, $this->signer))->generate($uri, $request, $absolute);
+=======
+<<<<<<< HEAD
+    private function generateSignedFragmentUri(ControllerReference $uri, Request $request): string
+    {
+        return (new FragmentUriGenerator($this->fragmentPath, $this->signer))->generate($uri, $request);
+=======
+    private function generateSignedFragmentUri(ControllerReference $uri, Request $request, bool $absolute): string
+    {
+        return (new FragmentUriGenerator($this->fragmentPath, $this->signer))->generate($uri, $request, $absolute);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     private function containsNonScalars(array $values): bool

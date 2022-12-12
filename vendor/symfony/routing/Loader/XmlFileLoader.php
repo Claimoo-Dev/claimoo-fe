@@ -92,6 +92,15 @@ class XmlFileLoader extends FileLoader
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function supports(mixed $resource, string $type = null): bool
     {
         return \is_string($resource) && 'xml' === pathinfo($resource, \PATHINFO_EXTENSION) && (!$type || 'xml' === $type);
@@ -151,6 +160,13 @@ class XmlFileLoader extends FileLoader
      */
     protected function parseImport(RouteCollection $collection, \DOMElement $node, string $path, string $file)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if ('' === $resource = $node->getAttribute('resource')) {
+            throw new \InvalidArgumentException(sprintf('The <import> element in file "%s" must have a "resource" attribute.', $path));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         /** @var \DOMElement $resourceElement */
         if (!($resource = $node->getAttribute('resource') ?: null) && $resourceElement = $node->getElementsByTagName('resource')[0] ?? null) {
             $resource = [];
@@ -162,6 +178,10 @@ class XmlFileLoader extends FileLoader
 
         if (!$resource) {
             throw new \InvalidArgumentException(sprintf('The <import> element in file "%s" must have a "resource" attribute or element.', $path));
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $type = $node->getAttribute('type');
@@ -285,8 +305,16 @@ class XmlFileLoader extends FileLoader
                 case 'condition':
                     $condition = trim($n->textContent);
                     break;
+<<<<<<< HEAD
                 case 'resource':
                     break;
+=======
+<<<<<<< HEAD
+=======
+                case 'resource':
+                    break;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 default:
                     throw new \InvalidArgumentException(sprintf('Unknown tag "%s" used in file "%s". Expected "default", "requirement", "option" or "condition".', $n->localName, $path));
             }

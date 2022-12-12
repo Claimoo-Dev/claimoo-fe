@@ -212,8 +212,16 @@ class Response
     ];
 
     /**
+<<<<<<< HEAD
      * @param int $status The HTTP status code (200 "OK" by default)
      *
+=======
+<<<<<<< HEAD
+=======
+     * @param int $status The HTTP status code (200 "OK" by default)
+     *
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws \InvalidArgumentException When the HTTP status code is not valid
      */
     public function __construct(?string $content = '', int $status = 200, array $headers = [])
@@ -720,9 +728,18 @@ class Response
      */
     public function setExpires(\DateTimeInterface $date = null): static
     {
+<<<<<<< HEAD
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
         }
+=======
+<<<<<<< HEAD
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (null === $date) {
             $this->headers->remove('Expires');
 
@@ -902,9 +919,18 @@ class Response
      */
     public function setLastModified(\DateTimeInterface $date = null): static
     {
+<<<<<<< HEAD
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
         }
+=======
+<<<<<<< HEAD
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (null === $date) {
             $this->headers->remove('Last-Modified');
 
@@ -943,9 +969,18 @@ class Response
      */
     public function setEtag(string $etag = null, bool $weak = false): static
     {
+<<<<<<< HEAD
         if (1 > \func_num_args()) {
             trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
         }
+=======
+<<<<<<< HEAD
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (null === $etag) {
             $this->headers->remove('Etag');
         } else {

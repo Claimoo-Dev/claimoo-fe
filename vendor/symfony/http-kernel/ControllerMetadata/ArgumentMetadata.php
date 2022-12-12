@@ -134,7 +134,15 @@ class ArgumentMetadata
             }
         } else {
             foreach ($this->attributes as $attribute) {
+<<<<<<< HEAD
                 if ($attribute::class === $name) {
+=======
+<<<<<<< HEAD
+                if (\get_class($attribute) === $name) {
+=======
+                if ($attribute::class === $name) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     $attributes[] = $attribute;
                 }
             }

@@ -180,7 +180,15 @@ class Table
     public function setHeaders(array $headers): static
     {
         $headers = array_values($headers);
+<<<<<<< HEAD
         if ($headers && !\is_array($headers[0])) {
+=======
+<<<<<<< HEAD
+        if (!empty($headers) && !\is_array($headers[0])) {
+=======
+        if ($headers && !\is_array($headers[0])) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $headers = [$headers];
         }
 
@@ -189,9 +197,18 @@ class Table
         return $this;
     }
 
+<<<<<<< HEAD
     /**
      * @return $this
      */
+=======
+<<<<<<< HEAD
+=======
+    /**
+     * @return $this
+     */
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function setRows(array $rows)
     {
         $this->rows = [];
@@ -620,7 +637,15 @@ class Table
                 if (!str_contains($cell ?? '', "\n")) {
                     continue;
                 }
+<<<<<<< HEAD
                 $escaped = implode("\n", array_map(OutputFormatter::escapeTrailingBackslash(...), explode("\n", $cell)));
+=======
+<<<<<<< HEAD
+                $escaped = implode("\n", array_map([OutputFormatter::class, 'escapeTrailingBackslash'], explode("\n", $cell)));
+=======
+                $escaped = implode("\n", array_map(OutputFormatter::escapeTrailingBackslash(...), explode("\n", $cell)));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $cell = $cell instanceof TableCell ? new TableCell($escaped, ['colspan' => $cell->getColspan()]) : $escaped;
                 $lines = explode("\n", str_replace("\n", "<fg=default;bg=default></>\n", $cell));
                 foreach ($lines as $lineKey => $line) {

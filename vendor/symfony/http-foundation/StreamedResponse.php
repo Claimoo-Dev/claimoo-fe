@@ -30,9 +30,18 @@ class StreamedResponse extends Response
     protected $streamed;
     private bool $headersSent;
 
+<<<<<<< HEAD
     /**
      * @param int $status The HTTP status code (200 "OK" by default)
      */
+=======
+<<<<<<< HEAD
+=======
+    /**
+     * @param int $status The HTTP status code (200 "OK" by default)
+     */
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function __construct(callable $callback = null, int $status = 200, array $headers = [])
     {
         parent::__construct(null, $status, $headers);
@@ -57,6 +66,14 @@ class StreamedResponse extends Response
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * This method only sends the headers once.
      *
      * @return $this
@@ -73,6 +90,14 @@ class StreamedResponse extends Response
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * This method only sends the content once.
      *
      * @return $this
@@ -95,9 +120,23 @@ class StreamedResponse extends Response
     }
 
     /**
+<<<<<<< HEAD
      * @return $this
      *
      * @throws \LogicException when the content is not null
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     *
+     * @throws \LogicException when the content is not null
+     *
+     * @return $this
+=======
+     * @return $this
+     *
+     * @throws \LogicException when the content is not null
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function setContent(?string $content): static
     {
@@ -110,6 +149,15 @@ class StreamedResponse extends Response
         return $this;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getContent(): string|false
     {
         return false;

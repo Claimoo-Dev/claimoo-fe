@@ -2,7 +2,14 @@
 
 namespace Illuminate\Routing;
 
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Arr;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Illuminate\Support\Str;
 
 class ResourceRegistrar
@@ -22,6 +29,11 @@ class ResourceRegistrar
     protected $resourceDefaults = ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy'];
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * The default actions for a singleton resource controller.
      *
      * @var string[]
@@ -29,6 +41,10 @@ class ResourceRegistrar
     protected $singletonResourceDefaults = ['show', 'edit', 'update'];
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * The parameters set for this resource instance.
      *
      * @var array|string
@@ -125,6 +141,11 @@ class ResourceRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Route a singleton resource to a controller.
      *
      * @param  string  $name
@@ -169,6 +190,10 @@ class ResourceRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Build a set of prefixed resource routes.
      *
      * @param  string  $name
@@ -191,6 +216,11 @@ class ResourceRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Build a set of prefixed singleton routes.
      *
      * @param  string  $name
@@ -213,6 +243,10 @@ class ResourceRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Extract the resource and prefix from a resource name.
      *
      * @param  string  $name
@@ -249,6 +283,11 @@ class ResourceRegistrar
             $methods = array_diff($methods, (array) $options['except']);
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (isset($options['creatable'])) {
             $methods = isset($options['apiSingleton'])
                             ? array_merge(['store', 'destroy'], $methods)
@@ -259,6 +298,10 @@ class ResourceRegistrar
             );
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         return $methods;
     }
 
@@ -403,6 +446,11 @@ class ResourceRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Add the create method for a singleton route.
      *
      * @param  string  $name
@@ -518,6 +566,10 @@ class ResourceRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get the name for a given resource with shallowness applied when applicable.
      *
      * @param  string  $name

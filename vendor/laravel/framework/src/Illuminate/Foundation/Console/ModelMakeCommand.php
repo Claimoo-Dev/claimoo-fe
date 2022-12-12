@@ -117,7 +117,14 @@ class ModelMakeCommand extends GeneratorCommand
         $this->call('make:migration', [
             'name' => "create_{$table}_table",
             '--create' => $table,
+<<<<<<< HEAD
             '--fullpath' => true,
+=======
+<<<<<<< HEAD
+=======
+            '--fullpath' => true,
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         ]);
     }
 

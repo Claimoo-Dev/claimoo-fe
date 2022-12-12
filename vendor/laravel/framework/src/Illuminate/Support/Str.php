@@ -341,7 +341,14 @@ class Str
     /**
      * Wrap the string with the given strings.
      *
+<<<<<<< HEAD
      * @param  string  $value
+=======
+<<<<<<< HEAD
+=======
+     * @param  string  $value
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  string  $before
      * @param  string|null  $after
      * @return string
@@ -1013,7 +1020,14 @@ class Str
      * @param  string  $title
      * @param  string  $separator
      * @param  string|null  $language
+<<<<<<< HEAD
      * @param  array<string, string>  $dictionary
+=======
+<<<<<<< HEAD
+=======
+     * @param  array<string, string>  $dictionary
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @return string
      */
     public static function slug($title, $separator = '-', $language = 'en', $dictionary = ['@' => 'at'])
@@ -1145,9 +1159,21 @@ class Str
     {
         if (! is_null($length)) {
             return substr_count($haystack, $needle, $offset, $length);
+<<<<<<< HEAD
         }
 
         return substr_count($haystack, $needle, $offset);
+=======
+<<<<<<< HEAD
+        } else {
+            return substr_count($haystack, $needle, $offset);
+        }
+=======
+        }
+
+        return substr_count($haystack, $needle, $offset);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**

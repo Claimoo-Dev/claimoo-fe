@@ -14,7 +14,14 @@ declare(strict_types=1);
 namespace League\Config;
 
 use Dflydev\DotAccessData\Data;
+<<<<<<< HEAD
 use Dflydev\DotAccessData\DataInterface;
+=======
+<<<<<<< HEAD
+=======
+use Dflydev\DotAccessData\DataInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Dflydev\DotAccessData\Exception\DataException;
 use Dflydev\DotAccessData\Exception\InvalidPathException;
 use Dflydev\DotAccessData\Exception\MissingPathException;
@@ -38,7 +45,15 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
     private array $configSchemas = [];
 
     /** @psalm-allow-private-mutation */
+<<<<<<< HEAD
     private Data $finalConfig;
+=======
+<<<<<<< HEAD
+    private ?Data $finalConfig = null;
+=======
+    private Data $finalConfig;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /**
      * @var array<string, mixed>
@@ -57,7 +72,14 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
     {
         $this->configSchemas = $baseSchemas;
         $this->userConfig    = new Data();
+<<<<<<< HEAD
         $this->finalConfig   = new Data();
+=======
+<<<<<<< HEAD
+=======
+        $this->finalConfig   = new Data();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         $this->reader = new ReadOnlyConfiguration($this);
     }
@@ -83,7 +105,15 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
     {
         $this->invalidate();
 
+<<<<<<< HEAD
         $this->userConfig->import($config, DataInterface::REPLACE);
+=======
+<<<<<<< HEAD
+        $this->userConfig->import($config, Data::REPLACE);
+=======
+        $this->userConfig->import($config, DataInterface::REPLACE);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -109,13 +139,31 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
      */
     public function get(string $key)
     {
+<<<<<<< HEAD
         if (\array_key_exists($key, $this->cache)) {
+=======
+<<<<<<< HEAD
+        if ($this->finalConfig === null) {
+            $this->finalConfig = $this->build();
+        } elseif (\array_key_exists($key, $this->cache)) {
+=======
+        if (\array_key_exists($key, $this->cache)) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return $this->cache[$key];
         }
 
         try {
+<<<<<<< HEAD
             $this->build(self::getTopLevelKey($key));
 
+=======
+<<<<<<< HEAD
+=======
+            $this->build(self::getTopLevelKey($key));
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return $this->cache[$key] = $this->finalConfig->get($key);
         } catch (InvalidPathException | MissingPathException $ex) {
             throw new UnknownOptionException($ex->getMessage(), $key, (int) $ex->getCode(), $ex);
@@ -129,15 +177,36 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
      */
     public function exists(string $key): bool
     {
+<<<<<<< HEAD
         if (\array_key_exists($key, $this->cache)) {
+=======
+<<<<<<< HEAD
+        if ($this->finalConfig === null) {
+            $this->finalConfig = $this->build();
+        } elseif (\array_key_exists($key, $this->cache)) {
+=======
+        if (\array_key_exists($key, $this->cache)) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return true;
         }
 
         try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            return $this->finalConfig->has($key);
+        } catch (InvalidPathException $ex) {
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $this->build(self::getTopLevelKey($key));
 
             return $this->finalConfig->has($key);
         } catch (InvalidPathException | UnknownOptionException $ex) {
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return false;
         }
     }
@@ -156,12 +225,39 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
     private function invalidate(): void
     {
         $this->cache       = [];
+<<<<<<< HEAD
         $this->finalConfig = new Data();
+=======
+<<<<<<< HEAD
+        $this->finalConfig = null;
+=======
+        $this->finalConfig = new Data();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
      * Applies the schema against the configuration to return the final configuration
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @throws ValidationException
+     *
+     * @psalm-allow-private-mutation
+     */
+    private function build(): Data
+    {
+        try {
+            $schema    = Expect::structure($this->configSchemas);
+            $processor = new Processor();
+            $processed = $processor->process($schema, $this->userConfig->export());
+
+            $this->raiseAnyDeprecationNotices($processor->getWarnings());
+
+            return $this->finalConfig = new Data(self::convertStdClassesToArrays($processed));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws ValidationException|UnknownOptionException|InvalidPathException
      *
      * @psalm-allow-private-mutation
@@ -191,6 +287,10 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
             $this->raiseAnyDeprecationNotices($processor->getWarnings());
 
             $this->finalConfig->import((array) self::convertStdClassesToArrays($processed));
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         } catch (NetteValidationException $ex) {
             throw new ValidationException($ex);
         }
@@ -199,6 +299,15 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
     /**
      * Recursively converts stdClass instances to arrays
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param mixed $data
+     *
+     * @return mixed
+     *
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @phpstan-template T
      *
      * @param T $data
@@ -207,6 +316,10 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
      *
      * @phpstan-return ($data is \stdClass ? array<string, mixed> : T)
      *
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @psalm-pure
      */
     private static function convertStdClassesToArrays($data)
@@ -233,6 +346,11 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
             @\trigger_error($warning, \E_USER_DEPRECATED);
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /**
      * @throws InvalidPathException
@@ -252,4 +370,8 @@ final class Configuration implements ConfigurationBuilderInterface, Configuratio
 
         return \substr($path, 0, $firstDelimiter);
     }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }

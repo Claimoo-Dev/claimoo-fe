@@ -1228,6 +1228,11 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Save an array of new models without raising any events and attach them to the parent model.
      *
      * @param  \Illuminate\Support\Collection|array  $models
@@ -1242,6 +1247,10 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Create a new instance of the related model.
      *
      * @param  array  $attributes

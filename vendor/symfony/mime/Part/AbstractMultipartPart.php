@@ -90,6 +90,18 @@ abstract class AbstractMultipartPart extends AbstractPart
 
     private function getBoundary(): string
     {
+<<<<<<< HEAD
         return $this->boundary ??= strtr(base64_encode(random_bytes(6)), '+/', '-_');
+=======
+<<<<<<< HEAD
+        if (null === $this->boundary) {
+            $this->boundary = strtr(base64_encode(random_bytes(6)), '+/', '-_');
+        }
+
+        return $this->boundary;
+=======
+        return $this->boundary ??= strtr(base64_encode(random_bytes(6)), '+/', '-_');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

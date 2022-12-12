@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 6.2
 ---
 
@@ -8,6 +13,10 @@ CHANGELOG
  * Deprecate `PhpExtractor` in favor of `PhpAstExtractor`
  * Add `PhpAstExtractor` (requires [nikic/php-parser](https://github.com/nikic/php-parser) to be installed)
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 6.1
 ---
 

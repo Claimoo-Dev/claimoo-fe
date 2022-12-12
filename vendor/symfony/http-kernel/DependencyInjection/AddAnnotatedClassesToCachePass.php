@@ -12,6 +12,13 @@
 namespace Symfony\Component\HttpKernel\DependencyInjection;
 
 use Composer\Autoload\ClassLoader;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use Symfony\Component\Debug\DebugClassLoader as LegacyDebugClassLoader;
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\ErrorHandler\DebugClassLoader;
@@ -31,6 +38,15 @@ class AddAnnotatedClassesToCachePass implements CompilerPassInterface
         $this->kernel = $kernel;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function process(ContainerBuilder $container)
     {
         $annotatedClasses = [];
@@ -89,7 +105,15 @@ class AddAnnotatedClassesToCachePass implements CompilerPassInterface
                 continue;
             }
 
+<<<<<<< HEAD
             if ($function[0] instanceof DebugClassLoader) {
+=======
+<<<<<<< HEAD
+            if ($function[0] instanceof DebugClassLoader || $function[0] instanceof LegacyDebugClassLoader) {
+=======
+            if ($function[0] instanceof DebugClassLoader) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $function = $function[0]->getClassLoader();
             }
 

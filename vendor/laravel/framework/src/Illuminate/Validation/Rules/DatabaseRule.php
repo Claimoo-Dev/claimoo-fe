@@ -170,6 +170,11 @@ trait DatabaseRule
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Ignore soft deleted models during the existence check.
      *
      * @param  string  $deletedAtColumn
@@ -196,6 +201,10 @@ trait DatabaseRule
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Register a custom query callback.
      *
      * @param  \Closure  $callback

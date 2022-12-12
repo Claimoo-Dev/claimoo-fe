@@ -33,17 +33,37 @@ interface OutputInterface
     /**
      * Writes a message to the output.
      *
+<<<<<<< HEAD
      * @param bool $newline Whether to add a newline
      * @param int  $options A bitmask of options (one of the OUTPUT or VERBOSITY constants),
      *                      0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
+=======
+<<<<<<< HEAD
+     * @param $newline Whether to add a newline
+     * @param $options A bitmask of options (one of the OUTPUT or VERBOSITY constants), 0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
+=======
+     * @param bool $newline Whether to add a newline
+     * @param int  $options A bitmask of options (one of the OUTPUT or VERBOSITY constants),
+     *                      0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function write(string|iterable $messages, bool $newline = false, int $options = 0);
 
     /**
      * Writes a message to the output and adds a newline at the end.
      *
+<<<<<<< HEAD
      * @param int $options A bitmask of options (one of the OUTPUT or VERBOSITY constants),
      *                     0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
+=======
+<<<<<<< HEAD
+     * @param $options A bitmask of options (one of the OUTPUT or VERBOSITY constants), 0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
+=======
+     * @param int $options A bitmask of options (one of the OUTPUT or VERBOSITY constants),
+     *                     0 is considered the same as self::OUTPUT_NORMAL | self::VERBOSITY_NORMAL
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function writeln(string|iterable $messages, int $options = 0);
 

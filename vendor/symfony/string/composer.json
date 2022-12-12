@@ -24,7 +24,14 @@
     },
     "require-dev": {
         "symfony/error-handler": "^5.4|^6.0",
+<<<<<<< HEAD
         "symfony/intl": "^6.2",
+=======
+<<<<<<< HEAD
+=======
+        "symfony/intl": "^6.2",
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         "symfony/http-client": "^5.4|^6.0",
         "symfony/translation-contracts": "^2.0|^3.0",
         "symfony/var-exporter": "^5.4|^6.0"

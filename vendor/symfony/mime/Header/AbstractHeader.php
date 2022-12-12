@@ -231,7 +231,17 @@ abstract class AbstractHeader implements HeaderInterface
      */
     protected function toTokens(string $string = null): array
     {
+<<<<<<< HEAD
         $string ??= $this->getBodyAsString();
+=======
+<<<<<<< HEAD
+        if (null === $string) {
+            $string = $this->getBodyAsString();
+        }
+=======
+        $string ??= $this->getBodyAsString();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         $tokens = [];
         // Generate atoms; split at all invisible boundaries followed by WSP

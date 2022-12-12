@@ -30,6 +30,15 @@ final class ResponseCookieValueSame extends Constraint
         $this->domain = $domain;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function toString(): string
     {
         $str = sprintf('has cookie "%s"', $this->name);
@@ -46,6 +55,14 @@ final class ResponseCookieValueSame extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function matches($response): bool
     {
@@ -54,11 +71,27 @@ final class ResponseCookieValueSame extends Constraint
             return false;
         }
 
+<<<<<<< HEAD
         return $this->value === (string) $cookie->getValue();
+=======
+<<<<<<< HEAD
+        return $this->value === $cookie->getValue();
+=======
+        return $this->value === (string) $cookie->getValue();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
      * @param Response $response
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function failureDescription($response): string
     {

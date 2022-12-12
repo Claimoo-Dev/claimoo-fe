@@ -31,10 +31,43 @@ abstract class Descriptor implements DescriptorInterface
      */
     protected $output;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function describe(OutputInterface $output, object $object, array $options = [])
     {
         $this->output = $output;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        switch (true) {
+            case $object instanceof InputArgument:
+                $this->describeInputArgument($object, $options);
+                break;
+            case $object instanceof InputOption:
+                $this->describeInputOption($object, $options);
+                break;
+            case $object instanceof InputDefinition:
+                $this->describeInputDefinition($object, $options);
+                break;
+            case $object instanceof Command:
+                $this->describeCommand($object, $options);
+                break;
+            case $object instanceof Application:
+                $this->describeApplication($object, $options);
+                break;
+            default:
+                throw new InvalidArgumentException(sprintf('Object of type "%s" is not describable.', get_debug_type($object)));
+        }
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         match (true) {
             $object instanceof InputArgument => $this->describeInputArgument($object, $options),
             $object instanceof InputOption => $this->describeInputOption($object, $options),
@@ -43,6 +76,10 @@ abstract class Descriptor implements DescriptorInterface
             $object instanceof Application => $this->describeApplication($object, $options),
             default => throw new InvalidArgumentException(sprintf('Object of type "%s" is not describable.', get_debug_type($object))),
         };
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**

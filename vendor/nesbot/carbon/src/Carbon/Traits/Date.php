@@ -532,7 +532,14 @@ trait Date
     use Creator;
     use Difference;
     use Macro;
+<<<<<<< HEAD
     use MagicParameter;
+=======
+<<<<<<< HEAD
+=======
+    use MagicParameter;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     use Modifiers;
     use Mutability;
     use ObjectInitialisation;
@@ -642,8 +649,16 @@ trait Date
     /**
      * List of minimum and maximums for each unit.
      *
+<<<<<<< HEAD
      * @param int $daysInMonth
      *
+=======
+<<<<<<< HEAD
+=======
+     * @param int $daysInMonth
+     *
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @return array
      */
     protected static function getRangesByUnit(int $daysInMonth = 31): array
@@ -1382,6 +1397,11 @@ trait Date
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Return the number of days since the start of the week (using the current locale or the first parameter
      * if explicitly given).
      *
@@ -1415,6 +1435,10 @@ trait Date
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Set any unit to a new value without overflowing current other unit given.
      *
      * @param string $valueUnit    unit name to modify
@@ -2670,7 +2694,15 @@ trait Date
         }
 
         if (static::isModifiableUnit($unit)) {
+<<<<<<< HEAD
             return $this->{"{$action}Unit"}($unit, $this->getMagicParameter($parameters, 0, 'value', 1), $overflow);
+=======
+<<<<<<< HEAD
+            return $this->{"{$action}Unit"}($unit, $parameters[0] ?? 1, $overflow);
+=======
+            return $this->{"{$action}Unit"}($unit, $this->getMagicParameter($parameters, 0, 'value', 1), $overflow);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $sixFirstLetters = substr($unit, 0, 6);
@@ -2709,11 +2741,21 @@ trait Date
             try {
                 $unit = static::singularUnit(substr($method, 0, -5));
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                return $this->range($parameters[0] ?? $this, $parameters[1] ?? 1, $unit);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 return $this->range(
                     $this->getMagicParameter($parameters, 0, 'endDate', $this),
                     $this->getMagicParameter($parameters, 1, 'factor', 1),
                     $unit
                 );
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             } catch (InvalidArgumentException $exception) {
                 // Try macros
             }

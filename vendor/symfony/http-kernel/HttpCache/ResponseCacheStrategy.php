@@ -37,7 +37,14 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
     private int $embeddedResponses = 0;
     private bool $isNotCacheableResponseEmbedded = false;
     private int $age = 0;
+<<<<<<< HEAD
     private \DateTimeInterface|null|false $lastModified = null;
+=======
+<<<<<<< HEAD
+=======
+    private \DateTimeInterface|null|false $lastModified = null;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private array $flagDirectives = [
         'no-cache' => null,
         'no-store' => null,
@@ -54,6 +61,15 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         'expires' => null,
     ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function add(Response $response)
     {
         ++$this->embeddedResponses;
@@ -88,6 +104,16 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         $expires = $response->getExpires();
         $expires = null !== $expires ? (int) $expires->format('U') - (int) $response->getDate()->format('U') : null;
         $this->storeRelativeAgeDirective('expires', $expires >= 0 ? $expires : null, 0, $isHeuristicallyCacheable);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if (false !== $this->lastModified) {
             $lastModified = $response->getLastModified();
@@ -95,6 +121,10 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function update(Response $response)
     {
         // if we have no embedded Response, do nothing
@@ -102,16 +132,37 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
             return;
         }
 
+<<<<<<< HEAD
         // Remove Etag since it cannot be merged from embedded responses.
         $response->setEtag(null);
+=======
+<<<<<<< HEAD
+        // Remove validation related headers of the master response,
+        // because some of the response content comes from at least
+        // one embedded response (which likely has a different caching strategy).
+        $response->setEtag(null);
+        $response->setLastModified(null);
+=======
+        // Remove Etag since it cannot be merged from embedded responses.
+        $response->setEtag(null);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         $this->add($response);
 
         $response->headers->set('Age', $this->age);
 
         if ($this->isNotCacheableResponseEmbedded) {
+<<<<<<< HEAD
             $response->setLastModified(null);
 
+=======
+<<<<<<< HEAD
+=======
+            $response->setLastModified(null);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             if ($this->flagDirectives['no-store']) {
                 $response->headers->set('Cache-Control', 'no-cache, no-store, must-revalidate');
             } else {
@@ -121,8 +172,16 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
             return;
         }
 
+<<<<<<< HEAD
         $response->setLastModified($this->lastModified ?: null);
 
+=======
+<<<<<<< HEAD
+=======
+        $response->setLastModified($this->lastModified ?: null);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $flags = array_filter($this->flagDirectives);
 
         if (isset($flags['must-revalidate'])) {
@@ -163,14 +222,37 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         // RFC2616: A response received with a status code of 200, 203, 300, 301 or 410
         // MAY be stored by a cache […] unless a cache-control directive prohibits caching.
         if ($response->headers->hasCacheControlDirective('no-cache')
+<<<<<<< HEAD
             || $response->headers->hasCacheControlDirective('no-store')
+=======
+<<<<<<< HEAD
+            || $response->headers->getCacheControlDirective('no-store')
+=======
+            || $response->headers->hasCacheControlDirective('no-store')
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         ) {
             return true;
         }
 
+<<<<<<< HEAD
         // Etag headers cannot be merged, they render the response uncacheable
         // by default (except if the response also has max-age etc.).
         if (null === $response->getEtag() && \in_array($response->getStatusCode(), [200, 203, 300, 301, 410])) {
+=======
+<<<<<<< HEAD
+        // Last-Modified and Etag headers cannot be merged, they render the response uncacheable
+        // by default (except if the response also has max-age etc.).
+        if (\in_array($response->getStatusCode(), [200, 203, 300, 301, 410])
+            && null === $response->getLastModified()
+            && null === $response->getEtag()
+        ) {
+=======
+        // Etag headers cannot be merged, they render the response uncacheable
+        // by default (except if the response also has max-age etc.).
+        if (null === $response->getEtag() && \in_array($response->getStatusCode(), [200, 203, 300, 301, 410])) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return false;
         }
 

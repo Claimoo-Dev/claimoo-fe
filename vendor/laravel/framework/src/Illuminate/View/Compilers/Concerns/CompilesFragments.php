@@ -5,6 +5,11 @@ namespace Illuminate\View\Compilers\Concerns;
 trait CompilesFragments
 {
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * The last compiled fragment.
      *
      * @var string
@@ -12,6 +17,10 @@ trait CompilesFragments
     protected $lastFragment;
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Compile the fragment statements into valid PHP.
      *
      * @param  string  $expression

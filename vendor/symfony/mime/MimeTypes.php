@@ -65,7 +65,15 @@ final class MimeTypes implements MimeTypesInterface
 
     public static function getDefault(): self
     {
+<<<<<<< HEAD
         return self::$default ??= new self();
+=======
+<<<<<<< HEAD
+        return self::$default ?? self::$default = new self();
+=======
+        return self::$default ??= new self();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -78,6 +86,15 @@ final class MimeTypes implements MimeTypesInterface
         array_unshift($this->guessers, $guesser);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getExtensions(string $mimeType): array
     {
         if ($this->extensions) {
@@ -87,6 +104,15 @@ final class MimeTypes implements MimeTypesInterface
         return $extensions ?? self::MAP[$mimeType] ?? self::MAP[$lcMimeType ?? strtolower($mimeType)] ?? [];
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getMimeTypes(string $ext): array
     {
         if ($this->mimeTypes) {
@@ -96,6 +122,15 @@ final class MimeTypes implements MimeTypesInterface
         return $mimeTypes ?? self::REVERSE_MAP[$ext] ?? self::REVERSE_MAP[$lcExt ?? strtolower($ext)] ?? [];
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function isGuesserSupported(): bool
     {
         foreach ($this->guessers as $guesser) {
@@ -108,6 +143,14 @@ final class MimeTypes implements MimeTypesInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * The file is passed to each registered MIME type guesser in reverse order
      * of their registration (last registered is queried first). Once a guesser
      * returns a value that is not null, this method terminates and returns the

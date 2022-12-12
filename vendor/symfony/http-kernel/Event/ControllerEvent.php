@@ -28,8 +28,16 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 final class ControllerEvent extends KernelEvent
 {
     private string|array|object $controller;
+<<<<<<< HEAD
     private \ReflectionFunctionAbstract $controllerReflector;
     private array $attributes;
+=======
+<<<<<<< HEAD
+=======
+    private \ReflectionFunctionAbstract $controllerReflector;
+    private array $attributes;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     public function __construct(HttpKernelInterface $kernel, callable $controller, Request $request, ?int $requestType)
     {
@@ -43,6 +51,15 @@ final class ControllerEvent extends KernelEvent
         return $this->controller;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    public function setController(callable $controller): void
+    {
+        $this->controller = $controller;
+    }
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getControllerReflector(): \ReflectionFunctionAbstract
     {
         return $this->controllerReflector;
@@ -104,4 +121,8 @@ final class ControllerEvent extends KernelEvent
 
         return $this->attributes;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }

@@ -11,7 +11,14 @@
 
 namespace Symfony\Component\String\Slugger;
 
+<<<<<<< HEAD
 use Symfony\Component\Intl\Transliterator\EmojiTransliterator;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\Intl\Transliterator\EmojiTransliterator;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\String\AbstractUnicodeString;
 use Symfony\Component\String\UnicodeString;
 use Symfony\Contracts\Translation\LocaleAwareInterface;
@@ -59,7 +66,14 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
     private \Closure|array $symbolsMap = [
         'en' => ['@' => 'at', '&' => 'and'],
     ];
+<<<<<<< HEAD
     private bool|string $emoji = false;
+=======
+<<<<<<< HEAD
+=======
+    private bool|string $emoji = false;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /**
      * Cache of transliterators per locale.
@@ -74,17 +88,42 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         $this->symbolsMap = $symbolsMap ?? $this->symbolsMap;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function setLocale(string $locale)
     {
         $this->defaultLocale = $locale;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getLocale(): string
     {
         return $this->defaultLocale;
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param bool|string $emoji true will use the same locale,
      *                           false will disable emoji,
      *                           and a string to use a specific locale
@@ -101,6 +140,10 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         return $new;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function slug(string $string, string $separator = '-', string $locale = null): AbstractUnicodeString
     {
         $locale ??= $this->defaultLocale;
@@ -113,10 +156,19 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
             $transliterator = (array) $this->createTransliterator($locale);
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($emojiTransliterator = $this->createEmojiTransliterator($locale)) {
             $transliterator[] = $emojiTransliterator;
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($this->symbolsMap instanceof \Closure) {
             // If the symbols map is passed as a closure, there is no need to fallback to the parent locale
             // as the closure can just provide substitutions for all locales of interest.
@@ -175,6 +227,11 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         return $this->transliterators[$locale] = $this->transliterators[$parent] = $transliterator ?? null;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private function createEmojiTransliterator(?string $locale): ?EmojiTransliterator
     {
         if (\is_string($this->emoji)) {
@@ -194,6 +251,10 @@ class AsciiSlugger implements SluggerInterface, LocaleAwareInterface
         return null;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private static function getParentLocale(?string $locale): ?string
     {
         if (!$locale) {

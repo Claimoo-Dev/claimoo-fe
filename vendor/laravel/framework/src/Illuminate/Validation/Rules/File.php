@@ -275,7 +275,15 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     }
 
     /**
+<<<<<<< HEAD
      * Adds the given failures, and return false.
+=======
+<<<<<<< HEAD
+     * Add the given failures and return false.
+=======
+     * Adds the given failures, and return false.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      *
      * @param  array|string  $messages
      * @return bool

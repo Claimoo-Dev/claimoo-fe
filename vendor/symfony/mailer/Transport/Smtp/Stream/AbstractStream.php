@@ -75,7 +75,15 @@ abstract class AbstractStream
         }
 
         $line = fgets($this->out);
+<<<<<<< HEAD
         if ('' === $line || false === $line) {
+=======
+<<<<<<< HEAD
+        if ('' === $line) {
+=======
+        if ('' === $line || false === $line) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $metas = stream_get_meta_data($this->out);
             if ($metas['timed_out']) {
                 throw new TransportException(sprintf('Connection to "%s" timed out.', $this->getReadConnectionDescription()));

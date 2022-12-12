@@ -180,7 +180,14 @@ if (! function_exists('value')) {
      * Return the default value of the given value.
      *
      * @param  mixed  $value
+<<<<<<< HEAD
      * @param  mixed  $args
+=======
+<<<<<<< HEAD
+=======
+     * @param  mixed  $args
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @return mixed
      */
     function value($value, ...$args)

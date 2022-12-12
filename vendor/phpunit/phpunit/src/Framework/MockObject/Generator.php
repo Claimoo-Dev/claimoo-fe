@@ -27,7 +27,14 @@ use function interface_exists;
 use function is_array;
 use function is_object;
 use function md5;
+<<<<<<< HEAD
 use function method_exists;
+=======
+<<<<<<< HEAD
+=======
+use function method_exists;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use function mt_rand;
 use function preg_match;
 use function preg_match_all;
@@ -147,7 +154,14 @@ EOT;
      * @throws \PHPUnit\Framework\InvalidArgumentException
      * @throws ClassAlreadyExistsException
      * @throws ClassIsFinalException
+<<<<<<< HEAD
      * @throws ClassIsReadonlyException
+=======
+<<<<<<< HEAD
+=======
+     * @throws ClassIsReadonlyException
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
      * @throws OriginalConstructorInvocationRequiredException
@@ -188,7 +202,15 @@ EOT;
             } catch (\ReflectionException $e) {
                 throw new ReflectionException(
                     $e->getMessage(),
+<<<<<<< HEAD
                     $e->getCode(),
+=======
+<<<<<<< HEAD
+                    (int) $e->getCode(),
+=======
+                    $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     $e
                 );
             }
@@ -301,7 +323,14 @@ EOT;
      * @throws \PHPUnit\Framework\InvalidArgumentException
      * @throws ClassAlreadyExistsException
      * @throws ClassIsFinalException
+<<<<<<< HEAD
      * @throws ClassIsReadonlyException
+=======
+<<<<<<< HEAD
+=======
+     * @throws ClassIsReadonlyException
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
      * @throws OriginalConstructorInvocationRequiredException
@@ -320,7 +349,15 @@ EOT;
             } catch (\ReflectionException $e) {
                 throw new ReflectionException(
                     $e->getMessage(),
+<<<<<<< HEAD
                     $e->getCode(),
+=======
+<<<<<<< HEAD
+                    (int) $e->getCode(),
+=======
+                    $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     $e
                 );
             }
@@ -363,7 +400,14 @@ EOT;
      * @throws \PHPUnit\Framework\InvalidArgumentException
      * @throws ClassAlreadyExistsException
      * @throws ClassIsFinalException
+<<<<<<< HEAD
      * @throws ClassIsReadonlyException
+=======
+<<<<<<< HEAD
+=======
+     * @throws ClassIsReadonlyException
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
      * @throws OriginalConstructorInvocationRequiredException
@@ -446,7 +490,14 @@ EOT;
 
     /**
      * @throws ClassIsFinalException
+<<<<<<< HEAD
      * @throws ClassIsReadonlyException
+=======
+<<<<<<< HEAD
+=======
+     * @throws ClassIsReadonlyException
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws ReflectionException
      * @throws RuntimeException
      */
@@ -506,7 +557,15 @@ EOT;
         } catch (SoapFault $e) {
             throw new RuntimeException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }
@@ -593,7 +652,15 @@ EOT;
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }
@@ -623,7 +690,15 @@ EOT;
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }
@@ -653,7 +728,15 @@ EOT;
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }
@@ -683,7 +766,15 @@ EOT;
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }
@@ -720,7 +811,15 @@ EOT;
                 } catch (\ReflectionException $e) {
                     throw new ReflectionException(
                         $e->getMessage(),
+<<<<<<< HEAD
                         $e->getCode(),
+=======
+<<<<<<< HEAD
+                        (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                         $e
                     );
                 }
@@ -747,7 +846,15 @@ EOT;
                     } catch (\ReflectionException $e) {
                         throw new ReflectionException(
                             $e->getMessage(),
+<<<<<<< HEAD
                             $e->getCode(),
+=======
+<<<<<<< HEAD
+                            (int) $e->getCode(),
+=======
+                            $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                             $e
                         );
                     }
@@ -769,7 +876,14 @@ EOT;
 
     /**
      * @throws ClassIsFinalException
+<<<<<<< HEAD
      * @throws ClassIsReadonlyException
+=======
+<<<<<<< HEAD
+=======
+     * @throws ClassIsReadonlyException
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @throws ReflectionException
      * @throws RuntimeException
      */
@@ -815,7 +929,15 @@ EOT;
             } catch (\ReflectionException $e) {
                 throw new ReflectionException(
                     $e->getMessage(),
+<<<<<<< HEAD
                     $e->getCode(),
+=======
+<<<<<<< HEAD
+                    (int) $e->getCode(),
+=======
+                    $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     $e
                 );
             }
@@ -825,10 +947,19 @@ EOT;
                 throw new ClassIsFinalException($_mockClassName['fullClassName']);
             }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             if (method_exists($class, 'isReadOnly') && $class->isReadOnly()) {
                 throw new ClassIsReadonlyException($_mockClassName['fullClassName']);
             }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             // @see https://github.com/sebastianbergmann/phpunit/issues/2995
             if ($isInterface && $class->implementsInterface(Throwable::class)) {
                 $actualClassName        = Exception::class;
@@ -841,7 +972,15 @@ EOT;
                 } catch (\ReflectionException $e) {
                     throw new ReflectionException(
                         $e->getMessage(),
+<<<<<<< HEAD
                         $e->getCode(),
+=======
+<<<<<<< HEAD
+                        (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                         $e
                     );
                 }
@@ -857,7 +996,15 @@ EOT;
                         } catch (\ReflectionException $e) {
                             throw new ReflectionException(
                                 $e->getMessage(),
+<<<<<<< HEAD
                                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                                (int) $e->getCode(),
+=======
+                                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                                 $e
                             );
                         }
@@ -898,7 +1045,15 @@ EOT;
                 } catch (\ReflectionException $e) {
                     throw new ReflectionException(
                         $e->getMessage(),
+<<<<<<< HEAD
                         $e->getCode(),
+=======
+<<<<<<< HEAD
+                        (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                         $e
                     );
                 }
@@ -937,7 +1092,15 @@ EOT;
                     } catch (\ReflectionException $e) {
                         throw new ReflectionException(
                             $e->getMessage(),
+<<<<<<< HEAD
                             $e->getCode(),
+=======
+<<<<<<< HEAD
+                            (int) $e->getCode(),
+=======
+                            $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                             $e
                         );
                     }
@@ -1098,7 +1261,15 @@ EOT;
             } catch (TemplateException $e) {
                 throw new RuntimeException(
                     $e->getMessage(),
+<<<<<<< HEAD
                     $e->getCode(),
+=======
+<<<<<<< HEAD
+                    (int) $e->getCode(),
+=======
+                    $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     $e
                 );
             }

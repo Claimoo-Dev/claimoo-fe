@@ -55,6 +55,11 @@ trait HasRelationships
     protected static $relationResolvers = [];
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Get the dynamic relation resolver if defined or inherited, or return null.
      *
      * @param  string  $class
@@ -75,6 +80,10 @@ trait HasRelationships
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Define a dynamic relation resolver.
      *
      * @param  string  $name

@@ -19,8 +19,17 @@ class PruneBatchesCommand extends Command
      */
     protected $signature = 'queue:prune-batches
                 {--hours=24 : The number of hours to retain batch data}
+<<<<<<< HEAD
                 {--unfinished= : The number of hours to retain unfinished batch data }
                 {--cancelled= : The number of hours to retain cancelled batch data }';
+=======
+<<<<<<< HEAD
+                {--unfinished= : The number of hours to retain unfinished batch data }';
+=======
+                {--unfinished= : The number of hours to retain unfinished batch data }
+                {--cancelled= : The number of hours to retain cancelled batch data }';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /**
      * The name of the console command.
@@ -66,6 +75,11 @@ class PruneBatchesCommand extends Command
 
             $this->components->info("{$count} unfinished entries deleted.");
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if ($this->option('cancelled')) {
             $count = 0;
@@ -76,5 +90,9 @@ class PruneBatchesCommand extends Command
 
             $this->components->info("{$count} cancelled entries deleted.");
         }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

@@ -21,7 +21,14 @@
         "symfony/translation-contracts": "^2.3|^3.0"
     },
     "require-dev": {
+<<<<<<< HEAD
         "nikic/php-parser": "^4.13",
+=======
+<<<<<<< HEAD
+=======
+        "nikic/php-parser": "^4.13",
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         "symfony/config": "^5.4|^6.0",
         "symfony/console": "^5.4|^6.0",
         "symfony/dependency-injection": "^5.4|^6.0",
@@ -47,7 +54,14 @@
         "symfony/translation-implementation": "2.3|3.0"
     },
     "suggest": {
+<<<<<<< HEAD
         "nikic/php-parser": "To use PhpAstExtractor",
+=======
+<<<<<<< HEAD
+=======
+        "nikic/php-parser": "To use PhpAstExtractor",
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         "symfony/config": "",
         "symfony/yaml": "",
         "psr/log-implementation": "To use logging capability in translator"

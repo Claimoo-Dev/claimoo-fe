@@ -401,7 +401,15 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
      * Attempt to authenticate a user with credentials and additional callbacks.
      *
      * @param  array  $credentials
+<<<<<<< HEAD
      * @param  array|callable|null  $callbacks
+=======
+<<<<<<< HEAD
+     * @param  array|callable  $callbacks
+=======
+     * @param  array|callable|null  $callbacks
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @param  bool  $remember
      * @return bool
      */

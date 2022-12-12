@@ -38,7 +38,15 @@ final class EnumRequirement implements \Stringable
                     throw new InvalidArgumentException(sprintf('Case must be a "BackedEnum" instance, "%s" given.', get_debug_type($case)));
                 }
 
+<<<<<<< HEAD
                 $class ??= $case::class;
+=======
+<<<<<<< HEAD
+                $class ??= \get_class($case);
+=======
+                $class ??= $case::class;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
                 if (!$case instanceof $class) {
                     throw new InvalidArgumentException(sprintf('"%s::%s" is not a case of "%s".', get_debug_type($case), $case->name, $class));

@@ -16,11 +16,44 @@ namespace Symfony\Component\Console\Formatter;
  */
 final class NullOutputFormatterStyle implements OutputFormatterStyleInterface
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function apply(string $text): string
     {
         return $text;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+    public function setBackground(string $color = null): void
+    {
+        // do nothing
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setForeground(string $color = null): void
+    {
+        // do nothing
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function setBackground(string $color = null): void
     {
         if (1 > \func_num_args()) {
@@ -37,16 +70,38 @@ final class NullOutputFormatterStyle implements OutputFormatterStyleInterface
         // do nothing
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function setOption(string $option): void
     {
         // do nothing
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function setOptions(array $options): void
     {
         // do nothing
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function unsetOption(string $option): void
     {
         // do nothing

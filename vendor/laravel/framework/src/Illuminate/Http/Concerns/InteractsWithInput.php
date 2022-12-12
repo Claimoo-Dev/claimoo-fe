@@ -225,6 +225,11 @@ trait InteractsWithInput
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Apply the callback if the request is missing the given input item key.
      *
      * @param  string  $key
@@ -246,6 +251,10 @@ trait InteractsWithInput
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Determine if the given input key is an empty string for "has".
      *
      * @param  string  $key

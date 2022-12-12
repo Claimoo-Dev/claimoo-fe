@@ -6,7 +6,14 @@ use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Filesystem\Filesystem;
+<<<<<<< HEAD
 use Illuminate\Support\Str;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'env:encrypt')]
@@ -97,7 +104,15 @@ class EnvironmentEncryptCommand extends Command
         }
 
         try {
+<<<<<<< HEAD
             $encrypter = new Encrypter($this->parseKey($key), $cipher);
+=======
+<<<<<<< HEAD
+            $encrypter = new Encrypter($key, $cipher);
+=======
+            $encrypter = new Encrypter($this->parseKey($key), $cipher);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
             $this->files->put(
                 $encryptedFile,
@@ -117,6 +132,11 @@ class EnvironmentEncryptCommand extends Command
 
         $this->newLine();
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /**
      * Parse the encryption key.
@@ -132,4 +152,8 @@ class EnvironmentEncryptCommand extends Command
 
         return $key;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }

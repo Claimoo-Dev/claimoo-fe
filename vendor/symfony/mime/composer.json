@@ -22,19 +22,43 @@
     },
     "require-dev": {
         "egulias/email-validator": "^2.1.10|^3.1",
+<<<<<<< HEAD
         "league/html-to-markdown": "^5.0",
+=======
+<<<<<<< HEAD
+=======
+        "league/html-to-markdown": "^5.0",
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0",
         "symfony/dependency-injection": "^5.4|^6.0",
         "symfony/property-access": "^5.4|^6.0",
         "symfony/property-info": "^5.4|^6.0",
+<<<<<<< HEAD
         "symfony/serializer": "^6.2"
+=======
+<<<<<<< HEAD
+        "symfony/serializer": "^5.2|^6.0"
+=======
+        "symfony/serializer": "^6.2"
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     },
     "conflict": {
         "egulias/email-validator": "~3.0.0",
         "phpdocumentor/reflection-docblock": "<3.2.2",
         "phpdocumentor/type-resolver": "<1.4.0",
+<<<<<<< HEAD
         "symfony/mailer": "<5.4",
         "symfony/serializer": "<6.2"
+=======
+<<<<<<< HEAD
+        "symfony/mailer": "<5.4"
+=======
+        "symfony/mailer": "<5.4",
+        "symfony/serializer": "<6.2"
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     },
     "autoload": {
         "psr-4": { "Symfony\\Component\\Mime\\": "" },

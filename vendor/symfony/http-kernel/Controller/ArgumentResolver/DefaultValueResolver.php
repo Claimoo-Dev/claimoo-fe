@@ -13,7 +13,14 @@ namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 
 /**
@@ -21,6 +28,27 @@ use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
  *
  * @author Iltar van der Berg <kjarli@gmail.com>
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+final class DefaultValueResolver implements ArgumentValueResolverInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+        return $argument->hasDefaultValue() || (null !== $argument->getType() && $argument->isNullable() && !$argument->isVariadic());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function resolve(Request $request, ArgumentMetadata $argument): iterable
+    {
+        yield $argument->hasDefaultValue() ? $argument->getDefaultValue() : null;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 final class DefaultValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
 {
     /**
@@ -44,5 +72,9 @@ final class DefaultValueResolver implements ArgumentValueResolverInterface, Valu
         }
 
         return [];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

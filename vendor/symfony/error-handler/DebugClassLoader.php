@@ -21,7 +21,14 @@ use PHPUnit\Framework\MockObject\MockObject;
 use Prophecy\Prophecy\ProphecySubjectInterface;
 use ProxyManager\Proxy\ProxyInterface;
 use Symfony\Component\ErrorHandler\Internal\TentativeTypes;
+<<<<<<< HEAD
 use Symfony\Component\VarExporter\LazyObjectInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\VarExporter\LazyObjectInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 /**
  * Autoloader checking if the class is really defined in the file found.
@@ -251,7 +258,14 @@ class DebugClassLoader
                     && !is_subclass_of($symbols[$i], ProphecySubjectInterface::class)
                     && !is_subclass_of($symbols[$i], Proxy::class)
                     && !is_subclass_of($symbols[$i], ProxyInterface::class)
+<<<<<<< HEAD
                     && !is_subclass_of($symbols[$i], LazyObjectInterface::class)
+=======
+<<<<<<< HEAD
+=======
+                    && !is_subclass_of($symbols[$i], LazyObjectInterface::class)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     && !is_subclass_of($symbols[$i], LegacyProxy::class)
                     && !is_subclass_of($symbols[$i], MockInterface::class)
                     && !is_subclass_of($symbols[$i], IMock::class)
@@ -855,11 +869,20 @@ class DebugClassLoader
                 return;
             }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             if (!preg_match('/^(?:\\\\?[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*)+$/', $n)) {
                 // exclude any invalid PHP class name (e.g. `Cookie::SAMESITE_*`)
                 continue;
             }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             if (!isset($phpTypes[''])) {
                 $phpTypes[] = $n;
             }

@@ -5,12 +5,23 @@ const cameraOptions = document.querySelector('.video-options>select');
 const video = document.querySelector('video');
 const canvas = document.querySelector('canvas');
 const btnModal = document.querySelector('.btn-modal');
+const modal = document.querySelector('.modal');
 const buttons = [...controls.querySelectorAll('button')];
+const frame = document.querySelector('.frame');
+const depan = document.querySelector('.depan');
+const belakang = document.querySelector('.belakang');
+const sampingKananDepan = document.querySelector('.samping-kanan-depan');
+const sampingKiriDepan = document.querySelector('.samping-kiri-depan');
+const sampingKananBelakang = document.querySelector('.samping-kanan-belakang');
+const sampingKiriBelakang = document.querySelector('.samping-kiri-belakang');
+const lampuDepanKanan = document.querySelector('.lampu-depan-kanan');
+const lampuDepanKiri = document.querySelector('.lampu-depan-kiri');
+const lampuBelakangKanan = document.querySelector('.lampu-belakang-kanan');
+const lampuBelakangKiri = document.querySelector('.lampu-belakang-kiri');
 let streamStarted = false;
 
 const [play, pause, screenshot] = buttons;
 
-const frame = document.querySelector('.frame');
 
 const constraints = {
   video: {
@@ -28,6 +39,56 @@ const constraints = {
       exact: 'user'
     }
   }
+};
+
+depan.onclick = () => {
+  frame.src = "frame/innova/depan.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+belakang.onclick = () => {
+  frame.src = "frame/innova/belakang.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+sampingKananDepan.onclick = () => {
+  frame.src = "frame/innova/samping-kanan-depan.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+sampingKiriDepan.onclick = () => {
+  frame.src = "frame/innova/samping-kiri-depan.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+sampingKananBelakang.onclick = () => {
+  frame.src = "frame/innova/samping-kanan-belakang.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+sampingKiriBelakang.onclick = () => {
+  frame.src = "frame/innova/samping-kiri-belakang.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+lampuDepanKanan.onclick = () => {
+  frame.src = "frame/innova/lampu-depan-kanan.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+lampuDepanKiri.onclick = () => {
+  frame.src = "frame/innova/lampu-depan-kiri.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+lampuBelakangKanan.onclick = () => {
+  frame.src = "frame/innova/lampu-belakang-kanan.png";
+  $('#exampleModalCenter').modal('hide');
+};
+
+lampuBelakangKiri.onclick = () => {
+  frame.src = "frame/innova/lampu-belakang-kiri.png";
+  $('#exampleModalCenter').modal('hide');
 };
 
 play.onclick = () => {

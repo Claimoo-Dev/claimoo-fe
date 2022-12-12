@@ -1,6 +1,14 @@
 BSD 3-Clause License
 
+<<<<<<< HEAD
 Copyright (c) 2022, Colin O'Dell. All rights reserved.
+=======
+<<<<<<< HEAD
+Copyright (c) 2021, Colin O'Dell. All rights reserved.
+=======
+Copyright (c) 2022, Colin O'Dell. All rights reserved.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:

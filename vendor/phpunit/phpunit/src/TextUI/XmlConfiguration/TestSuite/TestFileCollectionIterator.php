@@ -16,8 +16,16 @@ use Iterator;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
+<<<<<<< HEAD
  *
  * @template-implements Iterator<int, TestFile>
+=======
+<<<<<<< HEAD
+=======
+ *
+ * @template-implements Iterator<int, TestFile>
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  */
 final class TestFileCollectionIterator implements Countable, Iterator
 {

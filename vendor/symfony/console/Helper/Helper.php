@@ -23,6 +23,22 @@ abstract class Helper implements HelperInterface
 {
     protected $helperSet = null;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+    public function setHelperSet(HelperSet $helperSet = null)
+    {
+        $this->helperSet = $helperSet;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function setHelperSet(HelperSet $helperSet = null)
     {
         if (1 > \func_num_args()) {
@@ -31,6 +47,10 @@ abstract class Helper implements HelperInterface
         $this->helperSet = $helperSet;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getHelperSet(): ?HelperSet
     {
         return $this->helperSet;

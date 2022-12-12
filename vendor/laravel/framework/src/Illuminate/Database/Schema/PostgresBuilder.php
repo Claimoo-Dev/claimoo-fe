@@ -48,7 +48,15 @@ class PostgresBuilder extends Builder
 
         $table = $this->connection->getTablePrefix().$table;
 
+<<<<<<< HEAD
         return count($this->connection->selectFromWriteConnection(
+=======
+<<<<<<< HEAD
+        return count($this->connection->select(
+=======
+        return count($this->connection->selectFromWriteConnection(
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $this->grammar->compileTableExists(), [$database, $schema, $table]
         )) > 0;
     }
@@ -187,7 +195,15 @@ class PostgresBuilder extends Builder
 
         $table = $this->connection->getTablePrefix().$table;
 
+<<<<<<< HEAD
         $results = $this->connection->selectFromWriteConnection(
+=======
+<<<<<<< HEAD
+        $results = $this->connection->select(
+=======
+        $results = $this->connection->selectFromWriteConnection(
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $this->grammar->compileColumnListing(), [$database, $schema, $table]
         );
 

@@ -72,7 +72,15 @@ final class Loader
         } catch (XmlException $e) {
             throw new Exception(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }
@@ -84,7 +92,15 @@ final class Loader
         } catch (XmlException $e) {
             throw new Exception(
                 $e->getMessage(),
+<<<<<<< HEAD
                 $e->getCode(),
+=======
+<<<<<<< HEAD
+                (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $e
             );
         }

@@ -253,7 +253,15 @@ class MailManager implements FactoryContract
             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
         }
 
+<<<<<<< HEAD
         return Arr::except($config, ['token']);
+=======
+<<<<<<< HEAD
+        return $config;
+=======
+        return Arr::except($config, ['token']);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**

@@ -13,6 +13,14 @@ namespace Symfony\Component\HttpFoundation\Session\Storage\Handler;
 
 use Doctrine\DBAL\DriverManager;
 use Symfony\Component\Cache\Adapter\AbstractAdapter;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use Symfony\Component\Cache\Traits\RedisClusterProxy;
+use Symfony\Component\Cache\Traits\RedisProxy;
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 /**
  * @author Nicolas Grekas <p@tchwork.com>
@@ -35,6 +43,14 @@ class SessionHandlerFactory
             case $connection instanceof \RedisArray:
             case $connection instanceof \RedisCluster:
             case $connection instanceof \Predis\ClientInterface:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            case $connection instanceof RedisProxy:
+            case $connection instanceof RedisClusterProxy:
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 return new RedisSessionHandler($connection);
 
             case $connection instanceof \Memcached:

@@ -17,16 +17,8 @@
         <video autoplay></video>
         <canvas class="d-none"></canvas>
 
-        <!-- <div class="video-options">
-            <select name="" id="" class="custom-select">
-                <option value="">Select camera</option>
-            </select>
-        </div> -->
-
-        <!-- <img class="screenshot-image d-none" alt=""> -->
-
         <div class="frame-parent">
-            <img class="frame d-none" src="frame/APV-granmax/granmax-belakang.png" alt="">
+            <img class="frame d-none" alt="">
         </div>
 
         <div class="controls">
@@ -37,52 +29,37 @@
                     data-feather="image"></i></button>
         </div>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-outline-primary btn-modal d-none" data-toggle="modal" data-target="#exampleModalCenter">
+        <button type="button" class="btn btn-outline-primary btn-modal d-none" data-toggle="modal"
+            data-target="#exampleModalCenter">
             Select Frame
         </button>
 
-        <!-- Modal -->
-        <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <!-- <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div> -->
                     <div class="modal-body">
-                        ...
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 depan">Depan</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 belakang">Belakang</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 samping-kanan-depan">Samping Kanan Depan</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 samping-kiri-depan">Samping Kiri Depan</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 samping-kanan-belakang">Samping Kanan Belakang</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 samping-kiri-belakang">Samping Kiri Belakang</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 lampu-depan-kanan">Lampu Depan Kanan</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 lampu-depan-kiri">Lampu Depan Kiri</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 lampu-belakang-kanan">Lampu Belakang Kanan</button>
+                        <button class="btn btn-outline-primary col-sm-12 mb-1 lampu-belakang-kiri">Lampu Belakang Kiri</button>
                     </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div> -->
                 </div>
             </div>
         </div>
-
-        <!-- <div class="video-options">
-            <select name="" id="" class="custom-select">
-                <option value="">Depan</option>
-                <option value="">Belakang</option>
-                <option value="">Samping Kanan Depan</option>
-                <option value="">Samping Kiri Depan</option>
-                <option value="">Samping Kanan Belakang</option>
-                <option value="">Samping Kiri Belakang</option>
-                <option value="">Lampu Depan Kanan</option>
-                <option value="">Lampu Depan Kiri</option>
-                <option value="">Lampu Belakang Kanan</option>
-                <option value="">Lampu Belakang Kanan</option>
-            </select>
-        </div> -->
     </div>
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
     <script src="script.js"></script>
 </body>
 

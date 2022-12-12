@@ -165,7 +165,15 @@ trait QueriesRelationships
      */
     public function withWhereHas($relation, Closure $callback = null, $operator = '>=', $count = 1)
     {
+<<<<<<< HEAD
         return $this->whereHas(Str::before($relation, ':'), $callback, $operator, $count)
+=======
+<<<<<<< HEAD
+        return $this->whereHas($relation, $callback, $operator, $count)
+=======
+        return $this->whereHas(Str::before($relation, ':'), $callback, $operator, $count)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             ->with($callback ? [$relation => fn ($query) => $callback($query)] : $relation);
     }
 

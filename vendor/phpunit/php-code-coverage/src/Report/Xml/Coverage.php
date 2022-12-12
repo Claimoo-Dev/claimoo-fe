@@ -37,7 +37,15 @@ final class Coverage
     {
         $this->contextNode = $context;
 
+<<<<<<< HEAD
         $this->writer = new XMLWriter;
+=======
+<<<<<<< HEAD
+        $this->writer = new XMLWriter();
+=======
+        $this->writer = new XMLWriter;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $this->writer->openMemory();
         $this->writer->startElementNS(null, $context->nodeName, 'https://schema.phpunit.de/coverage/1.0');
         $this->writer->writeAttribute('nr', $line);

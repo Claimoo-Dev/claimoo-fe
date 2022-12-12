@@ -128,6 +128,11 @@ abstract class AbstractUid implements \JsonSerializable
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Returns the identifier as a prefixed hexadecimal case insensitive string.
      */
     public function toHex(): string
@@ -136,6 +141,10 @@ abstract class AbstractUid implements \JsonSerializable
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Returns whether the argument is an AbstractUid and contains the same value as the current instance.
      */
     public function equals(mixed $other): bool

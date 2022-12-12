@@ -53,7 +53,15 @@ class BufferingLogger extends AbstractLogger
                     if (null === $val || \is_scalar($val) || (\is_object($val) && \is_callable([$val, '__toString']))) {
                         $message = str_replace("{{$key}}", $val, $message);
                     } elseif ($val instanceof \DateTimeInterface) {
+<<<<<<< HEAD
                         $message = str_replace("{{$key}}", $val->format(\DateTimeInterface::RFC3339), $message);
+=======
+<<<<<<< HEAD
+                        $message = str_replace("{{$key}}", $val->format(\DateTime::RFC3339), $message);
+=======
+                        $message = str_replace("{{$key}}", $val->format(\DateTimeInterface::RFC3339), $message);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     } elseif (\is_object($val)) {
                         $message = str_replace("{{$key}}", '[object '.get_debug_type($val).']', $message);
                     } else {
@@ -62,7 +70,15 @@ class BufferingLogger extends AbstractLogger
                 }
             }
 
+<<<<<<< HEAD
             error_log(sprintf('%s [%s] %s', date(\DateTimeInterface::RFC3339), $level, $message));
+=======
+<<<<<<< HEAD
+            error_log(sprintf('%s [%s] %s', date(\DateTime::RFC3339), $level, $message));
+=======
+            error_log(sprintf('%s [%s] %s', date(\DateTimeInterface::RFC3339), $level, $message));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
     }
 }

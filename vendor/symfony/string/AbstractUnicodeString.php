@@ -121,10 +121,23 @@ abstract class AbstractUnicodeString extends AbstractString
                     $s = preg_replace("/([AUO])\u{0308}(?=\p{Ll})/u", '$1e', $s);
                     $s = str_replace(["a\u{0308}", "o\u{0308}", "u\u{0308}", "A\u{0308}", "O\u{0308}", "U\u{0308}"], ['ae', 'oe', 'ue', 'AE', 'OE', 'UE'], $s);
                 } elseif (\function_exists('transliterator_transliterate')) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    if (null === $transliterator = self::$transliterators[$rule] ?? self::$transliterators[$rule] = \Transliterator::create($rule)) {
+                        if ('any-latin/bgn' === $rule) {
+                            $rule = 'any-latin';
+                            $transliterator = self::$transliterators[$rule] ?? self::$transliterators[$rule] = \Transliterator::create($rule);
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                     if (null === $transliterator = self::$transliterators[$rule] ??= \Transliterator::create($rule)) {
                         if ('any-latin/bgn' === $rule) {
                             $rule = 'any-latin';
                             $transliterator = self::$transliterators[$rule] ??= \Transliterator::create($rule);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                         }
 
                         if (null === $transliterator) {
@@ -234,7 +247,23 @@ abstract class AbstractUnicodeString extends AbstractString
 
         try {
             if (false === $match($regexp.'u', $this->string, $matches, $flags | \PREG_UNMATCHED_AS_NULL, $offset)) {
+<<<<<<< HEAD
                 throw new RuntimeException('Matching failed with error: '.preg_last_error_msg());
+=======
+<<<<<<< HEAD
+                $lastError = preg_last_error();
+
+                foreach (get_defined_constants(true)['pcre'] as $k => $v) {
+                    if ($lastError === $v && str_ends_with($k, '_ERROR')) {
+                        throw new RuntimeException('Matching failed with '.$k.'.');
+                    }
+                }
+
+                throw new RuntimeException('Matching failed with unknown error code.');
+=======
+                throw new RuntimeException('Matching failed with error: '.preg_last_error_msg());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             }
         } finally {
             restore_error_handler();
@@ -550,7 +579,17 @@ abstract class AbstractUnicodeString extends AbstractString
                 return -1;
             }
 
+<<<<<<< HEAD
             self::$tableZero ??= require __DIR__.'/Resources/data/wcswidth_table_zero.php';
+=======
+<<<<<<< HEAD
+            if (null === self::$tableZero) {
+                self::$tableZero = require __DIR__.'/Resources/data/wcswidth_table_zero.php';
+            }
+=======
+            self::$tableZero ??= require __DIR__.'/Resources/data/wcswidth_table_zero.php';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
             if ($codePoint >= self::$tableZero[0][0] && $codePoint <= self::$tableZero[$ubound = \count(self::$tableZero) - 1][1]) {
                 $lbound = 0;
@@ -567,7 +606,17 @@ abstract class AbstractUnicodeString extends AbstractString
                 }
             }
 
+<<<<<<< HEAD
             self::$tableWide ??= require __DIR__.'/Resources/data/wcswidth_table_wide.php';
+=======
+<<<<<<< HEAD
+            if (null === self::$tableWide) {
+                self::$tableWide = require __DIR__.'/Resources/data/wcswidth_table_wide.php';
+            }
+=======
+            self::$tableWide ??= require __DIR__.'/Resources/data/wcswidth_table_wide.php';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
             if ($codePoint >= self::$tableWide[0][0] && $codePoint <= self::$tableWide[$ubound = \count(self::$tableWide) - 1][1]) {
                 $lbound = 0;

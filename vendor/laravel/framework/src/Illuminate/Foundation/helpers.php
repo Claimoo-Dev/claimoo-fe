@@ -681,6 +681,11 @@ if (! function_exists('report')) {
     }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 if (! function_exists('report_if')) {
     /**
      * Report an exception if the given condition is true.
@@ -713,6 +718,10 @@ if (! function_exists('report_unless')) {
     }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 if (! function_exists('request')) {
     /**
      * Get an instance of the current request or an input item from the request.

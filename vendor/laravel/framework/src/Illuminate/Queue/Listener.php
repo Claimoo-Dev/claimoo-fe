@@ -88,10 +88,19 @@ class Listener
 
         while (true) {
             $this->runProcess($process, $options->memory);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
             if ($options->rest) {
                 sleep($options->rest);
             }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
     }
 
@@ -177,7 +186,17 @@ class Listener
     public function runProcess(Process $process, $memory)
     {
         $process->run(function ($type, $line) {
+<<<<<<< HEAD
             $this->handleWorkerOutput($type, $line);
+=======
+<<<<<<< HEAD
+            if (! str($line)->contains('Processing jobs from the')) {
+                $this->handleWorkerOutput($type, $line);
+            }
+=======
+            $this->handleWorkerOutput($type, $line);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         });
 
         // Once we have run the job we'll go check if the memory limit has been exceeded

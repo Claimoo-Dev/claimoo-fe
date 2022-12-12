@@ -16,11 +16,25 @@ namespace Symfony\Component\Uid;
  *
  * @author Grégoire Pineau <lyrixx@lyrixx.info>
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class UuidV1 extends Uuid
+{
+    protected const TYPE = 1;
+
+    private static ?string $clockSeq = null;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 class UuidV1 extends Uuid implements TimeBasedUidInterface
 {
     protected const TYPE = 1;
 
     private static string $clockSeq;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     public function __construct(string $uuid = null)
     {
@@ -49,6 +63,18 @@ class UuidV1 extends Uuid implements TimeBasedUidInterface
             if ($node) {
                 // use clock_seq from the node
                 $seq = substr($node->uid, 19, 4);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            } else {
+                // generate a static random clock_seq to prevent any collisions with the real one
+                $seq = substr($uuid, 19, 4);
+
+                while (null === self::$clockSeq || $seq === self::$clockSeq) {
+                    self::$clockSeq = sprintf('%04x', random_int(0, 0x3FFF) | 0x8000);
+                }
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             } elseif (!$seq = self::$clockSeq ?? '') {
                 // generate a static random clock_seq to prevent any collisions with the real one
                 $seq = substr($uuid, 19, 4);
@@ -56,6 +82,10 @@ class UuidV1 extends Uuid implements TimeBasedUidInterface
                 do {
                     self::$clockSeq = sprintf('%04x', random_int(0, 0x3FFF) | 0x8000);
                 } while ($seq === self::$clockSeq);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
                 $seq = self::$clockSeq;
             }

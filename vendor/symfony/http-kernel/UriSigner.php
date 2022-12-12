@@ -27,7 +27,15 @@ class UriSigner
      * @param string $secret    A secret
      * @param string $parameter Query string parameter to use
      */
+<<<<<<< HEAD
     public function __construct(#[\SensitiveParameter] string $secret, string $parameter = '_hash')
+=======
+<<<<<<< HEAD
+    public function __construct(string $secret, string $parameter = '_hash')
+=======
+    public function __construct(#[\SensitiveParameter] string $secret, string $parameter = '_hash')
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         $this->secret = $secret;
         $this->parameter = $parameter;
@@ -42,10 +50,23 @@ class UriSigner
     public function sign(string $uri): string
     {
         $url = parse_url($uri);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (isset($url['query'])) {
+            parse_str($url['query'], $params);
+        } else {
+            $params = [];
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $params = [];
 
         if (isset($url['query'])) {
             parse_str($url['query'], $params);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $uri = $this->buildUrl($url, $params);
@@ -60,10 +81,23 @@ class UriSigner
     public function check(string $uri): bool
     {
         $url = parse_url($uri);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (isset($url['query'])) {
+            parse_str($url['query'], $params);
+        } else {
+            $params = [];
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $params = [];
 
         if (isset($url['query'])) {
             parse_str($url['query'], $params);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         if (empty($params[$this->parameter])) {
@@ -101,7 +135,15 @@ class UriSigner
         $pass = isset($url['pass']) ? ':'.$url['pass'] : '';
         $pass = ($user || $pass) ? "$pass@" : '';
         $path = $url['path'] ?? '';
+<<<<<<< HEAD
         $query = $url['query'] ? '?'.$url['query'] : '';
+=======
+<<<<<<< HEAD
+        $query = isset($url['query']) && $url['query'] ? '?'.$url['query'] : '';
+=======
+        $query = $url['query'] ? '?'.$url['query'] : '';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $fragment = isset($url['fragment']) ? '#'.$url['fragment'] : '';
 
         return $scheme.$user.$pass.$host.$port.$path.$query.$fragment;

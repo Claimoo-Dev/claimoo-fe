@@ -13,6 +13,13 @@ namespace Symfony\Component\Mime\Part;
 
 use Symfony\Component\Mime\Exception\InvalidArgumentException;
 use Symfony\Component\Mime\Header\Headers;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use Symfony\Component\Mime\MimeTypes;
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 /**
  * @author Fabien Potencier <fabien@symfony.com>
@@ -22,22 +29,52 @@ class DataPart extends TextPart
     /** @internal */
     protected $_parent;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private static $mimeTypes;
+
+    private $filename;
+    private $mediaType;
+    private $cid;
+    private $handle;
+
+    /**
+     * @param resource|string $body
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private $filename;
     private $mediaType;
     private $cid;
 
     /**
      * @param resource|string|File $body Use a File instance to defer loading the file until rendering
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     public function __construct($body, string $filename = null, string $contentType = null, string $encoding = null)
     {
         unset($this->_parent);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (null === $contentType) {
+            $contentType = 'application/octet-stream';
+        }
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if ($body instanceof File && !$filename) {
             $filename = $body->getFilename();
         }
 
         $contentType ??= $body instanceof File ? $body->getContentType() : 'application/octet-stream';
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         [$this->mediaType, $subtype] = explode('/', $contentType);
 
         parent::__construct($body, null, $subtype, $encoding);
@@ -51,7 +88,40 @@ class DataPart extends TextPart
 
     public static function fromPath(string $path, string $name = null, string $contentType = null): self
     {
+<<<<<<< HEAD
         return new self(new File($path), $name, $contentType);
+=======
+<<<<<<< HEAD
+        if (null === $contentType) {
+            $ext = strtolower(substr($path, strrpos($path, '.') + 1));
+            if (null === self::$mimeTypes) {
+                self::$mimeTypes = new MimeTypes();
+            }
+            $contentType = self::$mimeTypes->getMimeTypes($ext)[0] ?? 'application/octet-stream';
+        }
+
+        if ((is_file($path) && !is_readable($path)) || is_dir($path)) {
+            throw new InvalidArgumentException(sprintf('Path "%s" is not readable.', $path));
+        }
+
+        if (false === $handle = @fopen($path, 'r', false)) {
+            throw new InvalidArgumentException(sprintf('Unable to open path "%s".', $path));
+        }
+
+        if (!is_file($path)) {
+            $cache = fopen('php://temp', 'r+');
+            stream_copy_to_stream($handle, $cache);
+            $handle = $cache;
+        }
+
+        $p = new self($handle, $name ?: basename($path), $contentType);
+        $p->handle = $handle;
+
+        return $p;
+=======
+        return new self(new File($path), $name, $contentType);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     /**
@@ -62,6 +132,11 @@ class DataPart extends TextPart
         return $this->setDisposition('inline');
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     /**
      * @return $this
      */
@@ -76,6 +151,10 @@ class DataPart extends TextPart
         return $this;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function getContentId(): string
     {
         return $this->cid ?: $this->cid = $this->generateContentId();
@@ -131,6 +210,19 @@ class DataPart extends TextPart
         return bin2hex(random_bytes(16)).'@symfony';
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    public function __destruct()
+    {
+        if (null !== $this->handle && \is_resource($this->handle)) {
+            fclose($this->handle);
+        }
+    }
+
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function __sleep(): array
     {
         // converts the body to a string

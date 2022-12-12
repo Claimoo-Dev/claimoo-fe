@@ -9,6 +9,18 @@ use Illuminate\Support\Reflector;
 use InvalidArgumentException;
 
 /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ * @method \Illuminate\Routing\Route get(string $uri, \Closure|array|string|null $action = null)
+ * @method \Illuminate\Routing\Route post(string $uri, \Closure|array|string|null $action = null)
+ * @method \Illuminate\Routing\Route put(string $uri, \Closure|array|string|null $action = null)
+ * @method \Illuminate\Routing\Route delete(string $uri, \Closure|array|string|null $action = null)
+ * @method \Illuminate\Routing\Route patch(string $uri, \Closure|array|string|null $action = null)
+ * @method \Illuminate\Routing\Route options(string $uri, \Closure|array|string|null $action = null)
+ * @method \Illuminate\Routing\Route any(string $uri, \Closure|array|string|null $action = null)
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  * @method \Illuminate\Routing\Route any(string $uri, \Closure|array|string|null $action = null)
  * @method \Illuminate\Routing\Route delete(string $uri, \Closure|array|string|null $action = null)
  * @method \Illuminate\Routing\Route get(string $uri, \Closure|array|string|null $action = null)
@@ -16,6 +28,10 @@ use InvalidArgumentException;
  * @method \Illuminate\Routing\Route patch(string $uri, \Closure|array|string|null $action = null)
  * @method \Illuminate\Routing\Route post(string $uri, \Closure|array|string|null $action = null)
  * @method \Illuminate\Routing\Route put(string $uri, \Closure|array|string|null $action = null)
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  * @method \Illuminate\Routing\RouteRegistrar as(string $value)
  * @method \Illuminate\Routing\RouteRegistrar controller(string $controller)
  * @method \Illuminate\Routing\RouteRegistrar domain(string $value)
@@ -156,6 +172,11 @@ class RouteRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Route a singleton resource to a controller.
      *
      * @param  string  $name
@@ -182,6 +203,10 @@ class RouteRegistrar
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * Create a route group with shared attributes.
      *
      * @param  \Closure|string  $callback

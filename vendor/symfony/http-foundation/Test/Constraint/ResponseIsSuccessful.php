@@ -16,6 +16,15 @@ use Symfony\Component\HttpFoundation\Response;
 
 final class ResponseIsSuccessful extends Constraint
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function toString(): string
     {
         return 'is successful';
@@ -23,6 +32,14 @@ final class ResponseIsSuccessful extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function matches($response): bool
     {
@@ -31,6 +48,14 @@ final class ResponseIsSuccessful extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function failureDescription($response): string
     {
@@ -39,6 +64,14 @@ final class ResponseIsSuccessful extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function additionalFailureDescription($response): string
     {

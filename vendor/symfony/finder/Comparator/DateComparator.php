@@ -30,7 +30,15 @@ class DateComparator extends Comparator
         }
 
         try {
+<<<<<<< HEAD
             $date = new \DateTimeImmutable($matches[2]);
+=======
+<<<<<<< HEAD
+            $date = new \DateTime($matches[2]);
+=======
+            $date = new \DateTimeImmutable($matches[2]);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $target = $date->format('U');
         } catch (\Exception) {
             throw new \InvalidArgumentException(sprintf('"%s" is not a valid date.', $matches[2]));

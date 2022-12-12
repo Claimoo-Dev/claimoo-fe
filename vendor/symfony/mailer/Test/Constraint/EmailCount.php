@@ -27,6 +27,15 @@ final class EmailCount extends Constraint
         $this->queued = $queued;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function toString(): string
     {
         return sprintf('%shas %s "%d" emails', $this->transport ? $this->transport.' ' : '', $this->queued ? 'queued' : 'sent', $this->expectedValue);
@@ -34,6 +43,14 @@ final class EmailCount extends Constraint
 
     /**
      * @param MessageEvents $events
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function matches($events): bool
     {
@@ -42,6 +59,14 @@ final class EmailCount extends Constraint
 
     /**
      * @param MessageEvents $events
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     *
+     * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      */
     protected function failureDescription($events): string
     {

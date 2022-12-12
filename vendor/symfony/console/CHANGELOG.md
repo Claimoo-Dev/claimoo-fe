@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 6.2
 ---
 
@@ -10,15 +15,30 @@ CHANGELOG
  * Change the signature of `OutputFormatterStyleInterface::setForeground/setBackground()` to `setForeground/setBackground(?string)`
  * Change the signature of `HelperInterface::setHelperSet()` to `setHelperSet(?HelperSet)`
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 6.1
 ---
 
  * Add support to display table vertically when calling setVertical()
  * Add method `__toString()` to `InputInterface`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ * Deprecate `Command::$defaultName` and `Command::$defaultDescription`, use the `AsCommand` attribute instead
+ * Add suggested values for arguments and options in input definition, for input completion
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
  * Added `OutputWrapper` to prevent truncated URL in `SymfonyStyle::createBlock`.
  * Deprecate `Command::$defaultName` and `Command::$defaultDescription`, use the `AsCommand` attribute instead
  * Add suggested values for arguments and options in input definition, for input completion
  * Add `$resumeAt` parameter to `ProgressBar#start()`, so that one can easily 'resume' progress on longer tasks, and still get accurate `getEstimate()` and `getRemaining()` results.
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 6.0
 ---

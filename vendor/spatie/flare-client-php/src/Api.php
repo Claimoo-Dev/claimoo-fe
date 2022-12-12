@@ -32,7 +32,16 @@ class Api
     public function report(Report $report): void
     {
         try {
+<<<<<<< HEAD
             $this->sendReportsImmediately
+=======
+<<<<<<< HEAD
+            /** @phpstan-ignore-next-line */
+            $this->sendReportsImmediately()
+=======
+            $this->sendReportsImmediately
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 ? $this->sendReportToApi($report)
                 : $this->addReportToQueue($report);
         } catch (Exception $e) {

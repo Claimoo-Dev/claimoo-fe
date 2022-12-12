@@ -44,7 +44,14 @@ final class Mailer implements MailerInterface
             return;
         }
 
+<<<<<<< HEAD
         $stamps = [];
+=======
+<<<<<<< HEAD
+=======
+        $stamps = [];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (null !== $this->dispatcher) {
             // The dispatched event here has `queued` set to `true`; the goal is NOT to render the message, but to let
             // listeners do something before a message is sent to the queue.
@@ -55,11 +62,24 @@ final class Mailer implements MailerInterface
             $clonedEnvelope = null !== $envelope ? clone $envelope : Envelope::create($clonedMessage);
             $event = new MessageEvent($clonedMessage, $clonedEnvelope, (string) $this->transport, true);
             $this->dispatcher->dispatch($event);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+
+        try {
+            $this->bus->dispatch(new SendEmailMessage($message, $envelope));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $stamps = $event->getStamps();
         }
 
         try {
             $this->bus->dispatch(new SendEmailMessage($message, $envelope), $stamps);
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         } catch (HandlerFailedException $e) {
             foreach ($e->getNestedExceptions() as $nested) {
                 if ($nested instanceof TransportExceptionInterface) {

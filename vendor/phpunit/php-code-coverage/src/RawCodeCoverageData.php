@@ -15,12 +15,23 @@ use function array_flip;
 use function array_intersect;
 use function array_intersect_key;
 use function count;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use function in_array;
+use function range;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use function explode;
 use function file_get_contents;
 use function in_array;
 use function is_file;
 use function range;
 use function trim;
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use SebastianBergmann\CodeCoverage\Driver\Driver;
 use SebastianBergmann\CodeCoverage\StaticAnalysis\FileAnalyser;
 

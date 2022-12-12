@@ -14,15 +14,31 @@ namespace Symfony\Component\HttpKernel\Log;
 use Psr\Log\AbstractLogger;
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LogLevel;
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
 /**
  * Minimalist PSR-3 logger designed to write in stderr or any other stream.
  *
  * @author Kévin Dunglas <dunglas@gmail.com>
  */
+<<<<<<< HEAD
 class Logger extends AbstractLogger implements DebugLoggerInterface
+=======
+<<<<<<< HEAD
+class Logger extends AbstractLogger
+=======
+class Logger extends AbstractLogger implements DebugLoggerInterface
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 {
     private const LEVELS = [
         LogLevel::DEBUG => 0,
@@ -34,6 +50,14 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
         LogLevel::ALERT => 6,
         LogLevel::EMERGENCY => 7,
     ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    private int $minLevelIndex;
+    private \Closure $formatter;
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     private const PRIORITIES = [
         LogLevel::DEBUG => 100,
         LogLevel::INFO => 200,
@@ -50,6 +74,10 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
     private bool $debug = false;
     private array $logs = [];
     private array $errorCount = [];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     /** @var resource|null */
     private $handle;
@@ -57,12 +85,35 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
     /**
      * @param string|resource|null $output
      */
+<<<<<<< HEAD
     public function __construct(string $minLevel = null, $output = null, callable $formatter = null, private readonly ?RequestStack $requestStack = null)
+=======
+<<<<<<< HEAD
+    public function __construct(string $minLevel = null, $output = null, callable $formatter = null)
+=======
+    public function __construct(string $minLevel = null, $output = null, callable $formatter = null, private readonly ?RequestStack $requestStack = null)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     {
         if (null === $minLevel) {
             $minLevel = null === $output || 'php://stdout' === $output || 'php://stderr' === $output ? LogLevel::ERROR : LogLevel::WARNING;
 
             if (isset($_ENV['SHELL_VERBOSITY']) || isset($_SERVER['SHELL_VERBOSITY'])) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                switch ((int) ($_ENV['SHELL_VERBOSITY'] ?? $_SERVER['SHELL_VERBOSITY'])) {
+                    case -1: $minLevel = LogLevel::ERROR;
+                        break;
+                    case 1: $minLevel = LogLevel::NOTICE;
+                        break;
+                    case 2: $minLevel = LogLevel::INFO;
+                        break;
+                    case 3: $minLevel = LogLevel::DEBUG;
+                        break;
+                }
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 $minLevel = match ((int) ($_ENV['SHELL_VERBOSITY'] ?? $_SERVER['SHELL_VERBOSITY'])) {
                     -1 => LogLevel::ERROR,
                     1 => LogLevel::NOTICE,
@@ -70,6 +121,10 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
                     3 => LogLevel::DEBUG,
                     default => $minLevel,
                 };
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             }
         }
 
@@ -84,11 +139,23 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function enableDebug(): void
     {
         $this->debug = true;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function log($level, $message, array $context = []): void
     {
         if (!isset(self::LEVELS[$level])) {
@@ -105,6 +172,11 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
         } else {
             error_log($formatter($level, $message, $context, false));
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         if ($this->debug && $this->requestStack) {
             $this->record($level, $message, $context);
@@ -133,6 +205,10 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
     {
         $this->logs = [];
         $this->errorCount = [];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 
     private function format(string $level, string $message, array $context, bool $prefixDate = true): string
@@ -143,9 +219,21 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
                 if (null === $val || \is_scalar($val) || $val instanceof \Stringable) {
                     $replacements["{{$key}}"] = $val;
                 } elseif ($val instanceof \DateTimeInterface) {
+<<<<<<< HEAD
                     $replacements["{{$key}}"] = $val->format(\DateTimeInterface::RFC3339);
                 } elseif (\is_object($val)) {
                     $replacements["{{$key}}"] = '[object '.$val::class.']';
+=======
+<<<<<<< HEAD
+                    $replacements["{{$key}}"] = $val->format(\DateTime::RFC3339);
+                } elseif (\is_object($val)) {
+                    $replacements["{{$key}}"] = '[object '.\get_class($val).']';
+=======
+                    $replacements["{{$key}}"] = $val->format(\DateTimeInterface::RFC3339);
+                } elseif (\is_object($val)) {
+                    $replacements["{{$key}}"] = '[object '.$val::class.']';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                 } else {
                     $replacements["{{$key}}"] = '['.\gettype($val).']';
                 }
@@ -156,11 +244,24 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
 
         $log = sprintf('[%s] %s', $level, $message);
         if ($prefixDate) {
+<<<<<<< HEAD
             $log = date(\DateTimeInterface::RFC3339).' '.$log;
+=======
+<<<<<<< HEAD
+            $log = date(\DateTime::RFC3339).' '.$log;
+=======
+            $log = date(\DateTimeInterface::RFC3339).' '.$log;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         return $log;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     private function record($level, $message, array $context): void
     {
@@ -186,4 +287,8 @@ class Logger extends AbstractLogger implements DebugLoggerInterface
                 ++$this->errorCount[$key];
         }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 }

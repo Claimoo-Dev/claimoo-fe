@@ -15,7 +15,14 @@ use Psr\Container\ContainerInterface;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 
 /**
@@ -23,7 +30,15 @@ use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
  *
  * @author Simeon Kolev <simeon.kolev9@gmail.com>
  */
+<<<<<<< HEAD
 final class NotTaggedControllerValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
+=======
+<<<<<<< HEAD
+final class NotTaggedControllerValueResolver implements ArgumentValueResolverInterface
+=======
+final class NotTaggedControllerValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 {
     private ContainerInterface $container;
 
@@ -33,12 +48,25 @@ final class NotTaggedControllerValueResolver implements ArgumentValueResolverInt
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * {@inheritdoc}
+     */
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
      * @deprecated since Symfony 6.2, use resolve() instead
      */
     public function supports(Request $request, ArgumentMetadata $argument): bool
     {
         @trigger_deprecation('symfony/http-kernel', '6.2', 'The "%s()" method is deprecated, use "resolve()" instead.', __METHOD__);
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         $controller = $request->attributes->get('_controller');
 
         if (\is_array($controller) && \is_callable($controller, true) && \is_string($controller[0])) {
@@ -58,6 +86,18 @@ final class NotTaggedControllerValueResolver implements ArgumentValueResolverInt
         return false === $this->container->has($controller);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+    public function resolve(Request $request, ArgumentMetadata $argument): iterable
+    {
+        if (\is_array($controller = $request->attributes->get('_controller'))) {
+            $controller = $controller[0].'::'.$controller[1];
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function resolve(Request $request, ArgumentMetadata $argument): array
     {
         $controller = $request->attributes->get('_controller');
@@ -66,6 +106,10 @@ final class NotTaggedControllerValueResolver implements ArgumentValueResolverInt
             $controller = $controller[0].'::'.$controller[1];
         } elseif (!\is_string($controller) || '' === $controller) {
             return [];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         if ('\\' === $controller[0]) {
@@ -73,6 +117,13 @@ final class NotTaggedControllerValueResolver implements ArgumentValueResolverInt
         }
 
         if (!$this->container->has($controller)) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $i = strrpos($controller, ':');
+            $controller = substr($controller, 0, $i).strtolower(substr($controller, $i));
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $controller = (false !== $i = strrpos($controller, ':'))
                 ? substr($controller, 0, $i).strtolower(substr($controller, $i))
                 : $controller.'::__invoke';
@@ -80,6 +131,10 @@ final class NotTaggedControllerValueResolver implements ArgumentValueResolverInt
 
         if ($this->container->has($controller)) {
             return [];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         }
 
         $what = sprintf('argument $%s of "%s()"', $argument->getName(), $controller);

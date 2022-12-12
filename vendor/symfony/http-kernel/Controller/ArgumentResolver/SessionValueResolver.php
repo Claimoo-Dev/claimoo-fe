@@ -14,7 +14,14 @@ namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+=======
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 
 /**
@@ -22,6 +29,18 @@ use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
  *
  * @author Iltar van der Berg <kjarli@gmail.com>
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+final class SessionValueResolver implements ArgumentValueResolverInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 final class SessionValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
 {
     /**
@@ -31,6 +50,10 @@ final class SessionValueResolver implements ArgumentValueResolverInterface, Valu
     {
         @trigger_deprecation('symfony/http-kernel', '6.2', 'The "%s()" method is deprecated, use "resolve()" instead.', __METHOD__);
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (!$request->hasSession()) {
             return false;
         }
@@ -43,6 +66,17 @@ final class SessionValueResolver implements ArgumentValueResolverInterface, Valu
         return $request->getSession() instanceof $type;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+    public function resolve(Request $request, ArgumentMetadata $argument): iterable
+    {
+        yield $request->getSession();
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function resolve(Request $request, ArgumentMetadata $argument): array
     {
         if (!$request->hasSession()) {
@@ -55,5 +89,9 @@ final class SessionValueResolver implements ArgumentValueResolverInterface, Valu
         }
 
         return $request->getSession() instanceof $type ? [$request->getSession()] : [];
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     }
 }

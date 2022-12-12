@@ -11,7 +11,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+<<<<<<< HEAD
 use Illuminate\Support\Enumerable;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Enumerable;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\ForwardsCalls;
@@ -329,12 +336,21 @@ abstract class Factory
 
             $model->save();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             foreach ($model->getRelations() as $name => $items) {
                 if ($items instanceof Enumerable && $items->isEmpty()) {
                     $model->unsetRelation($name);
                 }
             }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             $this->createChildren($model);
         });
     }

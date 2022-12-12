@@ -34,6 +34,15 @@ class Parser implements ParserInterface
         $this->tokenizer = $tokenizer ?? new Tokenizer();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function parse(string $source): array
     {
         $reader = new Reader($source);
@@ -239,7 +248,15 @@ class Parser implements ParserInterface
                         }
                     }
 
+<<<<<<< HEAD
                     if (!$arguments) {
+=======
+<<<<<<< HEAD
+                    if (empty($arguments)) {
+=======
+                    if (!$arguments) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
                         throw SyntaxErrorException::unexpectedToken('at least one argument', $next);
                     }
 

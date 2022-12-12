@@ -36,6 +36,15 @@ class FileBinaryMimeTypeGuesser implements MimeTypeGuesserInterface
         $this->cmd = $cmd;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function isGuesserSupported(): bool
     {
         static $supported = null;
@@ -55,6 +64,15 @@ class FileBinaryMimeTypeGuesser implements MimeTypeGuesserInterface
         return $supported = 0 === $exitStatus && '' !== $binPath;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    /**
+     * {@inheritdoc}
+     */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public function guessMimeType(string $path): ?string
     {
         if (!is_file($path) || !is_readable($path)) {

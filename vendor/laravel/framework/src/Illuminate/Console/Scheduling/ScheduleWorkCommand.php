@@ -44,7 +44,15 @@ class ScheduleWorkCommand extends Command
     {
         $this->components->info('Running schedule tasks every minute.');
 
+<<<<<<< HEAD
         [$lastExecutionStartedAt, $executions] = [null, []];
+=======
+<<<<<<< HEAD
+        [$lastExecutionStartedAt, $keyOfLastExecutionWithOutput, $executions] = [null, null, []];
+=======
+        [$lastExecutionStartedAt, $executions] = [null, []];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
         while (true) {
             usleep(100 * 1000);

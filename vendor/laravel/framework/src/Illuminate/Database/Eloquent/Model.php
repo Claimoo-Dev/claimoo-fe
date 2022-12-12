@@ -2314,7 +2314,15 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
             return $this->$method(...$parameters);
         }
 
+<<<<<<< HEAD
         if ($resolver = ($this->relationResolver(static::class, $method))) {
+=======
+<<<<<<< HEAD
+        if ($resolver = (static::$relationResolvers[get_class($this)][$method] ?? null)) {
+=======
+        if ($resolver = ($this->relationResolver(static::class, $method))) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             return $resolver($this);
         }
 

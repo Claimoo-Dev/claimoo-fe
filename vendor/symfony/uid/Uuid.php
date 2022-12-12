@@ -25,7 +25,14 @@ class Uuid extends AbstractUid
 
     protected const TYPE = 0;
     protected const NIL = '00000000-0000-0000-0000-000000000000';
+<<<<<<< HEAD
     protected const MAX = 'ffffffff-ffff-ffff-ffff-ffffffffffff';
+=======
+<<<<<<< HEAD
+=======
+    protected const MAX = 'ffffffff-ffff-ffff-ffff-ffffffffffff';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 
     public function __construct(string $uuid, bool $checkVariant = false)
     {
@@ -69,10 +76,19 @@ class Uuid extends AbstractUid
             return new NilUuid();
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (self::MAX === $uuid = strtr($uuid, 'F', 'f')) {
             return new MaxUuid();
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
         if (!\in_array($uuid[19], ['8', '9', 'a', 'b', 'A', 'B'], true)) {
             return new self($uuid);
         }
@@ -83,8 +99,16 @@ class Uuid extends AbstractUid
             UuidV4::TYPE => new UuidV4($uuid),
             UuidV5::TYPE => new UuidV5($uuid),
             UuidV6::TYPE => new UuidV6($uuid),
+<<<<<<< HEAD
             UuidV7::TYPE => new UuidV7($uuid),
             UuidV8::TYPE => new UuidV8($uuid),
+=======
+<<<<<<< HEAD
+=======
+            UuidV7::TYPE => new UuidV7($uuid),
+            UuidV8::TYPE => new UuidV8($uuid),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
             default => new self($uuid),
         };
     }
@@ -120,6 +144,11 @@ class Uuid extends AbstractUid
         return new UuidV6();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     final public static function v7(): UuidV7
     {
         return new UuidV7();
@@ -130,6 +159,10 @@ class Uuid extends AbstractUid
         return new UuidV8($uuid);
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
     public static function isValid(string $uuid): bool
     {
         if (!preg_match('{^[0-9a-f]{8}(?:-[0-9a-f]{4}){2}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$}Di', $uuid)) {

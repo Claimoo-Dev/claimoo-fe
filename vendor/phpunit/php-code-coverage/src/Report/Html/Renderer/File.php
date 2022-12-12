@@ -80,8 +80,16 @@ use const T_WHILE;
 use const T_YIELD;
 use const T_YIELD_FROM;
 use function array_key_exists;
+<<<<<<< HEAD
 use function array_keys;
 use function array_merge;
+=======
+<<<<<<< HEAD
+=======
+use function array_keys;
+use function array_merge;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use function array_pop;
 use function array_unique;
 use function constant;
@@ -91,9 +99,18 @@ use function explode;
 use function file_get_contents;
 use function htmlspecialchars;
 use function is_string;
+<<<<<<< HEAD
 use function ksort;
 use function range;
 use function sort;
+=======
+<<<<<<< HEAD
+=======
+use function ksort;
+use function range;
+use function sort;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
+>>>>>>> 7e25601777803cff0484a0f03587d1acb226dcf0
 use function sprintf;
 use function str_replace;
 use function substr;
