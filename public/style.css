@@ -98,12 +98,11 @@ video {
 
 .btn-modal {
     position: fixed;
-    /* bottom: 0; */
     top: 50px;
     left: -25px;
     rotate: 90deg;
 }
 
 .modal {
-    /* rotate: 90deg; */
+    rotate: 90deg;
 }
