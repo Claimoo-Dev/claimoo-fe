@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+6.2
+---
+
+ * Deprecate `PhpStringTokenParser`
+ * Deprecate `PhpExtractor` in favor of `PhpAstExtractor`
+ * Add `PhpAstExtractor` (requires [nikic/php-parser](https://github.com/nikic/php-parser) to be installed)
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 6.1
 ---
 

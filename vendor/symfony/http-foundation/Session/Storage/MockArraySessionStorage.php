@@ -73,9 +73,12 @@ class MockArraySessionStorage implements SessionStorageInterface
         $this->data = $array;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function start(): bool
     {
         if ($this->started) {
@@ -91,9 +94,12 @@ class MockArraySessionStorage implements SessionStorageInterface
         return true;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function regenerate(bool $destroy = false, int $lifetime = null): bool
     {
         if (!$this->started) {
@@ -106,17 +112,23 @@ class MockArraySessionStorage implements SessionStorageInterface
         return true;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getId(): string
     {
         return $this->id;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function setId(string $id)
     {
         if ($this->started) {
@@ -126,25 +138,34 @@ class MockArraySessionStorage implements SessionStorageInterface
         $this->id = $id;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return $this->name;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function setName(string $name)
     {
         $this->name = $name;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function save()
     {
         if (!$this->started || $this->closed) {
@@ -155,9 +176,12 @@ class MockArraySessionStorage implements SessionStorageInterface
         $this->started = false;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function clear()
     {
         // clear out the bags
@@ -172,17 +196,23 @@ class MockArraySessionStorage implements SessionStorageInterface
         $this->loadSession();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function registerBag(SessionBagInterface $bag)
     {
         $this->bags[$bag->getName()] = $bag;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getBag(string $name): SessionBagInterface
     {
         if (!isset($this->bags[$name])) {
@@ -196,9 +226,12 @@ class MockArraySessionStorage implements SessionStorageInterface
         return $this->bags[$name];
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function isStarted(): bool
     {
         return $this->started;
@@ -206,11 +239,18 @@ class MockArraySessionStorage implements SessionStorageInterface
 
     public function setMetadataBag(MetadataBag $bag = null)
     {
+<<<<<<< HEAD
         if (null === $bag) {
             $bag = new MetadataBag();
         }
 
         $this->metadataBag = $bag;
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/http-foundation', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+        $this->metadataBag = $bag ?? new MetadataBag();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -238,7 +278,11 @@ class MockArraySessionStorage implements SessionStorageInterface
 
         foreach ($bags as $bag) {
             $key = $bag->getStorageKey();
+<<<<<<< HEAD
             $this->data[$key] = $this->data[$key] ?? [];
+=======
+            $this->data[$key] ??= [];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             $bag->initialize($this->data[$key]);
         }
 

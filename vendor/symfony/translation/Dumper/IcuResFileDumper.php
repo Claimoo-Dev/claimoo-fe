@@ -20,6 +20,7 @@ use Symfony\Component\Translation\MessageCatalogue;
  */
 class IcuResFileDumper extends FileDumper
 {
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
@@ -28,6 +29,10 @@ class IcuResFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
+=======
+    protected $relativePathTemplate = '%domain%/%locale%.%extension%';
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
     {
         $data = $indexes = $resources = '';
@@ -94,9 +99,12 @@ class IcuResFileDumper extends FileDumper
         return (\strlen($data) + 28) / 4;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function getExtension(): string
     {
         return 'res';

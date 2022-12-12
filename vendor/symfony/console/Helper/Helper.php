@@ -23,6 +23,7 @@ abstract class Helper implements HelperInterface
 {
     protected $helperSet = null;
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
@@ -34,6 +35,16 @@ abstract class Helper implements HelperInterface
     /**
      * {@inheritdoc}
      */
+=======
+    public function setHelperSet(HelperSet $helperSet = null)
+    {
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+        $this->helperSet = $helperSet;
+    }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getHelperSet(): ?HelperSet
     {
         return $this->helperSet;

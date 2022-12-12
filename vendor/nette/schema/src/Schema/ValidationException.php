@@ -40,6 +40,10 @@ class ValidationException extends Nette\InvalidStateException
 		foreach ($this->messages as $message) {
 			$res[] = $message->toString();
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $res;
 	}
 

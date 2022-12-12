@@ -31,9 +31,12 @@ final class ResponseFormatSame extends Constraint
         $this->format = $format;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function toString(): string
     {
         return 'format is '.($this->format ?? 'null');
@@ -41,8 +44,11 @@ final class ResponseFormatSame extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function matches($response): bool
     {
@@ -51,8 +57,11 @@ final class ResponseFormatSame extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function failureDescription($response): string
     {
@@ -61,8 +70,11 @@ final class ResponseFormatSame extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function additionalFailureDescription($response): string
     {

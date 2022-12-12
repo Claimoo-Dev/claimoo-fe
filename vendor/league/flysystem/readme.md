@@ -38,9 +38,15 @@ for which ever storage is right for you.
 
 * **[Gitlab](https://github.com/RoyVoetman/flysystem-gitlab-storage)**
 * **[Google Drive (using regular paths)](https://github.com/masbug/flysystem-google-drive-ext)**
+<<<<<<< HEAD
 * **[bunny.net / BunnyCDN](https://github.com/tinect/bunnycdn-s3-flysystem2-adapter)**
 * **[Sharepoint 365 / One Drive (Using MS Graph)](https://github.com/shitware-ltd/flysystem-msgraph)**
 * **[One Drive](https://github.com/doerffler/flysystem-onedrive)**
+=======
+* **[bunny.net / BunnyCDN](https://github.com/PlatformCommunity/flysystem-bunnycdn/tree/v3)**
+* **[Sharepoint 365 / One Drive (Using MS Graph)](https://github.com/shitware-ltd/flysystem-msgraph)**
+* **[OneDrive](https://github.com/doerffler/flysystem-onedrive)**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
 You can always [create an adapter](https://flysystem.thephpleague.com/v2/docs/advanced/creating-an-adapter/) yourself.
 

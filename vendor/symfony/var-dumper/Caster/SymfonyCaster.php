@@ -15,6 +15,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Uid\Uuid;
 use Symfony\Component\VarDumper\Cloner\Stub;
+<<<<<<< HEAD
+=======
+use Symfony\Component\VarExporter\Internal\LazyObjectState;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
 /**
  * @final
@@ -37,9 +41,13 @@ class SymfonyCaster
         foreach (self::REQUEST_GETTERS as $prop => $getter) {
             $key = Caster::PREFIX_PROTECTED.$prop;
             if (\array_key_exists($key, $a) && null === $a[$key]) {
+<<<<<<< HEAD
                 if (null === $clone) {
                     $clone = clone $request;
                 }
+=======
+                $clone ??= clone $request;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $a[Caster::PREFIX_VIRTUAL.$prop] = $clone->{$getter}();
             }
         }
@@ -49,7 +57,11 @@ class SymfonyCaster
 
     public static function castHttpClient($client, array $a, Stub $stub, bool $isNested)
     {
+<<<<<<< HEAD
         $multiKey = sprintf("\0%s\0multi", \get_class($client));
+=======
+        $multiKey = sprintf("\0%s\0multi", $client::class);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if (isset($a[$multiKey])) {
             $a[$multiKey] = new CutStub($a[$multiKey]);
         }
@@ -69,6 +81,25 @@ class SymfonyCaster
         return $a;
     }
 
+<<<<<<< HEAD
+=======
+    public static function castLazyObjectState($state, array $a, Stub $stub, bool $isNested)
+    {
+        if (!$isNested) {
+            return $a;
+        }
+
+        $stub->cut += \count($a) - 1;
+
+        return ['status' => new ConstStub(match ($a['status']) {
+            LazyObjectState::STATUS_INITIALIZED_FULL => 'INITIALIZED_FULL',
+            LazyObjectState::STATUS_INITIALIZED_PARTIAL => 'INITIALIZED_PARTIAL',
+            LazyObjectState::STATUS_UNINITIALIZED_FULL => 'UNINITIALIZED_FULL',
+            LazyObjectState::STATUS_UNINITIALIZED_PARTIAL => 'UNINITIALIZED_PARTIAL',
+        }, $a['status'])];
+    }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public static function castUuid(Uuid $uuid, array $a, Stub $stub, bool $isNested)
     {
         $a[Caster::PREFIX_VIRTUAL.'toBase58'] = $uuid->toBase58();

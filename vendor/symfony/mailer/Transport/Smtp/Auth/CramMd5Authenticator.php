@@ -26,8 +26,11 @@ class CramMd5Authenticator implements AuthenticatorInterface
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @see https://www.ietf.org/rfc/rfc4954.txt
      */
     public function authenticate(EsmtpTransport $client): void
@@ -41,7 +44,11 @@ class CramMd5Authenticator implements AuthenticatorInterface
     /**
      * Generates a CRAM-MD5 response from a server challenge.
      */
+<<<<<<< HEAD
     private function getResponse(string $secret, string $challenge): string
+=======
+    private function getResponse(#[\SensitiveParameter] string $secret, string $challenge): string
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         if (\strlen($secret) > 64) {
             $secret = pack('H32', md5($secret));

@@ -44,6 +44,12 @@ class Message extends RawMessage
      */
     public function setBody(AbstractPart $body = null): static
     {
+<<<<<<< HEAD
+=======
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/mime', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $this->body = $body;
 
         return $this;

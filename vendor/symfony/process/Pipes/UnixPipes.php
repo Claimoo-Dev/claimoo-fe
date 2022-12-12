@@ -50,9 +50,12 @@ class UnixPipes extends AbstractPipes
         $this->close();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getDescriptors(): array
     {
         if (!$this->haveReadSupport) {
@@ -88,17 +91,23 @@ class UnixPipes extends AbstractPipes
         ];
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getFiles(): array
     {
         return [];
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function readAndWrite(bool $blocking, bool $close = false): array
     {
         $this->unblock();
@@ -145,17 +154,23 @@ class UnixPipes extends AbstractPipes
         return $read;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function haveReadSupport(): bool
     {
         return $this->haveReadSupport;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function areOpen(): bool
     {
         return (bool) $this->pipes;

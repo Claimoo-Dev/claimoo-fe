@@ -9,6 +9,10 @@
  */
 namespace SebastianBergmann\CodeCoverage\StaticAnalysis;
 
+<<<<<<< HEAD
+=======
+use function assert;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use function implode;
 use function rtrim;
 use function trim;
@@ -314,6 +318,11 @@ final class CodeUnitFindingVisitor extends NodeVisitorAbstract
             if ($_type instanceof Name) {
                 $types[] = $_type->toCodeString();
             } else {
+<<<<<<< HEAD
+=======
+                assert($_type instanceof Identifier);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $types[] = $_type->toString();
             }
         }

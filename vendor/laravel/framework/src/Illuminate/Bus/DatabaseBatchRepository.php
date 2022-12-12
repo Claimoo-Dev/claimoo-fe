@@ -278,6 +278,32 @@ class DatabaseBatchRepository implements PrunableBatchRepository
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Prune all of the cancelled entries older than the given date.
+     *
+     * @param  \DateTimeInterface  $before
+     * @return int
+     */
+    public function pruneCancelled(DateTimeInterface $before)
+    {
+        $query = $this->connection->table($this->table)
+            ->whereNotNull('cancelled_at')
+            ->where('created_at', '<', $before->getTimestamp());
+
+        $totalDeleted = 0;
+
+        do {
+            $deleted = $query->take(1000)->delete();
+
+            $totalDeleted += $deleted;
+        } while ($deleted !== 0);
+
+        return $totalDeleted;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Execute the given Closure within a storage specific transaction.
      *
      * @param  \Closure  $callback

@@ -225,6 +225,30 @@ trait InteractsWithInput
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Apply the callback if the request is missing the given input item key.
+     *
+     * @param  string  $key
+     * @param  callable  $callback
+     * @param  callable|null  $default
+     * @return $this|mixed
+     */
+    public function whenMissing($key, callable $callback, callable $default = null)
+    {
+        if ($this->missing($key)) {
+            return $callback(data_get($this->all(), $key)) ?: $this;
+        }
+
+        if ($default) {
+            return $default();
+        }
+
+        return $this;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Determine if the given input key is an empty string for "has".
      *
      * @param  string  $key

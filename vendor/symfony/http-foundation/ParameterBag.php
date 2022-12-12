@@ -138,7 +138,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
      */
     public function getBoolean(string $key, bool $default = false): bool
     {
+<<<<<<< HEAD
         return $this->filter($key, $default, \FILTER_VALIDATE_BOOLEAN);
+=======
+        return $this->filter($key, $default, \FILTER_VALIDATE_BOOL);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**

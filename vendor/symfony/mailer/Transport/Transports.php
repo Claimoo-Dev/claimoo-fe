@@ -47,7 +47,11 @@ final class Transports implements TransportInterface
     public function send(RawMessage $message, Envelope $envelope = null): ?SentMessage
     {
         /** @var Message $message */
+<<<<<<< HEAD
         if (RawMessage::class === \get_class($message) || !$message->getHeaders()->has('X-Transport')) {
+=======
+        if (RawMessage::class === $message::class || !$message->getHeaders()->has('X-Transport')) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             return $this->default->send($message, $envelope);
         }
 

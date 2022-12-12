@@ -12,6 +12,11 @@
 namespace Symfony\Component\Mailer\Event;
 
 use Symfony\Component\Mailer\Envelope;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Mailer\Exception\LogicException;
+use Symfony\Component\Messenger\Stamp\StampInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\Mime\RawMessage;
 use Symfony\Contracts\EventDispatcher\Event;
 
@@ -27,6 +32,12 @@ final class MessageEvent extends Event
     private string $transport;
     private bool $queued;
 
+<<<<<<< HEAD
+=======
+    /** @var StampInterface[] */
+    private array $stamps = [];
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function __construct(RawMessage $message, Envelope $envelope, string $transport, bool $queued = false)
     {
         $this->message = $message;
@@ -64,4 +75,28 @@ final class MessageEvent extends Event
     {
         return $this->queued;
     }
+<<<<<<< HEAD
+=======
+
+    public function addStamp(StampInterface $stamp): void
+    {
+        if (!$this->queued) {
+            throw new LogicException(sprintf('Cannot call "%s()" on a message that is not meant to be queued', __METHOD__));
+        }
+
+        $this->stamps[] = $stamp;
+    }
+
+    /**
+     * @return StampInterface[]
+     */
+    public function getStamps(): array
+    {
+        if (!$this->queued) {
+            throw new LogicException(sprintf('Cannot call "%s()" on a message that is not meant to be queued.', __METHOD__));
+        }
+
+        return $this->stamps;
+    }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 }

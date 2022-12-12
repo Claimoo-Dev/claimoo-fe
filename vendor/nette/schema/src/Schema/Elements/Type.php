@@ -42,7 +42,11 @@ final class Type implements Schema
 
 	public function __construct(string $type)
 	{
+<<<<<<< HEAD
 		static $defaults = ['list' => [], 'array' => []];
+=======
+		$defaults = ['list' => [], 'array' => []];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		$this->type = $type;
 		$this->default = strpos($type, '[]') ? [] : $defaults[$type] ?? null;
 	}
@@ -129,11 +133,22 @@ final class Type implements Schema
 				$res[$key] = $this->itemsValue->normalize($val, $context);
 				array_pop($context->path);
 			}
+<<<<<<< HEAD
 			$value = $res;
 		}
 		if ($prevent && is_array($value)) {
 			$value[Helpers::PREVENT_MERGING] = true;
 		}
+=======
+
+			$value = $res;
+		}
+
+		if ($prevent && is_array($value)) {
+			$value[Helpers::PREVENT_MERGING] = true;
+		}
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $value;
 	}
 
@@ -144,6 +159,10 @@ final class Type implements Schema
 			unset($value[Helpers::PREVENT_MERGING]);
 			return $value;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		if (is_array($value) && is_array($base) && $this->itemsValue) {
 			$index = 0;
 			foreach ($value as $key => $val) {
@@ -156,6 +175,10 @@ final class Type implements Schema
 						: $val;
 				}
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 			return $base;
 		}
 
@@ -208,15 +231,27 @@ final class Type implements Schema
 				$res[$key] = $this->itemsValue->complete($val, $context);
 				array_pop($context->path);
 			}
+<<<<<<< HEAD
 			if (count($context->errors) > $errCount) {
 				return null;
 			}
+=======
+
+			if (count($context->errors) > $errCount) {
+				return null;
+			}
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 			$value = $res;
 		}
 
 		if ($merge) {
 			$value = Helpers::merge($value, $this->default);
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $this->doFinalize($value, $context);
 	}
 }

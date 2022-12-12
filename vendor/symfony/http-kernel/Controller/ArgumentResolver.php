@@ -16,6 +16,10 @@ use Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolve
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestAttributeValueResolver;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver;
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactoryInterface;
@@ -31,7 +35,11 @@ final class ArgumentResolver implements ArgumentResolverInterface
     private iterable $argumentValueResolvers;
 
     /**
+<<<<<<< HEAD
      * @param iterable<mixed, ArgumentValueResolverInterface> $argumentValueResolvers
+=======
+     * @param iterable<mixed, ArgumentValueResolverInterface|ValueResolverInterface> $argumentValueResolvers
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function __construct(ArgumentMetadataFactoryInterface $argumentMetadataFactory = null, iterable $argumentValueResolvers = [])
     {
@@ -39,6 +47,7 @@ final class ArgumentResolver implements ArgumentResolverInterface
         $this->argumentValueResolvers = $argumentValueResolvers ?: self::getDefaultArgumentValueResolvers();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
@@ -66,6 +75,36 @@ final class ArgumentResolver implements ArgumentResolverInterface
 
                 // continue to the next controller argument
                 continue 2;
+=======
+    public function getArguments(Request $request, callable $controller, \ReflectionFunctionAbstract $reflector = null): array
+    {
+        $arguments = [];
+
+        foreach ($this->argumentMetadataFactory->createArgumentMetadata($controller, $reflector) as $metadata) {
+            foreach ($this->argumentValueResolvers as $resolver) {
+                if ((!$resolver instanceof ValueResolverInterface || $resolver instanceof TraceableValueResolver) && !$resolver->supports($request, $metadata)) {
+                    continue;
+                }
+
+                $count = 0;
+                foreach ($resolver->resolve($request, $metadata) as $argument) {
+                    ++$count;
+                    $arguments[] = $argument;
+                }
+
+                if (1 < $count && !$metadata->isVariadic()) {
+                    throw new \InvalidArgumentException(sprintf('"%s::resolve()" must yield at most one value for non-variadic arguments.', get_debug_type($resolver)));
+                }
+
+                if ($count) {
+                    // continue to the next controller argument
+                    continue 2;
+                }
+
+                if (!$resolver instanceof ValueResolverInterface) {
+                    throw new \InvalidArgumentException(sprintf('"%s::resolve()" must yield at least one value.', get_debug_type($resolver)));
+                }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
 
             $representative = $controller;
@@ -73,7 +112,11 @@ final class ArgumentResolver implements ArgumentResolverInterface
             if (\is_array($representative)) {
                 $representative = sprintf('%s::%s()', \get_class($representative[0]), $representative[1]);
             } elseif (\is_object($representative)) {
+<<<<<<< HEAD
                 $representative = \get_class($representative);
+=======
+                $representative = get_debug_type($representative);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
 
             throw new \RuntimeException(sprintf('Controller "%s" requires that you provide a value for the "$%s" argument. Either the argument is nullable and no null value has been provided, no default value has been provided or because there is a non optional argument after this one.', $representative, $metadata->getName()));

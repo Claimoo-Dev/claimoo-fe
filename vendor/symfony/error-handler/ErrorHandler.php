@@ -212,9 +212,13 @@ class ErrorHandler
                 }
             }
         } else {
+<<<<<<< HEAD
             if (null === $levels) {
                 $levels = \E_ALL;
             }
+=======
+            $levels ??= \E_ALL;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             foreach ($this->loggers as $type => $log) {
                 if (($type & $levels) && (empty($log[0]) || $replace || $log[0] === $this->bootstrappingLogger)) {
                     $log[0] = $logger;
@@ -539,7 +543,11 @@ class ErrorHandler
             if (null !== $exceptionHandler) {
                 return $exceptionHandler($exception);
             }
+<<<<<<< HEAD
             $handlerException = $handlerException ?: $exception;
+=======
+            $handlerException ??= $exception;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         } catch (\Throwable $handlerException) {
         }
         if ($exception === $handlerException && null === $this->exceptionHandler) {

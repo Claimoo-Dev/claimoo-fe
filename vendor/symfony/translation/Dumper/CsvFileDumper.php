@@ -23,9 +23,12 @@ class CsvFileDumper extends FileDumper
     private string $delimiter = ';';
     private string $enclosure = '"';
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
     {
         $handle = fopen('php://memory', 'r+');
@@ -50,9 +53,12 @@ class CsvFileDumper extends FileDumper
         $this->enclosure = $enclosure;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function getExtension(): string
     {
         return 'csv';

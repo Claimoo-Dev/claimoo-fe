@@ -12,7 +12,10 @@
 namespace Symfony\Component\HttpKernel\EventListener;
 
 use Psr\Log\LoggerInterface;
+<<<<<<< HEAD
 use Symfony\Component\Debug\Exception\FlattenException as LegacyFlattenException;
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -132,7 +135,11 @@ class ErrorListener implements EventSubscriberInterface
         $r = new \ReflectionFunction($event->getController()(...));
         $r = $r->getParameters()[$k] ?? null;
 
+<<<<<<< HEAD
         if ($r && (!($r = $r->getType()) instanceof \ReflectionNamedType || \in_array($r->getName(), [FlattenException::class, LegacyFlattenException::class], true))) {
+=======
+        if ($r && (!($r = $r->getType()) instanceof \ReflectionNamedType || FlattenException::class === $r->getName())) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             $arguments = $event->getArguments();
             $arguments[$k] = FlattenException::createFromThrowable($e);
             $event->setArguments($arguments);

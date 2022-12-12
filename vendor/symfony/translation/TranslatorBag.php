@@ -35,9 +35,12 @@ final class TranslatorBag implements TranslatorBagInterface
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getCatalogue(string $locale = null): MessageCatalogueInterface
     {
         if (null === $locale || !isset($this->catalogues[$locale])) {
@@ -47,9 +50,12 @@ final class TranslatorBag implements TranslatorBagInterface
         return $this->catalogues[$locale];
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getCatalogues(): array
     {
         return array_values($this->catalogues);

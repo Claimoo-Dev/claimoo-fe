@@ -321,6 +321,19 @@ class Stringable implements JsonSerializable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Determine if a given string is a valid ULID.
+     *
+     * @return bool
+     */
+    public function isUlid()
+    {
+        return Str::isUlid($this->value);
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Determine if the given string is empty.
      *
      * @return bool
@@ -353,7 +366,11 @@ class Stringable implements JsonSerializable
     /**
      * Return the length of the given string.
      *
+<<<<<<< HEAD
      * @param  string  $encoding
+=======
+     * @param  string|null  $encoding
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return int
      */
     public function length($encoding = null)
@@ -492,7 +509,11 @@ class Stringable implements JsonSerializable
      * Parse a Class@method style callback into class and method.
      *
      * @param  string|null  $default
+<<<<<<< HEAD
      * @return array
+=======
+     * @return array<int, string|null>
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function parseCallback($default = null)
     {
@@ -513,7 +534,11 @@ class Stringable implements JsonSerializable
     /**
      * Get the plural form of an English word.
      *
+<<<<<<< HEAD
      * @param  int  $count
+=======
+     * @param  int|array|\Countable  $count
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return static
      */
     public function plural($count = 2)
@@ -524,7 +549,11 @@ class Stringable implements JsonSerializable
     /**
      * Pluralize the last word of an English, studly caps case string.
      *
+<<<<<<< HEAD
      * @param  int  $count
+=======
+     * @param  int|array|\Countable  $count
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return static
      */
     public function pluralStudly($count = 2)
@@ -546,7 +575,11 @@ class Stringable implements JsonSerializable
     /**
      * Remove any occurrence of the given string in the subject.
      *
+<<<<<<< HEAD
      * @param  string|array<string>  $search
+=======
+     * @param  string|iterable<string>  $search
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @param  bool  $caseSensitive
      * @return static
      */
@@ -729,11 +762,20 @@ class Stringable implements JsonSerializable
      *
      * @param  string  $separator
      * @param  string|null  $language
+<<<<<<< HEAD
      * @return static
      */
     public function slug($separator = '-', $language = 'en')
     {
         return new static(Str::slug($this->value, $separator, $language));
+=======
+     * @param  array<string, string>  $dictionary
+     * @return static
+     */
+    public function slug($separator = '-', $language = 'en', $dictionary = ['@' => 'at'])
+    {
+        return new static(Str::slug($this->value, $separator, $language, $dictionary));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -784,6 +826,7 @@ class Stringable implements JsonSerializable
      * Returns the number of substring occurrences.
      *
      * @param  string  $needle
+<<<<<<< HEAD
      * @param  int|null  $offset
      * @param  int|null  $length
      * @return int
@@ -791,6 +834,15 @@ class Stringable implements JsonSerializable
     public function substrCount($needle, $offset = null, $length = null)
     {
         return Str::substrCount($this->value, $needle, $offset ?? 0, $length);
+=======
+     * @param  int  $offset
+     * @param  int|null  $length
+     * @return int
+     */
+    public function substrCount($needle, $offset = 0, $length = null)
+    {
+        return Str::substrCount($this->value, $needle, $offset, $length);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -1007,6 +1059,21 @@ class Stringable implements JsonSerializable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Execute the given callback if the string is a valid ULID.
+     *
+     * @param  callable  $callback
+     * @param  callable|null  $default
+     * @return static
+     */
+    public function whenIsUlid($callback, $default = null)
+    {
+        return $this->when($this->isUlid(), $callback, $default);
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Execute the given callback if the string starts with a given substring.
      *
      * @param  string|iterable<string>  $needles
@@ -1047,11 +1114,20 @@ class Stringable implements JsonSerializable
     /**
      * Get the number of words a string contains.
      *
+<<<<<<< HEAD
      * @return int
      */
     public function wordCount()
     {
         return str_word_count($this->value);
+=======
+     * @param  string|null  $characters
+     * @return int
+     */
+    public function wordCount($characters = null)
+    {
+        return Str::wordCount($this->value, $characters);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**

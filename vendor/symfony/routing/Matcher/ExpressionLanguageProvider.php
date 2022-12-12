@@ -29,9 +29,12 @@ class ExpressionLanguageProvider implements ExpressionFunctionProviderInterface
         $this->functions = $functions;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getFunctions(): array
     {
         $functions = [];

@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\ViewException;
 use Laravel\Octane\Events\RequestReceived;
+<<<<<<< HEAD
+=======
+use Laravel\Octane\Events\RequestTerminated;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Laravel\Octane\Events\TaskReceived;
 use Laravel\Octane\Events\TickReceived;
 use Monolog\Logger;
@@ -322,6 +326,13 @@ class IgnitionServiceProvider extends ServiceProvider
         $this->app['events']->listen(TickReceived::class, function () {
             $this->resetFlareAndLaravelIgnition();
         });
+<<<<<<< HEAD
+=======
+        
+        $this->app['events']->listen(RequestTerminated::class, function () {
+            $this->resetFlareAndLaravelIgnition();
+        });
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     protected function resetFlareAndLaravelIgnition(): void

@@ -29,6 +29,7 @@ class TraceableArgumentResolver implements ArgumentResolverInterface
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      */
     public function getArguments(Request $request, callable $controller): array
@@ -36,6 +37,16 @@ class TraceableArgumentResolver implements ArgumentResolverInterface
         $e = $this->stopwatch->start('controller.get_arguments');
 
         $ret = $this->resolver->getArguments($request, $controller);
+=======
+     * @param \ReflectionFunctionAbstract|null $reflector
+     */
+    public function getArguments(Request $request, callable $controller/* , \ReflectionFunctionAbstract $reflector = null */): array
+    {
+        $reflector = 2 < \func_num_args() ? func_get_arg(2) : null;
+        $e = $this->stopwatch->start('controller.get_arguments');
+
+        $ret = $this->resolver->getArguments($request, $controller, $reflector);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         $e->stop();
 

@@ -67,6 +67,10 @@ final class Processor
 			$flatten = $first ? $data : $schema->merge($data, $flatten);
 			$first = false;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		$data = $schema->complete($flatten, $this->context);
 		$this->throwsErrors();
 		return $data;
@@ -82,6 +86,10 @@ final class Processor
 		foreach ($this->context->warnings as $message) {
 			$res[] = $message->toString();
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $res;
 	}
 

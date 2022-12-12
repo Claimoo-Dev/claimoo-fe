@@ -38,6 +38,10 @@ class SmtpTransport extends AbstractTransport
     private int $pingThreshold = 100;
     private float $lastMessageTime = 0;
     private AbstractStream $stream;
+<<<<<<< HEAD
+=======
+    private string $mtaResult = '';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     private string $domain = '[127.0.0.1]';
 
     public function __construct(AbstractStream $stream = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
@@ -146,11 +150,37 @@ class SmtpTransport extends AbstractTransport
             throw $e;
         }
 
+<<<<<<< HEAD
+=======
+        if ($this->mtaResult && $messageId = $this->parseMessageId($this->mtaResult)) {
+            $message->setMessageId($messageId);
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $this->checkRestartThreshold();
 
         return $message;
     }
 
+<<<<<<< HEAD
+=======
+    protected function parseMessageId(string $mtaResult): string
+    {
+        $regexps = [
+            '/250 Ok (?P<id>[0-9a-f-]+)\r?$/mis',
+            '/250 Ok:? queued as (?P<id>[A-Z0-9]+)\r?$/mis',
+        ];
+        $matches = [];
+        foreach ($regexps as $regexp) {
+            if (preg_match($regexp, $mtaResult, $matches)) {
+                return $matches['id'];
+            }
+        }
+
+        return '';
+    }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function __toString(): string
     {
         if ($this->stream instanceof SocketStream) {
@@ -213,7 +243,11 @@ class SmtpTransport extends AbstractTransport
                 $this->getLogger()->debug(sprintf('Email transport "%s" stopped', __CLASS__));
                 throw $e;
             }
+<<<<<<< HEAD
             $this->executeCommand("\r\n.\r\n", [250]);
+=======
+            $this->mtaResult = $this->executeCommand("\r\n.\r\n", [250]);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             $message->appendDebug($this->stream->getDebug());
             $this->lastMessageTime = microtime(true);
         } catch (TransportExceptionInterface $e) {

@@ -44,7 +44,11 @@ final class FootnoteBackrefRenderer implements NodeRendererInterface, XmlNodeRen
 
         $attrs->append('class', $this->config->get('footnote/backref_class'));
         $attrs->set('rev', 'footnote');
+<<<<<<< HEAD
         $attrs->set('href', \mb_strtolower($node->getReference()->getDestination()));
+=======
+        $attrs->set('href', \mb_strtolower($node->getReference()->getDestination(), 'UTF-8'));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $attrs->set('role', 'doc-backlink');
 
         $symbol = $this->config->get('footnote/backref_symbol');

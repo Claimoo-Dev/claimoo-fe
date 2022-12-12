@@ -38,8 +38,11 @@ class MoFileLoader extends FileLoader
     /**
      * Parses machine object (MO) format, independent of the machine's endian it
      * was created on. Both 32bit and 64bit systems are supported.
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function loadResource(string $resource): array
     {

@@ -20,7 +20,11 @@ final class Report extends File
 {
     public function __construct(string $name)
     {
+<<<<<<< HEAD
         $dom = new DOMDocument();
+=======
+        $dom = new DOMDocument;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $dom->loadXML('<?xml version="1.0" ?><phpunit xmlns="https://schema.phpunit.de/coverage/1.0"><file /></phpunit>');
 
         $contextNode = $dom->getElementsByTagNameNS(

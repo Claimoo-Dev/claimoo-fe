@@ -13,6 +13,10 @@ namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -21,11 +25,26 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * leading to a 404 Not Found if the attribute value isn't a valid backing value for the enum type.
  *
  * @author Maxime Steinhausser <maxime.steinhausser@gmail.com>
+<<<<<<< HEAD
  */
 class BackedEnumValueResolver implements ArgumentValueResolverInterface
 {
     public function supports(Request $request, ArgumentMetadata $argument): bool
     {
+=======
+ *
+ * @final since Symfony 6.2
+ */
+class BackedEnumValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
+{
+    /**
+     * @deprecated since Symfony 6.2, use resolve() instead
+     */
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+        @trigger_deprecation('symfony/http-kernel', '6.2', 'The "%s()" method is deprecated, use "resolve()" instead.', __METHOD__);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if (!is_subclass_of($argument->getType(), \BackedEnum::class)) {
             return false;
         }
@@ -43,6 +62,7 @@ class BackedEnumValueResolver implements ArgumentValueResolverInterface
 
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
+<<<<<<< HEAD
         $value = $request->attributes->get($argument->getName());
 
         if (null === $value) {
@@ -59,15 +79,51 @@ class BackedEnumValueResolver implements ArgumentValueResolverInterface
 
         if (!\is_int($value) && !\is_string($value)) {
             throw new \LogicException(sprintf('Could not resolve the "%s $%s" controller argument: expecting an int or string, got %s.', $argument->getType(), $argument->getName(), get_debug_type($value)));
+=======
+        if (!is_subclass_of($argument->getType(), \BackedEnum::class)) {
+            return [];
+        }
+
+        if ($argument->isVariadic()) {
+            // only target route path parameters, which cannot be variadic.
+            return [];
+        }
+
+        // do not support if no value can be resolved at all
+        // letting the \Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver be used
+        // or \Symfony\Component\HttpKernel\Controller\ArgumentResolver fail with a meaningful error.
+        if (!$request->attributes->has($argument->getName())) {
+            return [];
+        }
+
+        $value = $request->attributes->get($argument->getName());
+
+        if (null === $value) {
+            return [null];
+        }
+
+        if ($value instanceof \BackedEnum) {
+            return [$value];
+        }
+
+        if (!\is_int($value) && !\is_string($value)) {
+            throw new \LogicException(sprintf('Could not resolve the "%s $%s" controller argument: expecting an int or string, got "%s".', $argument->getType(), $argument->getName(), get_debug_type($value)));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         /** @var class-string<\BackedEnum> $enumType */
         $enumType = $argument->getType();
 
         try {
+<<<<<<< HEAD
             yield $enumType::from($value);
         } catch (\ValueError $error) {
             throw new NotFoundHttpException(sprintf('Could not resolve the "%s $%s" controller argument: %s', $argument->getType(), $argument->getName(), $error->getMessage()), $error);
+=======
+            return [$enumType::from($value)];
+        } catch (\ValueError $e) {
+            throw new NotFoundHttpException(sprintf('Could not resolve the "%s $%s" controller argument: ', $argument->getType(), $argument->getName()).$e->getMessage(), $e);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
     }
 }

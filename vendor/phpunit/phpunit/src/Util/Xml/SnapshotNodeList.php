@@ -18,6 +18,11 @@ use IteratorAggregate;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
+<<<<<<< HEAD
+=======
+ *
+ * @template-implements IteratorAggregate<int, DOMNode>
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
  */
 final class SnapshotNodeList implements Countable, IteratorAggregate
 {

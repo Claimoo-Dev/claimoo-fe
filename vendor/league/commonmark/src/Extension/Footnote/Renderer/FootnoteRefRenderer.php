@@ -40,7 +40,11 @@ final class FootnoteRefRenderer implements NodeRendererInterface, XmlNodeRendere
 
         $attrs = $node->data->getData('attributes');
         $attrs->append('class', $this->config->get('footnote/ref_class'));
+<<<<<<< HEAD
         $attrs->set('href', \mb_strtolower($node->getReference()->getDestination()));
+=======
+        $attrs->set('href', \mb_strtolower($node->getReference()->getDestination(), 'UTF-8'));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $attrs->set('role', 'doc-noteref');
 
         $idPrefix = $this->config->get('footnote/ref_id_prefix');
@@ -48,7 +52,11 @@ final class FootnoteRefRenderer implements NodeRendererInterface, XmlNodeRendere
         return new HtmlElement(
             'sup',
             [
+<<<<<<< HEAD
                 'id' => $idPrefix . \mb_strtolower($node->getReference()->getLabel()),
+=======
+                'id' => $idPrefix . \mb_strtolower($node->getReference()->getLabel(), 'UTF-8'),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             ],
             new HtmlElement(
                 'a',

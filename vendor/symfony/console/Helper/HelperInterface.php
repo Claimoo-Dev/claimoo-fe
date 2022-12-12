@@ -21,7 +21,11 @@ interface HelperInterface
     /**
      * Sets the helper set associated with this helper.
      */
+<<<<<<< HEAD
     public function setHelperSet(HelperSet $helperSet = null);
+=======
+    public function setHelperSet(?HelperSet $helperSet);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
     /**
      * Gets the helper set associated with this helper.

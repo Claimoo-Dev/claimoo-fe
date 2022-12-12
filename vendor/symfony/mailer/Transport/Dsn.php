@@ -25,7 +25,11 @@ final class Dsn
     private ?int $port;
     private array $options;
 
+<<<<<<< HEAD
     public function __construct(string $scheme, string $host, string $user = null, string $password = null, int $port = null, array $options = [])
+=======
+    public function __construct(string $scheme, string $host, string $user = null, #[\SensitiveParameter] string $password = null, int $port = null, array $options = [])
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         $this->scheme = $scheme;
         $this->host = $host;

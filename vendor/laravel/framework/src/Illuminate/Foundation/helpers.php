@@ -681,6 +681,41 @@ if (! function_exists('report')) {
     }
 }
 
+<<<<<<< HEAD
+=======
+if (! function_exists('report_if')) {
+    /**
+     * Report an exception if the given condition is true.
+     *
+     * @param  bool  $boolean
+     * @param  \Throwable|string  $exception
+     * @return void
+     */
+    function report_if($boolean, $exception)
+    {
+        if ($boolean) {
+            report($exception);
+        }
+    }
+}
+
+if (! function_exists('report_unless')) {
+    /**
+     * Report an exception unless the given condition is true.
+     *
+     * @param  bool  $boolean
+     * @param  \Throwable|string  $exception
+     * @return void
+     */
+    function report_unless($boolean, $exception)
+    {
+        if (! $boolean) {
+            report($exception);
+        }
+    }
+}
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 if (! function_exists('request')) {
     /**
      * Get an instance of the current request or an input item from the request.

@@ -35,7 +35,11 @@ trait CompilesJsonPaths
         $value = preg_replace("/([\\\\]+)?\\'/", "''", $value);
 
         $jsonPath = collect(explode($delimiter, $value))
+<<<<<<< HEAD
             ->map(fn ($segment) =>  $this->wrapJsonPathSegment($segment))
+=======
+            ->map(fn ($segment) => $this->wrapJsonPathSegment($segment))
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             ->join('.');
 
         return "'$".(str_starts_with($jsonPath, '[') ? '' : '.').$jsonPath."'";

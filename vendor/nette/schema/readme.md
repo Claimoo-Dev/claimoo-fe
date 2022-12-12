@@ -21,7 +21,11 @@ Installation:
 composer require nette/schema
 ```
 
+<<<<<<< HEAD
 It requires PHP version 7.1 and supports PHP up to 8.1.
+=======
+It requires PHP version 7.1 and supports PHP up to 8.2.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
 
 [Support Me](https://github.com/sponsors/dg)

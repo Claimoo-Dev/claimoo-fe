@@ -34,8 +34,13 @@ final class Headers
         'cc' => MailboxListHeader::class,
         'bcc' => MailboxListHeader::class,
         'message-id' => IdentificationHeader::class,
+<<<<<<< HEAD
         'in-reply-to' => UnstructuredHeader::class, // `In-Reply-To` and `References` are less strict than RFC 2822 (3.6.4) to allow users entering the original email's ...
         'references' => UnstructuredHeader::class, // ... `Message-ID`, even if that is no valid `msg-id`
+=======
+        'in-reply-to' => [UnstructuredHeader::class, IdentificationHeader::class], // `In-Reply-To` and `References` are less strict than RFC 2822 (3.6.4) to allow users entering the original email's ...
+        'references' => [UnstructuredHeader::class, IdentificationHeader::class], // ... `Message-ID`, even if that is no valid `msg-id`
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         'return-path' => PathHeader::class,
     ];
 
@@ -137,7 +142,15 @@ final class Headers
      */
     public function addHeader(string $name, mixed $argument, array $more = []): static
     {
+<<<<<<< HEAD
         $parts = explode('\\', self::HEADER_CLASS_MAP[strtolower($name)] ?? UnstructuredHeader::class);
+=======
+        $headerClass = self::HEADER_CLASS_MAP[strtolower($name)] ?? UnstructuredHeader::class;
+        if (\is_array($headerClass)) {
+            $headerClass = $headerClass[0];
+        }
+        $parts = explode('\\', $headerClass);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $method = 'add'.ucfirst(array_pop($parts));
         if ('addUnstructuredHeader' === $method) {
             $method = 'addTextHeader';
@@ -220,10 +233,29 @@ final class Headers
     public static function checkHeaderClass(HeaderInterface $header): void
     {
         $name = strtolower($header->getName());
+<<<<<<< HEAD
 
         if (($c = self::HEADER_CLASS_MAP[$name] ?? null) && !$header instanceof $c) {
             throw new LogicException(sprintf('The "%s" header must be an instance of "%s" (got "%s").', $header->getName(), $c, get_debug_type($header)));
         }
+=======
+        $headerClasses = self::HEADER_CLASS_MAP[$name] ?? [];
+        if (!\is_array($headerClasses)) {
+            $headerClasses = [$headerClasses];
+        }
+
+        if (!$headerClasses) {
+            return;
+        }
+
+        foreach ($headerClasses as $c) {
+            if ($header instanceof $c) {
+                return;
+            }
+        }
+
+        throw new LogicException(sprintf('The "%s" header must be an instance of "%s" (got "%s").', $header->getName(), implode('" or "', $headerClasses), get_debug_type($header)));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     public function toString(): string

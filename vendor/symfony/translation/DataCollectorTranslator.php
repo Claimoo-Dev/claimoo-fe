@@ -40,9 +40,12 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
         $this->translator = $translator;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
     {
         $trans = $this->translator->trans($id = (string) $id, $parameters, $domain, $locale);
@@ -51,41 +54,56 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
         return $trans;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function setLocale(string $locale)
     {
         $this->translator->setLocale($locale);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getLocale(): string
     {
         return $this->translator->getLocale();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getCatalogue(string $locale = null): MessageCatalogueInterface
     {
         return $this->translator->getCatalogue($locale);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getCatalogues(): array
     {
         return $this->translator->getCatalogues();
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return string[]
      */
     public function warmUp(string $cacheDir): array
@@ -124,9 +142,13 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
 
     private function collectMessage(?string $locale, ?string $domain, string $id, string $translation, ?array $parameters = [])
     {
+<<<<<<< HEAD
         if (null === $domain) {
             $domain = 'messages';
         }
+=======
+        $domain ??= 'messages';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         $catalogue = $this->translator->getCatalogue($locale);
         $locale = $catalogue->getLocale();

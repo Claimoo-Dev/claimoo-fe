@@ -64,9 +64,14 @@ final class TranslationPullCommand extends Command
         if ($input->mustSuggestOptionValuesFor('domains')) {
             $provider = $this->providerCollection->get($input->getArgument('provider'));
 
+<<<<<<< HEAD
             if ($provider && method_exists($provider, 'getDomains')) {
                 $domains = $provider->getDomains();
                 $suggestions->suggestValues($domains);
+=======
+            if (method_exists($provider, 'getDomains')) {
+                $suggestions->suggestValues($provider->getDomains());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
 
             return;
@@ -83,9 +88,12 @@ final class TranslationPullCommand extends Command
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function configure()
     {
         $keys = $this->providerCollection->keys();
@@ -120,9 +128,12 @@ EOF
         ;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);

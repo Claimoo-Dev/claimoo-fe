@@ -31,13 +31,17 @@ abstract class Descriptor implements DescriptorInterface
      */
     protected $output;
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function describe(OutputInterface $output, object $object, array $options = [])
     {
         $this->output = $output;
 
+<<<<<<< HEAD
         switch (true) {
             case $object instanceof InputArgument:
                 $this->describeInputArgument($object, $options);
@@ -57,6 +61,16 @@ abstract class Descriptor implements DescriptorInterface
             default:
                 throw new InvalidArgumentException(sprintf('Object of type "%s" is not describable.', get_debug_type($object)));
         }
+=======
+        match (true) {
+            $object instanceof InputArgument => $this->describeInputArgument($object, $options),
+            $object instanceof InputOption => $this->describeInputOption($object, $options),
+            $object instanceof InputDefinition => $this->describeInputDefinition($object, $options),
+            $object instanceof Command => $this->describeCommand($object, $options),
+            $object instanceof Application => $this->describeApplication($object, $options),
+            default => throw new InvalidArgumentException(sprintf('Object of type "%s" is not describable.', get_debug_type($object))),
+        };
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**

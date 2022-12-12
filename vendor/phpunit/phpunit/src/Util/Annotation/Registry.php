@@ -58,7 +58,11 @@ final class Registry
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
+<<<<<<< HEAD
                 (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $e
             );
         }
@@ -84,7 +88,11 @@ final class Registry
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
+<<<<<<< HEAD
                 (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $e
             );
         }

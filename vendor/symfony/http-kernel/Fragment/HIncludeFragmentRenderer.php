@@ -49,8 +49,11 @@ class HIncludeFragmentRenderer extends RoutableFragmentRenderer
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Additional available options:
      *
      *  * default:    The default content (it can be a template name or the content)
@@ -92,9 +95,12 @@ class HIncludeFragmentRenderer extends RoutableFragmentRenderer
         return new Response(sprintf('<hx:include src="%s"%s>%s</hx:include>', $uri, $renderedAttributes, $content));
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return 'hinclude';

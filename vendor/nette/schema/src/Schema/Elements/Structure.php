@@ -105,10 +105,18 @@ final class Structure implements Schema
 					array_pop($context->path);
 				}
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 			if ($prevent) {
 				$value[Helpers::PREVENT_MERGING] = true;
 			}
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $value;
 	}
 
@@ -135,6 +143,10 @@ final class Structure implements Schema
 					$base[$key] = $val;
 				}
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 			return $base;
 		}
 
@@ -184,6 +196,10 @@ final class Structure implements Schema
 					$value[$itemKey] = $default;
 				}
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 			array_pop($context->path);
 		}
 

@@ -242,7 +242,11 @@ final class NamePrettifier
         } catch (ReflectionException $e) {
             throw new UtilException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $e
             );
         }
@@ -262,7 +266,11 @@ final class NamePrettifier
                 } catch (ReflectionException $e) {
                     throw new UtilException(
                         $e->getMessage(),
+<<<<<<< HEAD
                         (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                         $e
                     );
                 }

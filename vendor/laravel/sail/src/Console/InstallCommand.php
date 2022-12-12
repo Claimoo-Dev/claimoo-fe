@@ -220,13 +220,31 @@ class InstallCommand extends Command
             return;
         }
 
+<<<<<<< HEAD
         $status = $this->runCommands([
             './vendor/bin/sail pull '.implode(' ', $services),
+=======
+        if (count($services) > 0) {
+            $status = $this->runCommands([
+                './vendor/bin/sail pull '.implode(' ', $services),
+            ]);
+
+            if ($status === 0) {
+                $this->info('Sail images installed successfully.');
+            }
+        }
+
+        $status = $this->runCommands([
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             './vendor/bin/sail build',
         ]);
 
         if ($status === 0) {
+<<<<<<< HEAD
             $this->info('Sail images installed successfully.');
+=======
+            $this->info('Sail build successful.');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
     }
 

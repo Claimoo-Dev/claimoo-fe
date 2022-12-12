@@ -49,6 +49,16 @@ class Vite implements Htmlable
     protected $buildDirectory = 'build';
 
     /**
+<<<<<<< HEAD
+=======
+     * The name of the manifest file.
+     *
+     * @var string
+     */
+    protected $manifestFilename = 'manifest.json';
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * The script tag attributes resolvers.
      *
      * @var array
@@ -141,6 +151,22 @@ class Vite implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Set the filename for the manifest file.
+     *
+     * @param  string  $filename
+     * @return $this
+     */
+    public function useManifestFilename($filename)
+    {
+        $this->manifestFilename = $filename;
+
+        return $this;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Get the Vite "hot" file path.
      *
      * @return string
@@ -669,7 +695,11 @@ class Vite implements Htmlable
      */
     protected function manifestPath($buildDirectory)
     {
+<<<<<<< HEAD
         return public_path($buildDirectory.'/manifest.json');
+=======
+        return public_path($buildDirectory.'/'.$this->manifestFilename);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -715,7 +745,11 @@ class Vite implements Htmlable
      *
      * @return bool
      */
+<<<<<<< HEAD
     protected function isRunningHot()
+=======
+    public function isRunningHot()
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         return is_file($this->hotFile());
     }

@@ -28,17 +28,23 @@ class ContainerLoader extends ObjectLoader
         parent::__construct($env);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function supports(mixed $resource, string $type = null): bool
     {
         return 'service' === $type && \is_string($resource);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function getObject(string $id): object
     {
         return $this->container->get($id);

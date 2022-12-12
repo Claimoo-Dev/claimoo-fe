@@ -30,9 +30,12 @@ class PhpBridgeSessionStorage extends NativeSessionStorage
         $this->setSaveHandler($handler);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function start(): bool
     {
         if ($this->started) {
@@ -44,9 +47,12 @@ class PhpBridgeSessionStorage extends NativeSessionStorage
         return true;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function clear()
     {
         // clear out the bags and nothing else that may be set

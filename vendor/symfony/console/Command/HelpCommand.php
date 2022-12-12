@@ -27,9 +27,12 @@ class HelpCommand extends Command
 {
     private Command $command;
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function configure()
     {
         $this->ignoreValidationErrors();
@@ -66,9 +69,12 @@ EOF
         $this->command = $command;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->command ??= $this->getApplication()->find($input->getArgument('command_name'));

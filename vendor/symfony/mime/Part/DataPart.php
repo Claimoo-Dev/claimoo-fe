@@ -13,7 +13,10 @@ namespace Symfony\Component\Mime\Part;
 
 use Symfony\Component\Mime\Exception\InvalidArgumentException;
 use Symfony\Component\Mime\Header\Headers;
+<<<<<<< HEAD
 use Symfony\Component\Mime\MimeTypes;
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
 /**
  * @author Fabien Potencier <fabien@symfony.com>
@@ -23,6 +26,7 @@ class DataPart extends TextPart
     /** @internal */
     protected $_parent;
 
+<<<<<<< HEAD
     private static $mimeTypes;
 
     private $filename;
@@ -32,14 +36,30 @@ class DataPart extends TextPart
 
     /**
      * @param resource|string $body
+=======
+    private $filename;
+    private $mediaType;
+    private $cid;
+
+    /**
+     * @param resource|string|File $body Use a File instance to defer loading the file until rendering
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function __construct($body, string $filename = null, string $contentType = null, string $encoding = null)
     {
         unset($this->_parent);
 
+<<<<<<< HEAD
         if (null === $contentType) {
             $contentType = 'application/octet-stream';
         }
+=======
+        if ($body instanceof File && !$filename) {
+            $filename = $body->getFilename();
+        }
+
+        $contentType ??= $body instanceof File ? $body->getContentType() : 'application/octet-stream';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         [$this->mediaType, $subtype] = explode('/', $contentType);
 
         parent::__construct($body, null, $subtype, $encoding);
@@ -53,6 +73,7 @@ class DataPart extends TextPart
 
     public static function fromPath(string $path, string $name = null, string $contentType = null): self
     {
+<<<<<<< HEAD
         if (null === $contentType) {
             $ext = strtolower(substr($path, strrpos($path, '.') + 1));
             if (null === self::$mimeTypes) {
@@ -79,6 +100,9 @@ class DataPart extends TextPart
         $p->handle = $handle;
 
         return $p;
+=======
+        return new self(new File($path), $name, $contentType);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -89,6 +113,23 @@ class DataPart extends TextPart
         return $this->setDisposition('inline');
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return $this
+     */
+    public function setContentId(string $cid): static
+    {
+        if (!str_contains($cid, '@')) {
+            throw new InvalidArgumentException(sprintf('Invalid cid "%s".', $cid));
+        }
+
+        $this->cid = $cid;
+
+        return $this;
+    }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getContentId(): string
     {
         return $this->cid ?: $this->cid = $this->generateContentId();
@@ -144,6 +185,7 @@ class DataPart extends TextPart
         return bin2hex(random_bytes(16)).'@symfony';
     }
 
+<<<<<<< HEAD
     public function __destruct()
     {
         if (null !== $this->handle && \is_resource($this->handle)) {
@@ -151,6 +193,8 @@ class DataPart extends TextPart
         }
     }
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function __sleep(): array
     {
         // converts the body to a string

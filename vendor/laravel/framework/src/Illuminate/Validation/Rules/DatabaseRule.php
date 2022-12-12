@@ -170,6 +170,35 @@ trait DatabaseRule
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Ignore soft deleted models during the existence check.
+     *
+     * @param  string  $deletedAtColumn
+     * @return $this
+     */
+    public function withoutTrashed($deletedAtColumn = 'deleted_at')
+    {
+        $this->whereNull($deletedAtColumn);
+
+        return $this;
+    }
+
+    /**
+     * Only include soft deleted models during the existence check.
+     *
+     * @param  string  $deletedAtColumn
+     * @return $this
+     */
+    public function onlyTrashed($deletedAtColumn = 'deleted_at')
+    {
+        $this->whereNotNull($deletedAtColumn);
+
+        return $this;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Register a custom query callback.
      *
      * @param  \Closure  $callback

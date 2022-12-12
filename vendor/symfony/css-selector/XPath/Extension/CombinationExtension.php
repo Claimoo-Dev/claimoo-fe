@@ -25,9 +25,12 @@ use Symfony\Component\CssSelector\XPath\XPathExpr;
  */
 class CombinationExtension extends AbstractExtension
 {
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getCombinationTranslators(): array
     {
         return [
@@ -61,9 +64,12 @@ class CombinationExtension extends AbstractExtension
         return $xpath->join('/following-sibling::', $combinedXpath);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return 'combination';

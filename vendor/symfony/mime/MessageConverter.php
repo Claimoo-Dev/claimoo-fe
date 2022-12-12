@@ -58,7 +58,11 @@ final class MessageConverter
                 throw new RuntimeException(sprintf('Unable to create an Email from an instance of "%s" as the body is too complex.', get_debug_type($message)));
             }
 
+<<<<<<< HEAD
             return self::attachParts($email, \array_slice($parts, 1));
+=======
+            return self::addParts($email, \array_slice($parts, 1));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         throw new RuntimeException(sprintf('Unable to create an Email from an instance of "%s" as the body is too complex.', get_debug_type($message)));
@@ -104,20 +108,31 @@ final class MessageConverter
             throw new RuntimeException(sprintf('Unable to create an Email from an instance of "%s" as the body is too complex.', get_debug_type($message)));
         }
 
+<<<<<<< HEAD
         return self::attachParts($email, \array_slice($parts, 1));
     }
 
     private static function attachParts(Email $email, array $parts): Email
+=======
+        return self::addParts($email, \array_slice($parts, 1));
+    }
+
+    private static function addParts(Email $email, array $parts): Email
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         foreach ($parts as $part) {
             if (!$part instanceof DataPart) {
                 throw new RuntimeException(sprintf('Unable to create an Email from an instance of "%s" as the body is too complex.', get_debug_type($email)));
             }
 
+<<<<<<< HEAD
             $headers = $part->getPreparedHeaders();
             $method = 'inline' === $headers->getHeaderBody('Content-Disposition') ? 'embed' : 'attach';
             $name = $headers->getHeaderParameter('Content-Disposition', 'filename');
             $email->$method($part->getBody(), $name, $part->getMediaType().'/'.$part->getMediaSubtype());
+=======
+            $email->addPart($part);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         return $email;

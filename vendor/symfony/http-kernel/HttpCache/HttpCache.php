@@ -78,6 +78,14 @@ class HttpCache implements HttpKernelInterface, TerminableInterface
      *                            the cache can serve a stale response when an error is encountered (default: 60).
      *                            This setting is overridden by the stale-if-error HTTP Cache-Control extension
      *                            (see RFC 5861).
+<<<<<<< HEAD
+=======
+     *
+     *   * terminate_on_cache_hit Specifies if the kernel.terminate event should be dispatched even when the cache
+     *                            was hit (default: true).
+     *                            Unless your application needs to process events on cache hits, it is recommended
+     *                            to set this to false to avoid having to bootstrap the Symfony framework on a cache hit.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function __construct(HttpKernelInterface $kernel, StoreInterface $store, SurrogateInterface $surrogate = null, array $options = [])
     {
@@ -98,6 +106,10 @@ class HttpCache implements HttpKernelInterface, TerminableInterface
             'stale_if_error' => 60,
             'trace_level' => 'none',
             'trace_header' => 'X-Symfony-Cache',
+<<<<<<< HEAD
+=======
+            'terminate_on_cache_hit' => true,
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         ], $options);
 
         if (!isset($options['trace_level'])) {
@@ -177,9 +189,12 @@ class HttpCache implements HttpKernelInterface, TerminableInterface
         return $this->surrogate;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function handle(Request $request, int $type = HttpKernelInterface::MAIN_REQUEST, bool $catch = true): Response
     {
         // FIXME: catch exceptions and implement a 500 error page here? -> in Varnish, there is a built-in error page mechanism
@@ -233,11 +248,25 @@ class HttpCache implements HttpKernelInterface, TerminableInterface
         return $response;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
     public function terminate(Request $request, Response $response)
     {
+=======
+    public function terminate(Request $request, Response $response)
+    {
+        // Do not call any listeners in case of a cache hit.
+        // This ensures identical behavior as if you had a separate
+        // reverse caching proxy such as Varnish and the like.
+        if ($this->options['terminate_on_cache_hit']) {
+            trigger_deprecation('symfony/http-kernel', '6.2', 'Setting "terminate_on_cache_hit" to "true" is deprecated and will be changed to "false" in Symfony 7.0.');
+        } elseif (\in_array('fresh', $this->traces[$this->getTraceKey($request)] ?? [], true)) {
+            return;
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if ($this->getKernel() instanceof TerminableInterface) {
             $this->getKernel()->terminate($request, $response);
         }
@@ -499,7 +528,11 @@ class HttpCache implements HttpKernelInterface, TerminableInterface
             Anyway, a client that received a message without a "Date" header MUST add it.
         */
         if (!$response->headers->has('Date')) {
+<<<<<<< HEAD
             $response->setDate(\DateTime::createFromFormat('U', time()));
+=======
+            $response->setDate(\DateTimeImmutable::createFromFormat('U', time()));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         $this->processResponseBody($request, $response);
@@ -687,10 +720,14 @@ class HttpCache implements HttpKernelInterface, TerminableInterface
     private function mayServeStaleWhileRevalidate(Response $entry): bool
     {
         $timeout = $entry->headers->getCacheControlDirective('stale-while-revalidate');
+<<<<<<< HEAD
 
         if (null === $timeout) {
             $timeout = $this->options['stale_while_revalidate'];
         }
+=======
+        $timeout ??= $this->options['stale_while_revalidate'];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         return abs($entry->getTtl() ?? 0) < $timeout;
     }

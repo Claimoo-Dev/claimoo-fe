@@ -60,6 +60,10 @@ abstract class GeneratorCommand extends Command
         'eval',
         'exit',
         'extends',
+<<<<<<< HEAD
+=======
+        'false',
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         'final',
         'finally',
         'fn',
@@ -93,6 +97,10 @@ abstract class GeneratorCommand extends Command
         'switch',
         'throw',
         'trait',
+<<<<<<< HEAD
+=======
+        'true',
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         'try',
         'unset',
         'use',

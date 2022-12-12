@@ -30,7 +30,11 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
+<<<<<<< HEAD
             "dev-main": "3.1-dev"
+=======
+            "dev-main": "3.3-dev"
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         },
         "thanks": {
             "name": "symfony/contracts",

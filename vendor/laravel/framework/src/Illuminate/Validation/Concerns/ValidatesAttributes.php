@@ -1159,6 +1159,35 @@ trait ValidatesAttributes
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Validate that an attribute is lowercase.
+     *
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @param  array<int, int|string>  $parameters
+     * @return bool
+     */
+    public function validateLowercase($attribute, $value, $parameters)
+    {
+        return Str::lower($value) === $value;
+    }
+
+    /**
+     * Validate that an attribute is uppercase.
+     *
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @param  array<int, int|string>  $parameters
+     * @return bool
+     */
+    public function validateUppercase($attribute, $value, $parameters)
+    {
+        return Str::upper($value) === $value;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Validate the MIME type of a file is an image MIME type.
      *
      * @param  string  $attribute

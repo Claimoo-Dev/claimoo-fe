@@ -47,6 +47,11 @@ use ReflectionMethod;
 use Throwable;
 
 /**
+<<<<<<< HEAD
+=======
+ * @template-implements IteratorAggregate<int, Test>
+ *
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
@@ -181,7 +186,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
+<<<<<<< HEAD
                         (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                         $e
                     );
                 }
@@ -264,7 +273,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
+<<<<<<< HEAD
                 (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $e
             );
         }
@@ -319,7 +332,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             } catch (ReflectionException $e) {
                 throw new Exception(
                     $e->getMessage(),
+<<<<<<< HEAD
                     (int) $e->getCode(),
+=======
+                    $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                     $e
                 );
             }
@@ -340,7 +357,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
+<<<<<<< HEAD
                         (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                         $e
                     );
                 }
@@ -422,7 +443,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
+<<<<<<< HEAD
                         (int) $e->getCode(),
+=======
+                        $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                         $e
                     );
                 }
@@ -444,7 +469,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             } catch (ReflectionException $e) {
                 throw new Exception(
                     $e->getMessage(),
+<<<<<<< HEAD
                     (int) $e->getCode(),
+=======
+                    $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                     $e
                 );
             }
@@ -464,7 +493,11 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                     } catch (ReflectionException $e) {
                         throw new Exception(
                             $e->getMessage(),
+<<<<<<< HEAD
                             (int) $e->getCode(),
+=======
+                            $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                             $e
                         );
                     }

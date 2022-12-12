@@ -5,6 +5,16 @@ namespace Illuminate\View\Compilers\Concerns;
 trait CompilesFragments
 {
     /**
+<<<<<<< HEAD
+=======
+     * The last compiled fragment.
+     *
+     * @var string
+     */
+    protected $lastFragment;
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Compile the fragment statements into valid PHP.
      *
      * @param  string  $expression

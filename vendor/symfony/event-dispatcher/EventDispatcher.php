@@ -42,12 +42,18 @@ class EventDispatcher implements EventDispatcherInterface
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
     public function dispatch(object $event, string $eventName = null): object
     {
         $eventName ??= \get_class($event);
+=======
+    public function dispatch(object $event, string $eventName = null): object
+    {
+        $eventName ??= $event::class;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         if (isset($this->optimized)) {
             $listeners = $this->optimized[$eventName] ?? (empty($this->listeners[$eventName]) ? [] : $this->optimizeListeners($eventName));
@@ -62,9 +68,12 @@ class EventDispatcher implements EventDispatcherInterface
         return $event;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getListeners(string $eventName = null): array
     {
         if (null !== $eventName) {
@@ -88,9 +97,12 @@ class EventDispatcher implements EventDispatcherInterface
         return array_filter($this->sorted);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getListenerPriority(string $eventName, callable|array $listener): ?int
     {
         if (empty($this->listeners[$eventName])) {
@@ -117,9 +129,12 @@ class EventDispatcher implements EventDispatcherInterface
         return null;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function hasListeners(string $eventName = null): bool
     {
         if (null !== $eventName) {
@@ -135,18 +150,24 @@ class EventDispatcher implements EventDispatcherInterface
         return false;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function addListener(string $eventName, callable|array $listener, int $priority = 0)
     {
         $this->listeners[$eventName][$priority][] = $listener;
         unset($this->sorted[$eventName], $this->optimized[$eventName]);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function removeListener(string $eventName, callable|array $listener)
     {
         if (empty($this->listeners[$eventName])) {
@@ -175,9 +196,12 @@ class EventDispatcher implements EventDispatcherInterface
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function addSubscriber(EventSubscriberInterface $subscriber)
     {
         foreach ($subscriber->getSubscribedEvents() as $eventName => $params) {
@@ -193,9 +217,12 @@ class EventDispatcher implements EventDispatcherInterface
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function removeSubscriber(EventSubscriberInterface $subscriber)
     {
         foreach ($subscriber->getSubscribedEvents() as $eventName => $params) {

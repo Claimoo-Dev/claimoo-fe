@@ -11,10 +11,20 @@
 
 namespace Symfony\Component\HttpFoundation;
 
+<<<<<<< HEAD
+=======
+trigger_deprecation('symfony/http-foundation', '6.2', 'The "%s" class is deprecated, use "%s" instead.', RequestMatcher::class, ChainRequestMatcher::class);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 /**
  * RequestMatcher compares a pre-defined set of checks against a Request instance.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+<<<<<<< HEAD
+=======
+ *
+ * @deprecated since Symfony 6.2, use ChainRequestMatcher instead
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
  */
 class RequestMatcher implements RequestMatcherInterface
 {
@@ -139,9 +149,12 @@ class RequestMatcher implements RequestMatcherInterface
         $this->attributes[$key] = $regexp;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function matches(Request $request): bool
     {
         if ($this->schemes && !\in_array($request->getScheme(), $this->schemes, true)) {

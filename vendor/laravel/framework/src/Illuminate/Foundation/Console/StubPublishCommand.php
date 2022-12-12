@@ -83,8 +83,17 @@ class StubPublishCommand extends Command
             realpath(__DIR__.'/../../Routing/Console/stubs/controller.model.api.stub') => $stubsPath.'/controller.model.api.stub',
             realpath(__DIR__.'/../../Routing/Console/stubs/controller.model.stub') => $stubsPath.'/controller.model.stub',
             realpath(__DIR__.'/../../Routing/Console/stubs/controller.nested.api.stub') => $stubsPath.'/controller.nested.api.stub',
+<<<<<<< HEAD
             realpath(__DIR__.'/../../Routing/Console/stubs/controller.nested.stub') => $stubsPath.'/controller.nested.stub',
             realpath(__DIR__.'/../../Routing/Console/stubs/controller.plain.stub') => $stubsPath.'/controller.plain.stub',
+=======
+            realpath(__DIR__.'/../../Routing/Console/stubs/controller.nested.singleton.api.stub') => $stubsPath.'/controller.stub',
+            realpath(__DIR__.'/../../Routing/Console/stubs/controller.nested.singleton.stub') => $stubsPath.'/controller.stub',
+            realpath(__DIR__.'/../../Routing/Console/stubs/controller.nested.stub') => $stubsPath.'/controller.nested.stub',
+            realpath(__DIR__.'/../../Routing/Console/stubs/controller.plain.stub') => $stubsPath.'/controller.plain.stub',
+            realpath(__DIR__.'/../../Routing/Console/stubs/controller.singleton.api.stub') => $stubsPath.'/controller.stub',
+            realpath(__DIR__.'/../../Routing/Console/stubs/controller.singleton.stub') => $stubsPath.'/controller.stub',
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             realpath(__DIR__.'/../../Routing/Console/stubs/controller.stub') => $stubsPath.'/controller.stub',
             realpath(__DIR__.'/../../Routing/Console/stubs/middleware.stub') => $stubsPath.'/middleware.stub',
         ];

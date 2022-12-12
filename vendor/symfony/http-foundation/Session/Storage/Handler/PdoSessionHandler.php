@@ -207,7 +207,11 @@ class PdoSessionHandler extends AbstractSessionHandler
 
         try {
             $this->pdo->exec($sql);
+<<<<<<< HEAD
             $this->pdo->exec("CREATE INDEX EXPIRY ON $this->table ($this->lifetimeCol)");
+=======
+            $this->pdo->exec("CREATE INDEX expiry ON $this->table ($this->lifetimeCol)");
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         } catch (\PDOException $e) {
             $this->rollback();
 
@@ -256,9 +260,12 @@ class PdoSessionHandler extends AbstractSessionHandler
         return 0;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function doDestroy(string $sessionId): bool
     {
         // delete the record associated with this id
@@ -277,9 +284,12 @@ class PdoSessionHandler extends AbstractSessionHandler
         return true;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function doWrite(string $sessionId, string $data): bool
     {
         $maxlifetime = (int) (($this->ttl instanceof \Closure ? ($this->ttl)() : $this->ttl) ?? \ini_get('session.gc_maxlifetime'));
@@ -599,7 +609,11 @@ class PdoSessionHandler extends AbstractSessionHandler
                 throw new \RuntimeException('Failed to read session: INSERT reported a duplicate id but next SELECT did not return any data.');
             }
 
+<<<<<<< HEAD
             if (!filter_var(\ini_get('session.use_strict_mode'), \FILTER_VALIDATE_BOOLEAN) && self::LOCK_TRANSACTIONAL === $this->lockMode && 'sqlite' !== $this->driver) {
+=======
+            if (!filter_var(\ini_get('session.use_strict_mode'), \FILTER_VALIDATE_BOOL) && self::LOCK_TRANSACTIONAL === $this->lockMode && 'sqlite' !== $this->driver) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 // In strict mode, session fixation is not possible: new sessions always start with a unique
                 // random id, so that concurrency is not possible and this code path can be skipped.
                 // Exclusive-reading of non-existent rows does not block, so we need to do an insert to block

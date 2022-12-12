@@ -40,6 +40,10 @@ final class Expect
 		if ($args) {
 			$type->default($args[0]);
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $type;
 	}
 
@@ -93,6 +97,10 @@ final class Expect
 				}
 			}
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return (new Structure($items))->castTo($ro->getName());
 	}
 

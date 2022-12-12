@@ -21,6 +21,10 @@ use Symfony\Component\Console\Command\SignalableCommandInterface;
 use Symfony\Component\Console\CommandLoader\CommandLoaderInterface;
 use Symfony\Component\Console\Completion\CompletionInput;
 use Symfony\Component\Console\Completion\CompletionSuggestions;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Console\Completion\Suggestion;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\Console\Event\ConsoleErrorEvent;
 use Symfony\Component\Console\Event\ConsoleSignalEvent;
@@ -32,6 +36,10 @@ use Symfony\Component\Console\Exception\NamespaceNotFoundException;
 use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Console\Formatter\OutputFormatter;
 use Symfony\Component\Console\Helper\DebugFormatterHelper;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Console\Helper\DescriptorHelper;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\Console\Helper\FormatterHelper;
 use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Console\Helper\HelperSet;
@@ -141,6 +149,7 @@ class Application implements ResetInterface
             @putenv('COLUMNS='.$this->terminal->getWidth());
         }
 
+<<<<<<< HEAD
         if (null === $input) {
             $input = new ArgvInput();
         }
@@ -148,6 +157,10 @@ class Application implements ResetInterface
         if (null === $output) {
             $output = new ConsoleOutput();
         }
+=======
+        $input ??= new ArgvInput();
+        $output ??= new ConsoleOutput();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         $renderException = function (\Throwable $e) use ($output) {
             if ($output instanceof ConsoleOutputInterface) {
@@ -258,7 +271,30 @@ class Application implements ResetInterface
             // the command name MUST be the first element of the input
             $command = $this->find($name);
         } catch (\Throwable $e) {
+<<<<<<< HEAD
             if (!($e instanceof CommandNotFoundException && !$e instanceof NamespaceNotFoundException) || 1 !== \count($alternatives = $e->getAlternatives()) || !$input->isInteractive()) {
+=======
+            if (($e instanceof CommandNotFoundException && !$e instanceof NamespaceNotFoundException) && 1 === \count($alternatives = $e->getAlternatives()) && $input->isInteractive()) {
+                $alternative = $alternatives[0];
+
+                $style = new SymfonyStyle($input, $output);
+                $output->writeln('');
+                $formattedBlock = (new FormatterHelper())->formatBlock(sprintf('Command "%s" is not defined.', $name), 'error', true);
+                $output->writeln($formattedBlock);
+                if (!$style->confirm(sprintf('Do you want to run "%s" instead? ', $alternative), false)) {
+                    if (null !== $this->dispatcher) {
+                        $event = new ConsoleErrorEvent($input, $output, $e);
+                        $this->dispatcher->dispatch($event, ConsoleEvents::ERROR);
+
+                        return $event->getExitCode();
+                    }
+
+                    return 1;
+                }
+
+                $command = $this->find($alternative);
+            } else {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 if (null !== $this->dispatcher) {
                     $event = new ConsoleErrorEvent($input, $output, $e);
                     $this->dispatcher->dispatch($event, ConsoleEvents::ERROR);
@@ -270,6 +306,7 @@ class Application implements ResetInterface
                     $e = $event->getError();
                 }
 
+<<<<<<< HEAD
                 throw $e;
             }
 
@@ -291,6 +328,24 @@ class Application implements ResetInterface
             }
 
             $command = $this->find($alternative);
+=======
+                try {
+                    if ($e instanceof CommandNotFoundException && $namespace = $this->findNamespace($name)) {
+                        $helper = new DescriptorHelper();
+                        $helper->describe($output instanceof ConsoleOutputInterface ? $output->getErrorOutput() : $output, $this, [
+                            'format' => 'txt',
+                            'raw_text' => false,
+                            'namespace' => $namespace,
+                            'short' => false,
+                        ]);
+
+                        return isset($event) ? $event->getExitCode() : 1;
+                    }
+                } catch (NamespaceNotFoundException) {
+                    throw $e;
+                }
+            }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         if ($command instanceof LazyCommand) {
@@ -304,9 +359,12 @@ class Application implements ResetInterface
         return $exitCode;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function reset()
     {
     }
@@ -355,18 +413,29 @@ class Application implements ResetInterface
             CompletionInput::TYPE_ARGUMENT_VALUE === $input->getCompletionType()
             && 'command' === $input->getCompletionName()
         ) {
+<<<<<<< HEAD
             $commandNames = [];
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             foreach ($this->all() as $name => $command) {
                 // skip hidden commands and aliased commands as they already get added below
                 if ($command->isHidden() || $command->getName() !== $name) {
                     continue;
                 }
+<<<<<<< HEAD
                 $commandNames[] = $command->getName();
                 foreach ($command->getAliases() as $name) {
                     $commandNames[] = $name;
                 }
             }
             $suggestions->suggestValues(array_filter($commandNames));
+=======
+                $suggestions->suggestValue(new Suggestion($command->getName(), $command->getDescription()));
+                foreach ($command->getAliases() as $name) {
+                    $suggestions->suggestValue(new Suggestion($name, $command->getDescription()));
+                }
+            }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
             return;
         }
@@ -986,10 +1055,13 @@ class Application implements ResetInterface
                         });
                     }
                 }
+<<<<<<< HEAD
 
                 foreach ($commandSignals as $signal) {
                     $this->signalRegistry->register($signal, [$command, 'handleSignal']);
                 }
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
 
             if (null !== $this->dispatcher) {
@@ -1008,6 +1080,13 @@ class Application implements ResetInterface
                     });
                 }
             }
+<<<<<<< HEAD
+=======
+
+            foreach ($commandSignals as $signal) {
+                $this->signalRegistry->register($signal, [$command, 'handleSignal']);
+            }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         if (null === $this->dispatcher) {

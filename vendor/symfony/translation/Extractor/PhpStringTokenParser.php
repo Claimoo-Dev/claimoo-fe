@@ -11,6 +11,11 @@
 
 namespace Symfony\Component\Translation\Extractor;
 
+<<<<<<< HEAD
+=======
+trigger_deprecation('symfony/translation', '6.2', '"%s" is deprecated.', PhpStringTokenParser::class);
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 /*
  * The following is derived from code at http://github.com/nikic/PHP-Parser
  *
@@ -47,6 +52,12 @@ namespace Symfony\Component\Translation\Extractor;
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+<<<<<<< HEAD
+=======
+/**
+ * @deprecated since Symfony 6.2
+ */
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 class PhpStringTokenParser
 {
     protected static $replacements = [

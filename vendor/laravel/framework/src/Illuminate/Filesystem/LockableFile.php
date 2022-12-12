@@ -101,7 +101,11 @@ class LockableFile
      * Write to the file.
      *
      * @param  string  $contents
+<<<<<<< HEAD
      * @return string
+=======
+     * @return $this
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function write($contents)
     {

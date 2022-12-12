@@ -130,9 +130,12 @@ class ProcessHelper extends Helper
         return str_replace('<', '\\<', $str);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return 'process';

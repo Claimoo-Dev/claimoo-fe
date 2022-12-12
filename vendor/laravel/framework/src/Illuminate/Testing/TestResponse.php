@@ -253,6 +253,34 @@ class TestResponse implements ArrayAccess
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Assert whether the response is redirecting to a given route.
+     *
+     * @param  string  $name
+     * @param  mixed  $parameters
+     * @return $this
+     */
+    public function assertRedirectToRoute($name, $parameters = [])
+    {
+        $uri = route($name, $parameters);
+
+        PHPUnit::assertTrue(
+            $this->isRedirect(),
+            $this->statusMessageWithDetails('201, 301, 302, 303, 307, 308', $this->getStatusCode()),
+        );
+
+        $request = Request::create($this->headers->get('Location'));
+
+        PHPUnit::assertEquals(
+            app('url')->to($uri), $request->fullUrl()
+        );
+
+        return $this;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Assert whether the response is redirecting to a given signed route.
      *
      * @param  string|null  $name

@@ -34,6 +34,16 @@ class SendQueuedMailable
     public $timeout;
 
     /**
+<<<<<<< HEAD
+=======
+     * The maximum number of unhandled exceptions to allow before failing.
+     *
+     * @return int|null
+     */
+    public $maxExceptions;
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Indicates if the job should be encrypted.
      *
      * @var bool
@@ -51,6 +61,10 @@ class SendQueuedMailable
         $this->mailable = $mailable;
         $this->tries = property_exists($mailable, 'tries') ? $mailable->tries : null;
         $this->timeout = property_exists($mailable, 'timeout') ? $mailable->timeout : null;
+<<<<<<< HEAD
+=======
+        $this->maxExceptions = property_exists($mailable, 'maxExceptions') ? $mailable->maxExceptions : null;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $this->afterCommit = property_exists($mailable, 'afterCommit') ? $mailable->afterCommit : null;
         $this->shouldBeEncrypted = $mailable instanceof ShouldBeEncrypted;
     }

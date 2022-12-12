@@ -14,6 +14,10 @@ namespace Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Attribute\MapDateTime;
 use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -23,6 +27,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  * @author Benjamin Eberlei <kontakt@beberlei.de>
  * @author Tim Goudriaan <tim@codedmonkey.com>
  */
+<<<<<<< HEAD
 final class DateTimeValueResolver implements ArgumentValueResolverInterface
 {
     /**
@@ -53,6 +58,37 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface
         }
 
         $class = \DateTimeInterface::class === $argument->getType() ? \DateTimeImmutable::class : $argument->getType();
+=======
+final class DateTimeValueResolver implements ArgumentValueResolverInterface, ValueResolverInterface
+{
+    /**
+     * @deprecated since Symfony 6.2, use resolve() instead
+     */
+    public function supports(Request $request, ArgumentMetadata $argument): bool
+    {
+        @trigger_deprecation('symfony/http-kernel', '6.2', 'The "%s()" method is deprecated, use "resolve()" instead.', __METHOD__);
+
+        return is_a($argument->getType(), \DateTimeInterface::class, true) && $request->attributes->has($argument->getName());
+    }
+
+    public function resolve(Request $request, ArgumentMetadata $argument): array
+    {
+        if (!is_a($argument->getType(), \DateTimeInterface::class, true) || !$request->attributes->has($argument->getName())) {
+            return [];
+        }
+
+        $value = $request->attributes->get($argument->getName());
+        $class = \DateTimeInterface::class === $argument->getType() ? \DateTimeImmutable::class : $argument->getType();
+
+        if ($value instanceof \DateTimeInterface) {
+            return [$value instanceof $class ? $value : $class::createFromInterface($value)];
+        }
+
+        if ($argument->isNullable() && !$value) {
+            return [null];
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $format = null;
 
         if ($attributes = $argument->getAttributes(MapDateTime::class, ArgumentMetadata::IS_INSTANCEOF)) {
@@ -60,8 +96,11 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface
             $format = $attribute->format;
         }
 
+<<<<<<< HEAD
         $date = false;
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if (null !== $format) {
             $date = $class::createFromFormat($format, $value);
 
@@ -73,7 +112,11 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface
                 $value = '@'.$value;
             }
             try {
+<<<<<<< HEAD
                 $date = new $class($value);
+=======
+                $date = new $class($value ?? 'now');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             } catch (\Exception) {
                 $date = false;
             }
@@ -83,6 +126,10 @@ final class DateTimeValueResolver implements ArgumentValueResolverInterface
             throw new NotFoundHttpException(sprintf('Invalid date given for parameter "%s".', $argument->getName()));
         }
 
+<<<<<<< HEAD
         yield $date;
+=======
+        return [$date];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 }

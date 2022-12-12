@@ -45,9 +45,12 @@ class TrimmedBufferOutput extends Output
         return $content;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function doWrite(string $message, bool $newline)
     {
         $this->buffer .= $message;

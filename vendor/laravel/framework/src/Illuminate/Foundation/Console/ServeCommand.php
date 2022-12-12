@@ -300,7 +300,11 @@ class ServeCommand extends Command
     protected function getDateFromLine($line)
     {
         $regex = env('PHP_CLI_SERVER_WORKERS', 1) > 1
+<<<<<<< HEAD
             ? '/^\[\d+]\s\[(.*)]/'
+=======
+            ? '/^\[\d+]\s\[([a-zA-Z0-9: ]+)\]/'
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             : '/^\[([^\]]+)\]/';
 
         preg_match($regex, $line, $matches);

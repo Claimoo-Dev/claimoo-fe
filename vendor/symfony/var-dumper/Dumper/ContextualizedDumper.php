@@ -35,7 +35,11 @@ class ContextualizedDumper implements DataDumperInterface
     {
         $context = [];
         foreach ($this->contextProviders as $contextProvider) {
+<<<<<<< HEAD
             $context[\get_class($contextProvider)] = $contextProvider->getContext();
+=======
+            $context[$contextProvider::class] = $contextProvider->getContext();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         $this->wrappedDumper->dump($data->withContext($context));

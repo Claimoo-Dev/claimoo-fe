@@ -38,7 +38,11 @@ class BinaryFileResponse extends Response
 
     /**
      * @param \SplFileInfo|string $file               The file to stream
+<<<<<<< HEAD
      * @param int                 $status             The response status code
+=======
+     * @param int                 $status             The response status code (200 "OK" by default)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @param array               $headers            An array of response headers
      * @param bool                $public             Files are public by default
      * @param string|null         $contentDisposition The type of Content-Disposition to set automatically with the filename
@@ -177,9 +181,12 @@ class BinaryFileResponse extends Response
         return $this;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function prepare(Request $request): static
     {
         if ($this->isInformational() || $this->isEmpty()) {
@@ -292,9 +299,12 @@ class BinaryFileResponse extends Response
         return $lastModified->format('D, d M Y H:i:s').' GMT' === $header;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function sendContent(): static
     {
         try {
@@ -339,8 +349,11 @@ class BinaryFileResponse extends Response
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @throws \LogicException when the content is not null
      */
     public function setContent(?string $content): static
@@ -352,9 +365,12 @@ class BinaryFileResponse extends Response
         return $this;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getContent(): string|false
     {
         return false;

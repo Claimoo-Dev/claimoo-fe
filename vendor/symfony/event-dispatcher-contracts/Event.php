@@ -32,9 +32,12 @@ class Event implements StoppableEventInterface
 {
     private bool $propagationStopped = false;
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function isPropagationStopped(): bool
     {
         return $this->propagationStopped;

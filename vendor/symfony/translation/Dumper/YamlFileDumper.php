@@ -30,9 +30,12 @@ class YamlFileDumper extends FileDumper
         $this->extension = $extension;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
     {
         if (!class_exists(Yaml::class)) {
@@ -52,9 +55,12 @@ class YamlFileDumper extends FileDumper
         return Yaml::dump($data);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function getExtension(): string
     {
         return $this->extension;

@@ -83,7 +83,11 @@ final class InlineParserContext
      */
     public function getFullMatchLength(): int
     {
+<<<<<<< HEAD
         return \mb_strlen($this->matches[0]);
+=======
+        return \mb_strlen($this->matches[0], 'UTF-8');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**

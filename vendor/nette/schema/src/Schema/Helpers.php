@@ -44,6 +44,10 @@ final class Helpers
 					$base[$key] = static::merge($val, $base[$key] ?? null);
 				}
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 			return $base;
 
 		} elseif ($value === null && is_array($base)) {
@@ -67,6 +71,10 @@ final class Helpers
 				return Reflection::expandClassName($m[0], $class);
 			}, $type);
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return null;
 	}
 
@@ -80,10 +88,18 @@ final class Helpers
 		if (!Reflection::areCommentsAvailable()) {
 			throw new Nette\InvalidStateException('You have to enable phpDoc comments in opcode cache.');
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		$re = '#[\s*]@' . preg_quote($name, '#') . '(?=\s|$)(?:[ \t]+([^@\s]\S*))?#';
 		if ($ref->getDocComment() && preg_match($re, trim($ref->getDocComment(), '/*'), $m)) {
 			return $m[1] ?? '';
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return null;
 	}
 

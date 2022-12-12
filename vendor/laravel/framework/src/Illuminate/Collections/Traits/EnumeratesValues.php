@@ -196,6 +196,7 @@ trait EnumeratesValues
     }
 
     /**
+<<<<<<< HEAD
      * Determine if an item exists, using strict comparison.
      *
      * @param  (callable(TValue): bool)|TValue|array-key  $key
@@ -222,6 +223,8 @@ trait EnumeratesValues
     }
 
     /**
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Dump the items and end the script.
      *
      * @param  mixed  ...$args
@@ -384,8 +387,16 @@ trait EnumeratesValues
     /**
      * Map a collection and flatten the result by a single level.
      *
+<<<<<<< HEAD
      * @param  callable(TValue, TKey): mixed  $callback
      * @return static<int, mixed>
+=======
+     * @template TFlatMapKey of array-key
+     * @template TFlatMapValue
+     *
+     * @param  callable(TValue, TKey): (\Illuminate\Support\Collection<TFlatMapKey, TFlatMapValue>|array<TFlatMapKey, TFlatMapValue>)  $callback
+     * @return static<TFlatMapKey, TFlatMapValue>
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function flatMap(callable $callback)
     {
@@ -791,7 +802,11 @@ trait EnumeratesValues
     /**
      * Create a collection of all elements that do not pass a given truth test.
      *
+<<<<<<< HEAD
      * @param  (callable(TValue, TKey): bool)|bool  $callback
+=======
+     * @param  (callable(TValue, TKey): bool)|bool|TValue  $callback
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return static
      */
     public function reject($callback = true)

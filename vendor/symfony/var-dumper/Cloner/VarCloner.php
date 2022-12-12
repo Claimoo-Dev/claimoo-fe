@@ -19,9 +19,12 @@ class VarCloner extends AbstractCloner
     private static string $gid;
     private static array $arrayCache = [];
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function doClone(mixed $var): array
     {
         $len = 1;                       // Length of $queue
@@ -129,7 +132,11 @@ class VarCloner extends AbstractCloner
                         if (empty($objRefs[$h = spl_object_id($v)])) {
                             $stub = new Stub();
                             $stub->type = Stub::TYPE_OBJECT;
+<<<<<<< HEAD
                             $stub->class = \get_class($v);
+=======
+                            $stub->class = $v::class;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                             $stub->value = $v;
                             $stub->handle = $h;
                             $a = $this->castObject($stub, 0 < $i);

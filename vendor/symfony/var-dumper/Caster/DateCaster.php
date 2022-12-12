@@ -28,7 +28,11 @@ class DateCaster
     {
         $prefix = Caster::PREFIX_VIRTUAL;
         $location = $d->getTimezone()->getLocation();
+<<<<<<< HEAD
         $fromNow = (new \DateTime())->diff($d);
+=======
+        $fromNow = (new \DateTimeImmutable())->diff($d);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         $title = $d->format('l, F j, Y')
             ."\n".self::formatInterval($fromNow).' from now'
@@ -79,7 +83,11 @@ class DateCaster
     public static function castTimeZone(\DateTimeZone $timeZone, array $a, Stub $stub, bool $isNested, int $filter)
     {
         $location = $timeZone->getLocation();
+<<<<<<< HEAD
         $formatted = (new \DateTime('now', $timeZone))->format($location ? 'e (P)' : 'P');
+=======
+        $formatted = (new \DateTimeImmutable('now', $timeZone))->format($location ? 'e (P)' : 'P');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $title = $location && \extension_loaded('intl') ? \Locale::getDisplayRegion('-'.$location['country_code']) : '';
 
         $z = [Caster::PREFIX_VIRTUAL.'timezone' => new ConstStub($formatted, $title)];

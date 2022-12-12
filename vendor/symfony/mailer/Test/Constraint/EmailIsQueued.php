@@ -16,9 +16,12 @@ use Symfony\Component\Mailer\Event\MessageEvent;
 
 final class EmailIsQueued extends Constraint
 {
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function toString(): string
     {
         return 'is queued';
@@ -26,8 +29,11 @@ final class EmailIsQueued extends Constraint
 
     /**
      * @param MessageEvent $event
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function matches($event): bool
     {
@@ -36,8 +42,11 @@ final class EmailIsQueued extends Constraint
 
     /**
      * @param MessageEvent $event
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function failureDescription($event): string
     {

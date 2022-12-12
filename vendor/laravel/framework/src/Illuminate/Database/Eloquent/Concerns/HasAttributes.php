@@ -541,7 +541,11 @@ trait HasAttributes
         }
 
         return method_exists($this, $key) ||
+<<<<<<< HEAD
             (static::$relationResolvers[get_class($this)][$key] ?? null);
+=======
+               $this->relationResolver(static::class, $key);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -2145,6 +2149,7 @@ trait HasAttributes
      */
     public function getMutatedAttributes()
     {
+<<<<<<< HEAD
         $class = static::class;
 
         if (! isset(static::$mutatorCache[$class])) {
@@ -2152,11 +2157,19 @@ trait HasAttributes
         }
 
         return static::$mutatorCache[$class];
+=======
+        if (! isset(static::$mutatorCache[static::class])) {
+            static::cacheMutatedAttributes($this);
+        }
+
+        return static::$mutatorCache[static::class];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
      * Extract and cache all the mutated attributes of a class.
      *
+<<<<<<< HEAD
      * @param  string  $class
      * @return void
      */
@@ -2164,6 +2177,19 @@ trait HasAttributes
     {
         static::$getAttributeMutatorCache[$class] =
             collect($attributeMutatorMethods = static::getAttributeMarkedMutatorMethods($class))
+=======
+     * @param  object|string  $classOrInstance
+     * @return void
+     */
+    public static function cacheMutatedAttributes($classOrInstance)
+    {
+        $reflection = new ReflectionClass($classOrInstance);
+
+        $class = $reflection->getName();
+
+        static::$getAttributeMutatorCache[$class] =
+            collect($attributeMutatorMethods = static::getAttributeMarkedMutatorMethods($classOrInstance))
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                     ->mapWithKeys(function ($match) {
                         return [lcfirst(static::$snakeAttributes ? Str::snake($match) : $match) => true];
                     })->all();

@@ -34,7 +34,11 @@ class LazyString implements \Stringable, \JsonSerializable
             if (null !== $arguments) {
                 if (!\is_callable($callback)) {
                     $callback[0] = $callback[0]();
+<<<<<<< HEAD
                     $callback[1] = $callback[1] ?? '__invoke';
+=======
+                    $callback[1] ??= '__invoke';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 }
                 $value = $callback(...$arguments);
                 $callback = self::getPrettyName($callback);
@@ -50,7 +54,11 @@ class LazyString implements \Stringable, \JsonSerializable
     public static function fromStringable(string|int|float|bool|\Stringable $value): static
     {
         if (\is_object($value)) {
+<<<<<<< HEAD
             return static::fromCallable([$value, '__toString']);
+=======
+            return static::fromCallable($value->__toString(...));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         $lazyString = new static();
@@ -86,7 +94,11 @@ class LazyString implements \Stringable, \JsonSerializable
         try {
             return $this->value = ($this->value)();
         } catch (\Throwable $e) {
+<<<<<<< HEAD
             if (\TypeError::class === \get_class($e) && __FILE__ === $e->getFile()) {
+=======
+            if (\TypeError::class === $e::class && __FILE__ === $e->getFile()) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $type = explode(', ', $e->getMessage());
                 $type = substr(array_pop($type), 0, -\strlen(' returned'));
                 $r = new \ReflectionFunction($this->value);

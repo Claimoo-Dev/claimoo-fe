@@ -16,8 +16,11 @@ class FatalError extends \Error
     private array $error;
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @param array $error An array as returned by error_get_last()
      */
     public function __construct(string $message, int $code, array $error, int $traceOffset = null, bool $traceArgs = true, array $trace = null)
@@ -78,9 +81,12 @@ class FatalError extends \Error
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getError(): array
     {
         return $this->error;

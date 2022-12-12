@@ -79,7 +79,15 @@ class Command extends SymfonyCommand
         // Once we have constructed the command, we'll set the description and other
         // related properties of the command. If a signature wasn't used to build
         // the command we'll set the arguments and the options on this command.
+<<<<<<< HEAD
         $this->setDescription((string) $this->description);
+=======
+        if (! isset($this->description)) {
+            $this->setDescription((string) static::getDefaultDescription());
+        } else {
+            $this->setDescription((string) $this->description);
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         $this->setHelp((string) $this->help);
 

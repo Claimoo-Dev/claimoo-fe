@@ -232,7 +232,11 @@ class Profiler implements ResetInterface
         }
 
         try {
+<<<<<<< HEAD
             $value = new \DateTime(is_numeric($value) ? '@'.$value : $value);
+=======
+            $value = new \DateTimeImmutable(is_numeric($value) ? '@'.$value : $value);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         } catch (\Exception) {
             return null;
         }

@@ -55,6 +55,29 @@ trait HasRelationships
     protected static $relationResolvers = [];
 
     /**
+<<<<<<< HEAD
+=======
+     * Get the dynamic relation resolver if defined or inherited, or return null.
+     *
+     * @param  string  $class
+     * @param  string  $key
+     * @return mixed
+     */
+    public function relationResolver($class, $key)
+    {
+        if ($resolver = static::$relationResolvers[$class][$key] ?? null) {
+            return $resolver;
+        }
+
+        if ($parent = get_parent_class($class)) {
+            return $this->relationResolver($parent, $key);
+        }
+
+        return null;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Define a dynamic relation resolver.
      *
      * @param  string  $name

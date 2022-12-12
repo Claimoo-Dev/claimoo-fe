@@ -24,6 +24,13 @@ class UnsupportedSchemeException extends LogicException
             'class' => Bridge\Google\Transport\GmailTransportFactory::class,
             'package' => 'symfony/google-mailer',
         ],
+<<<<<<< HEAD
+=======
+        'infobip' => [
+            'class' => Bridge\Infobip\Transport\InfobipTransportFactory::class,
+            'package' => 'symfony/infobip-mailer',
+        ],
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         'mailgun' => [
             'class' => Bridge\Mailgun\Transport\MailgunTransportFactory::class,
             'package' => 'symfony/mailgun-mailer',

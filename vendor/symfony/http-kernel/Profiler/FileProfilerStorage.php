@@ -42,9 +42,12 @@ class FileProfilerStorage implements ProfilerStorageInterface
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function find(?string $ip, ?string $url, ?int $limit, ?string $method, int $start = null, int $end = null, string $statusCode = null): array
     {
         $file = $this->getIndexFilename();
@@ -90,9 +93,12 @@ class FileProfilerStorage implements ProfilerStorageInterface
         return array_values($result);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function purge()
     {
         $flags = \FilesystemIterator::SKIP_DOTS;
@@ -108,17 +114,23 @@ class FileProfilerStorage implements ProfilerStorageInterface
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function read(string $token): ?Profile
     {
         return $this->doRead($token);
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @throws \RuntimeException
      */
     public function write(Profile $profile): bool

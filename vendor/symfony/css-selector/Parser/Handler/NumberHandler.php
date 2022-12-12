@@ -35,9 +35,12 @@ class NumberHandler implements HandlerInterface
         $this->patterns = $patterns;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function handle(Reader $reader, TokenStream $stream): bool
     {
         $match = $reader->findPattern($this->patterns->getNumberPattern());

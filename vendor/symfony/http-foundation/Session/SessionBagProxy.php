@@ -54,17 +54,23 @@ final class SessionBagProxy implements SessionBagInterface
         return empty($this->data[$this->bag->getStorageKey()]);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return $this->bag->getName();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function initialize(array &$array): void
     {
         ++$this->usageIndex;
@@ -77,17 +83,23 @@ final class SessionBagProxy implements SessionBagInterface
         $this->bag->initialize($array);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getStorageKey(): string
     {
         return $this->bag->getStorageKey();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function clear(): mixed
     {
         return $this->bag->clear();

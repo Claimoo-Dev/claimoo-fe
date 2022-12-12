@@ -12,7 +12,11 @@ use Illuminate\Routing\Contracts\ControllerDispatcher as ControllerDispatcherCon
 class HandlePrecognitiveRequests
 {
     /**
+<<<<<<< HEAD
      *The container instance.
+=======
+     * The container instance.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      *
      * @var \Illuminate\Container\Container
      */

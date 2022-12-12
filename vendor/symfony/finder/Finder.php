@@ -425,6 +425,25 @@ class Finder implements \IteratorAggregate, \Countable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Sorts files and directories by extension.
+     *
+     * This can be slow as all the matching files and directories must be retrieved for comparison.
+     *
+     * @return $this
+     *
+     * @see SortableIterator
+     */
+    public function sortByExtension(): static
+    {
+        $this->sort = Iterator\SortableIterator::SORT_BY_EXTENSION;
+
+        return $this;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Sorts files and directories by name.
      *
      * This can be slow as all the matching files and directories must be retrieved for comparison.
@@ -441,6 +460,41 @@ class Finder implements \IteratorAggregate, \Countable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Sorts files and directories by name case insensitive.
+     *
+     * This can be slow as all the matching files and directories must be retrieved for comparison.
+     *
+     * @return $this
+     *
+     * @see SortableIterator
+     */
+    public function sortByCaseInsensitiveName(bool $useNaturalSort = false): static
+    {
+        $this->sort = $useNaturalSort ? Iterator\SortableIterator::SORT_BY_NAME_NATURAL_CASE_INSENSITIVE : Iterator\SortableIterator::SORT_BY_NAME_CASE_INSENSITIVE;
+
+        return $this;
+    }
+
+    /**
+     * Sorts files and directories by size.
+     *
+     * This can be slow as all the matching files and directories must be retrieved for comparison.
+     *
+     * @return $this
+     *
+     * @see SortableIterator
+     */
+    public function sortBySize(): static
+    {
+        $this->sort = Iterator\SortableIterator::SORT_BY_SIZE;
+
+        return $this;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Sorts files and directories by type (directories before files), then by name.
      *
      * This can be slow as all the matching files and directories must be retrieved for comparison.

@@ -134,22 +134,38 @@ class Request
     protected $content;
 
     /**
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected $languages;
 
     /**
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected $charsets;
 
     /**
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected $encodings;
 
     /**
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected $acceptableContentTypes;
 
@@ -199,7 +215,11 @@ class Request
     protected $defaultLocale = 'en';
 
     /**
+<<<<<<< HEAD
      * @var array
+=======
+     * @var array<string, string[]>
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected static $formats;
 
@@ -505,7 +525,11 @@ class Request
             $cookies[] = $k.'='.$v;
         }
 
+<<<<<<< HEAD
         if (!empty($cookies)) {
+=======
+        if ($cookies) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             $cookieHeader = 'Cookie: '.implode('; ', $cookies)."\r\n";
         }
 
@@ -578,6 +602,11 @@ class Request
 
     /**
      * Gets the list of trusted proxies.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public static function getTrustedProxies(): array
     {
@@ -612,6 +641,11 @@ class Request
 
     /**
      * Gets the list of trusted host patterns.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public static function getTrustedHosts(): array
     {
@@ -815,11 +849,15 @@ class Request
      */
     public function getPathInfo(): string
     {
+<<<<<<< HEAD
         if (null === $this->pathInfo) {
             $this->pathInfo = $this->preparePathInfo();
         }
 
         return $this->pathInfo;
+=======
+        return $this->pathInfo ??= $this->preparePathInfo();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -836,11 +874,15 @@ class Request
      */
     public function getBasePath(): string
     {
+<<<<<<< HEAD
         if (null === $this->basePath) {
             $this->basePath = $this->prepareBasePath();
         }
 
         return $this->basePath;
+=======
+        return $this->basePath ??= $this->prepareBasePath();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -873,11 +915,15 @@ class Request
      */
     private function getBaseUrlReal(): string
     {
+<<<<<<< HEAD
         if (null === $this->baseUrl) {
             $this->baseUrl = $this->prepareBaseUrl();
         }
 
         return $this->baseUrl;
+=======
+        return $this->baseUrl ??= $this->prepareBaseUrl();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -964,7 +1010,11 @@ class Request
         $scheme = $this->getScheme();
         $port = $this->getPort();
 
+<<<<<<< HEAD
         if (('http' == $scheme && 80 == $port) || ('https' == $scheme && 443 == $port)) {
+=======
+        if (('http' === $scheme && 80 == $port) || ('https' === $scheme && 443 == $port)) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             return $this->getHost();
         }
 
@@ -978,11 +1028,15 @@ class Request
      */
     public function getRequestUri(): string
     {
+<<<<<<< HEAD
         if (null === $this->requestUri) {
             $this->requestUri = $this->prepareRequestUri();
         }
 
         return $this->requestUri;
+=======
+        return $this->requestUri ??= $this->prepareRequestUri();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -1246,6 +1300,11 @@ class Request
 
     /**
      * Gets the mime types associated with the format.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public static function getMimeTypes(string $format): array
     {
@@ -1285,7 +1344,11 @@ class Request
     /**
      * Associates a format with mime types.
      *
+<<<<<<< HEAD
      * @param string|array $mimeTypes The associated mime types (the preferred one must be the first as it will be used as the content type)
+=======
+     * @param string|string[] $mimeTypes The associated mime types (the preferred one must be the first as it will be used as the content type)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function setFormat(?string $format, string|array $mimeTypes)
     {
@@ -1309,9 +1372,13 @@ class Request
      */
     public function getRequestFormat(?string $default = 'html'): ?string
     {
+<<<<<<< HEAD
         if (null === $this->format) {
             $this->format = $this->attributes->get('_format');
         }
+=======
+        $this->format ??= $this->attributes->get('_format');
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         return $this->format ?? $default;
     }
@@ -1325,10 +1392,31 @@ class Request
     }
 
     /**
+<<<<<<< HEAD
      * Gets the format associated with the request.
      */
     public function getContentType(): ?string
     {
+=======
+     * Gets the usual name of the format associated with the request's media type (provided in the Content-Type header).
+     *
+     * @deprecated since Symfony 6.2, use getContentTypeFormat() instead
+     */
+    public function getContentType(): ?string
+    {
+        trigger_deprecation('symfony/http-foundation', '6.2', 'The "%s()" method is deprecated, use "getContentTypeFormat()" instead.', __METHOD__);
+
+        return $this->getContentTypeFormat();
+    }
+
+    /**
+     * Gets the usual name of the format associated with the request's media type (provided in the Content-Type header).
+     *
+     * @see Request::$formats
+     */
+    public function getContentTypeFormat(): ?string
+    {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         return $this->getFormat($this->headers->get('CONTENT_TYPE', ''));
     }
 
@@ -1434,6 +1522,10 @@ class Request
      * @param bool $asResource If true, a resource will be returned
      *
      * @return string|resource
+<<<<<<< HEAD
+=======
+     * @psalm-return ($asResource is true ? resource : string)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function getContent(bool $asResource = false)
     {
@@ -1568,6 +1660,11 @@ class Request
 
     /**
      * Gets a list of languages acceptable by the client browser ordered in the user browser preferences.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function getLanguages(): array
     {
@@ -1607,6 +1704,11 @@ class Request
 
     /**
      * Gets a list of charsets acceptable by the client browser in preferable order.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function getCharsets(): array
     {
@@ -1619,6 +1721,11 @@ class Request
 
     /**
      * Gets a list of encodings acceptable by the client browser in preferable order.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function getEncodings(): array
     {
@@ -1631,6 +1738,11 @@ class Request
 
     /**
      * Gets a list of content types acceptable by the client browser in preferable order.
+<<<<<<< HEAD
+=======
+     *
+     * @return string[]
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function getAcceptableContentTypes(): array
     {
@@ -2008,9 +2120,13 @@ class Request
                 unset($clientIps[$key]);
 
                 // Fallback to this when the client IP falls into the range of trusted proxies
+<<<<<<< HEAD
                 if (null === $firstTrustedIp) {
                     $firstTrustedIp = $clientIp;
                 }
+=======
+                $firstTrustedIp ??= $clientIp;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
         }
 

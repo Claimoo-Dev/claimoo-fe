@@ -53,7 +53,11 @@ class TrimStrings extends TransformsRequest
             return $value;
         }
 
+<<<<<<< HEAD
         return preg_replace('~^[\s﻿]+|[\s﻿]+$~u', '', $value) ?? trim($value);
+=======
+        return preg_replace('~^[\s﻿​]+|[\s﻿​]+$~u', '', $value) ?? trim($value);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**

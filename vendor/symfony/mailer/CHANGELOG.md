@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+6.2
+---
+
+ * Add a `mailer:test` command
+ * Add `SentMessageEvent` and `FailedMessageEvent` events
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 6.1
 ---
 

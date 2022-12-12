@@ -68,7 +68,11 @@ class RouterListener implements EventSubscriberInterface
         $this->debug = $debug;
     }
 
+<<<<<<< HEAD
     private function setCurrentRequest(Request $request = null)
+=======
+    private function setCurrentRequest(?Request $request)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         if (null !== $request) {
             try {
@@ -83,7 +87,11 @@ class RouterListener implements EventSubscriberInterface
      * After a sub-request is done, we need to reset the routing context to the parent request so that the URL generator
      * operates on the correct context again.
      */
+<<<<<<< HEAD
     public function onKernelFinishRequest(FinishRequestEvent $event)
+=======
+    public function onKernelFinishRequest()
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         $this->setCurrentRequest($this->requestStack->getParentRequest());
     }

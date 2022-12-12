@@ -69,6 +69,14 @@ class Cookie
         return new static($name, $value, $data['expires'], $data['path'], $data['domain'], $data['secure'], $data['httponly'], $data['raw'], $data['samesite']);
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @see self::__construct
+     *
+     * @param self::SAMESITE_*|''|null $sameSite
+     */
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public static function create(string $name, string $value = null, int|string|\DateTimeInterface $expire = 0, ?string $path = '/', string $domain = null, bool $secure = null, bool $httpOnly = true, bool $raw = false, ?string $sameSite = self::SAMESITE_LAX): self
     {
         return new self($name, $value, $expire, $path, $domain, $secure, $httpOnly, $raw, $sameSite);
@@ -83,7 +91,11 @@ class Cookie
      * @param bool|null                     $secure   Whether the client should send back the cookie only over HTTPS or null to auto-enable this when the request is already using HTTPS
      * @param bool                          $httpOnly Whether the cookie will be made accessible only through the HTTP protocol
      * @param bool                          $raw      Whether the cookie value should be sent with no url encoding
+<<<<<<< HEAD
      * @param string|null                   $sameSite Whether the cookie will be available for cross-site requests
+=======
+     * @param self::SAMESITE_*|''|null      $sameSite Whether the cookie will be available for cross-site requests
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      *
      * @throws \InvalidArgumentException
      */
@@ -211,6 +223,11 @@ class Cookie
 
     /**
      * Creates a cookie copy with SameSite attribute.
+<<<<<<< HEAD
+=======
+     *
+     * @param self::SAMESITE_*|''|null $sameSite
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function withSameSite(?string $sameSite): static
     {
@@ -359,7 +376,11 @@ class Cookie
     }
 
     /**
+<<<<<<< HEAD
      * Gets the SameSite attribute.
+=======
+     * @return self::SAMESITE_*|null
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     public function getSameSite(): ?string
     {

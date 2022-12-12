@@ -2,6 +2,15 @@
 
 All notable changes of the PHPUnit 9.5 release series are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
+=======
+## [9.5.27] - 2022-12-09
+
+### Fixed
+
+* [#5113](https://github.com/sebastianbergmann/phpunit/pull/5113): PHP error instead of PHPUnit error when trying to create test double for `readonly` class
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 ## [9.5.26] - 2022-10-28
 
 ### Fixed
@@ -206,6 +215,10 @@ All notable changes of the PHPUnit 9.5 release series are documented in this fil
 
 * [#4535](https://github.com/sebastianbergmann/phpunit/issues/4535): `getMockFromWsdl()` does not handle methods that do not have parameters correctly
 
+<<<<<<< HEAD
+=======
+[9.5.27]: https://github.com/sebastianbergmann/phpunit/compare/9.5.26...9.5.27
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 [9.5.26]: https://github.com/sebastianbergmann/phpunit/compare/9.5.25...9.5.26
 [9.5.25]: https://github.com/sebastianbergmann/phpunit/compare/9.5.24...9.5.25
 [9.5.24]: https://github.com/sebastianbergmann/phpunit/compare/9.5.23...9.5.24

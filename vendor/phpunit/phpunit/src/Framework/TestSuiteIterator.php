@@ -14,6 +14,11 @@ use function count;
 use RecursiveIterator;
 
 /**
+<<<<<<< HEAD
+=======
+ * @template-implements RecursiveIterator<int, Test>
+ *
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 final class TestSuiteIterator implements RecursiveIterator

@@ -30,9 +30,12 @@ class FlashBag implements FlashBagInterface
         $this->storageKey = $storageKey;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return $this->name;
@@ -43,41 +46,56 @@ class FlashBag implements FlashBagInterface
         $this->name = $name;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function initialize(array &$flashes)
     {
         $this->flashes = &$flashes;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function add(string $type, mixed $message)
     {
         $this->flashes[$type][] = $message;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function peek(string $type, array $default = []): array
     {
         return $this->has($type) ? $this->flashes[$type] : $default;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function peekAll(): array
     {
         return $this->flashes;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function get(string $type, array $default = []): array
     {
         if (!$this->has($type)) {
@@ -91,9 +109,12 @@ class FlashBag implements FlashBagInterface
         return $return;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function all(): array
     {
         $return = $this->peekAll();
@@ -102,49 +123,67 @@ class FlashBag implements FlashBagInterface
         return $return;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function set(string $type, string|array $messages)
     {
         $this->flashes[$type] = (array) $messages;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function setAll(array $messages)
     {
         $this->flashes = $messages;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function has(string $type): bool
     {
         return \array_key_exists($type, $this->flashes) && $this->flashes[$type];
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function keys(): array
     {
         return array_keys($this->flashes);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getStorageKey(): string
     {
         return $this->storageKey;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function clear(): mixed
     {
         return $this->all();

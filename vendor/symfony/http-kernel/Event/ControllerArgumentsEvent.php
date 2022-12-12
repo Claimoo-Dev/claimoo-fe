@@ -28,6 +28,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  */
 final class ControllerArgumentsEvent extends KernelEvent
 {
+<<<<<<< HEAD
     private $controller;
     private array $arguments;
 
@@ -36,17 +37,45 @@ final class ControllerArgumentsEvent extends KernelEvent
         parent::__construct($kernel, $request, $requestType);
 
         $this->controller = $controller;
+=======
+    private ControllerEvent $controllerEvent;
+    private array $arguments;
+    private array $namedArguments;
+
+    public function __construct(HttpKernelInterface $kernel, callable|ControllerEvent $controller, array $arguments, Request $request, ?int $requestType)
+    {
+        parent::__construct($kernel, $request, $requestType);
+
+        if (!$controller instanceof ControllerEvent) {
+            $controller = new ControllerEvent($kernel, $controller, $request, $requestType);
+        }
+
+        $this->controllerEvent = $controller;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $this->arguments = $arguments;
     }
 
     public function getController(): callable
     {
+<<<<<<< HEAD
         return $this->controller;
     }
 
     public function setController(callable $controller)
     {
         $this->controller = $controller;
+=======
+        return $this->controllerEvent->getController();
+    }
+
+    /**
+     * @param array<class-string, list<object>>|null $attributes
+     */
+    public function setController(callable $controller, array $attributes = null): void
+    {
+        $this->controllerEvent->setController($controller, $attributes);
+        unset($this->namedArguments);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     public function getArguments(): array
@@ -57,5 +86,41 @@ final class ControllerArgumentsEvent extends KernelEvent
     public function setArguments(array $arguments)
     {
         $this->arguments = $arguments;
+<<<<<<< HEAD
+=======
+        unset($this->namedArguments);
+    }
+
+    public function getNamedArguments(): array
+    {
+        if (isset($this->namedArguments)) {
+            return $this->namedArguments;
+        }
+
+        $namedArguments = [];
+        $arguments = $this->arguments;
+
+        foreach ($this->controllerEvent->getControllerReflector()->getParameters() as $i => $param) {
+            if ($param->isVariadic()) {
+                $namedArguments[$param->name] = \array_slice($arguments, $i);
+                break;
+            }
+            if (\array_key_exists($i, $arguments)) {
+                $namedArguments[$param->name] = $arguments[$i];
+            } elseif ($param->isDefaultvalueAvailable()) {
+                $namedArguments[$param->name] = $param->getDefaultValue();
+            }
+        }
+
+        return $this->namedArguments = $namedArguments;
+    }
+
+    /**
+     * @return array<class-string, list<object>>
+     */
+    public function getAttributes(): array
+    {
+        return $this->controllerEvent->getAttributes();
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 }

@@ -14,6 +14,10 @@ namespace Symfony\Component\Mime;
 use Symfony\Component\Mime\Exception\LogicException;
 use Symfony\Component\Mime\Part\AbstractPart;
 use Symfony\Component\Mime\Part\DataPart;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Mime\Part\File;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\Mime\Part\Multipart\AlternativePart;
 use Symfony\Component\Mime\Part\Multipart\MixedPart;
 use Symfony\Component\Mime\Part\Multipart\RelatedPart;
@@ -326,6 +330,7 @@ class Email extends Message
      */
     public function attach($body, string $name = null, string $contentType = null): static
     {
+<<<<<<< HEAD
         if (!\is_string($body) && !\is_resource($body)) {
             throw new \TypeError(sprintf('The body must be a string or a resource (got "%s").', get_debug_type($body)));
         }
@@ -334,6 +339,9 @@ class Email extends Message
         $this->attachments[] = ['body' => $body, 'name' => $name, 'content-type' => $contentType, 'inline' => false];
 
         return $this;
+=======
+        return $this->addPart(new DataPart($body, $name, $contentType));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -341,10 +349,14 @@ class Email extends Message
      */
     public function attachFromPath(string $path, string $name = null, string $contentType = null): static
     {
+<<<<<<< HEAD
         $this->cachedBody = null;
         $this->attachments[] = ['path' => $path, 'name' => $name, 'content-type' => $contentType, 'inline' => false];
 
         return $this;
+=======
+        return $this->addPart(new DataPart(new File($path), $name, $contentType));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -354,6 +366,7 @@ class Email extends Message
      */
     public function embed($body, string $name = null, string $contentType = null): static
     {
+<<<<<<< HEAD
         if (!\is_string($body) && !\is_resource($body)) {
             throw new \TypeError(sprintf('The body must be a string or a resource (got "%s").', get_debug_type($body)));
         }
@@ -362,6 +375,9 @@ class Email extends Message
         $this->attachments[] = ['body' => $body, 'name' => $name, 'content-type' => $contentType, 'inline' => true];
 
         return $this;
+=======
+        return $this->addPart((new DataPart($body, $name, $contentType))->asInline());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
@@ -369,24 +385,49 @@ class Email extends Message
      */
     public function embedFromPath(string $path, string $name = null, string $contentType = null): static
     {
+<<<<<<< HEAD
         $this->cachedBody = null;
         $this->attachments[] = ['path' => $path, 'name' => $name, 'content-type' => $contentType, 'inline' => true];
 
         return $this;
+=======
+        return $this->addPart((new DataPart(new File($path), $name, $contentType))->asInline());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**
      * @return $this
+<<<<<<< HEAD
      */
     public function attachPart(DataPart $part): static
     {
         $this->cachedBody = null;
         $this->attachments[] = ['part' => $part];
+=======
+     *
+     * @deprecated since Symfony 6.2, use addPart() instead
+     */
+    public function attachPart(DataPart $part): static
+    {
+        @trigger_deprecation('symfony/mime', '6.2', 'The "%s()" method is deprecated, use "addPart()" instead.', __METHOD__);
+
+        return $this->addPart($part);
+    }
+
+    /**
+     * @return $this
+     */
+    public function addPart(DataPart $part): static
+    {
+        $this->cachedBody = null;
+        $this->attachments[] = $part;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * @return array|DataPart[]
      */
     public function getAttachments(): array
@@ -397,6 +438,13 @@ class Email extends Message
         }
 
         return $parts;
+=======
+     * @return DataPart[]
+     */
+    public function getAttachments(): array
+    {
+        return $this->attachments;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     public function getBody(): AbstractPart
@@ -501,6 +549,7 @@ class Email extends Message
             $names = array_filter(array_unique($names));
         }
 
+<<<<<<< HEAD
         // usage of reflection is a temporary workaround for missing getters that will be added in 6.2
         $nameRef = new \ReflectionProperty(TextPart::class, 'name');
         $nameRef->setAccessible(true);
@@ -514,11 +563,18 @@ class Email extends Message
             $related = false;
             foreach ($names as $name) {
                 if ($name !== $attachment['name']) {
+=======
+        $otherParts = $relatedParts = [];
+        foreach ($this->attachments as $part) {
+            foreach ($names as $name) {
+                if ($name !== $part->getName()) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                     continue;
                 }
                 if (isset($relatedParts[$name])) {
                     continue 2;
                 }
+<<<<<<< HEAD
                 $part->setDisposition('inline');
                 $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html, $count);
                 if ($count) {
@@ -534,6 +590,17 @@ class Email extends Message
             } else {
                 $otherParts[] = $part;
             }
+=======
+
+                $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html, $count);
+                $relatedParts[$name] = $part;
+                $part->setName($part->getContentId())->asInline();
+
+                continue 2;
+            }
+
+            $otherParts[] = $part;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
         if (null !== $htmlPart) {
             $htmlPart = new TextPart($html, $this->htmlCharset, 'html');
@@ -542,6 +609,7 @@ class Email extends Message
         return [$htmlPart, $otherParts, array_values($relatedParts)];
     }
 
+<<<<<<< HEAD
     private function createDataPart(array $attachment): DataPart
     {
         if (isset($attachment['part'])) {
@@ -560,6 +628,8 @@ class Email extends Message
         return $part;
     }
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     /**
      * @return $this
      */
@@ -609,12 +679,15 @@ class Email extends Message
             $this->html = (new TextPart($this->html))->getBody();
         }
 
+<<<<<<< HEAD
         foreach ($this->attachments as $i => $attachment) {
             if (isset($attachment['body']) && \is_resource($attachment['body'])) {
                 $this->attachments[$i]['body'] = (new TextPart($attachment['body']))->getBody();
             }
         }
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         return [$this->text, $this->textCharset, $this->html, $this->htmlCharset, $this->attachments, parent::__serialize()];
     }
 

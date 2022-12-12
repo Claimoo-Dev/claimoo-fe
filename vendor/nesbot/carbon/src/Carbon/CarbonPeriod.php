@@ -1685,6 +1685,7 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
             return $roundedValue;
         }
 
+<<<<<<< HEAD
         $first = \count($parameters) >= 1 ? $parameters[0] : null;
         $second = \count($parameters) >= 2 ? $parameters[1] : null;
 
@@ -1726,13 +1727,86 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
 
             case 'filters':
                 return $this->setFilters($first ?: []);
+=======
+        switch ($method) {
+            case 'start':
+            case 'since':
+                self::setDefaultParameters($parameters, [
+                    [0, 'date', null],
+                ]);
+
+                return $this->setStartDate(...$parameters);
+
+            case 'sinceNow':
+                return $this->setStartDate(new Carbon(), ...$parameters);
+
+            case 'end':
+            case 'until':
+                self::setDefaultParameters($parameters, [
+                    [0, 'date', null],
+                ]);
+
+                return $this->setEndDate(...$parameters);
+
+            case 'untilNow':
+                return $this->setEndDate(new Carbon(), ...$parameters);
+
+            case 'dates':
+            case 'between':
+                self::setDefaultParameters($parameters, [
+                    [0, 'start', null],
+                    [1, 'end', null],
+                ]);
+
+                return $this->setDates(...$parameters);
+
+            case 'recurrences':
+            case 'times':
+                self::setDefaultParameters($parameters, [
+                    [0, 'recurrences', null],
+                ]);
+
+                return $this->setRecurrences(...$parameters);
+
+            case 'options':
+                self::setDefaultParameters($parameters, [
+                    [0, 'options', null],
+                ]);
+
+                return $this->setOptions(...$parameters);
+
+            case 'toggle':
+                self::setDefaultParameters($parameters, [
+                    [0, 'options', null],
+                ]);
+
+                return $this->toggleOptions(...$parameters);
+
+            case 'filter':
+            case 'push':
+                return $this->addFilter(...$parameters);
+
+            case 'prepend':
+                return $this->prependFilter(...$parameters);
+
+            case 'filters':
+                self::setDefaultParameters($parameters, [
+                    [0, 'filters', []],
+                ]);
+
+                return $this->setFilters(...$parameters);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
             case 'interval':
             case 'each':
             case 'every':
             case 'step':
             case 'stepBy':
+<<<<<<< HEAD
                 return $this->setDateInterval($first);
+=======
+                return $this->setDateInterval(...$parameters);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
             case 'invert':
                 return $this->invertDateInterval();
@@ -1755,9 +1829,13 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
                 return $this->setDateInterval((
                     // Override default P1D when instantiating via fluent setters.
                     [$this->isDefaultInterval ? new CarbonInterval('PT0S') : $this->dateInterval, $method]
+<<<<<<< HEAD
                 )(
                     \count($parameters) === 0 ? 1 : $first
                 ));
+=======
+                )(...$parameters));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         if ($this->localStrictModeEnabled ?? Carbon::isStrictModeEnabled()) {
@@ -2650,4 +2728,16 @@ class CarbonPeriod implements Iterator, Countable, JsonSerializable
 
         return new $class($date->format('Y-m-d H:i:s.u'), $date->getTimezone());
     }
+<<<<<<< HEAD
+=======
+
+    private static function setDefaultParameters(array &$parameters, array $defaults): void
+    {
+        foreach ($defaults as [$index, $name, $value]) {
+            if (!\array_key_exists($index, $parameters) && !\array_key_exists($name, $parameters)) {
+                $parameters[$index] = $value;
+            }
+        }
+    }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 }

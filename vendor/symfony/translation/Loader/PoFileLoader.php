@@ -57,8 +57,11 @@ class PoFileLoader extends FileLoader
      * - Message IDs are allowed to have other encodings as just US-ASCII.
      *
      * Items with an empty id are ignored.
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function loadResource(string $resource): array
     {

@@ -25,6 +25,10 @@ class Uuid extends AbstractUid
 
     protected const TYPE = 0;
     protected const NIL = '00000000-0000-0000-0000-000000000000';
+<<<<<<< HEAD
+=======
+    protected const MAX = 'ffffffff-ffff-ffff-ffff-ffffffffffff';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
     public function __construct(string $uuid, bool $checkVariant = false)
     {
@@ -68,6 +72,13 @@ class Uuid extends AbstractUid
             return new NilUuid();
         }
 
+<<<<<<< HEAD
+=======
+        if (self::MAX === $uuid = strtr($uuid, 'F', 'f')) {
+            return new MaxUuid();
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if (!\in_array($uuid[19], ['8', '9', 'a', 'b', 'A', 'B'], true)) {
             return new self($uuid);
         }
@@ -78,6 +89,11 @@ class Uuid extends AbstractUid
             UuidV4::TYPE => new UuidV4($uuid),
             UuidV5::TYPE => new UuidV5($uuid),
             UuidV6::TYPE => new UuidV6($uuid),
+<<<<<<< HEAD
+=======
+            UuidV7::TYPE => new UuidV7($uuid),
+            UuidV8::TYPE => new UuidV8($uuid),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             default => new self($uuid),
         };
     }
@@ -113,6 +129,19 @@ class Uuid extends AbstractUid
         return new UuidV6();
     }
 
+<<<<<<< HEAD
+=======
+    final public static function v7(): UuidV7
+    {
+        return new UuidV7();
+    }
+
+    final public static function v8(string $uuid): UuidV8
+    {
+        return new UuidV8($uuid);
+    }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public static function isValid(string $uuid): bool
     {
         if (!preg_match('{^[0-9a-f]{8}(?:-[0-9a-f]{4}){2}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$}Di', $uuid)) {

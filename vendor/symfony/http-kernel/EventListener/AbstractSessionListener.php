@@ -151,7 +151,11 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
                 $request = $event->getRequest();
                 $requestSessionCookieId = $request->cookies->get($sessionName);
 
+<<<<<<< HEAD
                 $isSessionEmpty = ($session instanceof Session ? $session->isEmpty() : empty($session->all())) && empty($_SESSION); // checking $_SESSION to keep compatibility with native sessions
+=======
+                $isSessionEmpty = ($session instanceof Session ? $session->isEmpty() : !$session->all()) && empty($_SESSION); // checking $_SESSION to keep compatibility with native sessions
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 if ($requestSessionCookieId && $isSessionEmpty) {
                     // PHP internally sets the session cookie value to "deleted" when setcookie() is called with empty string $value argument
                     // which happens in \Symfony\Component\HttpFoundation\Session\Storage\Handler\AbstractSessionHandler::destroy
@@ -196,7 +200,11 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
 
         if ($autoCacheControl) {
             $response
+<<<<<<< HEAD
                 ->setExpires(new \DateTime())
+=======
+                ->setExpires(new \DateTimeImmutable())
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 ->setPrivate()
                 ->setMaxAge(0)
                 ->headers->addCacheControlDirective('must-revalidate');

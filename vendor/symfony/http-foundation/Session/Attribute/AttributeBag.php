@@ -31,9 +31,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         $this->storageKey = $storageKey;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return $this->name;
@@ -44,57 +47,78 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         $this->name = $name;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function initialize(array &$attributes)
     {
         $this->attributes = &$attributes;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getStorageKey(): string
     {
         return $this->storageKey;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function has(string $name): bool
     {
         return \array_key_exists($name, $this->attributes);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function get(string $name, mixed $default = null): mixed
     {
         return \array_key_exists($name, $this->attributes) ? $this->attributes[$name] : $default;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function set(string $name, mixed $value)
     {
         $this->attributes[$name] = $value;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function all(): array
     {
         return $this->attributes;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function replace(array $attributes)
     {
         $this->attributes = [];
@@ -103,9 +127,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function remove(string $name): mixed
     {
         $retval = null;
@@ -117,9 +144,12 @@ class AttributeBag implements AttributeBagInterface, \IteratorAggregate, \Counta
         return $retval;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function clear(): mixed
     {
         $return = $this->attributes;

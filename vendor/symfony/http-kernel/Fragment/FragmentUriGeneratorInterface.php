@@ -15,7 +15,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
 
 /**
+<<<<<<< HEAD
  * Interface implemented by rendering strategies able to generate an URL for a fragment.
+=======
+ * Interface implemented by rendering strategies able to generate a URL for a fragment.
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
  *
  * @author Kévin Dunglas <kevin@dunglas.fr>
  */

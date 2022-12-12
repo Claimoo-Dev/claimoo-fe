@@ -90,7 +90,13 @@ class KeyGenerateCommand extends Command
             return false;
         }
 
+<<<<<<< HEAD
         $this->writeNewEnvironmentFileWith($key);
+=======
+        if (! $this->writeNewEnvironmentFileWith($key)) {
+            return false;
+        }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         return true;
     }
@@ -99,6 +105,7 @@ class KeyGenerateCommand extends Command
      * Write a new environment file with the given key.
      *
      * @param  string  $key
+<<<<<<< HEAD
      * @return void
      */
     protected function writeNewEnvironmentFileWith($key)
@@ -108,6 +115,27 @@ class KeyGenerateCommand extends Command
             'APP_KEY='.$key,
             file_get_contents($this->laravel->environmentFilePath())
         ));
+=======
+     * @return bool
+     */
+    protected function writeNewEnvironmentFileWith($key)
+    {
+        $replaced = preg_replace(
+            $this->keyReplacementPattern(),
+            'APP_KEY='.$key,
+            $input = file_get_contents($this->laravel->environmentFilePath())
+        );
+
+        if ($replaced === $input || $replaced === null) {
+            $this->error('Unable to set application key. No APP_KEY variable was found in the .env file.');
+
+            return false;
+        }
+
+        file_put_contents($this->laravel->environmentFilePath(), $replaced);
+
+        return true;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     /**

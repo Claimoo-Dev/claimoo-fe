@@ -105,7 +105,11 @@ final class UrlAutolinkParser implements InlineParserInterface
             $url = \substr($url, 0, -$diff);
         }
 
+<<<<<<< HEAD
         $cursor->advanceBy(\mb_strlen($url));
+=======
+        $cursor->advanceBy(\mb_strlen($url, 'UTF-8'));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         // Auto-prefix 'http://' onto 'www' URLs
         if (\substr($url, 0, 4) === 'www.') {

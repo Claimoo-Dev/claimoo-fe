@@ -57,11 +57,22 @@ class ControllerMakeCommand extends GeneratorCommand
         if ($type = $this->option('type')) {
             $stub = "/stubs/controller.{$type}.stub";
         } elseif ($this->option('parent')) {
+<<<<<<< HEAD
             $stub = '/stubs/controller.nested.stub';
+=======
+            $stub = $this->option('singleton')
+                        ? '/stubs/controller.nested.singleton.stub'
+                        : '/stubs/controller.nested.stub';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         } elseif ($this->option('model')) {
             $stub = '/stubs/controller.model.stub';
         } elseif ($this->option('invokable')) {
             $stub = '/stubs/controller.invokable.stub';
+<<<<<<< HEAD
+=======
+        } elseif ($this->option('singleton')) {
+            $stub = '/stubs/controller.singleton.stub';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         } elseif ($this->option('resource')) {
             $stub = '/stubs/controller.stub';
         }
@@ -123,6 +134,13 @@ class ControllerMakeCommand extends GeneratorCommand
             $replace = $this->buildModelReplacements($replace);
         }
 
+<<<<<<< HEAD
+=======
+        if ($this->option('creatable')) {
+            $replace['abort(404);'] = '//';
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $replace["use {$controllerNamespace}\Controller;\n"] = '';
 
         return str_replace(
@@ -285,6 +303,11 @@ class ControllerMakeCommand extends GeneratorCommand
             ['parent', 'p', InputOption::VALUE_OPTIONAL, 'Generate a nested resource controller class'],
             ['resource', 'r', InputOption::VALUE_NONE, 'Generate a resource controller class'],
             ['requests', 'R', InputOption::VALUE_NONE, 'Generate FormRequest classes for store and update'],
+<<<<<<< HEAD
+=======
+            ['singleton', 's', InputOption::VALUE_NONE, 'Generate a singleton resource controller class'],
+            ['creatable', null, InputOption::VALUE_NONE, 'Indicate that a singleton resource should be creatable'],
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         ];
     }
 }

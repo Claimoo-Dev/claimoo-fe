@@ -68,7 +68,11 @@ class Token
             return false;
         }
 
+<<<<<<< HEAD
         if (empty($values)) {
+=======
+        if (!$values) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             return true;
         }
 

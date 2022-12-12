@@ -84,9 +84,12 @@ class QuestionHelper extends Helper
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return 'question';
@@ -140,6 +143,10 @@ class QuestionHelper extends Helper
         }
 
         if ($output instanceof ConsoleSectionOutput) {
+<<<<<<< HEAD
+=======
+            $output->addContent(''); // add EOL to the question
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             $output->addContent($ret);
         }
 
@@ -432,6 +439,14 @@ class QuestionHelper extends Helper
 
         $value = fgets($inputStream, 4096);
 
+<<<<<<< HEAD
+=======
+        if (4095 === \strlen($value)) {
+            $errOutput = $output instanceof ConsoleOutputInterface ? $output->getErrorOutput() : $output;
+            $errOutput->warning('The value was possibly truncated by your shell or terminal emulator');
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if (self::$stty && Terminal::hasSttyAvailable()) {
             shell_exec('stty '.$sttyMode);
         }

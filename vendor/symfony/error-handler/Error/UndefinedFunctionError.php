@@ -13,9 +13,12 @@ namespace Symfony\Component\ErrorHandler\Error;
 
 class UndefinedFunctionError extends \Error
 {
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function __construct(string $message, \Throwable $previous)
     {
         parent::__construct($message, $previous->getCode(), $previous->getPrevious());

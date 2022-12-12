@@ -452,6 +452,7 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
 
         try {
             if (false === $chunks = preg_split($delimiter, $this->string, $limit, $flags)) {
+<<<<<<< HEAD
                 $lastError = preg_last_error();
 
                 foreach (get_defined_constants(true)['pcre'] as $k => $v) {
@@ -461,6 +462,9 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
                 }
 
                 throw new RuntimeException('Splitting failed with unknown error code.');
+=======
+                throw new RuntimeException('Splitting failed with error: '.preg_last_error_msg());
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
         } finally {
             restore_error_handler();

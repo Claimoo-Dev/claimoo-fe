@@ -65,7 +65,11 @@ trait Base
 	}
 
 
+<<<<<<< HEAD
 	public function assert(callable $handler, string $description = null): self
+=======
+	public function assert(callable $handler, ?string $description = null): self
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 	{
 		$this->asserts[] = [$handler, $description];
 		return $this;
@@ -89,6 +93,10 @@ trait Base
 			);
 			return null;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $this->default;
 	}
 
@@ -98,6 +106,10 @@ trait Base
 		if ($this->before) {
 			$value = ($this->before)($value);
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $value;
 	}
 
@@ -124,6 +136,10 @@ trait Base
 			);
 			return false;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return true;
 	}
 
@@ -145,7 +161,10 @@ trait Base
 				);
 				return false;
 			}
+<<<<<<< HEAD
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		} elseif ((is_int($value) || is_float($value)) && !self::isInRange($value, $range)) {
 			$context->addError(
 				'The %label% %path% expects to be in range %expected%, %value% given.',
@@ -154,6 +173,10 @@ trait Base
 			);
 			return false;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return true;
 	}
 
@@ -175,6 +198,10 @@ trait Base
 				foreach ($value as $k => $v) {
 					$object->$k = $v;
 				}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 				$value = $object;
 			}
 		}

@@ -13,7 +13,10 @@ use Illuminate\Support\ProcessUtils;
 use Symfony\Component\Console\Application as SymfonyApplication;
 use Symfony\Component\Console\Command\Command as SymfonyCommand;
 use Symfony\Component\Console\Exception\CommandNotFoundException;
+<<<<<<< HEAD
 use Symfony\Component\Console\Exception\ExceptionInterface;
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputDefinition;
@@ -94,6 +97,7 @@ class Application extends SymfonyApplication implements ApplicationContract
             $input = $input ?: new ArgvInput
         );
 
+<<<<<<< HEAD
         if (! is_null($commandName)) {
             try {
                 $input->bind($this->find($commandName)->getDefinition());
@@ -102,6 +106,8 @@ class Application extends SymfonyApplication implements ApplicationContract
             }
         }
 
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $this->events->dispatch(
             new CommandStarting(
                 $commandName, $input, $output = $output ?: new BufferedConsoleOutput

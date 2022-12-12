@@ -532,6 +532,10 @@ trait Date
     use Creator;
     use Difference;
     use Macro;
+<<<<<<< HEAD
+=======
+    use MagicParameter;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     use Modifiers;
     use Mutability;
     use ObjectInitialisation;
@@ -641,6 +645,11 @@ trait Date
     /**
      * List of minimum and maximums for each unit.
      *
+<<<<<<< HEAD
+=======
+     * @param int $daysInMonth
+     *
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return array
      */
     protected static function getRangesByUnit(int $daysInMonth = 31): array
@@ -1379,6 +1388,42 @@ trait Date
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Return the number of days since the start of the week (using the current locale or the first parameter
+     * if explicitly given).
+     *
+     * @param int|null $weekStartsAt optional start allow you to specify the day of week to use to start the week,
+     *                               if not provided, start of week is inferred from the locale
+     *                               (Sunday for en_US, Monday for de_DE, etc.)
+     *
+     * @return int
+     */
+    public function getDaysFromStartOfWeek(int $weekStartsAt = null): int
+    {
+        $firstDay = (int) ($weekStartsAt ?? $this->getTranslationMessage('first_day_of_week') ?? 0);
+
+        return ($this->dayOfWeek + 7 - $firstDay) % 7;
+    }
+
+    /**
+     * Set the day (keeping the current time) to the start of the week + the number of days passed as the first
+     * parameter. First day of week is driven by the locale unless explicitly set with the second parameter.
+     *
+     * @param int      $numberOfDays number of days to add after the start of the current week
+     * @param int|null $weekStartsAt optional start allow you to specify the day of week to use to start the week,
+     *                               if not provided, start of week is inferred from the locale
+     *                               (Sunday for en_US, Monday for de_DE, etc.)
+     *
+     * @return static
+     */
+    public function setDaysFromStartOfWeek(int $numberOfDays, int $weekStartsAt = null)
+    {
+        return $this->addDays($numberOfDays - $this->getDaysFromStartOfWeek($weekStartsAt));
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Set any unit to a new value without overflowing current other unit given.
      *
      * @param string $valueUnit    unit name to modify
@@ -2634,7 +2679,11 @@ trait Date
         }
 
         if (static::isModifiableUnit($unit)) {
+<<<<<<< HEAD
             return $this->{"{$action}Unit"}($unit, $parameters[0] ?? 1, $overflow);
+=======
+            return $this->{"{$action}Unit"}($unit, $this->getMagicParameter($parameters, 0, 'value', 1), $overflow);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         $sixFirstLetters = substr($unit, 0, 6);
@@ -2673,7 +2722,15 @@ trait Date
             try {
                 $unit = static::singularUnit(substr($method, 0, -5));
 
+<<<<<<< HEAD
                 return $this->range($parameters[0] ?? $this, $parameters[1] ?? 1, $unit);
+=======
+                return $this->range(
+                    $this->getMagicParameter($parameters, 0, 'endDate', $this),
+                    $this->getMagicParameter($parameters, 1, 'factor', 1),
+                    $unit
+                );
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             } catch (InvalidArgumentException $exception) {
                 // Try macros
             }

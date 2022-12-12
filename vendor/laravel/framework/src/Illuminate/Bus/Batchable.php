@@ -74,6 +74,12 @@ trait Batchable
      * @param  int  $failedJobs
      * @param  array  $failedJobIds
      * @param  array  $options
+<<<<<<< HEAD
+=======
+     * @param  \Carbon\CarbonImmutable  $createdAt
+     * @param  \Carbon\CarbonImmutable|null  $cancelledAt
+     * @param  \Carbon\CarbonImmutable|null  $finishedAt
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @return array{0: $this, 1: \Illuminate\Support\Testing\BatchFake}
      */
     public function withFakeBatch(string $id = '',

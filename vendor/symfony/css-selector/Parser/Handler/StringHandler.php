@@ -40,9 +40,12 @@ class StringHandler implements HandlerInterface
         $this->escaping = $escaping;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function handle(Reader $reader, TokenStream $stream): bool
     {
         $quote = $reader->getSubstring(1);

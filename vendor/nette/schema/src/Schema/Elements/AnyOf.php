@@ -32,6 +32,10 @@ final class AnyOf implements Schema
 		if (!$set) {
 			throw new Nette\InvalidStateException('The enumeration must not be empty.');
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		$this->set = $set;
 	}
 
@@ -72,6 +76,10 @@ final class AnyOf implements Schema
 			unset($value[Helpers::PREVENT_MERGING]);
 			return $value;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return Helpers::merge($value, $base);
 	}
 
@@ -88,6 +96,10 @@ final class AnyOf implements Schema
 					$context->warnings = array_merge($context->warnings, $dolly->warnings);
 					return $this->doFinalize($res, $context);
 				}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 				foreach ($dolly->errors as $error) {
 					if ($error->path !== $context->path || empty($error->variables['expected'])) {
 						$innerErrors[] = $error;
@@ -99,6 +111,10 @@ final class AnyOf implements Schema
 				if ($item === $value) {
 					return $this->doFinalize($value, $context);
 				}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 				$expecteds[] = Nette\Schema\Helpers::formatValue($item);
 			}
 		}
@@ -127,9 +143,17 @@ final class AnyOf implements Schema
 			);
 			return null;
 		}
+<<<<<<< HEAD
 		if ($this->default instanceof Schema) {
 			return $this->default->completeDefault($context);
 		}
+=======
+
+		if ($this->default instanceof Schema) {
+			return $this->default->completeDefault($context);
+		}
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		return $this->default;
 	}
 }

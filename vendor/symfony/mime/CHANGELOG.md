@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+6.2
+---
+
+ * Add `File`
+ * Deprecate `Email::attachPart()`, use `addPart()` instead
+ * Deprecate calling `Message::setBody()` without arguments
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 6.1
 ---
 

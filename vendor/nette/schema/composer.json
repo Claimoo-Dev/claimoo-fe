@@ -15,13 +15,21 @@
 		}
 	],
 	"require": {
+<<<<<<< HEAD
 		"php": ">=7.1 <8.2",
+=======
+		"php": ">=7.1 <8.3",
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 		"nette/utils": "^2.5.7 || ^3.1.5 ||  ^4.0"
 	},
 	"require-dev": {
 		"nette/tester": "^2.3 || ^2.4",
 		"tracy/tracy": "^2.7",
+<<<<<<< HEAD
 		"phpstan/phpstan-nette": "^0.12"
+=======
+		"phpstan/phpstan-nette": "^1.0"
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 	},
 	"autoload": {
 		"classmap": ["src/"]

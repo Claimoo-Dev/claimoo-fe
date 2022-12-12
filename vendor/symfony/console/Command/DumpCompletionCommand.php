@@ -48,6 +48,10 @@ final class DumpCompletionCommand extends Command
         $shell = $this->guessShell();
         [$rcFile, $completionFile] = match ($shell) {
             'fish' => ['~/.config/fish/config.fish', "/etc/fish/completions/$commandName.fish"],
+<<<<<<< HEAD
+=======
+            'zsh' => ['~/.zshrc', '$fpath[1]/'.$commandName],
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             default => ['~/.bashrc', "/etc/bash_completion.d/$commandName"],
         };
 
@@ -101,13 +105,28 @@ EOH
         if (!file_exists($completionFile)) {
             $supportedShells = $this->getSupportedShells();
 
+<<<<<<< HEAD
             ($output instanceof ConsoleOutputInterface ? $output->getErrorOutput() : $output)
                 ->writeln(sprintf('<error>Detected shell "%s", which is not supported by Symfony shell completion (supported shells: "%s").</>', $shell, implode('", "', $supportedShells)));
+=======
+            if ($output instanceof ConsoleOutputInterface) {
+                $output = $output->getErrorOutput();
+            }
+            if ($shell) {
+                $output->writeln(sprintf('<error>Detected shell "%s", which is not supported by Symfony shell completion (supported shells: "%s").</>', $shell, implode('", "', $supportedShells)));
+            } else {
+                $output->writeln(sprintf('<error>Shell not detected, Symfony shell completion only supports "%s").</>', implode('", "', $supportedShells)));
+            }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
             return self::INVALID;
         }
 
+<<<<<<< HEAD
         $output->write(str_replace(['{{ COMMAND_NAME }}', '{{ VERSION }}'], [$commandName, $this->getApplication()->getVersion()], file_get_contents($completionFile)));
+=======
+        $output->write(str_replace(['{{ COMMAND_NAME }}', '{{ VERSION }}'], [$commandName, CompleteCommand::COMPLETION_API_VERSION], file_get_contents($completionFile)));
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
         return self::SUCCESS;
     }

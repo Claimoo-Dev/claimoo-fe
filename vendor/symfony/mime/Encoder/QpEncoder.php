@@ -106,8 +106,11 @@ class QpEncoder implements EncoderInterface
     }
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
      *
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Takes an unencoded string and produces a QP encoded string from it.
      *
      * QP encoded strings have a maximum line length of 76 characters.

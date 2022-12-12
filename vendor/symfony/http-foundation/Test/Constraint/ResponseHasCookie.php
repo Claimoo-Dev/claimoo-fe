@@ -28,9 +28,12 @@ final class ResponseHasCookie extends Constraint
         $this->domain = $domain;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function toString(): string
     {
         $str = sprintf('has cookie "%s"', $this->name);
@@ -46,8 +49,11 @@ final class ResponseHasCookie extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function matches($response): bool
     {
@@ -56,8 +62,11 @@ final class ResponseHasCookie extends Constraint
 
     /**
      * @param Response $response
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function failureDescription($response): string
     {

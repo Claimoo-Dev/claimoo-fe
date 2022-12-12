@@ -6,6 +6,10 @@ use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Filesystem\Filesystem;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'env:encrypt')]
@@ -96,7 +100,11 @@ class EnvironmentEncryptCommand extends Command
         }
 
         try {
+<<<<<<< HEAD
             $encrypter = new Encrypter($key, $cipher);
+=======
+            $encrypter = new Encrypter($this->parseKey($key), $cipher);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
             $this->files->put(
                 $encryptedFile,
@@ -116,4 +124,22 @@ class EnvironmentEncryptCommand extends Command
 
         $this->newLine();
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Parse the encryption key.
+     *
+     * @param  string  $key
+     * @return string
+     */
+    protected function parseKey(string $key)
+    {
+        if (Str::startsWith($key, $prefix = 'base64:')) {
+            $key = base64_decode(Str::after($key, $prefix));
+        }
+
+        return $key;
+    }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 }

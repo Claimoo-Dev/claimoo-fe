@@ -36,9 +36,12 @@ class HtmlExtension extends AbstractExtension
             ->setFlag(NodeExtension::ATTRIBUTE_NAME_IN_LOWER_CASE, true);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getPseudoClassTranslators(): array
     {
         return [
@@ -53,9 +56,12 @@ class HtmlExtension extends AbstractExtension
         ];
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getFunctionTranslators(): array
     {
         return [
@@ -177,9 +183,12 @@ class HtmlExtension extends AbstractExtension
         return $xpath->addCondition('0');
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return 'html';

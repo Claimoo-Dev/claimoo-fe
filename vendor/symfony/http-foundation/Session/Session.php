@@ -30,7 +30,11 @@ class_exists(SessionBagProxy::class);
  *
  * @implements \IteratorAggregate<string, mixed>
  */
+<<<<<<< HEAD
 class Session implements SessionInterface, \IteratorAggregate, \Countable
+=======
+class Session implements FlashBagAwareSessionInterface, \IteratorAggregate, \Countable
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 {
     protected $storage;
 
@@ -54,73 +58,100 @@ class Session implements SessionInterface, \IteratorAggregate, \Countable
         $this->registerBag($flashes);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function start(): bool
     {
         return $this->storage->start();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function has(string $name): bool
     {
         return $this->getAttributeBag()->has($name);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function get(string $name, mixed $default = null): mixed
     {
         return $this->getAttributeBag()->get($name, $default);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function set(string $name, mixed $value)
     {
         $this->getAttributeBag()->set($name, $value);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function all(): array
     {
         return $this->getAttributeBag()->all();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function replace(array $attributes)
     {
         $this->getAttributeBag()->replace($attributes);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function remove(string $name): mixed
     {
         return $this->getAttributeBag()->remove($name);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function clear()
     {
         $this->getAttributeBag()->clear();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function isStarted(): bool
     {
         return $this->storage->isStarted();
@@ -169,9 +200,12 @@ class Session implements SessionInterface, \IteratorAggregate, \Countable
         return true;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function invalidate(int $lifetime = null): bool
     {
         $this->storage->clear();
@@ -179,33 +213,45 @@ class Session implements SessionInterface, \IteratorAggregate, \Countable
         return $this->migrate(true, $lifetime);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function migrate(bool $destroy = false, int $lifetime = null): bool
     {
         return $this->storage->regenerate($destroy, $lifetime);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function save()
     {
         $this->storage->save();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getId(): string
     {
         return $this->storage->getId();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function setId(string $id)
     {
         if ($this->storage->getId() !== $id) {
@@ -213,25 +259,34 @@ class Session implements SessionInterface, \IteratorAggregate, \Countable
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getName(): string
     {
         return $this->storage->getName();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function setName(string $name)
     {
         $this->storage->setName($name);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getMetadataBag(): MetadataBag
     {
         ++$this->usageIndex;
@@ -242,17 +297,23 @@ class Session implements SessionInterface, \IteratorAggregate, \Countable
         return $this->storage->getMetadataBag();
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function registerBag(SessionBagInterface $bag)
     {
         $this->storage->registerBag(new SessionBagProxy($bag, $this->data, $this->usageIndex, $this->usageReporter));
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getBag(string $name): SessionBagInterface
     {
         $bag = $this->storage->getBag($name);

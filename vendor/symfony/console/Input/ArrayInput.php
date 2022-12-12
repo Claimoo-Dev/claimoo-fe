@@ -34,9 +34,12 @@ class ArrayInput extends Input
         parent::__construct($definition);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getFirstArgument(): ?string
     {
         foreach ($this->parameters as $param => $value) {
@@ -50,9 +53,12 @@ class ArrayInput extends Input
         return null;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function hasParameterOption(string|array $values, bool $onlyParams = false): bool
     {
         $values = (array) $values;
@@ -74,9 +80,12 @@ class ArrayInput extends Input
         return false;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function getParameterOption(string|array $values, string|bool|int|float|array|null $default = false, bool $onlyParams = false): mixed
     {
         $values = (array) $values;
@@ -122,9 +131,12 @@ class ArrayInput extends Input
         return implode(' ', $params);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     protected function parse()
     {
         foreach ($this->parameters as $key => $value) {

@@ -19,9 +19,12 @@ use Symfony\Component\ErrorHandler\Error\UndefinedFunctionError;
  */
 class UndefinedFunctionErrorEnhancer implements ErrorEnhancerInterface
 {
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function enhance(\Throwable $error): ?\Throwable
     {
         if ($error instanceof FatalError) {

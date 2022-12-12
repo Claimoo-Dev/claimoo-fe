@@ -14,13 +14,22 @@ namespace Symfony\Component\HttpKernel\Log;
 use Psr\Log\AbstractLogger;
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LogLevel;
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
 /**
  * Minimalist PSR-3 logger designed to write in stderr or any other stream.
  *
  * @author Kévin Dunglas <dunglas@gmail.com>
  */
+<<<<<<< HEAD
 class Logger extends AbstractLogger
+=======
+class Logger extends AbstractLogger implements DebugLoggerInterface
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 {
     private const LEVELS = [
         LogLevel::DEBUG => 0,
@@ -32,9 +41,28 @@ class Logger extends AbstractLogger
         LogLevel::ALERT => 6,
         LogLevel::EMERGENCY => 7,
     ];
+<<<<<<< HEAD
 
     private int $minLevelIndex;
     private \Closure $formatter;
+=======
+    private const PRIORITIES = [
+        LogLevel::DEBUG => 100,
+        LogLevel::INFO => 200,
+        LogLevel::NOTICE => 250,
+        LogLevel::WARNING => 300,
+        LogLevel::ERROR => 400,
+        LogLevel::CRITICAL => 500,
+        LogLevel::ALERT => 550,
+        LogLevel::EMERGENCY => 600,
+    ];
+
+    private int $minLevelIndex;
+    private \Closure $formatter;
+    private bool $debug = false;
+    private array $logs = [];
+    private array $errorCount = [];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
     /** @var resource|null */
     private $handle;
@@ -42,12 +70,17 @@ class Logger extends AbstractLogger
     /**
      * @param string|resource|null $output
      */
+<<<<<<< HEAD
     public function __construct(string $minLevel = null, $output = null, callable $formatter = null)
+=======
+    public function __construct(string $minLevel = null, $output = null, callable $formatter = null, private readonly ?RequestStack $requestStack = null)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         if (null === $minLevel) {
             $minLevel = null === $output || 'php://stdout' === $output || 'php://stderr' === $output ? LogLevel::ERROR : LogLevel::WARNING;
 
             if (isset($_ENV['SHELL_VERBOSITY']) || isset($_SERVER['SHELL_VERBOSITY'])) {
+<<<<<<< HEAD
                 switch ((int) ($_ENV['SHELL_VERBOSITY'] ?? $_SERVER['SHELL_VERBOSITY'])) {
                     case -1: $minLevel = LogLevel::ERROR;
                         break;
@@ -58,6 +91,15 @@ class Logger extends AbstractLogger
                     case 3: $minLevel = LogLevel::DEBUG;
                         break;
                 }
+=======
+                $minLevel = match ((int) ($_ENV['SHELL_VERBOSITY'] ?? $_SERVER['SHELL_VERBOSITY'])) {
+                    -1 => LogLevel::ERROR,
+                    1 => LogLevel::NOTICE,
+                    2 => LogLevel::INFO,
+                    3 => LogLevel::DEBUG,
+                    default => $minLevel,
+                };
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             }
         }
 
@@ -72,9 +114,17 @@ class Logger extends AbstractLogger
         }
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+    public function enableDebug(): void
+    {
+        $this->debug = true;
+    }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function log($level, $message, array $context = []): void
     {
         if (!isset(self::LEVELS[$level])) {
@@ -91,6 +141,37 @@ class Logger extends AbstractLogger
         } else {
             error_log($formatter($level, $message, $context, false));
         }
+<<<<<<< HEAD
+=======
+
+        if ($this->debug && $this->requestStack) {
+            $this->record($level, $message, $context);
+        }
+    }
+
+    public function getLogs(Request $request = null): array
+    {
+        if ($request) {
+            return $this->logs[spl_object_id($request)] ?? [];
+        }
+
+        return array_merge(...array_values($this->logs));
+    }
+
+    public function countErrors(Request $request = null): int
+    {
+        if ($request) {
+            return $this->errorCount[spl_object_id($request)] ?? 0;
+        }
+
+        return array_sum($this->errorCount);
+    }
+
+    public function clear(): void
+    {
+        $this->logs = [];
+        $this->errorCount = [];
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     private function format(string $level, string $message, array $context, bool $prefixDate = true): string
@@ -101,9 +182,15 @@ class Logger extends AbstractLogger
                 if (null === $val || \is_scalar($val) || $val instanceof \Stringable) {
                     $replacements["{{$key}}"] = $val;
                 } elseif ($val instanceof \DateTimeInterface) {
+<<<<<<< HEAD
                     $replacements["{{$key}}"] = $val->format(\DateTime::RFC3339);
                 } elseif (\is_object($val)) {
                     $replacements["{{$key}}"] = '[object '.\get_class($val).']';
+=======
+                    $replacements["{{$key}}"] = $val->format(\DateTimeInterface::RFC3339);
+                } elseif (\is_object($val)) {
+                    $replacements["{{$key}}"] = '[object '.$val::class.']';
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 } else {
                     $replacements["{{$key}}"] = '['.\gettype($val).']';
                 }
@@ -114,9 +201,41 @@ class Logger extends AbstractLogger
 
         $log = sprintf('[%s] %s', $level, $message);
         if ($prefixDate) {
+<<<<<<< HEAD
             $log = date(\DateTime::RFC3339).' '.$log;
+=======
+            $log = date(\DateTimeInterface::RFC3339).' '.$log;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         }
 
         return $log;
     }
+<<<<<<< HEAD
+=======
+
+    private function record($level, $message, array $context): void
+    {
+        $request = $this->requestStack->getCurrentRequest();
+        $key = $request ? spl_object_id($request) : '';
+
+        $this->logs[$key][] = [
+            'channel' => null,
+            'context' => $context,
+            'message' => $message,
+            'priority' => self::PRIORITIES[$level],
+            'priorityName' => $level,
+            'timestamp' => time(),
+            'timestamp_rfc3339' => date(\DATE_RFC3339_EXTENDED),
+        ];
+
+        $this->errorCount[$key] ??= 0;
+        switch ($level) {
+            case LogLevel::ERROR:
+            case LogLevel::CRITICAL:
+            case LogLevel::ALERT:
+            case LogLevel::EMERGENCY:
+                ++$this->errorCount[$key];
+        }
+    }
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 }

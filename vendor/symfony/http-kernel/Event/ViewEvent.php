@@ -25,13 +25,24 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  */
 final class ViewEvent extends RequestEvent
 {
+<<<<<<< HEAD
     private mixed $controllerResult;
 
     public function __construct(HttpKernelInterface $kernel, Request $request, int $requestType, mixed $controllerResult)
+=======
+    public readonly ?ControllerArgumentsEvent $controllerArgumentsEvent;
+    private mixed $controllerResult;
+
+    public function __construct(HttpKernelInterface $kernel, Request $request, int $requestType, mixed $controllerResult, ControllerArgumentsEvent $controllerArgumentsEvent = null)
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     {
         parent::__construct($kernel, $request, $requestType);
 
         $this->controllerResult = $controllerResult;
+<<<<<<< HEAD
+=======
+        $this->controllerArgumentsEvent = $controllerArgumentsEvent;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     }
 
     public function getControllerResult(): mixed

@@ -114,6 +114,10 @@ final class MockBuilder
      * @throws \PHPUnit\Framework\InvalidArgumentException
      * @throws ClassAlreadyExistsException
      * @throws ClassIsFinalException
+<<<<<<< HEAD
+=======
+     * @throws ClassIsReadonlyException
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
      * @throws OriginalConstructorInvocationRequiredException
@@ -241,7 +245,11 @@ final class MockBuilder
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $e
             );
         }
@@ -283,7 +291,11 @@ final class MockBuilder
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
+<<<<<<< HEAD
                 (int) $e->getCode(),
+=======
+                $e->getCode(),
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
                 $e
             );
         }

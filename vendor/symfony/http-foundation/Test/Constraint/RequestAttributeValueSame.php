@@ -25,9 +25,12 @@ final class RequestAttributeValueSame extends Constraint
         $this->value = $value;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function toString(): string
     {
         return sprintf('has attribute "%s" with value "%s"', $this->name, $this->value);
@@ -35,8 +38,11 @@ final class RequestAttributeValueSame extends Constraint
 
     /**
      * @param Request $request
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function matches($request): bool
     {
@@ -45,8 +51,11 @@ final class RequestAttributeValueSame extends Constraint
 
     /**
      * @param Request $request
+<<<<<<< HEAD
      *
      * {@inheritdoc}
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      */
     protected function failureDescription($request): string
     {

@@ -12,12 +12,34 @@
 namespace Carbon\PHPStan;
 
 use Carbon\CarbonInterface;
+<<<<<<< HEAD
+=======
+use PHPStan\Reflection\ReflectionProvider;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use ReflectionClass;
 use ReflectionException;
 
 final class MacroScanner
 {
     /**
+<<<<<<< HEAD
+=======
+     * @var \PHPStan\Reflection\ReflectionProvider
+     */
+    private $reflectionProvider;
+
+    /**
+     * MacroScanner constructor.
+     *
+     * @param \PHPStan\Reflection\ReflectionProvider $reflectionProvider
+     */
+    public function __construct(ReflectionProvider $reflectionProvider)
+    {
+        $this->reflectionProvider = $reflectionProvider;
+    }
+
+    /**
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
      * Return true if the given pair class-method is a Carbon macro.
      *
      * @param string $className
@@ -29,8 +51,21 @@ final class MacroScanner
      */
     public function hasMethod(string $className, string $methodName): bool
     {
+<<<<<<< HEAD
         return is_a($className, CarbonInterface::class, true) &&
             \is_callable([$className, 'hasMacro']) &&
+=======
+        $classReflection = $this->reflectionProvider->getClass($className);
+
+        if (
+            $classReflection->getName() !== CarbonInterface::class &&
+            !$classReflection->isSubclassOf(CarbonInterface::class)
+        ) {
+            return false;
+        }
+
+        return \is_callable([$className, 'hasMacro']) &&
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             $className::hasMacro($methodName);
     }
 

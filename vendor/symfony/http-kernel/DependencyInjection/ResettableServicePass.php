@@ -23,9 +23,12 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 class ResettableServicePass implements CompilerPassInterface
 {
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function process(ContainerBuilder $container)
     {
         if (!$container->has('services_resetter')) {

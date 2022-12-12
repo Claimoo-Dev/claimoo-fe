@@ -33,17 +33,23 @@ class FileinfoMimeTypeGuesser implements MimeTypeGuesserInterface
         $this->magicFile = $magicFile;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function isGuesserSupported(): bool
     {
         return \function_exists('finfo_open');
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     public function guessMimeType(string $path): ?string
     {
         if (!is_file($path) || !is_readable($path)) {

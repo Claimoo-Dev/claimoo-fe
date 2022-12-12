@@ -21,6 +21,7 @@
         "psr/event-dispatcher": "^1",
         "psr/log": "^1|^2|^3",
         "symfony/event-dispatcher": "^5.4|^6.0",
+<<<<<<< HEAD
         "symfony/mime": "^5.4|^6.0",
         "symfony/service-contracts": "^1.1|^2|^3"
     },
@@ -30,6 +31,22 @@
     },
     "conflict": {
         "symfony/http-kernel": "<5.4"
+=======
+        "symfony/mime": "^6.2",
+        "symfony/service-contracts": "^1.1|^2|^3"
+    },
+    "require-dev": {
+        "symfony/console": "^5.4|^6.0",
+        "symfony/http-client-contracts": "^1.1|^2|^3",
+        "symfony/messenger": "^6.2",
+        "symfony/twig-bridge": "^6.2"
+    },
+    "conflict": {
+        "symfony/http-kernel": "<5.4",
+        "symfony/messenger": "<6.2",
+        "symfony/mime": "<6.2",
+        "symfony/twig-bridge": "<6.2.1"
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
     },
     "autoload": {
         "psr-4": { "Symfony\\Component\\Mailer\\": "" },

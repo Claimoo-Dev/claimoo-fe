@@ -17,15 +17,36 @@ use Symfony\Component\RateLimiter\Policy\NoLimiter;
 use Symfony\Component\RateLimiter\RateLimit;
 
 /**
+<<<<<<< HEAD
  * An implementation of RequestRateLimiterInterface that
+=======
+ * An implementation of PeekableRequestRateLimiterInterface that
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
  * fits most use-cases.
  *
  * @author Wouter de Jong <wouter@wouterj.nl>
  */
+<<<<<<< HEAD
 abstract class AbstractRequestRateLimiter implements RequestRateLimiterInterface
 {
     public function consume(Request $request): RateLimit
     {
+=======
+abstract class AbstractRequestRateLimiter implements PeekableRequestRateLimiterInterface
+{
+    public function consume(Request $request): RateLimit
+    {
+        return $this->doConsume($request, 1);
+    }
+
+    public function peek(Request $request): RateLimit
+    {
+        return $this->doConsume($request, 0);
+    }
+
+    private function doConsume(Request $request, int $tokens): RateLimit
+    {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         $limiters = $this->getLimiters($request);
         if (0 === \count($limiters)) {
             $limiters = [new NoLimiter()];
@@ -33,7 +54,11 @@ abstract class AbstractRequestRateLimiter implements RequestRateLimiterInterface
 
         $minimalRateLimit = null;
         foreach ($limiters as $limiter) {
+<<<<<<< HEAD
             $rateLimit = $limiter->consume(1);
+=======
+            $rateLimit = $limiter->consume($tokens);
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 
             $minimalRateLimit = $minimalRateLimit ? self::getMinimalRateLimit($minimalRateLimit, $rateLimit) : $rateLimit;
         }

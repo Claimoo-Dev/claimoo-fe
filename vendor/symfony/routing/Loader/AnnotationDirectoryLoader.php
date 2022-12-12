@@ -64,16 +64,29 @@ class AnnotationDirectoryLoader extends AnnotationFileLoader
         return $collection;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
     public function supports(mixed $resource, string $type = null): bool
     {
+=======
+    public function supports(mixed $resource, string $type = null): bool
+    {
+        if (!\is_string($resource)) {
+            return false;
+        }
+
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
         if (\in_array($type, ['annotation', 'attribute'], true)) {
             return true;
         }
 
+<<<<<<< HEAD
         if ($type || !\is_string($resource)) {
+=======
+        if ($type) {
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
             return false;
         }
 

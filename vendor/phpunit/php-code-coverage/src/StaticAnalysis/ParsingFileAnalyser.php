@@ -9,11 +9,19 @@
  */
 namespace SebastianBergmann\CodeCoverage\StaticAnalysis;
 
+<<<<<<< HEAD
+=======
+use function array_merge;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use function array_unique;
 use function assert;
 use function file_get_contents;
 use function is_array;
 use function max;
+<<<<<<< HEAD
+=======
+use function sort;
+>>>>>>> e82a15adacdba22fb721425e4f15531d994b77b2
 use function sprintf;
 use function substr_count;
 use function token_get_all;
