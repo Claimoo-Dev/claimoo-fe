@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use Illuminate\Http\Request;
 
 class CameraController extends Controller
@@ -9,15 +10,16 @@ class CameraController extends Controller
     public function index(Request $request)
     {
         $userId = $request->user_id;
-        $typeId = $request->type_id;
 
-        return redirect('show-camera')->with(compact('userId', 'typeId'));
-
-        // return view('camera')->with(compact('userId', 'typeId'));
+        return view('show-camera')->with(compact('userId'));
     }
 
     public function store(Request $request)
     {
+        $userId = $request->user_id;
+        $latitude = $request->latitude;
+        $longitude = $request->longitude;
+
         $img = $request->image;
         $folderPath = public_path('images/');
         $explode = explode(";base64,", $img);
@@ -33,7 +35,14 @@ class CameraController extends Controller
         } else {
             file_put_contents($file, $decode);
         }
+
+        $user = new Image();
+        $user->image = $fileName;
+        $user->user_id = $userId;
+        $user->latitude = $latitude;
+        $user->longitude = $longitude;
+        $user->save();
     
-        return true;
+        return view('show-camera')->with(compact('userId'));
     }
 }

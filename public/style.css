@@ -107,8 +107,22 @@ video {
     /* rotate: 90deg; */
 }
 
-.modal {
+.modal, .alert {
     -ms-transform: rotate(90deg); /* IE 9 */
     transform: rotate(90deg);
     /* rotate: 90deg; */
+}
+
+.alert {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+}
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 30vh;
+    overflow-y: auto;
 }

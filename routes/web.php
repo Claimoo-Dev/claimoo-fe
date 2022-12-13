@@ -18,15 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('camera', [CameraController::class, 'index']);
+Route::get('camera', [CameraController::class, 'index']);
+
+// Route::post('camera', [CameraController::class, 'index']);
 // Route::get('show-camera', [CameraController::class, 'index']);
 
-Route::get('/show-camera', function () {
-    return view('camera');
-});
+// Route::get('/show-camera', function () {
+//     return view('camera');
+// });
 
 Route::post('save-image', [CameraController::class, 'store']);
 
-Route::get('testing', function () {
-    return view('show-camera');
-});
+// Route::get('testing', function () {
+//     return view('show-camera');
+// });

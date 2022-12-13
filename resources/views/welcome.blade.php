@@ -60,8 +60,8 @@
             <div class="section-title">Isi Data</div>
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ url('camera') }}" method="post">
-                    @csrf
+                    <form action="{{ url('camera') }}" method="get">
+                    <!-- @csrf -->
                         <div class="form-group boxed">
                             <div class="input-wrapper">
                                 <label class="label" for="text4b">Nama Lengkap</label>
@@ -72,7 +72,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group boxed">
+                        <!-- <div class="form-group boxed">
                             <div class="input-wrapper">
                                 <label class="label" for="select4b">Jenis Mobil</label>
                                 <select class="form-control custom-select" id="select4b" name="type_id" required>
@@ -88,7 +88,7 @@
                                     <option value="10">Pick Up</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <li class="splide__slide mt-3">
                             <div class="bill-box">

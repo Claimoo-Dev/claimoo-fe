@@ -36,60 +36,60 @@ const constraints = {
       max: 1440
     },
     facingMode: {
-      exact: 'environment'
+      exact: 'user'
     }
   }
 };
 
-depan.onclick = () => {
-  frame.src = "frame/innova/depan.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// depan.onclick = () => {
+//   frame.src = "frame/innova/depan.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-belakang.onclick = () => {
-  frame.src = "frame/innova/belakang.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// belakang.onclick = () => {
+//   frame.src = "frame/innova/belakang.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-sampingKananDepan.onclick = () => {
-  frame.src = "frame/innova/samping-kanan-depan.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// sampingKananDepan.onclick = () => {
+//   frame.src = "frame/innova/samping-kanan-depan.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-sampingKiriDepan.onclick = () => {
-  frame.src = "frame/innova/samping-kiri-depan.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// sampingKiriDepan.onclick = () => {
+//   frame.src = "frame/innova/samping-kiri-depan.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-sampingKananBelakang.onclick = () => {
-  frame.src = "frame/innova/samping-kanan-belakang.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// sampingKananBelakang.onclick = () => {
+//   frame.src = "frame/innova/samping-kanan-belakang.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-sampingKiriBelakang.onclick = () => {
-  frame.src = "frame/innova/samping-kiri-belakang.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// sampingKiriBelakang.onclick = () => {
+//   frame.src = "frame/innova/samping-kiri-belakang.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-lampuDepanKanan.onclick = () => {
-  frame.src = "frame/innova/lampu-depan-kanan.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// lampuDepanKanan.onclick = () => {
+//   frame.src = "frame/innova/lampu-depan-kanan.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-lampuDepanKiri.onclick = () => {
-  frame.src = "frame/innova/lampu-depan-kiri.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// lampuDepanKiri.onclick = () => {
+//   frame.src = "frame/innova/lampu-depan-kiri.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-lampuBelakangKanan.onclick = () => {
-  frame.src = "frame/innova/lampu-belakang-kanan.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// lampuBelakangKanan.onclick = () => {
+//   frame.src = "frame/innova/lampu-belakang-kanan.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
-lampuBelakangKiri.onclick = () => {
-  frame.src = "frame/innova/lampu-belakang-kiri.png";
-  $('#exampleModalCenter').modal('hide');
-};
+// lampuBelakangKiri.onclick = () => {
+//   frame.src = "frame/innova/lampu-belakang-kiri.png";
+//   $('#exampleModalCenter').modal('hide');
+// };
 
 play.onclick = () => {
   if (streamStarted) {
@@ -121,16 +121,34 @@ const doScreenshot = () => {
 
   var dataURL = canvas.toDataURL();
 
-  $.ajax({
-    type: "POST",
-    url: "/save-image",
-    data: {
-        _token : $('meta[name="csrf-token"]').attr('content'),
-        image: dataURL
-    }
-  }).done(function(o) {
-    console.log('saved'); 
-  });
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    console.log("Geolocation is not supported by this browser.");
+  }
+
+  function showPosition(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    $.ajax({
+      type: "POST",
+      url: "/save-image",
+      data: {
+          _token : $('meta[name="csrf-token"]').attr('content'),
+          image : dataURL,
+          user_id : document.getElementById("userId").value,
+          latitude : latitude,
+          longitude : longitude
+      }
+    }).done(function(o) {
+      console.log('saved'); 
+
+      $("#success-alert").fadeTo(500, 500).slideUp(100, function() {
+        $("#success-alert").slideUp(100);
+      });
+    });
+  }
 };
 
 pause.onclick = pauseStream;
