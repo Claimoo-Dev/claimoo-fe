@@ -115,34 +115,23 @@ const doScreenshot = () => {
 
     var dataURL = canvas.toDataURL();
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        console.log("Geolocation is not supported by this browser.");
-    }
+    $.ajax({
+        type: "POST",
+        url: "/save-image",
+        data: {
+            _token: $('meta[name="csrf-token"]').attr('content'),
+            image: dataURL,
+            user_id: document.getElementById("userId").value,
+            latitude: document.getElementById("latitude").value,
+            longitude: document.getElementById("longitude").value
+        }
+    }).done(function (o) {
+        console.log('saved');
 
-    function showPosition(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-
-        $.ajax({
-            type: "POST",
-            url: "/save-image",
-            data: {
-                _token: $('meta[name="csrf-token"]').attr('content'),
-                image: dataURL,
-                user_id: document.getElementById("userId").value,
-                latitude: latitude,
-                longitude: longitude
-            }
-        }).done(function (o) {
-            console.log('saved');
-
-            $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
-                $("#success-alert").slideUp(100);
-            });
+        $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
+            $("#success-alert").slideUp(100);
         });
-    }
+    });
 };
 
 // pause.onclick = pauseStream;
