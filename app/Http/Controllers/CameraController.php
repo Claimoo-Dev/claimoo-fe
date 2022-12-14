@@ -24,7 +24,7 @@ class CameraController extends Controller
         $latitude = $request->latitude;
         $longitude = $request->longitude;
 
-        if (!$userId) {
+        if (!$userId or !$latitude or !$longitude) {
             return redirect('/');
         }
 
