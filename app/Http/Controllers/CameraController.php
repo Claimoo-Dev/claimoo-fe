@@ -11,7 +11,24 @@ class CameraController extends Controller
     {
         $userId = $request->user_id;
 
+        if (!$userId) {
+            return redirect('/');
+        }
+
         return view('show-camera')->with(compact('userId'));
+    }
+
+    public function indexTesting(Request $request)
+    {
+        $userId = $request->user_id;
+        $latitude = $request->latitude;
+        $longitude = $request->longitude;
+
+        if (!$userId) {
+            return redirect('/');
+        }
+
+        return view('show-camera-testing')->with(compact('userId', 'latitude', 'longitude'));
     }
 
     public function store(Request $request)

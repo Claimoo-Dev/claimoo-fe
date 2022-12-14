@@ -60,17 +60,20 @@
             <div class="section-title">Isi Data</div>
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ url('camera') }}" method="get">
+                    <form action="{{ url('camera-testing') }}" method="get">
                     <!-- @csrf -->
                         <div class="form-group boxed">
                             <div class="input-wrapper">
-                                <label class="label" for="text4b">Nama Lengkap</label>
-                                <select class="livesearch form-control" id="text4b" name="user_id" required></select>
+                                <label class="label" for="userId">Nama Lengkap</label>
+                                <select class="livesearch form-control" id="userId" name="user_id" required></select>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                         </div>
+
+                        <input type="hidden" name="latitude" id="latitude">
+                        <input type="hidden" name="longitude" id="longitude">
 
                         <!-- <div class="form-group boxed">
                             <div class="input-wrapper">
@@ -94,7 +97,7 @@
                             <div class="bill-box">
                                 <div class="price">Mohon Aktifkan Kamera & Location</div>
                                 <p>untuk menggunakan layanan ini</p>
-                                <button class="btn btn-primary btn-block btn-sm" type="submit">Take Picture</button>
+                                <button class="btn btn-primary btn-block btn-sm" id="takePicture">Take Picture</button>
                             </div>
                         </li>
                     </form>
@@ -227,6 +230,20 @@
                 cache: true
             }
         });
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            console.log("Geolocation is not supported by this browser.");
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            document.getElementById("latitude").value = latitude;
+            document.getElementById("longitude").value = longitude;
+        }
     </script>
 
 </body>
