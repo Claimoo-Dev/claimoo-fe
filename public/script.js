@@ -18,6 +18,7 @@ const lampuDepanKanan = document.querySelector('.lampu-depan-kanan');
 const lampuDepanKiri = document.querySelector('.lampu-depan-kiri');
 const lampuBelakangKanan = document.querySelector('.lampu-belakang-kanan');
 const lampuBelakangKiri = document.querySelector('.lampu-belakang-kiri');
+const btnDescription = document.querySelector('.btn-description');
 let streamStarted = false;
 
 const constraints = {
@@ -33,59 +34,109 @@ const constraints = {
             max: 1440
         },
         facingMode: {
-            exact: 'environment'
+            exact: 'user'
         }
     }
 };
 
 depan.onclick = () => {
-    frame.src = "frame/innova/depan.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/depan.png";
+    }
 };
 
 belakang.onclick = () => {
-    frame.src = "frame/innova/belakang.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/belakang.png";
+    }
 };
 
 sampingKananDepan.onclick = () => {
-    frame.src = "frame/innova/samping-kanan-depan.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/samping-kanan-depan.png";
+    }
 };
 
 sampingKiriDepan.onclick = () => {
-    frame.src = "frame/innova/samping-kiri-depan.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/samping-kiri-depan.png";
+    }
 };
 
 sampingKananBelakang.onclick = () => {
-    frame.src = "frame/innova/samping-kanan-belakang.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/samping-kanan-belakang.png";
+    }
 };
 
 sampingKiriBelakang.onclick = () => {
-    frame.src = "frame/innova/samping-kiri-belakang.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/samping-kiri-belakang.png";
+    }
 };
 
 lampuDepanKanan.onclick = () => {
-    frame.src = "frame/innova/lampu-depan-kanan.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/lampu-depan-kanan.png";
+    }
 };
 
 lampuDepanKiri.onclick = () => {
-    frame.src = "frame/innova/lampu-depan-kiri.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/lampu-depan-kiri.png";
+    }
 };
 
 lampuBelakangKanan.onclick = () => {
-    frame.src = "frame/innova/lampu-belakang-kanan.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/lampu-belakang-kanan.png";
+    }
 };
 
 lampuBelakangKiri.onclick = () => {
-    frame.src = "frame/innova/lampu-belakang-kiri.png";
     $('#exampleModalCenter').modal('hide');
+    $('#exampleModalCenter1').modal('show');
+
+    btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
+        frame.src = "frame/innova/lampu-belakang-kiri.png";
+    }
 };
 
 // play.onclick = () => {
@@ -123,7 +174,8 @@ const doScreenshot = () => {
             image: dataURL,
             user_id: document.getElementById("userId").value,
             latitude: document.getElementById("latitude").value,
-            longitude: document.getElementById("longitude").value
+            longitude: document.getElementById("longitude").value,
+            description: document.getElementById("description").value
         }
     }).done(function (o) {
         console.log('saved');
@@ -139,10 +191,12 @@ screenshot.onclick = doScreenshot;
 
 const startStream = async () => {
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-        const updatedConstraints = {...constraints};
-        
+        const updatedConstraints = {
+            ...constraints
+        };
+
         const stream = await navigator.mediaDevices.getUserMedia(updatedConstraints);
-        
+
         handleStream(stream);
     }
 };

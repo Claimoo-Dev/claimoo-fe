@@ -38,6 +38,7 @@ class CameraController extends Controller
         $userId = $request->user_id;
         $latitude = $request->latitude;
         $longitude = $request->longitude;
+        $description = $request->description;
 
         $img = $request->image;
         $folderPath = public_path('images/');
@@ -60,6 +61,7 @@ class CameraController extends Controller
         $user->user_id = $userId;
         $user->latitude = $latitude;
         $user->longitude = $longitude;
+        $user->description = $description;
         $user->save();
     
         return view('show-camera')->with(compact('userId', 'latitude', 'longitude'));
