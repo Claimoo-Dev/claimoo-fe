@@ -98,7 +98,7 @@
                                 <div class="price">Mohon Aktifkan Kamera & Location</div>
                                 <p>untuk menggunakan layanan ini</p>
                                 <div class="price">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</div>
-                                <button class="btn btn-primary btn-block btn-sm" type="submit" onclick="lock()">Take Picture</button>
+                                <button class="btn btn-primary btn-block btn-sm" type="submit">Take Picture</button>
                             </div>
                         </li>
                     </form>
@@ -245,21 +245,7 @@
             document.getElementById("latitude").value = latitude;
             document.getElementById("longitude").value = longitude;
         }
-
-        function lock() {
-            let de = document.documentElement;
-            if (de.requestFullscreen) {
-                de.requestFullscreen();
-            } else if (de.mozRequestFullScreen) {
-                de.mozRequestFullScreen();
-            } else if (de.webkitRequestFullscreen) {
-                de.webkitRequestFullscreen();
-            } else if (de.msRequestFullscreen) {
-                de.msRequestFullscreen();
-            }
-
-            screen.orientation.lock('portrait');
-        }
     </script>
+
 </body>
 </html>
