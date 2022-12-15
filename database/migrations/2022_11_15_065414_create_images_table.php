@@ -25,6 +25,7 @@ return new class extends Migration
 
             $table->string('latitude');
             $table->string('longitude');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

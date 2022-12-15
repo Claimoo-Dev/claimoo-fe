@@ -10,8 +10,27 @@ class CameraController extends Controller
     public function index(Request $request)
     {
         $userId = $request->user_id;
+        $latitude = $request->latitude;
+        $longitude = $request->longitude;
 
-        return view('show-camera')->with(compact('userId'));
+        if (!$userId or !$latitude or !$longitude) {
+            return redirect('/');
+        }
+
+        return view('show-camera')->with(compact('userId', 'latitude', 'longitude'));
+    }
+
+    public function indexTesting(Request $request)
+    {
+        $userId = $request->user_id;
+        $latitude = $request->latitude;
+        $longitude = $request->longitude;
+
+        if (!$userId or !$latitude or !$longitude) {
+            return redirect('/');
+        }
+
+        return view('show-camera-testing')->with(compact('userId', 'latitude', 'longitude'));
     }
 
     public function store(Request $request)
@@ -19,6 +38,7 @@ class CameraController extends Controller
         $userId = $request->user_id;
         $latitude = $request->latitude;
         $longitude = $request->longitude;
+        $description = $request->description;
 
         $img = $request->image;
         $folderPath = public_path('images/');
@@ -41,8 +61,9 @@ class CameraController extends Controller
         $user->user_id = $userId;
         $user->latitude = $latitude;
         $user->longitude = $longitude;
+        $user->description = $description;
         $user->save();
     
-        return view('show-camera')->with(compact('userId'));
+        return view('show-camera')->with(compact('userId', 'latitude', 'longitude'));
     }
 }

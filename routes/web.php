@@ -29,6 +29,8 @@ Route::get('camera', [CameraController::class, 'index']);
 
 Route::post('save-image', [CameraController::class, 'store']);
 
-// Route::get('testing', function () {
-//     return view('show-camera');
-// });
+Route::get('testing', function () {
+    return view('welcome-testing');
+});
+
+Route::get('camera-testing', [CameraController::class, 'indexTesting']);

@@ -60,7 +60,7 @@
             <div class="section-title">Isi Data</div>
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ url('camera') }}" method="get">
+                    <form action="{{ url('camera-testing') }}" method="get">
                     <!-- @csrf -->
                         <div class="form-group boxed">
                             <div class="input-wrapper">
@@ -97,8 +97,7 @@
                             <div class="bill-box">
                                 <div class="price">Mohon Aktifkan Kamera & Location</div>
                                 <p>untuk menggunakan layanan ini</p>
-                                <div class="price">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</div>
-                                <button class="btn btn-primary btn-block btn-sm" type="submit">Take Picture</button>
+                                <button class="btn btn-primary btn-block btn-sm" id="takePicture">Take Picture</button>
                             </div>
                         </li>
                     </form>
