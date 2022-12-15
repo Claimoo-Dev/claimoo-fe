@@ -222,39 +222,10 @@ const startStream = async () => {
 
         handleStream(stream);
     }
-
-    // let de = document.documentElement;
-    // if (de.requestFullscreen) {
-    //     de.requestFullscreen();
-    // } else if (de.mozRequestFullScreen) {
-    //     de.mozRequestFullScreen();
-    // } else if (de.webkitRequestFullscreen) {
-    //     de.webkitRequestFullscreen();
-    // } else if (de.msRequestFullscreen) {
-    //     de.msRequestFullscreen();
-    // }
-
-    // screen.orientation.lock("portrait");
 };
 
 const handleStream = (stream) => {
     video.srcObject = stream;
 };
 
-const lock = () => {
-    let de = document.documentElement;
-    if (de.requestFullscreen) {
-        de.requestFullscreen();
-    } else if (de.mozRequestFullScreen) {
-        de.mozRequestFullScreen();
-    } else if (de.webkitRequestFullscreen) {
-        de.webkitRequestFullscreen();
-    } else if (de.msRequestFullscreen) {
-        de.msRequestFullscreen();
-    }
-
-    screen.orientation.lock('portrait');
-}
-
-lock();
 startStream();
