@@ -96,6 +96,7 @@
                         <li class="splide__slide mt-3">
                             <div class="bill-box">
                                 <div class="price">Mohon Aktifkan Kamera & Location</div>
+                                <div class="price">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</div>
                                 <p>untuk menggunakan layanan ini</p>
                                 <button class="btn btn-primary btn-block btn-sm" type="submit">Take Picture</button>
                             </div>

@@ -62,6 +62,6 @@ class CameraController extends Controller
         $user->longitude = $longitude;
         $user->save();
     
-        return view('show-camera')->with(compact('userId'));
+        return view('show-camera')->with(compact('userId', 'latitude', 'longitude'));
     }
 }
