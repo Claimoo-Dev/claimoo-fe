@@ -40,18 +40,15 @@ const constraints = {
     }
 };
 
-btnDescription.onclick = () => {
-    $('#exampleModalCenter1').modal('hide');
-    screenshot.classList.remove('d-none');
-    back.classList.remove('d-none');
-};
-
 depan.onclick = () => {
     $('#exampleModalCenter').modal('hide');
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/depan.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -60,7 +57,10 @@ belakang.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/belakang.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -69,7 +69,10 @@ sampingKananDepan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kanan-depan.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -78,7 +81,10 @@ sampingKiriDepan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kiri-depan.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -87,7 +93,10 @@ sampingKananBelakang.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kanan-belakang.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -96,7 +105,10 @@ sampingKiriBelakang.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kiri-belakang.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -105,7 +117,10 @@ lampuDepanKanan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-depan-kanan.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -114,7 +129,10 @@ lampuDepanKiri.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-depan-kiri.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -123,7 +141,10 @@ lampuBelakangKanan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-belakang-kanan.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -132,7 +153,10 @@ lampuBelakangKiri.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
+        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-belakang-kiri.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
