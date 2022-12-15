@@ -6,6 +6,7 @@ const video = document.querySelector('video');
 const canvas = document.querySelector('canvas');
 const btnModal = document.querySelector('.btn-modal');
 const modal = document.querySelector('.modal');
+const back = document.querySelector('.back');
 const screenshot = document.querySelector('.screenshot');
 const frame = document.querySelector('.frame');
 const depan = document.querySelector('.depan');
@@ -46,6 +47,8 @@ depan.onclick = () => {
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/depan.png";
+        screenshot.classList.remove('d-none');
+        back.classList.remove('d-none');
     }
 };
 
@@ -199,6 +202,19 @@ const startStream = async () => {
 
         handleStream(stream);
     }
+
+    let de = document.documentElement;
+    if (de.requestFullscreen) {
+        de.requestFullscreen();
+    } else if (de.mozRequestFullScreen) {
+        de.mozRequestFullScreen();
+    } else if (de.webkitRequestFullscreen) {
+        de.webkitRequestFullscreen();
+    } else if (de.msRequestFullscreen) {
+        de.msRequestFullscreen();
+    }
+
+    screen.orientation.lock("portrait");
 };
 
 const handleStream = (stream) => {
