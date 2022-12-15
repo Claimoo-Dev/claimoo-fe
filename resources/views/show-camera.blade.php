@@ -14,24 +14,24 @@
 
 <body>
     <input type="hidden" name="user_id" value="{{ $userId }}" id="userId">
+    <input type="hidden" name="latitude" value="{{ $latitude }}" id="latitude">
+    <input type="hidden" name="longitude" value="{{ $longitude }}" id="longitude">
 
     <div class="display-cover">
         <video autoplay></video>
         <canvas class="d-none"></canvas>
 
         <div class="frame-parent">
-            <img class="frame d-none" alt="">
+            <img class="frame" alt="">
         </div>
 
         <div class="controls">
-            <button class="btn btn-danger play" title="Play"><i data-feather="play-circle"></i></button>
-            <button class="btn btn-info pause d-none" title="Pause"><i data-feather="pause"></i></button>
+            <button class="btn btn-outline-info back mb-5" title="Back" onclick="history.back()"><i data-feather="arrow-left"></i></button>
             <br>
-            <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i
-                    data-feather="image"></i></button>
+            <button class="btn btn-outline-success screenshot" title="ScreenShot"><i data-feather="image"></i></button>
         </div>
 
-        <button type="button" class="btn btn-outline-primary btn-modal d-none" data-toggle="modal"
+        <button type="button" class="btn btn-outline-primary btn-modal" data-toggle="modal"
             data-target="#exampleModalCenter">
             Select Frame
         </button>

@@ -10,12 +10,14 @@ class CameraController extends Controller
     public function index(Request $request)
     {
         $userId = $request->user_id;
+        $latitude = $request->latitude;
+        $longitude = $request->longitude;
 
-        if (!$userId) {
+        if (!$userId or !$latitude or !$longitude) {
             return redirect('/');
         }
 
-        return view('show-camera')->with(compact('userId'));
+        return view('show-camera')->with(compact('userId', 'latitude', 'longitude'));
     }
 
     public function indexTesting(Request $request)

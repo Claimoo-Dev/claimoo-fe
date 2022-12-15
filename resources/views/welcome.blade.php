@@ -64,13 +64,16 @@
                     <!-- @csrf -->
                         <div class="form-group boxed">
                             <div class="input-wrapper">
-                                <label class="label" for="text4b">Nama Lengkap</label>
-                                <select class="livesearch form-control" id="text4b" name="user_id" required></select>
+                                <label class="label" for="userId">Nama Lengkap</label>
+                                <select class="livesearch form-control" id="userId" name="user_id" required></select>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                         </div>
+
+                        <input type="hidden" name="latitude" id="latitude">
+                        <input type="hidden" name="longitude" id="longitude">
 
                         <!-- <div class="form-group boxed">
                             <div class="input-wrapper">
@@ -227,6 +230,20 @@
                 cache: true
             }
         });
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            console.log("Geolocation is not supported by this browser.");
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            document.getElementById("latitude").value = latitude;
+            document.getElementById("longitude").value = longitude;
+        }
     </script>
 
 </body>

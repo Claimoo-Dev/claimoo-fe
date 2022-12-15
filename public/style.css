@@ -7,11 +7,6 @@
     position: relative;
 }
 
-/* video {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.2);
-} */
-
 video {
     width: 100vw;
     height: 100vh;
@@ -33,7 +28,6 @@ video {
     bottom: 20px;
     -ms-transform: rotate(90deg); /* IE 9 */
     transform: rotate(90deg);
-    /* rotate: 90deg; */
 }
 
 .controls > button {
@@ -48,35 +42,19 @@ video {
     color: white !important;
 }
 
-/* .controls > button > svg {
-    height: 20px;
-    width: 18px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-} */
-
 .controls button:nth-child(1) {
-    border: 2px solid #D2002E;
-}
-
-.controls button:nth-child(1) svg {
-    color: #D2002E;
-}
-
-.controls button:nth-child(2) {
     border: 2px solid #008496;
 }
 
-.controls button:nth-child(2) svg {
+.controls button:nth-child(1) svg {
     color: #008496;
 }
 
-.controls button:nth-child(3) {
+.controls button:nth-child(2) {
     border: 2px solid #00B541;
 }
 
-.controls button:nth-child(3) svg {
+.controls button:nth-child(2) svg {
     color: #00B541;
 }
 
@@ -104,13 +82,11 @@ video {
     left: -25px;
     -ms-transform: rotate(90deg); /* IE 9 */
     transform: rotate(90deg);
-    /* rotate: 90deg; */
 }
 
 .modal, .alert {
     -ms-transform: rotate(90deg); /* IE 9 */
     transform: rotate(90deg);
-    /* rotate: 90deg; */
 }
 
 .alert {
