@@ -40,15 +40,18 @@ const constraints = {
     }
 };
 
+btnDescription.onclick = () => {
+    $('#exampleModalCenter1').modal('hide');
+    screenshot.classList.remove('d-none');
+    back.classList.remove('d-none');
+};
+
 depan.onclick = () => {
     $('#exampleModalCenter').modal('hide');
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/depan.png";
-        screenshot.classList.remove('d-none');
-        back.classList.remove('d-none');
     }
 };
 
@@ -57,7 +60,6 @@ belakang.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/belakang.png";
     }
 };
@@ -67,7 +69,6 @@ sampingKananDepan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kanan-depan.png";
     }
 };
@@ -77,7 +78,6 @@ sampingKiriDepan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kiri-depan.png";
     }
 };
@@ -87,7 +87,6 @@ sampingKananBelakang.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kanan-belakang.png";
     }
 };
@@ -97,7 +96,6 @@ sampingKiriBelakang.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/samping-kiri-belakang.png";
     }
 };
@@ -107,7 +105,6 @@ lampuDepanKanan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-depan-kanan.png";
     }
 };
@@ -117,7 +114,6 @@ lampuDepanKiri.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-depan-kiri.png";
     }
 };
@@ -127,7 +123,6 @@ lampuBelakangKanan.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-belakang-kanan.png";
     }
 };
@@ -137,7 +132,6 @@ lampuBelakangKiri.onclick = () => {
     $('#exampleModalCenter1').modal('show');
 
     btnDescription.onclick = () => {
-        $('#exampleModalCenter1').modal('hide');
         frame.src = "frame/innova/lampu-belakang-kiri.png";
     }
 };
