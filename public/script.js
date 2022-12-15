@@ -35,7 +35,7 @@ const constraints = {
             max: 1440
         },
         facingMode: {
-            exact: 'environment'
+            exact: 'user'
         }
     }
 };
@@ -201,6 +201,8 @@ const doScreenshot = () => {
     }).done(function (o) {
         console.log('saved');
 
+        description.value = '';
+
         $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
             $("#success-alert").slideUp(100);
         });
@@ -221,6 +223,25 @@ const startStream = async () => {
         handleStream(stream);
     }
 
+    // let de = document.documentElement;
+    // if (de.requestFullscreen) {
+    //     de.requestFullscreen();
+    // } else if (de.mozRequestFullScreen) {
+    //     de.mozRequestFullScreen();
+    // } else if (de.webkitRequestFullscreen) {
+    //     de.webkitRequestFullscreen();
+    // } else if (de.msRequestFullscreen) {
+    //     de.msRequestFullscreen();
+    // }
+
+    // screen.orientation.lock("portrait");
+};
+
+const handleStream = (stream) => {
+    video.srcObject = stream;
+};
+
+function lock() {
     let de = document.documentElement;
     if (de.requestFullscreen) {
         de.requestFullscreen();
@@ -233,10 +254,7 @@ const startStream = async () => {
     }
 
     screen.orientation.lock("portrait");
-};
+}
 
-const handleStream = (stream) => {
-    video.srcObject = stream;
-};
-
+lock();
 startStream();

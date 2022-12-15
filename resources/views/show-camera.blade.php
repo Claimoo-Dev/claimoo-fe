@@ -68,7 +68,8 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Deskripsi</h5>
+                        <h4 class="modal-title">Deskripsi</h4>
+                        <span class="text-red">*tidak wajib</span>
                     </div>
                     <div class="modal-body">
                         <textarea class="form-control" id="description"></textarea>

@@ -38,8 +38,9 @@ video {
     background: transparent;
 }
 
-.controls > button:hover svg {
-    color: white !important;
+.btn-outline-success:hover {
+    background-color: transparent;
+    color: #28a745;
 }
 
 .controls button:nth-child(1) {
@@ -56,10 +57,6 @@ video {
 
 .controls button:nth-child(2) svg {
     color: #00B541;
-}
-
-.controls > button:hover svg {
-    color: white;
 }
 
 .frame-parent {
@@ -99,15 +96,24 @@ video {
     top: 50%;
 }
 
-.modal-dialog{
+/* .modal-dialog{
     overflow-y: initial !important
+} */
+
+.modal-header {
+    display: block;
+    font-size: 14px;
 }
 
 .modal-body{
-    height: 30vh;
+    height: 40vh;
     overflow-y: auto;
 }
 
 textarea.form-control {
     height: 100%;
+}
+
+.text-red {
+    color: red;
 }
