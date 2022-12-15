@@ -35,7 +35,7 @@
         </div>
 
         <button type="button" class="btn btn-outline-primary btn-modal" data-toggle="modal"
-            data-target="#exampleModalCenter" onclick="lock()">
+            data-target="#exampleModalCenter">
             Select Frame
         </button>
 
@@ -97,7 +97,7 @@
     </script>
     <script src="script.js"></script>
     <script type="text/javascript">
-        function lock() {
+        // function lock() {
             let de = document.documentElement;
             if (de.requestFullscreen) {
                 de.requestFullscreen();
@@ -110,7 +110,7 @@
             }
 
             screen.orientation.lock('portrait');
-        }
+        // }
     </script>
 </body>
 
