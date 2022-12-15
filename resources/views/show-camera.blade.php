@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Claimoo</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
 </head>
 
 <body>
