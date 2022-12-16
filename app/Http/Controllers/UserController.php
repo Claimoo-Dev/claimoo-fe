@@ -32,8 +32,10 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        $result = Http::get('https://project.bintorocorp.co.id/area/province')->paginate(10);
+        $result = Http::get('https://project.bintorocorp.co.id/area/province');
 
-        return response()->json($result);
+        $res = json_decode($result->body());
+
+        return response()->json($res);
     }
 }
