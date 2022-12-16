@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CameraController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,18 +20,11 @@ Route::get('/', function () {
 });
 
 Route::get('camera', [CameraController::class, 'index']);
-
-// Route::post('camera', [CameraController::class, 'index']);
-// Route::get('show-camera', [CameraController::class, 'index']);
-
-// Route::get('/show-camera', function () {
-//     return view('camera');
-// });
-
 Route::post('save-image', [CameraController::class, 'store']);
 
 Route::get('testing', function () {
     return view('welcome-testing');
 });
-
 Route::get('camera-testing', [CameraController::class, 'indexTesting']);
+
+Route::get('register', [UserController::class, 'register']);

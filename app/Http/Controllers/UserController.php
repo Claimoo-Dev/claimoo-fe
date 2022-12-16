@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
@@ -27,5 +28,12 @@ class UserController extends Controller
         $user->save();
 
         return $user;
+    }
+
+    public function register(Request $request)
+    {
+        $result = Http::get('https://project.bintorocorp.co.id/area/province')->paginate(10);
+
+        return response()->json($result);
     }
 }
