@@ -32,7 +32,7 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        $result = Http::get('https://project.bintorocorp.co.id/area/province');
+        $result = Http::get('https://project.bintorocorp.co.id/api/area/province');
 
         $res = json_decode($result->body());
 
