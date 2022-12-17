@@ -17,6 +17,7 @@
     <input type="hidden" name="user_id" value="{{ $userId }}" id="userId">
     <input type="hidden" name="latitude" value="{{ $latitude }}" id="latitude">
     <input type="hidden" name="longitude" value="{{ $longitude }}" id="longitude">
+    <input type="hidden" name="type_car" value="{{ $typeCar }}" id="typeCar">
 
     <div class="display-cover">
         <video autoplay></video>

@@ -12,12 +12,13 @@ class CameraController extends Controller
         $userId = $request->user_id;
         $latitude = $request->latitude;
         $longitude = $request->longitude;
+        $typeCar = $request->type_car;
 
-        if (!$userId or !$latitude or !$longitude) {
-            return redirect('/');
-        }
+        // if (!$userId or !$latitude or !$longitude) {
+        //     return redirect('/');
+        // }
 
-        return view('show-camera')->with(compact('userId', 'latitude', 'longitude'));
+        return view('show-camera')->with(compact('userId', 'latitude', 'longitude', 'typeCar'));
     }
 
     public function indexTesting(Request $request)

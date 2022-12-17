@@ -1,0 +1,45 @@
+.width-50 {
+    width: 50% !important;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.height-50px {
+    height: 50px !important;
+}
+
+.img-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.register-title {
+    color: #073f78;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.fz-24 {
+    font-size: 24px !important;
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.td-none {
+    text-decoration: none;
+}

@@ -40,4 +40,9 @@ class UserController extends Controller
 
         return response()->json($res);
     }
+
+    public function signIn()
+    {
+        return redirect('/dashboard');
+    }
 }

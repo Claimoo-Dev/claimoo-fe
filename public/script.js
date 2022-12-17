@@ -20,6 +20,7 @@ const lampuDepanKiri = document.querySelector('.lampu-depan-kiri');
 const lampuBelakangKanan = document.querySelector('.lampu-belakang-kanan');
 const lampuBelakangKiri = document.querySelector('.lampu-belakang-kiri');
 const btnDescription = document.querySelector('.btn-description');
+const typeCar = document.getElementById("typeCar").value;
 let streamStarted = false;
 
 const constraints = {
@@ -46,7 +47,25 @@ depan.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/depan.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/depan.png";
+        } else if (typeCar == 'suv') {
+            frame.src = "frame/fortuner/depan.png";
+        } else if (typeCar == 'crossover') {
+            frame.src = "frame/mobilio/depan.png";
+        } else if (typeCar == 'hatchback') {
+            frame.src = "frame/brio/depan.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            frame.src = "frame/granmax/depan.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -58,7 +77,25 @@ belakang.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/belakang.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/belakang.png";
+        } else if (typeCar == 'suv') {
+            frame.src = "frame/fortuner/belakang.png";
+        } else if (typeCar == 'crossover') {
+            frame.src = "frame/mobilio/belakang.png";
+        } else if (typeCar == 'hatchback') {
+            frame.src = "frame/brio/belakang.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            frame.src = "frame/granmax/belakang.png";
+        }
+        
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -70,7 +107,25 @@ sampingKananDepan.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/samping-kanan-depan.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/samping-kanan-depan.png";
+        } else if (typeCar == 'suv') {
+            frame.src = "frame/fortuner/samping-kanan-depan.png";
+        } else if (typeCar == 'crossover') {
+            frame.src = "frame/mobilio/samping-kanan-depan.png";
+        } else if (typeCar == 'hatchback') {
+            frame.src = "frame/brio/samping-kanan-depan.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            frame.src = "frame/granmax/samping-kanan-depan.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -82,7 +137,25 @@ sampingKiriDepan.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/samping-kiri-depan.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/samping-kiri-depan.png";
+        } else if (typeCar == 'suv') {
+            frame.src = "frame/fortuner/samping-kiri-depan.png";
+        } else if (typeCar == 'crossover') {
+            frame.src = "frame/mobilio/samping-kiri-depan.png";
+        } else if (typeCar == 'hatchback') {
+            frame.src = "frame/brio/samping-kiri-depan.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            frame.src = "frame/granmax/samping-kiri-depan.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -94,7 +167,25 @@ sampingKananBelakang.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/samping-kanan-belakang.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/samping-kanan-belakang.png";
+        } else if (typeCar == 'suv') {
+            frame.src = "frame/fortuner/samping-kanan-belakang.png";
+        } else if (typeCar == 'crossover') {
+            frame.src = "frame/mobilio/samping-kanan-belakang.png";
+        } else if (typeCar == 'hatchback') {
+            frame.src = "frame/brio/samping-kanan-belakang.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            frame.src = "frame/granmax/samping-kanan-belakang.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -106,7 +197,25 @@ sampingKiriBelakang.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/samping-kiri-belakang.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/samping-kiri-belakang.png";
+        } else if (typeCar == 'suv') {
+            frame.src = "frame/fortuner/samping-kiri-belakang.png";
+        } else if (typeCar == 'crossover') {
+            frame.src = "frame/mobilio/samping-kiri-belakang.png";
+        } else if (typeCar == 'hatchback') {
+            frame.src = "frame/brio/samping-kiri-belakang.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            frame.src = "frame/granmax/samping-kiri-belakang.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -118,7 +227,25 @@ lampuDepanKanan.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/lampu-depan-kanan.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/lampu-depan-kanan.png";
+        } else if (typeCar == 'suv') {
+            // frame.src = "frame/fortuner/lampu-depan-kanan.png";
+        } else if (typeCar == 'crossover') {
+            // frame.src = "frame/mobilio/lampu-depan-kanan.png";
+        } else if (typeCar == 'hatchback') {
+            // frame.src = "frame/brio/lampu-depan-kanan.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            // frame.src = "frame/granmax/lampu-depan-kanan.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -130,7 +257,25 @@ lampuDepanKiri.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/lampu-depan-kiri.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/lampu-depan-kiri.png";
+        } else if (typeCar == 'suv') {
+            // frame.src = "frame/fortuner/lampu-depan-kiri.png";
+        } else if (typeCar == 'crossover') {
+            // frame.src = "frame/mobilio/lampu-depan-kiri.png";
+        } else if (typeCar == 'hatchback') {
+            // frame.src = "frame/brio/lampu-depan-kiri.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            // frame.src = "frame/granmax/lampu-depan-kiri.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -142,7 +287,25 @@ lampuBelakangKanan.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/lampu-belakang-kanan.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/lampu-belakang-kanan.png";
+        } else if (typeCar == 'suv') {
+            // frame.src = "frame/fortuner/lampu-belakang-kanan.png";
+        } else if (typeCar == 'crossover') {
+            // frame.src = "frame/mobilio/lampu-belakang-kanan.png";
+        } else if (typeCar == 'hatchback') {
+            // frame.src = "frame/brio/lampu-belakang-kanan.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            // frame.src = "frame/granmax/lampu-belakang-kanan.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -154,7 +317,25 @@ lampuBelakangKiri.onclick = () => {
 
     btnDescription.onclick = () => {
         $('#exampleModalCenter1').modal('hide');
-        frame.src = "frame/innova/lampu-belakang-kiri.png";
+
+        if (typeCar == 'mpv') {
+            frame.src = "frame/innova/lampu-belakang-kiri.png";
+        } else if (typeCar == 'suv') {
+            // frame.src = "frame/fortuner/lampu-belakang-kiri.png";
+        } else if (typeCar == 'crossover') {
+            // frame.src = "frame/mobilio/lampu-belakang-kiri.png";
+        } else if (typeCar == 'hatchback') {
+            // frame.src = "frame/brio/lampu-belakang-kiri.png";
+        } else if (typeCar == 'sedan') {
+            
+        } else if (typeCar == 'stationWagon') {
+            
+        } else if (typeCar == 'jeep') {
+            
+        } else if (typeCar == 'pickup') {
+            // frame.src = "frame/granmax/lampu-belakang-kiri.png";
+        }
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }

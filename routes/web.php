@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('camera', [CameraController::class, 'index']);
+Route::get('camera', [CameraController::class, 'index'])->name('camera');
 Route::post('save-image', [CameraController::class, 'store']);
 
 Route::get('testing', function () {
@@ -27,4 +27,20 @@ Route::get('testing', function () {
 });
 Route::get('camera-testing', [CameraController::class, 'indexTesting']);
 
-Route::get('register', [UserController::class, 'register']);
+Route::get('/sign-up', function () {
+    return view('auth.sign-up');
+});
+
+Route::get('/sign-in', function () {
+    return view('auth.sign-in');
+});
+
+Route::post('sign-in', [UserController::class, 'signIn'])->name('sign-in');
+
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
