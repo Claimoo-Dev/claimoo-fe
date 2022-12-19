@@ -49,29 +49,6 @@ feedback.onclick = () => {
     window.location.href = 'feedback';
 };
 
-// const startStream = async () => {
-//     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-//         const updatedConstraints = {
-//             ...constraints
-//         };
-
-//         await navigator.mediaDevices.getUserMedia(updatedConstraints);
-//     }
-
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     } else { 
-//         console.log("Geolocation is not supported by this browser.");
-//     }
-
-//     function showPosition(position) {
-//         var latitude = position.coords.latitude;
-//         var longitude = position.coords.longitude;
-//     }
-// };
-
-// startStream();
-
 navigator.geolocation.getCurrentPosition(function(position) {
     position.coords.latitude, position.coords.longitude;
 });

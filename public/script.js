@@ -341,56 +341,39 @@ lampuBelakangKiri.onclick = () => {
     }
 };
 
-// play.onclick = () => {
-//   if (streamStarted) {
-//     video.play();
-//     play.classList.add('d-none');
-//     pause.classList.remove('d-none');
-//     pause.classList.add('mb-5');
-//     return;
-//   }
-//   if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-//     const updatedConstraints = {...constraints};
-//     startStream(updatedConstraints);
-//   }
-// };
-
-// const pauseStream = () => {
-//     video.pause();
-// };
-
 const doScreenshot = () => {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     canvas.getContext('2d').drawImage(video, 0, 0);
     // screenshotImage.src = canvas.toDataURL('image/webp');
-    // screenshotImage.classList.remove('d-none');
 
     var dataURL = canvas.toDataURL();
 
-    $.ajax({
-        type: "POST",
-        url: "/save-image",
-        data: {
-            _token: $('meta[name="csrf-token"]').attr('content'),
-            image: dataURL,
-            user_id: document.getElementById("userId").value,
-            latitude: document.getElementById("latitude").value,
-            longitude: document.getElementById("longitude").value,
-            description: document.getElementById("description").value
-        }
-    }).done(function (o) {
-        console.log('saved');
-
-        description.value = '';
-
-        $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
-            $("#success-alert").slideUp(100);
+    navigator.geolocation.getCurrentPosition(function(position) {
+        $.ajax({
+            type: "POST",
+            url: "/save-image",
+            data: {
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                image: dataURL,
+                user_id: document.getElementById("userId").value,
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+                description: document.getElementById("description").value
+            }
+        }).done(function (o) {
+            console.log('saved');
+    
+            description.value = '';
+    
+            $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
+                $("#success-alert").slideUp(100);
+            });
         });
     });
+
 };
 
-// pause.onclick = pauseStream;
 screenshot.onclick = doScreenshot;
 
 const startStream = async () => {
