@@ -49,21 +49,6 @@ feedback.onclick = () => {
     window.location.href = 'feedback';
 };
 
-// const constraints = {
-//     video: {
-//         width: {
-//             min: 1280,
-//             ideal: 1920,
-//             max: 2560,
-//         },
-//         height: {
-//             min: 720,
-//             ideal: 1080,
-//             max: 1440
-//         }
-//     }
-// };
-
 // const startStream = async () => {
 //     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
 //         const updatedConstraints = {
@@ -87,8 +72,8 @@ feedback.onclick = () => {
 
 // startStream();
 
-function testing() {
-    return navigator.mediaDevices.getUserMedia({video: true}) && navigator.geolocation;
-}
+navigator.geolocation.getCurrentPosition(function(position) {
+    position.coords.latitude, position.coords.longitude;
+});
 
-testing();
+navigator.mediaDevices.getUserMedia({video: true});
