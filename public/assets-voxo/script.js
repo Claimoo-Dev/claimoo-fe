@@ -88,7 +88,7 @@ feedback.onclick = () => {
 // startStream();
 
 function testing() {
-    return navigator.mediaDevices.getUserMedia && navigator.geolocation;
+    return navigator.mediaDevices.getUserMedia({video: true}) && navigator.geolocation;
 }
 
 testing();
