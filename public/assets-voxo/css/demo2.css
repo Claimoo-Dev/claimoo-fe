@@ -7388,7 +7388,7 @@ footer .sub-footer {
         top: -20px;
         opacity: 0.8;
         z-index: -1; }
-      .login-section .materialContainer .box:before {
+      /* .login-section .materialContainer .box:before {
         content: "";
         position: absolute;
         width: 100%;
@@ -7398,7 +7398,7 @@ footer .sub-footer {
         background-color: rgba(255, 255, 255, 0.6);
         left: 0;
         -webkit-transform: scale(0.95);
-                transform: scale(0.95); }
+                transform: scale(0.95); } */
     .login-section .materialContainer .login-title {
       width: 100%;
       line-height: 46px;

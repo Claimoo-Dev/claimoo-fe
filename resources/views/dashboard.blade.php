@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <title>Claimoo - Dashboard</title>
-    
+
     <!-- font-awesome css -->
     <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/font-awesome.css">
-    
+
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/bootstrap.css">
-    
+
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="assets-voxo/style.css">
 </head>
@@ -24,76 +24,122 @@
             <img src="assets/img/logo2.png" alt="" class="width-50">
         </div>
 
-        <div class="w-100 text-center mt-3">
-            <p class="text-welcome fw-900">Selamat Datang Yusuf, Mohon pilih jenis mobil</p>
-        </div>
         <div class="row mt-3">
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="mpv">MPV</button>
+            <div class="col-12">
+                <div class="card bs-card br-10px p-3">
+                    <p class="text-center fw-500 lh-1">Hai Yusuf, mohon pilih jenis mobil</p>
+                    <p class="text-center fw-500 lh-1">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini</p>
+                    <p class="text-center fw-500 lh-1">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6" id="mpv">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/mpv.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">MPV</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="suv">SUV</button>
+            <div class="col-6" id="suv">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/suv.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">SUV</h5>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row mt-1">
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="crossover">Crossover</button>
+            <div class="col-6" id="crossover">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/crossover.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">Crossover</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="hatchback">Hatchback</button>
+            <div class="col-6" id="hatchback">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/hatchback.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">Hatchback</h5>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row mt-1">
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="sedan">Sedan</button>
+            <div class="col-6" id="sedan">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/sedan.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">Sedan</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="stationWagon">Station Wagon</button>
+            <div class="col-6" id="stationWagon">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/station-wagon.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">Station Wagon</h5>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row mt-1">
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="jeep">Jeep</button>
+            <div class="col-6" id="jeep">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/jeep.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">Jeep</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-body p-0 height-50px">
-                        <button class="btn btn-outline-primary width-100 height-100" id="pickup">Pickup</button>
+            <div class="col-6" id="pickup">
+                <div class="card bs-card br-10px">
+                    <div class="p-2">
+                        <img class="card-img-top" src="frame/icon/pickup.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="card-title fz-1rem">Pickup</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <a href="{{ url('sign-in') }}" class="theme-color td-none">Sign Out</a>
+
+        <div class="row mt-4 mb-4">
+            <div class="col-6">
+                <div class="card bs-card br-10px text-center bg-color-blue">
+                    <div class="card-body p-0 height-50px">
+                        <button class="btn width-100 height-100 br-10px text-white" id="signOut">Sign Out</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card bs-card br-10px text-center bg-color-blue">
+                    <div class="card-body p-0 height-50px">
+                        <button class="btn width-100 height-100 br-10px text-white" id="feedback">Give Feedback</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

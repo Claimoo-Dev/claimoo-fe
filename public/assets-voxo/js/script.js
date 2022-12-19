@@ -413,7 +413,7 @@
                     .parent(".input")
                     .each(function () {
                         $("label", this).css({
-                            "line-height": "18px",
+                            "line-height": "40px",
                             "font-weight": "100",
                             top: "0px",
                         });

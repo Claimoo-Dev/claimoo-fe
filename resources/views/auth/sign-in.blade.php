@@ -8,7 +8,7 @@
     <meta name="description" content="Voxo">
     <meta name="keywords" content="Voxo">
     <meta name="author" content="Voxo">
-    <link rel="icon" href="assets-voxo/images/favicon/2.png" type="image/x-icon" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <title>Claimoo - Sign In</title>
 
     <!--Google font-->
@@ -73,7 +73,7 @@
     
                     <div class="button login">
                         <button type="submit">
-                            <span>Log In</span>
+                            <span>Sign In</span>
                             <i class="fa fa-check"></i>
                         </button>
                     </div>
