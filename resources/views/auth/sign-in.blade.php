@@ -43,6 +43,15 @@
     <!-- Log In Section Start -->
     <div class="login-section">
         <div class="materialContainer">
+
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">{{ $message }}</div>
+            @endif
+
+            @if ($message = Session::get('error'))
+            <div class="alert alert-danger">{{ $message }}</div>
+            @endif
+
             <div class="box">
                 <div class="width-100 img-center">
                     <img src="assets/img/logo2.png" alt="" class="width-50">
@@ -51,30 +60,30 @@
                 <div class="register-title mt-4">
                     <h3 class="fz-24 fw-900">Sign In</h3>
                 </div>
-                
+
                 <form action="{{ route('sign-in') }}" method="post">
                     @csrf
                     <div class="input mt-0">
-                        <label for="name">Email</label>
-                        <input type="text" name="name" id="name" required>
+                        <label for="username">Email</label>
+                        <input type="text" name="username" id="username" required>
                         <span class="spin"></span>
                         <div class="valid-feedback">
                             Please fill the name
                         </div>
                     </div>
-    
+
                     <div class="input mt-0">
-                        <label for="pass">Password</label>
-                        <input type="password" name="pass" id="pass">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
                         <span class="spin"></span>
                     </div>
-    
+
                     <a href="{{ url('forgot-password') }}" class="pass-forgot">Forgot your password?</a>
-    
+
                     <div class="button login">
                         <button type="submit">
                             <span>Sign In</span>
-                            <i class="fa fa-check"></i>
+                            <!-- <i class="fa fa-check"></i> -->
                         </button>
                     </div>
                 </form>
@@ -113,6 +122,14 @@
     <script src="assets-voxo/js/script.js"></script>
     <script src="assets-voxo/js/home-script.js"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.setTimeout(function () {
+                $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                    $(this).remove();
+                });
+            }, 500);
+        });
+    </script>
 </body>
-
 </html>

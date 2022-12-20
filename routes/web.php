@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CameraController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,29 +24,26 @@ Route::get('/', function () {
 Route::get('camera', [CameraController::class, 'index'])->name('camera');
 Route::post('save-image', [CameraController::class, 'store']);
 
-Route::get('testing', function () {
-    return view('welcome-testing');
-});
-Route::get('camera-testing', [CameraController::class, 'indexTesting']);
+// Route::get('testing', function () {
+//     return view('welcome-testing');
+// });
+// Route::get('camera-testing', [CameraController::class, 'indexTesting']);
 
 Route::get('/sign-up', function () {
     return view('auth.sign-up');
 });
 
-Route::get('/sign-in', function () {
-    return view('auth.sign-in');
-});
-
+Route::get('sign-in', [UserController::class, 'signInForm'])->name('sign-in-form');
 Route::post('sign-in', [UserController::class, 'signIn'])->name('sign-in');
+Route::get('dashboard', [DashboardController::class, 'index']);
+Route::post('sign-out', [UserController::class, 'signOut']);
+Route::get('feedback', [FeedbackController::class, 'index']);
+Route::post('feedback', [FeedbackController::class, 'create']);
+Route::get('verify', [UserController::class, 'verifiedEmail']);
+Route::post('forgot-password', [UserController::class, 'sendLinkForgotPassword'])->name('sendLinkForgotPassword');
+Route::get('reset-password', [UserController::class, 'requestResetPassword'])->name('resetPassword');
+Route::post('reset-password', [UserController::class, 'resetPassword'])->name('postResetPassword');
 
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/feedback', function () {
-    return view('feedback');
 });

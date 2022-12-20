@@ -67,3 +67,7 @@ body {
 .lh-1 {
     line-height: 1 !important;
 }
+
+.text-justify {
+    text-align: justify;
+}

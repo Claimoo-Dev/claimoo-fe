@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // route
 Route::get('select2', [UserController::class, 'select2']);
 Route::post('user', [UserController::class, 'create']);
+
+Route::post('sign_up', [UserController::class, 'signUp']);

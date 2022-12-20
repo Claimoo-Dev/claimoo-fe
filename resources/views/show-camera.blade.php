@@ -14,9 +14,6 @@
 </head>
 
 <body>
-    <input type="hidden" name="user_id" value="{{ $userId }}" id="userId">
-    <input type="hidden" name="latitude" value="{{ $latitude }}" id="latitude">
-    <input type="hidden" name="longitude" value="{{ $longitude }}" id="longitude">
     <input type="hidden" name="type_car" value="{{ $typeCar }}" id="typeCar">
 
     <div class="display-cover">
@@ -86,6 +83,13 @@
     </div>
     <div class="alert alert-success alert-dismissible fade" role="alert" id="success-alert">
         Success!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible fade" role="alert" id="success-alert">
+        Something Wrong
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

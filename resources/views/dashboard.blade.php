@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <title>Claimoo - Dashboard</title>
 
@@ -24,12 +25,23 @@
             <img src="assets/img/logo2.png" alt="" class="width-50">
         </div>
 
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success mt-3">{{ $message }}</div>
+        @endif
+
         <div class="row mt-3">
             <div class="col-12">
                 <div class="card bs-card br-10px p-3">
-                    <p class="text-center fw-500 lh-1">Hai Yusuf, mohon pilih jenis mobil</p>
-                    <p class="text-center fw-500 lh-1">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini</p>
-                    <p class="text-center fw-500 lh-1">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</p>
+                    <p class="text-center fw-500">Hai {{ $user->data->name }}</p>
+                    <p class="text-center fw-500 m-0">Syarat & Ketentuan :</p>
+                    <ul>
+                        <li class="text-justify">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini.</li>
+                        <li class="text-justify">Mohon pilih jenis mobil.</li>
+                        <li class="text-justify">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti
+                            tangan, pensil, kendaraan lain.</li>
+                    </ul>
+                    <!-- <p class="text-center fw-500 lh-1">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini</p>
+                    <p class="text-center fw-500 lh-1">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</p> -->
                 </div>
             </div>
         </div>

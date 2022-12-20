@@ -9,7 +9,7 @@
     <meta name="keywords" content="Voxo">
     <meta name="author" content="Voxo">
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
-    <title>Claimoo - Sign Up</title>
+    <title>Claimoo - Sign In</title>
 
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -37,11 +37,16 @@
 
 </head>
 
-<body class="signup-page theme-color2">
+<body class="theme-color2 light ltr">
 
-    <!-- Sign Up Section Start -->
+
+    <!-- Log In Section Start -->
     <div class="login-section">
         <div class="materialContainer">
+
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">{{ $message }}</div>
+            @endif
 
             @if ($message = Session::get('error'))
             <div class="alert alert-danger">{{ $message }}</div>
@@ -53,52 +58,42 @@
                 </div>
 
                 <div class="register-title mt-4">
-                    <h3 class="fz-24 fw-900">Sign Up</h3>
+                    <h3 class="fz-24 fw-900">Reset Password</h3>
                 </div>
 
-                <form action="{{ url('api/sign_up') }}" method="post">
+                <form action="{{ route('postResetPassword') }}" method="post">
+                    @csrf
                     <div class="input mt-0">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required>
+                        <label for="username">New Password</label>
+                        <input type="password" name="password" id="username" required>
                         <span class="spin"></span>
+                        <div class="valid-feedback">
+                            Please fill the name
+                        </div>
                     </div>
 
                     <div class="input mt-0">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" required>
+                        <label for="password">New Password Confirmation</label>
+                        <input type="password" name="retype_password" id="password">
                         <span class="spin"></span>
                     </div>
 
-                    <label for="phone" class="form-label mt-3 mb-0">Nomor Telepon</label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1">62</span>
-                        <input type="text" name="phone" class="form-control" id="phone" required>
-                    </div>
-
-                    <div class="input mt-0">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required>
-                        <span class="spin"></span>
-                    </div>
-
-                    <div class="input mt-0">
-                        <label for="retypePassword">Confirm Password</label>
-                        <input type="password" name="retype_password" id="retypePassword" required>
-                        <span class="spin"></span>
-                    </div>
+                    <input type="hidden" name="username" value="{{ $email }}">
 
                     <div class="button login">
-                        <button type="submit" id="submit">
-                            <span>Sign Up</span>
+                        <button type="submit">
+                            <span>Save</span>
                             <!-- <i class="fa fa-check"></i> -->
                         </button>
                     </div>
                 </form>
-                <p class="mt-0"><a href="{{ url('sign-in') }}" class="theme-color">Already have an account?</a></p>
+
             </div>
         </div>
     </div>
-    <!-- Sign Up Section End -->
+    <!-- Log In Section End -->
+
+    <div class="bg-overlay"></div>
 
     <!-- latest jquery-->
     <script src="assets-voxo/js/jquery-3.5.1.min.js"></script>
@@ -106,11 +101,11 @@
     <!-- Bootstrap js-->
     <script src="assets-voxo/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-    <!-- lazyload js-->
-    <script src="assets-voxo/js/lazysizes.min.js"></script>
-
     <!-- feather icon js-->
     <script src="assets-voxo/js/feather/feather.min.js"></script>
+
+    <!-- lazyload js-->
+    <script src="assets-voxo/js/lazysizes.min.js"></script>
 
     <!-- Slick js-->
     <script src="assets-voxo/js/slick/slick.js"></script>
@@ -133,8 +128,6 @@
                 });
             }, 500);
         });
-
     </script>
 </body>
-
 </html>

@@ -52,17 +52,21 @@
                 <div class="register-title mt-4">
                     <h3 class="fz-24 fw-900">Forgot Password</h3>
                 </div>
-                <div class="input mt-0">
-                    <label for="emailname">Enter Email Address</label>
-                    <input type="text" name="name" class="is-invalid" id="emailname">
-                    <span class="spin"></span>
-                </div>
-                <div class="button login button-1">
-                    <button>
-                        <span>Send</span>
-                        <i class="fa fa-check"></i>
-                    </button>
-                </div>
+
+                <form action="{{ route('sendLinkForgotPassword') }}" method="post">
+                    <div class="input mt-0">
+                        <label for="emailname">Enter Email Address</label>
+                        <input type="text" name="username" class="is-invalid" id="emailname">
+                        <span class="spin"></span>
+                    </div>
+    
+                    <div class="button login button-1">
+                        <button>
+                            <span>Send</span>
+                            <i class="fa fa-check"></i>
+                        </button>
+                    </div>
+                </form>
 
                 <p><a href="{{ url('sign-in') }}" class="theme-color">Back</a></p>
             </div>

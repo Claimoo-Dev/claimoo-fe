@@ -57,11 +57,11 @@ depan.onclick = () => {
         } else if (typeCar == 'hatchback') {
             frame.src = "frame/brio/depan.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/depan.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/depan.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/depan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "frame/granmax/depan.png";
         }
@@ -87,15 +87,15 @@ belakang.onclick = () => {
         } else if (typeCar == 'hatchback') {
             frame.src = "frame/brio/belakang.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/belakang.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/belakang.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/belakang.png";
         } else if (typeCar == 'pickup') {
             frame.src = "frame/granmax/belakang.png";
         }
-        
+
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
@@ -117,11 +117,11 @@ sampingKananDepan.onclick = () => {
         } else if (typeCar == 'hatchback') {
             frame.src = "frame/brio/samping-kanan-depan.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/samping-kanan-depan.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/samping-kanan-depan.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/samping-kanan-depan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "frame/granmax/samping-kanan-depan.png";
         }
@@ -147,11 +147,11 @@ sampingKiriDepan.onclick = () => {
         } else if (typeCar == 'hatchback') {
             frame.src = "frame/brio/samping-kiri-depan.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/samping-kiri-depan.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/samping-kiri-depan.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/samping-kiri-depan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "frame/granmax/samping-kiri-depan.png";
         }
@@ -177,11 +177,11 @@ sampingKananBelakang.onclick = () => {
         } else if (typeCar == 'hatchback') {
             frame.src = "frame/brio/samping-kanan-belakang.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/samping-kanan-belakang.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/samping-kanan-belakang.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/samping-kanan-belakang.png";
         } else if (typeCar == 'pickup') {
             frame.src = "frame/granmax/samping-kanan-belakang.png";
         }
@@ -207,11 +207,11 @@ sampingKiriBelakang.onclick = () => {
         } else if (typeCar == 'hatchback') {
             frame.src = "frame/brio/samping-kiri-belakang.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/samping-kiri-belakang.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/samping-kiri-belakang.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/samping-kiri-belakang.png";
         } else if (typeCar == 'pickup') {
             frame.src = "frame/granmax/samping-kiri-belakang.png";
         }
@@ -231,19 +231,19 @@ lampuDepanKanan.onclick = () => {
         if (typeCar == 'mpv') {
             frame.src = "frame/innova/lampu-depan-kanan.png";
         } else if (typeCar == 'suv') {
-            // frame.src = "frame/fortuner/lampu-depan-kanan.png";
+            frame.src = "frame/fortuner/lampu-depan-kanan.png";
         } else if (typeCar == 'crossover') {
-            // frame.src = "frame/mobilio/lampu-depan-kanan.png";
+            frame.src = "frame/mobilio/lampu-depan-kanan.png";
         } else if (typeCar == 'hatchback') {
-            // frame.src = "frame/brio/lampu-depan-kanan.png";
+            frame.src = "frame/brio/lampu-depan-kanan.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/lampu-depan-kanan.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/lampu-depan-kanan.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/lampu-depan-kanan.png";
         } else if (typeCar == 'pickup') {
-            // frame.src = "frame/granmax/lampu-depan-kanan.png";
+            frame.src = "frame/granmax/lampu-depan-kanan.png";
         }
 
         screenshot.classList.remove('d-none');
@@ -261,19 +261,19 @@ lampuDepanKiri.onclick = () => {
         if (typeCar == 'mpv') {
             frame.src = "frame/innova/lampu-depan-kiri.png";
         } else if (typeCar == 'suv') {
-            // frame.src = "frame/fortuner/lampu-depan-kiri.png";
+            frame.src = "frame/fortuner/lampu-depan-kiri.png";
         } else if (typeCar == 'crossover') {
-            // frame.src = "frame/mobilio/lampu-depan-kiri.png";
+            frame.src = "frame/mobilio/lampu-depan-kiri.png";
         } else if (typeCar == 'hatchback') {
-            // frame.src = "frame/brio/lampu-depan-kiri.png";
+            frame.src = "frame/brio/lampu-depan-kiri.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/lampu-depan-kiri.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/lampu-depan-kiri.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/lampu-depan-kiri.png";
         } else if (typeCar == 'pickup') {
-            // frame.src = "frame/granmax/lampu-depan-kiri.png";
+            frame.src = "frame/granmax/lampu-depan-kiri.png";
         }
 
         screenshot.classList.remove('d-none');
@@ -291,19 +291,19 @@ lampuBelakangKanan.onclick = () => {
         if (typeCar == 'mpv') {
             frame.src = "frame/innova/lampu-belakang-kanan.png";
         } else if (typeCar == 'suv') {
-            // frame.src = "frame/fortuner/lampu-belakang-kanan.png";
+            frame.src = "frame/fortuner/lampu-belakang-kanan.png";
         } else if (typeCar == 'crossover') {
-            // frame.src = "frame/mobilio/lampu-belakang-kanan.png";
+            frame.src = "frame/mobilio/lampu-belakang-kanan.png";
         } else if (typeCar == 'hatchback') {
-            // frame.src = "frame/brio/lampu-belakang-kanan.png";
+            frame.src = "frame/brio/lampu-belakang-kanan.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/lampu-belakang-kanan.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/lampu-belakang-kanan.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/lampu-belakang-kanan.png";
         } else if (typeCar == 'pickup') {
-            // frame.src = "frame/granmax/lampu-belakang-kanan.png";
+            frame.src = "frame/granmax/lampu-belakang-kanan.png";
         }
 
         screenshot.classList.remove('d-none');
@@ -321,19 +321,19 @@ lampuBelakangKiri.onclick = () => {
         if (typeCar == 'mpv') {
             frame.src = "frame/innova/lampu-belakang-kiri.png";
         } else if (typeCar == 'suv') {
-            // frame.src = "frame/fortuner/lampu-belakang-kiri.png";
+            frame.src = "frame/fortuner/lampu-belakang-kiri.png";
         } else if (typeCar == 'crossover') {
-            // frame.src = "frame/mobilio/lampu-belakang-kiri.png";
+            frame.src = "frame/mobilio/lampu-belakang-kiri.png";
         } else if (typeCar == 'hatchback') {
-            // frame.src = "frame/brio/lampu-belakang-kiri.png";
+            frame.src = "frame/brio/lampu-belakang-kiri.png";
         } else if (typeCar == 'sedan') {
-            
+            frame.src = "frame/civic/lampu-belakang-kiri.png";
         } else if (typeCar == 'stationWagon') {
-            
+            frame.src = "frame/mini-cooper/lampu-belakang-kiri.png";
         } else if (typeCar == 'jeep') {
-            
+            frame.src = "frame/jimny/lampu-belakang-kiri.png";
         } else if (typeCar == 'pickup') {
-            // frame.src = "frame/granmax/lampu-belakang-kiri.png";
+            frame.src = "frame/granmax/lampu-belakang-kiri.png";
         }
 
         screenshot.classList.remove('d-none');
@@ -349,25 +349,32 @@ const doScreenshot = () => {
 
     var dataURL = canvas.toDataURL();
 
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
         $.ajax({
             type: "POST",
             url: "/save-image",
             data: {
                 _token: $('meta[name="csrf-token"]').attr('content'),
                 image: dataURL,
-                user_id: document.getElementById("userId").value,
                 latitude: position.coords.latitude,
                 longitude: position.coords.longitude,
-                description: document.getElementById("description").value
+                description: document.getElementById("description").value,
+                type_car: document.getElementById("typeCar").value,
+                type_frame: 'depan'
             }
         }).done(function (o) {
             console.log('saved');
-    
             description.value = '';
-    
+
             $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
-                $("#success-alert").slideUp(100);
+                $("#success-alert").slideUp(500);
+            });
+        }).fail(function () {
+            console.log('something wrong');
+            description.value = '';
+
+            $("#error-alert").fadeTo(500, 500).slideUp(100, function () {
+                $("#error-alert").slideUp(500);
             });
         });
     });
