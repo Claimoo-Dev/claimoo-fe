@@ -54,9 +54,10 @@
                 </div>
 
                 <form action="{{ route('sendLinkForgotPassword') }}" method="post">
+                    @csrf
                     <div class="input mt-0">
                         <label for="emailname">Enter Email Address</label>
-                        <input type="text" name="username" class="is-invalid" id="emailname">
+                        <input type="text" name="username" class="is-invalid" id="emailname" required>
                         <span class="spin"></span>
                     </div>
     
