@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginSaveRequest;
 use App\Http\Requests\UserSaveRequest;
-use GuzzleHttp\Exception\ConnectException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Http;
@@ -18,34 +17,20 @@ class UserController extends Controller
 
     public function signIn(LoginSaveRequest $request)
     {
-        try {
-            $result = Http::withHeaders([
-                'X-Channel' => 'cust_mobile_app'
-            ])->post('http://staging.claimoo.com:9100/v1/auth/login', [
-                'username' => $request->username,
-                'password' => $request->password,
-            ]);
-            $response = json_decode($result->body());
-        } catch (ConnectException $e) {
-            $response['message'] = $e->getMessage();
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app'
+        ])->post('http://staging.claimoo.com:9100/v1/auth/login', [
+            'username' => $request->username,
+            'password' => $request->password,
+        ]);
+
+        $response = json_decode($result->body());
+
+        if ($response->stat_msg == 'Success') {
+            return redirect('dashboard')->with('success', 'Sign In Successfully')->cookie('auth_token', $response->data->token)->cookie('user_code', $response->data->user_code);
+        } else {
+            return redirect('sign-in')->with('error', 'Account need activated, please check your email');
         }
-
-        return $response;
-
-        // $result = Http::withHeaders([
-        //     'X-Channel' => 'cust_mobile_app'
-        // ])->post('http://staging.claimoo.com:9100/v1/auth/login', [
-        //     'username' => $request->username,
-        //     'password' => $request->password,
-        // ]);
-
-        // $response = json_decode($result->body());
-
-        // if ($response->stat_msg == 'Success') {
-        //     return redirect('dashboard')->with('success', 'Sign In Successfully')->cookie('auth_token', $response->data->token)->cookie('user_code', $response->data->user_code);
-        // } else {
-        //     return redirect('sign-in')->with('error', 'Account need activated, please check your email');
-        // }
     }
 
     public function signUp(UserSaveRequest $request)
