@@ -41,7 +41,7 @@ class UserController extends Controller
     {
         $result = Http::withHeaders([
             'X-Channel' => 'cust_mobile_app'
-        ])->post('http://staging.claimoo.com:9100/v1/auth/register', [
+        ])->post('http://staging.claimoo.com:55777/v1/auth/register', [
             'phone' => 62 . $request->phone,
             'name' => $request->name,
             'email' => $request->email,
@@ -75,7 +75,7 @@ class UserController extends Controller
     {
         $result = Http::withHeaders([
             'X-Channel' => 'cust_mobile_app'
-        ])->post('http://staging.claimoo.com:9100/v1/auth/checktoken-email', [
+        ])->post('http://staging.claimoo.com:55777/v1/auth/checktoken-email', [
             'email' => $request->email,
             'token' => $request->token
         ]);
@@ -93,7 +93,7 @@ class UserController extends Controller
     {
         $result = Http::withHeaders([
             'X-Channel' => 'cust_mobile_app'
-        ])->post('http://staging.claimoo.com:9100/v1/auth/forgotpass', [
+        ])->post('http://staging.claimoo.com:55777/v1/auth/forgotpass', [
             'username' => $request->username
         ]);
 
@@ -120,7 +120,7 @@ class UserController extends Controller
     {
         $result = Http::withHeaders([
             'X-Channel' => 'cust_mobile_app'
-        ])->post('http://staging.claimoo.com:9100/v1/auth/change-pass', [
+        ])->post('http://staging.claimoo.com:55777/v1/auth/change-pass', [
             'username' => $request->username,
             'password' => $request->password,
             'retype_password' => $request->retype_password

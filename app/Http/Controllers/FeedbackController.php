@@ -38,7 +38,7 @@ class FeedbackController extends Controller
             'X-Channel' => 'cust_mobile_app',
             'Authorization' => $token,
             'Content-Type' => 'application/json'
-        ])->post('http://staging.claimoo.com:9100/v1/feedback', [
+        ])->post('http://staging.claimoo.com:55777/v1/feedback', [
             'member_code' => $userCode,
             'description' => $request->description,
             'file' => $fileName ?? null,

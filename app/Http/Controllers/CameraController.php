@@ -73,7 +73,7 @@ class CameraController extends Controller
             'X-Channel' => 'cust_mobile_app',
             'Authorization' => $token,
             'Content-Type' => 'application/json'
-        ])->post('http://staging.claimoo.com:9100/v1/upload', [
+        ])->post('http://staging.claimoo.com:55777/v1/upload', [
             'member_code' => $userCode,
             'type_car' => $typeCar,
             'type_frame' => $typeFrame,

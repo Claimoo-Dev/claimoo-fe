@@ -22,7 +22,7 @@ class DashboardController extends Controller
             'X-Channel' => 'cust_mobile_app',
             'Authorization' => $token,
             'Content-Type' => 'application/json'
-        ])->get('http://staging.claimoo.com:9100/v1/members/' . $userCode);
+        ])->get('http://staging.claimoo.com:55777/v1/members/' . $userCode);
 
         $user = json_decode($result->body());
 
