@@ -64,8 +64,8 @@
                 <form action="{{ route('postResetPassword') }}" method="post">
                     @csrf
                     <div class="input mt-0">
-                        <label for="username">New Password</label>
-                        <input type="password" name="password" id="username" required>
+                        <label for="password">New Password</label>
+                        <input type="password" name="password" id="password" required>
                         <span class="spin"></span>
                         <div class="valid-feedback">
                             Please fill the name
@@ -73,8 +73,8 @@
                     </div>
 
                     <div class="input mt-0">
-                        <label for="password">New Password Confirmation</label>
-                        <input type="password" name="retype_password" id="password">
+                        <label for="retypePassword" id="labelRetypePassword">New Password Confirmation</label>
+                        <input type="password" name="retype_password" id="retypePassword">
                         <span class="spin"></span>
                     </div>
 
@@ -127,6 +127,16 @@
                     $(this).remove();
                 });
             }, 500);
+        });
+
+        $('#password, #retypePassword').on('keyup', function () {
+            if ($('#retypePassword').val()) {
+                if ($('#password').val() != $('#retypePassword').val()) {
+                    $('#labelRetypePassword').html('Confirm Password (tidak sesuai)').css('color', 'red');
+                } else {
+                    $('#labelRetypePassword').html('Confirm Password').css('color', 'black');
+                }
+            }
         });
     </script>
 </body>

@@ -44,6 +44,13 @@
     <!-- Sign Up Section Start -->
     <div class="login-section">
         <div class="materialContainer">
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">{{ $message }}</div>
+            @endif
+
+            @if ($message = Session::get('error'))
+            <div class="alert alert-danger">{{ $message }}</div>
+            @endif
             <div class="box">
                 <div class="width-100 img-center">
                     <img src="assets/img/logo2.png" alt="" class="width-50">
@@ -60,7 +67,7 @@
                         <input type="text" name="username" class="is-invalid" id="emailname" required>
                         <span class="spin"></span>
                     </div>
-    
+
                     <div class="button login button-1">
                         <button>
                             <span>Kirim</span>

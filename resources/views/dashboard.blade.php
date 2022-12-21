@@ -142,14 +142,14 @@
             <div class="col-6">
                 <div class="card bs-card br-10px text-center bg-color-blue">
                     <div class="card-body p-0 height-50px">
-                        <button class="btn width-100 height-100 br-10px text-white" id="signOut">Sign Out</button>
+                        <button class="btn width-100 height-100 br-10px text-white" id="signOut">Keluar</button>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card bs-card br-10px text-center bg-color-blue">
                     <div class="card-body p-0 height-50px">
-                        <button class="btn width-100 height-100 br-10px text-white" id="feedback">Give Feedback</button>
+                        <button class="btn width-100 height-100 br-10px text-white" id="feedback">Beri Masukan</button>
                     </div>
                 </div>
             </div>

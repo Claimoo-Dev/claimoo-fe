@@ -68,7 +68,7 @@ class UserController extends Controller
             Cookie::forget('user_code')
         );
 
-        return true;
+        return redirect('sign-in')->with('success', 'Berhasil keluar');
     }
 
     public function verifiedEmail(Request $request)
