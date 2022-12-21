@@ -47,9 +47,9 @@ class FeedbackController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return back()->with('success', 'Feedback sent successfully');
+            return back()->with('success', 'Masukan terkirim');
         } else {
-            return back()->with('error', 'Something Wrong');
+            return back()->with('error', 'Terjadi kesalahan');
         }
     }
 }

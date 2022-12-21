@@ -33,17 +33,9 @@ class CameraController extends Controller
         return view('show-camera')->with(compact('latitude', 'longitude', 'typeCar'));
     }
 
-    public function indexTesting(Request $request)
+    public function indexTesting()
     {
-        $userId = $request->user_id;
-        $latitude = $request->latitude;
-        $longitude = $request->longitude;
-
-        if (!$userId or !$latitude or !$longitude) {
-            return redirect('/');
-        }
-
-        return view('show-camera-testing')->with(compact('userId', 'latitude', 'longitude'));
+        return view('show-camera-testing');
     }
 
     public function store(Request $request)

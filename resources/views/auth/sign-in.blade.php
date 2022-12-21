@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="register-title mt-4">
-                    <h3 class="fz-24 fw-900">Sign In</h3>
+                    <h3 class="fz-24 fw-900">Masuk</h3>
                 </div>
 
                 <form action="{{ route('sign-in') }}" method="post">
@@ -73,22 +73,22 @@
                     </div>
 
                     <div class="input mt-0">
-                        <label for="password">Password</label>
+                        <label for="password">Kata Sandi</label>
                         <input type="password" name="password" id="password">
                         <span class="spin"></span>
                     </div>
 
-                    <a href="{{ url('forgot-password') }}" class="pass-forgot">Forgot your password?</a>
+                    <a href="{{ url('forgot-password') }}" class="pass-forgot">Lupa kata sandi?</a>
 
                     <div class="button login">
                         <button type="submit">
-                            <span>Sign In</span>
+                            <span>Masuk</span>
                             <!-- <i class="fa fa-check"></i> -->
                         </button>
                     </div>
                 </form>
 
-                <p class="mt-0">Not a member? <a href="{{ url('sign-up') }}" class="theme-color">Sign up now</a></p>
+                <p class="mt-0">Belum punya akun? <a href="{{ url('sign-up') }}" class="theme-color">Daftar sekarang</a></p>
 
             </div>
         </div>

@@ -19,7 +19,7 @@ class UserController extends Controller
     {
         $result = Http::withHeaders([
             'X-Channel' => 'cust_mobile_app'
-        ])->post('http://staging.claimoo.com:9100/v1/auth/login', [
+        ])->post('http://staging.claimoo.com:55777/v1/auth/login', [
             'username' => $request->username,
             'password' => $request->password,
         ]);
@@ -27,9 +27,13 @@ class UserController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return redirect('dashboard')->with('success', 'Sign In Successfully')->cookie('auth_token', $response->data->token)->cookie('user_code', $response->data->user_code);
+            return redirect('dashboard')->with('success', 'Berhasil Masuk')->cookie('auth_token', $response->data->token)->cookie('user_code', $response->data->user_code);
+        } elseif ($response->stat_msg == 'invalid user or credential') {
+            return redirect('sign-in')->with('error', 'Email atau password tidak ditemukan');
+        } elseif ($response->stat_msg == 'Account need activated, please check your email') {
+            return redirect('sign-in')->with('error', 'Akun butuh aktivasi, silakan periksa email Anda');
         } else {
-            return redirect('sign-in')->with('error', 'Account need activated, please check your email');
+            return redirect('sign-in')->with('error', 'Terjadi kesalahan');
         }
     }
 
@@ -48,9 +52,9 @@ class UserController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return redirect('sign-in')->with('success', 'Sign Up Successfully');
+            return redirect('sign-in')->with('success', 'Pendaftaran akun berhasil, silakan periksa email Anda untuk aktivasi akun');
         } else {
-            return redirect('sign-up')->with('error', 'Something Wrong');
+            return redirect('sign-up')->with('error', 'Terjadi Kesalahan');
         }
     }
 
@@ -79,7 +83,7 @@ class UserController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return redirect('sign-in')->with('success', 'Email Verification Successfully');
+            return redirect('sign-in')->with('success', 'Verifikasi Email Berhasil');
         } else {
             return abort(404);
         }
@@ -96,9 +100,11 @@ class UserController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return back()->with('success', 'Forgot password URL has been sent to your email');
+            return back()->with('success', 'URL lupa kata sandi telah terkirim ke email Anda');
+        } elseif ($response->stat_msg == 'Account need activated, please check your email') {
+            return back()->with('error', 'Akun butuh aktivasi, silakan periksa email Anda');
         } else {
-            return back()->with('error', 'Account need activated, please check your email');
+            return back()->with('error', 'Terjadi kesahalan');
         }
     }
 
@@ -123,7 +129,7 @@ class UserController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return redirect('sign-in')->with('success', 'Password Updated Successfully');
+            return redirect('sign-in')->with('success', 'Password berhasil diubah');
         } else {
             return back()->with('error', 'Something Wrong');
         }

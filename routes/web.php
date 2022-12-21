@@ -27,7 +27,7 @@ Route::post('save-image', [CameraController::class, 'store']);
 // Route::get('testing', function () {
 //     return view('welcome-testing');
 // });
-// Route::get('camera-testing', [CameraController::class, 'indexTesting']);
+Route::get('camera-testing', [CameraController::class, 'indexTesting']);
 
 Route::get('/sign-up', function () {
     return view('auth.sign-up');

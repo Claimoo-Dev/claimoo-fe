@@ -53,18 +53,18 @@
                 </div>
 
                 <div class="register-title mt-4">
-                    <h3 class="fz-24 fw-900">Sign Up</h3>
+                    <h3 class="fz-24 fw-900">Daftar</h3>
                 </div>
 
                 <form action="{{ url('api/sign_up') }}" method="post">
                     <div class="input mt-0">
-                        <label for="name">Name</label>
+                        <label for="name">Nama Lengkap</label>
                         <input type="text" name="name" id="name" required>
                         <span class="spin"></span>
                     </div>
 
                     <div class="input mt-0">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email</label>
                         <input type="email" name="email" id="email" required>
                         <span class="spin"></span>
                     </div>
@@ -76,25 +76,25 @@
                     </div>
 
                     <div class="input mt-0">
-                        <label for="password">Password</label>
+                        <label for="password">Kata Sandi</label>
                         <input type="password" name="password" id="password" required>
                         <span class="spin"></span>
                     </div>
 
                     <div class="input mt-0">
-                        <label for="retypePassword">Confirm Password</label>
+                        <label for="retypePassword" id="labelRetypePassword">Ulangi Kata Sandi</label>
                         <input type="password" name="retype_password" id="retypePassword" required>
                         <span class="spin"></span>
                     </div>
 
                     <div class="button login">
                         <button type="submit" id="submit">
-                            <span>Sign Up</span>
+                            <span>Daftar</span>
                             <!-- <i class="fa fa-check"></i> -->
                         </button>
                     </div>
                 </form>
-                <p class="mt-0"><a href="{{ url('sign-in') }}" class="theme-color">Already have an account?</a></p>
+                <p class="mt-0"><a href="{{ url('sign-in') }}" class="theme-color">Sudah punya akun?</a></p>
             </div>
         </div>
     </div>
@@ -134,6 +134,15 @@
             }, 500);
         });
 
+        $('#password, #retypePassword').on('keyup', function () {
+            if ($('#retypePassword').val()) {
+                if ($('#password').val() != $('#retypePassword').val()) {
+                    $('#labelRetypePassword').html('Confirm Password (tidak sesuai)').css('color', 'red');
+                } else {
+                    $('#labelRetypePassword').html('Confirm Password').css('color', 'black');
+                }
+            }
+        });
     </script>
 </body>
 

@@ -50,26 +50,26 @@
                 </div>
 
                 <div class="register-title mt-4">
-                    <h3 class="fz-24 fw-900">Forgot Password</h3>
+                    <h3 class="fz-24 fw-900">Lupa Kata Sandi</h3>
                 </div>
 
                 <form action="{{ route('sendLinkForgotPassword') }}" method="post">
                     @csrf
                     <div class="input mt-0">
-                        <label for="emailname">Enter Email Address</label>
+                        <label for="emailname">Masukkan Email</label>
                         <input type="text" name="username" class="is-invalid" id="emailname" required>
                         <span class="spin"></span>
                     </div>
     
                     <div class="button login button-1">
                         <button>
-                            <span>Send</span>
+                            <span>Kirim</span>
                             <i class="fa fa-check"></i>
                         </button>
                     </div>
                 </form>
 
-                <p><a href="{{ url('sign-in') }}" class="theme-color">Back</a></p>
+                <p><a href="{{ url('sign-in') }}" class="theme-color">Kembali</a></p>
             </div>
         </div>
     </div>
