@@ -383,10 +383,6 @@ const doScreenshot = () => {
 
 screenshot.onclick = doScreenshot;
 
-back.onclick = () => {
-    window.location.href = '/';
-};
-
 const startStream = async () => {
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
         const updatedConstraints = {

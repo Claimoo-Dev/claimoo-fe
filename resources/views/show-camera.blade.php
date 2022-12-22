@@ -29,8 +29,7 @@
                 <button class="btn btn-outline-info back mb-2 d-none" title="Back"><i data-feather="arrow-left"></i></button>
             </a>
             <br>
-            <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i
-                    data-feather="camera"></i></button>
+            <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="camera"></i></button>
         </div>
 
         <button type="button" class="btn btn-outline-primary btn-modal" data-toggle="modal"
