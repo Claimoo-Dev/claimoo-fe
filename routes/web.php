@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('camera', [CameraController::class, 'index'])->name('camera');
 Route::post('save-image', [CameraController::class, 'store']);
@@ -35,7 +35,7 @@ Route::get('/sign-up', function () {
 
 Route::get('sign-in', [UserController::class, 'signInForm'])->name('sign-in-form');
 Route::post('sign-in', [UserController::class, 'signIn'])->name('sign-in');
-Route::get('dashboard', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 Route::post('sign-out', [UserController::class, 'signOut']);
 Route::get('feedback', [FeedbackController::class, 'index']);
 Route::post('feedback', [FeedbackController::class, 'create']);

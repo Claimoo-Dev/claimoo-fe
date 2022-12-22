@@ -23,11 +23,11 @@ class CameraController extends Controller
         $typeCar = $request->type_car;
 
         if (!$latitude or !$longitude) {
-            return redirect('/dashboard');
+            return redirect()->route('dashboard');
         }
 
         if (!$typeCar) {
-            return redirect('/dashboard');
+            return redirect()->route('dashboard');
         }
 
         return view('show-camera')->with(compact('latitude', 'longitude', 'typeCar'));

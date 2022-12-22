@@ -44,7 +44,7 @@
 
             <div class="form-group mt-3">
                 <button class="btn btn-primary" type="submit">Send</button>
-                <a class="btn btn-secondary" href="{{ url('dashboard') }}">Back</a>
+                <a class="btn btn-secondary" href="{{ route('dashboard') }}">Back</a>
             </div>
         </form>
     </div>

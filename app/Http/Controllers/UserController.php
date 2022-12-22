@@ -27,7 +27,7 @@ class UserController extends Controller
         $response = json_decode($result->body());
 
         if ($response->stat_msg == 'Success') {
-            return redirect('dashboard')->with('success', 'Berhasil Masuk')->cookie('auth_token', $response->data->token)->cookie('user_code', $response->data->user_code);
+            return redirect()->route('dashboard')->with('success', 'Berhasil Masuk')->cookie('auth_token', $response->data->token)->cookie('user_code', $response->data->user_code);
         } elseif ($response->stat_msg == 'invalid user or credential') {
             return redirect('sign-in')->with('error', 'Email atau password tidak ditemukan');
         } elseif ($response->stat_msg == 'Account need activated, please check your email') {
