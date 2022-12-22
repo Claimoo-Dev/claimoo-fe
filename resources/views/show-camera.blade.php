@@ -156,22 +156,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <button class="btn btn-outline-primary col-12 mb-1 depan">Depan</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 belakang">Belakang</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 samping-kanan-depan">Samping Kanan
-                            Depan</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 samping-kiri-depan">Samping Kiri
-                            Depan</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 samping-kanan-belakang">Samping Kanan
-                            Belakang</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 samping-kiri-belakang">Samping Kiri
-                            Belakang</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 lampu-depan-kanan">Lampu Depan Kanan</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 lampu-depan-kiri">Lampu Depan Kiri</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 lampu-belakang-kanan">Lampu Belakang
-                            Kanan</button>
-                        <button class="btn btn-outline-primary col-12 mb-1 lampu-belakang-kiri">Lampu Belakang
-                            Kiri</button> -->
                     </div>
                 </div>
             </div>
@@ -191,9 +175,6 @@
                             <button type="button" class="btn btn-primary btn-description">Save</button>
                         </div>
                     </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-description">Save</button>
-                    </div> -->
                 </div>
             </div>
         </div>
