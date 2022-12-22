@@ -30,6 +30,14 @@ video {
     transform: rotate(90deg);
 }
 
+.controls > a > button {
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+}
+
 .controls > button {
     width: 70px;
     height: 50px;
