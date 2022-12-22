@@ -39,7 +39,7 @@
 
         <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
-            <div class="modal-dialog m-0 modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-custom m-0 modal-dialog-centered" role="document">
                 <div class="modal-content modal-content-custom">
                     <div class="modal-body">
                         <div class="row">
@@ -179,18 +179,21 @@
 
         <div class="modal" id="exampleModalCenter1" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog m-0 modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-custom m-0 modal-dialog-centered" role="document">
                 <div class="modal-content modal-content-custom">
                     <div class="modal-header">
                         <h4 class="modal-title">Deskripsi</h4>
                         <span class="text-red">*tidak wajib</span>
                     </div>
                     <div class="modal-body">
-                        <textarea class="form-control" id="description"></textarea>
+                        <textarea class="form-control" id="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' rows="10"></textarea>
+                        <div class="text-center mt-2">
+                            <button type="button" class="btn btn-primary btn-description">Save</button>
+                        </div>
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <button type="button" class="btn btn-primary btn-description">Save</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
