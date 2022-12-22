@@ -39,10 +39,124 @@
 
         <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+            <div class="modal-dialog m-0 modal-dialog-centered" role="document">
+                <div class="modal-content modal-content-custom">
                     <div class="modal-body">
-                        <button class="btn btn-outline-primary col-12 mb-1 depan">Depan</button>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card bs-card br-10px depan">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/depan.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Depan</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bs-card br-10px belakang">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/belakang.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Belakang</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-1">
+                            <div class="col-6">
+                                <div class="card bs-card br-10px samping-kanan-depan">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/samping-kanan-depan.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Samping Kanan Depan</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bs-card br-10px samping-kiri-depan">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/samping-kiri-depan.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Samping Kiri Depan</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-6">
+                                <div class="card bs-card br-10px samping-kanan-belakang">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/samping-kanan-belakang.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Samping Kanan Belakang</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bs-card br-10px samping-kiri-belakang">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/samping-kiri-belakang.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Samping Kiri Belakang</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-6">
+                                <div class="card bs-card br-10px lampu-depan-kanan">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/lampu-depan-kanan.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Lampu Depan Kanan</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bs-card br-10px lampu-depan-kiri">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/lampu-depan-kiri.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Lampu Depan Kiri</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-6">
+                                <div class="card bs-card br-10px lampu-belakang-kanan">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/lampu-belakang-kanan.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Lampu Belakang Kanan</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bs-card br-10px lampu-belakang-kiri">
+                                    <div>
+                                        <img class="card-img-top" src="icon-frame/civic1/lampu-belakang-kiri.png" alt="Card image cap">
+                                    </div>
+                                    <div class="card-body p-2 text-center">
+                                        <h5 class="card-title mb-0 fz-1rem">Lampu Belakang Kiri</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button class="btn btn-outline-primary col-12 mb-1 depan">Depan</button>
                         <button class="btn btn-outline-primary col-12 mb-1 belakang">Belakang</button>
                         <button class="btn btn-outline-primary col-12 mb-1 samping-kanan-depan">Samping Kanan
                             Depan</button>
@@ -57,7 +171,7 @@
                         <button class="btn btn-outline-primary col-12 mb-1 lampu-belakang-kanan">Lampu Belakang
                             Kanan</button>
                         <button class="btn btn-outline-primary col-12 mb-1 lampu-belakang-kiri">Lampu Belakang
-                            Kiri</button>
+                            Kiri</button> -->
                     </div>
                 </div>
             </div>
@@ -65,8 +179,8 @@
 
         <div class="modal" id="exampleModalCenter1" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+            <div class="modal-dialog m-0 modal-dialog-centered" role="document">
+                <div class="modal-content modal-content-custom">
                     <div class="modal-header">
                         <h4 class="modal-title">Deskripsi</h4>
                         <span class="text-red">*tidak wajib</span>
@@ -116,6 +230,7 @@
 
             screen.orientation.lock('portrait');
         }
+
     </script>
 </body>
 

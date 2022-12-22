@@ -53,6 +53,8 @@ class UserController extends Controller
 
         if ($response->stat_msg == 'Success') {
             return redirect('sign-in')->with('success', 'Pendaftaran akun berhasil, silakan periksa email Anda untuk aktivasi akun');
+        } elseif ($response->stat_msg == 'user already exists') {
+            return redirect('sign-up')->with('error', 'Email sudah terdaftar');
         } else {
             return redirect('sign-up')->with('error', 'Terjadi Kesalahan');
         }

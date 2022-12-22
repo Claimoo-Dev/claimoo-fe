@@ -106,7 +106,6 @@ video {
 }
 
 .modal-body{
-    height: 40vh;
     overflow-y: auto;
 }
 
@@ -116,4 +115,26 @@ textarea.form-control {
 
 .text-red {
     color: red;
+}
+
+.modal-content-custom {
+    height: 100vh;
+    border: 0 !important;
+    border-radius: 0;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.bs-card {
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+}
+
+.br-10px {
+    border-radius: 10px;
+}
+
+.fz-1rem {
+    font-size: 1rem !important;
 }

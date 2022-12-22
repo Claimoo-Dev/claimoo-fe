@@ -50,7 +50,7 @@
             <div class="col-6" id="mpv">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/mpv.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/mpv.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">MPV</h5>
@@ -60,7 +60,7 @@
             <div class="col-6" id="suv">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/suv.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/suv.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">SUV</h5>
@@ -73,7 +73,7 @@
             <div class="col-6" id="crossover">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/crossover.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/crossover.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Crossover</h5>
@@ -83,7 +83,7 @@
             <div class="col-6" id="hatchback">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/hatchback.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/hatchback.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Hatchback</h5>
@@ -96,7 +96,7 @@
             <div class="col-6" id="sedan">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/sedan.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/sedan.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Sedan</h5>
@@ -106,7 +106,7 @@
             <div class="col-6" id="stationWagon">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/station-wagon.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/station-wagon.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Station Wagon</h5>
@@ -119,7 +119,7 @@
             <div class="col-6" id="jeep">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/jeep.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/jeep.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Jeep</h5>
@@ -129,7 +129,7 @@
             <div class="col-6" id="pickup">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="frame/icon/pickup.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-icon/pickup.png" alt="Card image cap">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Pickup</h5>
