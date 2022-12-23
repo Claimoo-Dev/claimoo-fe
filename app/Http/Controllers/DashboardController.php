@@ -26,6 +26,10 @@ class DashboardController extends Controller
 
         $user = json_decode($result->body());
 
+        if ($user->stat_msg != "Success") {
+            return redirect('sign-in');
+        }
+
         return view('dashboard')->with(compact('user'));
     }
 }
