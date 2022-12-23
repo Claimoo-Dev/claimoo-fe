@@ -46,7 +46,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px depan">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/depan.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-depan" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Depan</h5>
@@ -56,7 +56,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px belakang">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/belakang.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-belakang" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Belakang</h5>
@@ -69,7 +69,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px samping-kanan-depan">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/samping-kanan-depan.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-kanan-depan" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Samping Kanan Depan</h5>
@@ -79,7 +79,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px samping-kiri-depan">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/samping-kiri-depan.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-kiri-depan" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Samping Kiri Depan</h5>
@@ -92,7 +92,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px samping-kanan-belakang">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/samping-kanan-belakang.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-kanan-belakang" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Samping Kanan Belakang</h5>
@@ -102,7 +102,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px samping-kiri-belakang">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/samping-kiri-belakang.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-kiri-belakang" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Samping Kiri Belakang</h5>
@@ -115,7 +115,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px lampu-depan-kanan">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/lampu-depan-kanan.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-lampu-kanan-depan" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Lampu Depan Kanan</h5>
@@ -125,7 +125,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px lampu-depan-kiri">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/lampu-depan-kiri.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-lampu-kiri-depan" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Lampu Depan Kiri</h5>
@@ -138,7 +138,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px lampu-belakang-kanan">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/lampu-belakang-kanan.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-lampu-kanan-belakang" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Lampu Belakang Kanan</h5>
@@ -148,7 +148,7 @@
                             <div class="col-6">
                                 <div class="card bs-card br-10px lampu-belakang-kiri">
                                     <div>
-                                        <img class="card-img-top" src="icon-frame/civic1/lampu-belakang-kiri.png" alt="Card image cap">
+                                        <img class="card-img-top icon-frame-lampu-kiri-belakang" alt="Icon">
                                     </div>
                                     <div class="card-body p-2 text-center">
                                         <h5 class="card-title mb-0 fz-1rem">Lampu Belakang Kiri</h5>
