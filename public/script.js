@@ -140,7 +140,7 @@ const constraints = {
             max: 1440
         },
         facingMode: {
-            exact: 'user'
+            exact: 'environment'
         }
     }
 };
