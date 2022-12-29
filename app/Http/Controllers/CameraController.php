@@ -47,43 +47,42 @@ class CameraController extends Controller
         $typeCar = $request->type_car;
         $typeFrame = $request->type_frame;
 
-        return 123;
-        // $img = $request->image;
-        // $folderPath = public_path('images/');
-        // $explode = explode(";base64,", $img);
-        // $decode = base64_decode($explode[1]);
-        // $fileName = uniqid() . '.png';
+        $img = $request->image;
+        $folderPath = public_path('images/');
+        $explode = explode(";base64,", $img);
+        $decode = base64_decode($explode[1]);
+        $fileName = uniqid() . '.png';
 
-        // $file = $folderPath . $fileName;
+        $file = $folderPath . $fileName;
 
-        // if (!is_dir(public_path('images'))) {
-        //     mkdir(public_path('images'));
+        if (!is_dir(public_path('images'))) {
+            mkdir(public_path('images'));
 
-        //     file_put_contents($file, $decode);
-        // } else {
-        //     file_put_contents($file, $decode);
-        // }
+            file_put_contents($file, $decode);
+        } else {
+            file_put_contents($file, $decode);
+        }
 
-        // $result = Http::post('http://210.247.245.51:55888/image_quality', [
-        //     'path' => "../../../../../var/www/html/claimoo-fe/public/type-car-icon/sedan.png",
-        // ]);
+        $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
+            'path' => "../../../../../var/www/html/claimoo-fe/public/type-car-icon/sedan.png",
+        ]);
 
-        // $result = Http::withHeaders([
-        //     'X-Channel' => 'cust_mobile_app',
-        //     'Authorization' => $token,
-        //     'Content-Type' => 'application/json'
-        // ])->post('http://staging.claimoo.com:55777/v1/upload', [
-        //     'member_code' => $userCode,
-        //     'type_car' => $typeCar,
-        //     'type_frame' => $typeFrame,
-        //     'longitude' => $longitude,
-        //     'latitude' => $latitude,
-        //     'image' => $fileName,
-        //     'descriptions' => $descriptions
-        // ]);
+        $backend = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->post('http://staging.claimoo.com:55777/v1/upload', [
+            'member_code' => $userCode,
+            'type_car' => $typeCar,
+            'type_frame' => $typeFrame,
+            'longitude' => $longitude,
+            'latitude' => $latitude,
+            'image' => $fileName,
+            'descriptions' => $descriptions
+        ]);
 
-        // $response = json_decode($result->body());
+        $response = json_decode($machineLearning->body());
 
-        // return response()->json($response);
+        return response()->json($response);
     }
 }
