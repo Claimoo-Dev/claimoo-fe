@@ -33,6 +33,8 @@ const iconFrameLampuKiriDepan = document.querySelector(".icon-frame-lampu-kiri-d
 const iconFrameLampuKananBelakang = document.querySelector(".icon-frame-lampu-kanan-belakang");
 const iconFrameLampuKiriBelakang = document.querySelector(".icon-frame-lampu-kiri-belakang");
 const closeModalProgress = document.getElementById("closeModalProgress");
+const statusImage = document.getElementById("statusImage");
+const resultImage = document.getElementById("resultImage");
 let streamStarted = false;
 
 if (typeCar == 'mpv') {
@@ -493,7 +495,7 @@ const doScreenshot = () => {
                     } else if (percentComplete >= 50 && percentComplete <= 99) {
                         progressBarProcess.innerHTML = percentComplete + '% analyzing';
                     } else {
-                        progressBarProcess.innerHTML = percentComplete + '% completed';
+                        progressBarProcess.innerHTML = percentComplete + '% done';
                     }
                 });
 
@@ -513,9 +515,40 @@ const doScreenshot = () => {
             success: function (data) {
                 console.log('saved');
                 $('input[type=checkbox]').prop('checked', false);
+
+                if (data.status == 1) {
+                    var responseStatus = 'OK';
+                } else {
+                    var responseStatus = 'Terjadi Kesalahan';
+
+                    resultImage.innerHTML = 
+                    '<table class="w-100">' +
+                        '<tr>' +
+                            '<td class="col-2 p-0"></td>' +
+                            '<td class="col-3 p-0 text-left">Gambar</td>' +
+                            '<td class="col-1 p-0 text-center">:</td>' +
+                            '<td class="col-6 p-0 text-left">'+ data.gambar + '</td>' +
+                        '</tr>' +
+                    '</table>';
+                }
+
+                statusImage.innerHTML = 
+                '<table class="w-100">' +
+                    '<tr>' +
+                        '<td class="col-2 p-0"></td>' +
+                        '<td class="col-3 p-0 text-left">Status</td>' +
+                        '<td class="col-1 p-0 text-center">:</td>' +
+                        '<td class="col-6 p-0 text-left">'+ responseStatus + '</td>' +
+                    '</tr>' +
+                '</table>';
             },
-            error: function () {
-                
+            error: function (data) {
+                statusImage.innerHTML = 
+                '<table class="w-100">' +
+                    '<tr>' +
+                        '<td class="col-12 p-0 text-center">ERROR</td>' +
+                    '</tr>' +
+                '</table>';
             }
         });
     });
@@ -531,6 +564,8 @@ $('#exampleModalCenter2').on('hidden.bs.modal', function () {
     var progressBarProcess = document.getElementById('progressBarProcess');
     progressBarProcess.innerHTML = '0%';
     $('.progress .progress-bar').css('width', '0%').attr('aria-valuenow', 0);
+    statusImage.innerHTML = '';
+    resultImage.innerHTML = '';
 });
 
 const startStream = async () => {

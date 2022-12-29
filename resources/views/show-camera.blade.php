@@ -227,8 +227,10 @@
                             style="width:0%;" aria-valuemin="0" aria-valuemax="100">0%
                         </div>
                     </div>
-                    <div class="modal-body text-center">
-                        <p id="closeModalProgress">Tutup</p>
+                    <div class="modal-body">
+                        <div id="statusImage"></div>
+                        <div id="resultImage"></div>
+                        <div class="mt-3 text-center" id="closeModalProgress">Tutup</div>
                     </div>
                 </div>
             </div>

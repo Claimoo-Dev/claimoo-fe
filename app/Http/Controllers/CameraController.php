@@ -64,7 +64,7 @@ class CameraController extends Controller
         }
 
         $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
-            'path' => "../../../../../var/www/html/claimoo-fe/public/type-car-icon/sedan.png",
+            'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . $fileName,
         ]);
 
         $backend = Http::withHeaders([
