@@ -63,26 +63,26 @@ class CameraController extends Controller
             file_put_contents($file, $decode);
         }
 
-        $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
-            'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . $fileName,
-        ]);
+        // $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
+        //     'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . $fileName,
+        // ]);
 
-        $backend = Http::withHeaders([
-            'X-Channel' => 'cust_mobile_app',
-            'Authorization' => $token,
-            'Content-Type' => 'application/json'
-        ])->post('http://staging.claimoo.com:55777/v1/upload', [
-            'member_code' => $userCode,
-            'type_car' => $typeCar,
-            'type_frame' => $typeFrame,
-            'longitude' => $longitude,
-            'latitude' => $latitude,
-            'image' => $fileName,
-            'description' => $descriptions
-        ]);
+        // $backend = Http::withHeaders([
+        //     'X-Channel' => 'cust_mobile_app',
+        //     'Authorization' => $token,
+        //     'Content-Type' => 'application/json'
+        // ])->post('http://staging.claimoo.com:55777/v1/upload', [
+        //     'member_code' => $userCode,
+        //     'type_car' => $typeCar,
+        //     'type_frame' => $typeFrame,
+        //     'longitude' => $longitude,
+        //     'latitude' => $latitude,
+        //     'image' => $fileName,
+        //     'description' => $descriptions
+        // ]);
 
-        $response = json_decode($machineLearning->body());
+        // $response = json_decode($machineLearning->body());
 
-        return response()->json($response);
+        // return response()->json($response);
     }
 }
