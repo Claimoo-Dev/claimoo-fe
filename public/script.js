@@ -546,7 +546,7 @@ const doScreenshot = () => {
                 statusImage.innerHTML = 
                 '<table class="w-100">' +
                     '<tr>' +
-                        '<td class="col-12 p-0 text-center">ERROR</td>' +
+                        '<td class="col-12 p-0 text-center">' + data + '</td>' +
                     '</tr>' +
                 '</table>';
             }
