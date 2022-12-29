@@ -21,6 +21,7 @@ const lampuBelakangKanan = document.querySelector('.lampu-belakang-kanan');
 const lampuBelakangKiri = document.querySelector('.lampu-belakang-kiri');
 const btnDescription = document.querySelector('.btn-description');
 const typeCar = document.getElementById("typeCar").value;
+const typeFrame = document.getElementById("typeFrame");
 const iconFrameDepan = document.querySelector(".icon-frame-depan");
 const iconFrameBelakang = document.querySelector(".icon-frame-belakang");
 const iconFrameKananDepan = document.querySelector(".icon-frame-kanan-depan");
@@ -31,6 +32,7 @@ const iconFrameLampuKananDepan = document.querySelector(".icon-frame-lampu-kanan
 const iconFrameLampuKiriDepan = document.querySelector(".icon-frame-lampu-kiri-depan");
 const iconFrameLampuKananBelakang = document.querySelector(".icon-frame-lampu-kanan-belakang");
 const iconFrameLampuKiriBelakang = document.querySelector(".icon-frame-lampu-kiri-belakang");
+const closeModalProgress = document.getElementById("closeModalProgress");
 let streamStarted = false;
 
 if (typeCar == 'mpv') {
@@ -169,6 +171,8 @@ depan.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "depan";
 };
 
 belakang.onclick = () => {
@@ -199,6 +203,8 @@ belakang.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "belakang";
 };
 
 sampingKananDepan.onclick = () => {
@@ -229,6 +235,8 @@ sampingKananDepan.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "kanan depan";
 };
 
 sampingKiriDepan.onclick = () => {
@@ -259,6 +267,8 @@ sampingKiriDepan.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "kiri depan";
 };
 
 sampingKananBelakang.onclick = () => {
@@ -289,6 +299,8 @@ sampingKananBelakang.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "kanan belakang";
 };
 
 sampingKiriBelakang.onclick = () => {
@@ -319,6 +331,8 @@ sampingKiriBelakang.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "kiri belakang";
 };
 
 lampuDepanKanan.onclick = () => {
@@ -349,6 +363,8 @@ lampuDepanKanan.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "lampu kanan depan";
 };
 
 lampuDepanKiri.onclick = () => {
@@ -379,6 +395,8 @@ lampuDepanKiri.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "lampu kiri depan";
 };
 
 lampuBelakangKanan.onclick = () => {
@@ -409,6 +427,8 @@ lampuBelakangKanan.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "lampu kanan belakang";
 };
 
 lampuBelakangKiri.onclick = () => {
@@ -439,9 +459,12 @@ lampuBelakangKiri.onclick = () => {
         screenshot.classList.remove('d-none');
         back.classList.remove('d-none');
     }
+
+    typeFrame.value = "lampu kiri belakang";
 };
 
 const doScreenshot = () => {
+    $('#exampleModalCenter2').modal('show');
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     canvas.getContext('2d').drawImage(video, 0, 0);
@@ -449,8 +472,33 @@ const doScreenshot = () => {
 
     var dataURL = canvas.toDataURL();
 
+    var descriptions = [];
+    $("input:checked").each(function () {
+        descriptions.push($(this).val());
+    });
+
+    var progressBarProcess = document.getElementById('progressBarProcess');
+
     navigator.geolocation.getCurrentPosition(function (position) {
         $.ajax({
+            xhr: function () {
+                var xhr = new window.XMLHttpRequest();
+
+                xhr.upload.addEventListener("progress", function (evt) {
+                    var percentComplete = Math.round((evt.loaded / evt.total) * 100);
+                    progressBarProcess.style.width = percentComplete + '%';
+
+                    if (percentComplete < 50) {
+                        progressBarProcess.innerHTML = percentComplete + '% uploading';
+                    } else if (percentComplete >= 50 && percentComplete <= 99) {
+                        progressBarProcess.innerHTML = percentComplete + '% analyzing';
+                    } else {
+                        progressBarProcess.innerHTML = percentComplete + '% completed';
+                    }
+                });
+
+                return xhr;
+            },
             type: "POST",
             url: "/save-image",
             data: {
@@ -458,30 +506,32 @@ const doScreenshot = () => {
                 image: dataURL,
                 latitude: position.coords.latitude,
                 longitude: position.coords.longitude,
-                description: document.getElementById("description").value,
+                descriptions: descriptions,
                 type_car: document.getElementById("typeCar").value,
-                type_frame: 'depan'
+                type_frame: typeFrame.value
+            },
+            success: function (data) {
+                console.log('saved');
+                $('input[type=checkbox]').prop('checked', false);
+            },
+            error: function () {
+                
             }
-        }).done(function (o) {
-            console.log('saved');
-            description.value = '';
-
-            $("#success-alert").fadeTo(500, 500).slideUp(100, function () {
-                $("#success-alert").slideUp(500);
-            });
-        }).fail(function () {
-            console.log('something wrong');
-            description.value = '';
-
-            $("#error-alert").fadeTo(500, 500).slideUp(100, function () {
-                $("#error-alert").slideUp(500);
-            });
         });
     });
-
 };
 
 screenshot.onclick = doScreenshot;
+
+closeModalProgress.onclick = () => {
+    $('#exampleModalCenter2').modal('hide');
+};
+
+$('#exampleModalCenter2').on('hidden.bs.modal', function () {
+    var progressBarProcess = document.getElementById('progressBarProcess');
+    progressBarProcess.innerHTML = '0%';
+    $('.progress .progress-bar').css('width', '0%').attr('aria-valuenow', 0);
+});
 
 const startStream = async () => {
     if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {

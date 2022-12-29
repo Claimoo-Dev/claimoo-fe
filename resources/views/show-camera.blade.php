@@ -15,6 +15,7 @@
 
 <body>
     <input type="hidden" name="type_car" value="{{ $typeCar }}" id="typeCar">
+    <input type="hidden" name="type_frame" id="typeFrame">
 
     <div class="display-cover">
         <video autoplay></video>
@@ -26,10 +27,12 @@
 
         <div class="controls">
             <a href="{{ route('dashboard') }}">
-                <button class="btn btn-outline-info back mb-2 d-none" title="Back"><i data-feather="arrow-left"></i></button>
+                <button class="btn btn-outline-info back mb-2 d-none" title="Back"><i
+                        data-feather="arrow-left"></i></button>
             </a>
             <br>
-            <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="camera"></i></button>
+            <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i
+                    data-feather="camera"></i></button>
         </div>
 
         <button type="button" class="btn btn-outline-primary btn-modal" data-toggle="modal"
@@ -64,7 +67,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row mt-1">
                             <div class="col-6">
                                 <div class="card bs-card br-10px samping-kanan-depan">
@@ -170,7 +173,43 @@
                         <span class="text-red">*tidak wajib</span>
                     </div>
                     <div class="modal-body">
-                        <textarea class="form-control" id="description" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' rows="10"></textarea>
+                        <form id="descriptions" class="descriptions" name="descriptions" method="post">
+                            <div class="form-check">
+                                <input class="form-check-input" name="descriptions" type="checkbox" value="Kaca Pecah"
+                                    id="kacaPecah">
+                                <label class="form-check-label" for="kacaPecah">
+                                    Kaca Pecah
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="descriptions" type="checkbox" value="Kaca Retak"
+                                    id="kacaRetak">
+                                <label class="form-check-label" for="kacaRetak">
+                                    Kaca Retak
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="descriptions" type="checkbox" value="Lecet"
+                                    id="lecet">
+                                <label class="form-check-label" for="lecet">
+                                    Lecet
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="descriptions" type="checkbox" value="Sobek"
+                                    id="sobek">
+                                <label class="form-check-label" for="sobek">
+                                    Sobek
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="descriptions" type="checkbox" value="Penyok"
+                                    id="penyok">
+                                <label class="form-check-label" for="penyok">
+                                    Penyok
+                                </label>
+                            </div>
+                        </form>
                         <div class="text-center mt-2">
                             <button type="button" class="btn btn-primary btn-description">Save</button>
                         </div>
@@ -178,19 +217,22 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="alert alert-success alert-dismissible fade" role="alert" id="success-alert">
-        Success!
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
 
-    <div class="alert alert-danger alert-dismissible fade" role="alert" id="success-alert">
-        Something Wrong
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="progress" id="progressBar">
+                        <div class="progress-bar bg-success" id="progressBarProcess" role="progressbar"
+                            style="width:0%;" aria-valuemin="0" aria-valuemax="100">0%
+                        </div>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p id="closeModalProgress">Tutup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/feather-icons"></script>

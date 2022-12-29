@@ -29,6 +29,10 @@
         <div class="alert alert-success mt-3">{{ $message }}</div>
         @endif
 
+        @if ($message = Session::get('error'))
+            <div class="alert alert-danger mt-3">{{ $message }}</div>
+        @endif
+
         <div class="row mt-3">
             <div class="col-12">
                 <div class="card bs-card br-10px p-3">
