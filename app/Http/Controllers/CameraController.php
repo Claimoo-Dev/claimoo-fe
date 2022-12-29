@@ -34,6 +34,7 @@ class CameraController extends Controller
 
     public function store(Request $request)
     {
+        return $request->image;
         $userCode = Cookie::get('user_code');
         $token = Cookie::get('auth_token');
         
