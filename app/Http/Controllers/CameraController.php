@@ -78,7 +78,7 @@ class CameraController extends Controller
             'longitude' => $longitude,
             'latitude' => $latitude,
             'image' => $fileName,
-            'descriptions' => $descriptions
+            'description' => $descriptions
         ]);
 
         $response = json_decode($machineLearning->body());
