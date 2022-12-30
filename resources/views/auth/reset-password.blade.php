@@ -58,13 +58,13 @@
                 </div>
 
                 <div class="register-title mt-4">
-                    <h3 class="fz-24 fw-900">Reset Password</h3>
+                    <h3 class="fz-24 fw-900">Atur Ulang Kata Sandi</h3>
                 </div>
 
                 <form action="{{ route('postResetPassword') }}" method="post">
                     @csrf
                     <div class="input mt-0">
-                        <label for="password">New Password</label>
+                        <label for="password">Kata Sandi Baru</label>
                         <input type="password" name="password" id="password" required>
                         <span class="spin"></span>
                         <div class="valid-feedback">
@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="input mt-0">
-                        <label for="retypePassword" id="labelRetypePassword">New Password Confirmation</label>
+                        <label for="retypePassword" id="labelRetypePassword">Ulangi Kata Sandi Baru</label>
                         <input type="password" name="retype_password" id="retypePassword">
                         <span class="spin"></span>
                     </div>
@@ -82,7 +82,7 @@
 
                     <div class="button login">
                         <button type="submit">
-                            <span>Save</span>
+                            <span>Simpan</span>
                             <!-- <i class="fa fa-check"></i> -->
                         </button>
                     </div>
