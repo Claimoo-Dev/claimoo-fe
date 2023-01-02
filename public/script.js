@@ -517,9 +517,9 @@ const doScreenshot = () => {
                 $('input[type=checkbox]').prop('checked', false);
 
                 if (data.status == 1) {
-                    var responseStatus = 'OK';
+                    var responseStatus = 'Foto Layak Proses';
                 } else {
-                    var responseStatus = 'Terjadi Kesalahan';
+                    var responseStatus = 'Foto Tidak Layak Proses';
 
                     resultImage.innerHTML = 
                     '<table class="w-100">' +
