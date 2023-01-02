@@ -41,30 +41,52 @@ class CameraController extends Controller
             return redirect('sign-in');
         }
 
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/members/' . $userCode);
+
+        $user = json_decode($result->body());
+
+        $username = $user->data->name;
+        $implodeDescription = implode(",", ($request->descriptions ?? []));
+
         $latitude = $request->latitude;
         $longitude = $request->longitude;
         $descriptions = $request->descriptions;
         $typeCar = $request->type_car;
         $typeFrame = $request->type_frame;
-
-        $img = $request->image;
-        $folderPath = public_path('images/');
-        $explode = explode(";base64,", $img);
+        $image = $request->image;
+        $explode = explode(";base64,", $image);
         $decode = base64_decode($explode[1]);
-        $fileName = uniqid() . '.png';
 
+        $folderPath = public_path('images/' . date('Y/m/d/'));
+        $fileName = $username . '-' . $implodeDescription . '-' . date('His') . '.png';
         $file = $folderPath . $fileName;
 
-        if (!is_dir(public_path('images'))) {
-            mkdir(public_path('images'));
+        if (!is_dir(public_path('images/' . date('Y')))) {
+            mkdir(public_path('images/' . date('Y')));
+            
+            if (!is_dir(public_path('images/' . date('Y/m')))) {
+                mkdir(public_path('images/' . date('Y/m')));
 
-            file_put_contents($file, $decode);
+                if (!is_dir(public_path('images/' . date('Y/m/d')))) {
+                    mkdir(public_path('images/' . date('Y/m/d')));
+                    
+                    file_put_contents($file, $decode);
+                } else {
+                    file_put_contents($file, $decode);
+                }
+            } else {
+                file_put_contents($file, $decode);
+            }
         } else {
             file_put_contents($file, $decode);
         }
 
         $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
-            'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . $fileName,
+            'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . $file,
         ]);
 
         $backend = Http::withHeaders([
