@@ -85,7 +85,7 @@ class CameraController extends Controller
 
         $response = json_decode($machineLearning->body());
 
-        if ($response->ok()) {
+        if ($machineLearning->ok()) {
             $backend = Http::withHeaders([
                 'X-Channel' => 'cust_mobile_app',
                 'Authorization' => $token,
