@@ -66,45 +66,43 @@ class CameraController extends Controller
         $file = $folderPath . $fileName;
 
         if (!is_dir(public_path('images/' . date('Y')))) {
-            mkdir(public_path('images/' . date('Y')));
-            
-            if (!is_dir(public_path('images/' . date('Y/m')))) {
-                mkdir(public_path('images/' . date('Y/m')));
-
-                if (!is_dir(public_path('images/' . date('Y/m/d')))) {
-                    mkdir(public_path('images/' . date('Y/m/d')));
-                }
-            }
+            mkdir(public_path('images/' . date('Y')));    
         }
 
-        return $file;
+        if (!is_dir(public_path('images/' . date('Y/m')))) {
+            mkdir(public_path('images/' . date('Y/m')));
+        }
+
+        if (!is_dir(public_path('images/' . date('Y/m/d')))) {
+            mkdir(public_path('images/' . date('Y/m/d')));
+        }
         
-        // file_put_contents($file, $decode);
+        file_put_contents($file, $decode);
 
-        // $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
-        //     'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . date('Y/m/d/') . $fileName,
-        // ]);
+        $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
+            'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . date('Y/m/d/') . $fileName,
+        ]);
 
-        // $response = json_decode($machineLearning->body());
+        $response = json_decode($machineLearning->body());
 
-        // if ($response->status) {
-        //     $backend = Http::withHeaders([
-        //         'X-Channel' => 'cust_mobile_app',
-        //         'Authorization' => $token,
-        //         'Content-Type' => 'application/json'
-        //     ])->post('http://staging.claimoo.com:55777/v1/upload', [
-        //         'member_code' => $userCode,
-        //         'type_car' => $typeCar,
-        //         'type_frame' => $typeFrame,
-        //         'longitude' => $longitude,
-        //         'latitude' => $latitude,
-        //         'image' => $fileName,
-        //         'description' => $descriptions,
-        //         'status' => $response->status == 1 ? "Foto Layak Proses" : "Foto Tidak Layak Proses",
-        //         'status_description' => $response->gambar ? $response->gambar : null
-        //     ]);
-        // }
+        if ($response->status) {
+            $backend = Http::withHeaders([
+                'X-Channel' => 'cust_mobile_app',
+                'Authorization' => $token,
+                'Content-Type' => 'application/json'
+            ])->post('http://staging.claimoo.com:55777/v1/upload', [
+                'member_code' => $userCode,
+                'type_car' => $typeCar,
+                'type_frame' => $typeFrame,
+                'longitude' => $longitude,
+                'latitude' => $latitude,
+                'image' => $fileName,
+                'description' => $descriptions,
+                'status' => $response->status == 1 ? "Foto Layak Proses" : "Foto Tidak Layak Proses",
+                'status_description' => $response->gambar ? $response->gambar : null
+            ]);
+        }
 
-        // return response()->json($response);
+        return response()->json($response);
     }
 }
