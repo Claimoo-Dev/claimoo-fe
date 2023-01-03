@@ -2,7 +2,7 @@
   --theme-color: #0163d2; }
 
 .theme-color2 {
-  --theme-color: #e22454; }
+  --theme-color: #073f78;; }
 
 .theme-color3 {
   --theme-color: #7520dd; }
@@ -2569,7 +2569,7 @@ header .onhover-div {
     right: unset;
     left: 0; }
 
-@media (max-width: 575px) {
+@media (max-width: 767) {
   header .wislist-dropdown {
     display: none; } }
 
@@ -3196,7 +3196,7 @@ header .main-menu {
         padding-left: 8px; } }
   header .main-menu .menu-right .search-box {
     padding: 10px 12px;
-    color: #fff;
+    color: #212529;
     cursor: pointer; }
     header .main-menu .menu-right .search-box.black-search-icon {
       color: #212529; }
@@ -3451,7 +3451,7 @@ header .main-navbar {
         width: 100%;
         border-radius: 4px; }
         header .main-navbar .nav-menu > li .mega-menu-container.poster-bg-image {
-          background-image: url(../images/voxo.png);
+          background-image: url(../images/mega.png);
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
