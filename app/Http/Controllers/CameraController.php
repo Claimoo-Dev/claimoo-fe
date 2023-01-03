@@ -62,7 +62,7 @@ class CameraController extends Controller
         $decode = base64_decode($explode[1]);
 
         $folderPath = public_path('images/' . date('Y/m/d/'));
-        $fileName = $username . '-' . $implodeDescription . '-' . date('His') . '.png';
+        $fileName = $username . ($implodeDescription ? '-' . $implodeDescription : null) . '-' . date('His') . '.png';
         $file = $folderPath . $fileName;
 
         if (!is_dir(public_path('images/' . date('Y')))) {
