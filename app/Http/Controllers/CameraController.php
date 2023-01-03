@@ -76,6 +76,8 @@ class CameraController extends Controller
                 }
             }
         }
+
+        return $file;
         
         // file_put_contents($file, $decode);
 
