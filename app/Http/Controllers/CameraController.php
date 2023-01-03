@@ -77,7 +77,7 @@ class CameraController extends Controller
             }
         }
         
-        file_put_contents($file, $decode);
+        // file_put_contents($file, $decode);
 
         $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
             'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . date('Y/m/d/') . $fileName,
