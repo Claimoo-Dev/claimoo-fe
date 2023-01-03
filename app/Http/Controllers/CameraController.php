@@ -73,17 +73,11 @@ class CameraController extends Controller
 
                 if (!is_dir(public_path('images/' . date('Y/m/d')))) {
                     mkdir(public_path('images/' . date('Y/m/d')));
-                    
-                    file_put_contents($file, $decode);
-                } else {
-                    file_put_contents($file, $decode);
                 }
-            } else {
-                file_put_contents($file, $decode);
             }
-        } else {
-            file_put_contents($file, $decode);
         }
+        
+        file_put_contents($file, $decode);
 
         $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
             'path' => "../../../../../var/www/html/claimoo-fe/public/images/" . date('Y/m/d/') . $fileName,
