@@ -99,7 +99,7 @@ class CameraController extends Controller
                 'image' => $fileName,
                 'description' => $descriptions,
                 'status' => $response->status == 1 ? "Foto Layak Proses" : "Foto Tidak Layak Proses",
-                'status_description' => $response->gambar ? $response->gambar : null
+                'status_description' => $response->status == 0 ? $response->gambar : null
             ]);
         }
 
