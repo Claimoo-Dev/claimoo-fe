@@ -85,25 +85,24 @@ class CameraController extends Controller
 
         $response = json_decode($machineLearning->body());
 
-        if ($response['status']) {
-            return 1;
-            $backend = Http::withHeaders([
-                'X-Channel' => 'cust_mobile_app',
-                'Authorization' => $token,
-                'Content-Type' => 'application/json'
-            ])->post('http://staging.claimoo.com:55777/v1/upload', [
-                'member_code' => $userCode,
-                'type_car' => $typeCar,
-                'type_frame' => $typeFrame,
-                'longitude' => $longitude,
-                'latitude' => $latitude,
-                'image' => $fileName,
-                'description' => $descriptions,
-                'status' => $response->status == 1 ? "Foto Layak Proses" : "Foto Tidak Layak Proses",
-                'status_description' => $response->gambar ? $response->gambar : null
-            ]);
-        }
+        // if ($response->status) {
+        //     $backend = Http::withHeaders([
+        //         'X-Channel' => 'cust_mobile_app',
+        //         'Authorization' => $token,
+        //         'Content-Type' => 'application/json'
+        //     ])->post('http://staging.claimoo.com:55777/v1/upload', [
+        //         'member_code' => $userCode,
+        //         'type_car' => $typeCar,
+        //         'type_frame' => $typeFrame,
+        //         'longitude' => $longitude,
+        //         'latitude' => $latitude,
+        //         'image' => $fileName,
+        //         'description' => $descriptions,
+        //         'status' => $response->status == 1 ? "Foto Layak Proses" : "Foto Tidak Layak Proses",
+        //         'status_description' => $response->gambar ? $response->gambar : null
+        //     ]);
+        // }
 
-        return response()->json($response);
+        return response()->json($response->status);
     }
 }
