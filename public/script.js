@@ -520,16 +520,6 @@ const doScreenshot = () => {
                     var responseStatus = 'Foto Layak Proses';
                 } else {
                     var responseStatus = 'Foto Tidak Layak Proses';
-
-                    resultImage.innerHTML = 
-                    '<table class="w-100">' +
-                        '<tr>' +
-                            '<td class="col-2 p-0"></td>' +
-                            '<td class="col-3 p-0 text-left">Gambar</td>' +
-                            '<td class="col-1 p-0 text-center">:</td>' +
-                            '<td class="col-6 p-0 text-left">'+ data.gambar + '</td>' +
-                        '</tr>' +
-                    '</table>';
                 }
 
                 statusImage.innerHTML = 
@@ -541,6 +531,16 @@ const doScreenshot = () => {
                         '<td class="col-6 p-0 text-left">'+ responseStatus + '</td>' +
                     '</tr>' +
                 '</table>';
+
+                resultImage.innerHTML = 
+                    '<table class="w-100">' +
+                        '<tr>' +
+                            '<td class="col-2 p-0"></td>' +
+                            '<td class="col-3 p-0 text-left">Gambar</td>' +
+                            '<td class="col-1 p-0 text-center">:</td>' +
+                            '<td class="col-6 p-0 text-left">'+ data.hasil + '</td>' +
+                        '</tr>' +
+                    '</table>';
             },
             error: function (data) {
                 statusImage.innerHTML = 
