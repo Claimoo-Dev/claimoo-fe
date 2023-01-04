@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#073f78">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Voxo">
+    <meta name="apple-mobile-web-app-title" content="Claimoo">
     <meta name="msapplication-TileImage" content="assets-voxo/images/favicon/favicon.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +16,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Voxo">
-    <meta name="keywords" content="Voxo">
-    <meta name="author" content="Voxo">
-    <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
+    <meta name="description" content="Claimoo">
+    <meta name="keywords" content="Claimoo">
+    <meta name="author" content="Claimoo">
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <title>Claimoo - Klaim dan Inspeksi Mobil Berbasis AI</title>
 
     <!-- Google font -->
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/feather-icon.css">
 
     <!-- Icon Start -->
-    <link rel="icon" href="assets-voxo/images/favicon/favicon.png">
+    <link rel="icon" href="assets/img/favicon.png">
 
     <!-- animation css -->
     <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/animate.css">
@@ -49,14 +49,14 @@
 
     <!-- Theme css -->
     <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/demo3.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/custom-style.css">
 
 </head>
 
 <body class="theme-color2 light ltr">
-
     <!-- header start -->
     <header id="home">
-        <div class="top-header">
+        <!-- <div class="top-header">
             <div class="container-fluid-lg">
                 <div class="row">
                     <div class="col-auto d-xl-block d-none">
@@ -66,18 +66,19 @@
                         </ul>
                     </div>
                     <div class="col-auto d-sm-block d-none">
-                        
+
                     </div>
                     <div class="col-auto">
                         <ul class="border-list">
                             <li>
-                               
+
                             </li>
 
                             <li>
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                        id="dropdownMenuLink2" data-bs-toggle="dropdown">Bahasa<i class="fas fa-chevron-down"></i></a>
+                                        id="dropdownMenuLink2" data-bs-toggle="dropdown">Bahasa<i
+                                            class="fas fa-chevron-down"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                         <li class="w-100">
                                             <a class="dropdown-item" href="javascript:void(0)">Indonesia</a>
@@ -96,7 +97,7 @@
                                     <a class="dropdown-toggle" href="javascript:void(0)" role="button"
                                         id="dropdownMenuLink" data-bs-toggle="dropdown">
                                         <span><i data-feather="user"></i>
-                                        <i class="fas fa-chevron-down"></i>
+                                            <i class="fas fa-chevron-down"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                         <li class="w-100">
@@ -113,7 +114,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="main-header navbar-searchbar">
             <div class="container-fluid-lg">
                 <div class="row">
@@ -122,14 +123,14 @@
                             <div class="menu-left">
                                 <div class="toggle-nav">
                                     <i data-feather="align-justify" class="sidebar-bar"></i>
-                                </div><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                </div>
                                 <div class="brand-logo">
-                                    <a href="index.html">
-
-                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo" width="240">
+                                    <a href="{{ route('dashboard-customer') }}">
+                                        <img src="assets-voxo/images/logo-claimoo.png"
+                                            class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
-                                
+
                             </div>
                             <nav>
                                 <div class="main-navbar">
@@ -145,11 +146,12 @@
                                             </li>
                                             <li class="home-menu">
                                                 <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
-                                                
+
                                             </li>
-                                                   
+
                                             <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Tentang Kami</a>
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Tentang
+                                                    Kami</a>
                                                 <ul class="nav-submenu menu-content">
                                                     <li>
                                                         <a href="javascript:void(0)">Perusahaan</a>
@@ -157,7 +159,7 @@
                                                         <a href="javascript:void(0)">Tenaga Ahli</a>
                                                         <a href="javascript:void(0)">Partner</a>
                                                     </li>
-                                                    
+
                                                 </ul>
                                             </li>
 
@@ -176,14 +178,13 @@
                                                                     <div class="submenu-content opensubmegamenu">
                                                                         <ul class="list">
                                                                             <li>
-                                                                                <a
-                                                                                    href="javascript:void(0)">All Risk</a>
+                                                                                <a href="javascript:void(0)">All
+                                                                                    Risk</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a
-                                                                                    href="javascript:void(0)">TLO</a>
+                                                                                <a href="javascript:void(0)">TLO</a>
                                                                             </li>
-                                                                            
+
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -196,12 +197,11 @@
                                                                     <div class="submenu-content opensubmegamenu">
                                                                         <ul class="list">
                                                                             <li>
-                                                                                <a
-                                                                                    href="javascript:void(0)">All Risk</a>
+                                                                                <a href="javascript:void(0)">All
+                                                                                    Risk</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a
-                                                                                    href="javascript:void(0)">TLO</a>
+                                                                                <a href="javascript:void(0)">TLO</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -213,12 +213,11 @@
                                                                     <div class="submenu-content opensubmegamenu">
                                                                         <ul class="list">
                                                                             <li>
-                                                                                <a
-                                                                                    href="javascript:void(0)">All Risk</a>
+                                                                                <a href="javascript:void(0)">All
+                                                                                    Risk</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a
-                                                                                    href="javascript:void(0)">TLO</a>
+                                                                                <a href="javascript:void(0)">TLO</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -230,16 +229,21 @@
                                                 </div>
                                             </li>
 
-                                            
+
                                             <li>
                                                 <a href="javascript:void(0)" class="nav-link menu-title">Bengkel</a>
                                             </li>
-                                            
+
                                             <li>
                                                 <a href="javascript:void(0)" class="nav-link menu-title">Berita</a>
                                             </li>
 
-                                            
+                                            <li>
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Hubungi
+                                                    Kami</a>
+                                            </li>
+
+
                                             <li class="mobile-poster d-flex d-xl-none">
                                                 <img src="assets-voxo/images/pwa.png" class="img-fluid" alt="">
                                                 <div class="mobile-contain">
@@ -256,34 +260,33 @@
                             </nav>
                             <div class="menu-right">
                                 <ul>
-                                    <li>
+                                    <!-- <li>
                                         <div class="search-box ">
                                             <i data-feather="search"></i>
                                         </div>
-                                    </li>
+                                    </li> -->
 
                                     <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
                                             <div class="cart-icon">
                                                 <i data-feather="bell"></i>
-                                                <span class="label label-theme rounded-pill">0</span>
                                             </div>
 
                                         </div>
-                                        <div class="onhover-div">
+                                        <!-- <div class="onhover-div">
                                             <a href="wishlist.html">
                                                 <div class="wislist-empty">
                                                     <i class="fas fa-bell"></i>
-                                                    <h6 class="mb-1">Notifikasi anda kosong</h6>
-                                                    </div>
+                                                    <h6 class="mb-1">Tidak ada Notifikasi</h6>
+                                                </div>
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </li>
 
-                                    <li class="onhover-dropdown cart-dropdown">  
-                                        <button type="button" class="btn btn-outline-danger btn-spacing">  
-                                    <i data-feather="shopping-cart" ></i>
-                                </button>
+                                    <!-- <li class="onhover-dropdown cart-dropdown">
+                                        <button type="button" class="btn btn-outline-danger btn-spacing">
+                                            <i data-feather="shopping-cart"></i>
+                                        </button>
                                         <div class="onhover-div">
                                             <div class="cart-menu">
                                                 <div class="cart-title">
@@ -297,10 +300,10 @@
                                                 </div>
                                                 <ul class="custom-scroll">
                                                     <li>
-                                                        
+
                                                     </li>
                                                     <li>
-                                                        
+
                                                     </li>
                                                 </ul>
                                             </div>
@@ -312,10 +315,10 @@
                                                 </button>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
-                            <div class="search-full">
+                            <!-- <div class="search-full">
                                 <div class="input-group">
                                     <span class="input-group-text">
                                         <i data-feather="search" class="font-light"></i>
@@ -328,14 +331,14 @@
                                 <div class="search-suggestion">
                                     <ul class="custom-scroll">
                                         <li>
-                                            
+
                                         </li>
                                         <li>
-                                           
+
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -347,7 +350,6 @@
     <!-- mobile fix menu start -->
     <div class="mobile-menu d-sm-none">
         <ul>
-
             <li>
                 <a href="javascript:void(0)" class="active">
                     <i data-feather="home"></i>
@@ -382,327 +384,36 @@
     </div>
     <!-- mobile fix menu end -->
 
-    <!-- home slider start -->
     <section class="pt-0 overflow-hidden">
-        <div>
-            <div class="banner-slider box-arrow">
-                <!-- Slider 1 Start -->
-                <div class="banner-poster">
-                    <div class="slider-right-detail">
-                        <!-- <div class="labels">
-                            <ul class="label-15">
-                                <li>
-                                    <a href="https://www.facebook.com/">
-                                        <img src="assets-voxo/images/social-icon/1.png" class="img-fluid blur-up lazyload"
-                                            alt="facebook">
-                                        <h5 class="d-lg-block d-none">Facebook</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/">
-                                        <img src="assets-voxo/images/social-icon/2.png" class="img-fluid blur-up lazyload"
-                                            alt="Instagram">
-                                        <h5 class="d-lg-block d-none">Instagram</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/">
-                                        <img src="assets-voxo/images/social-icon/3.png" class="img-fluid blur-up lazyload"
-                                            alt="Twitter">
-                                        <h5 class="d-lg-block d-none">Twitter</h5>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <h4>New Festival Offer</h4>
-                        <div class="offer-box">
-                            <h6>65% off</h6>
-                        </div> -->
-                    </div>
-
-                    <div class="slider-bg">
-                        <!-- <div class="bg-text">
-                            <span>Nike shoes</span>
-                        </div>
-
-                        <div class="bg-circle gradient-purple"></div> -->
-                        <img src="assets-voxo/images/shoes/1-.png" class="shoes-1 img-fluid blur-up lazyload" alt="">
-                    </div>
-
-                    <!-- <div class="sugestion-product d-xl-block d-none">
-                        <h3>Sugestion Product</h3>
-                        <h6>Our Collection</h6>
-
-                        <a href="product-left-sidebar.html" class="slider-shoes-image d-block">
-                            <div class="relative-shoes">
-                                <img src="assets-voxo/images/shoes/slider-2.png" class="img-fluid blur-up lazyload" alt="">
-                                <div class="shoes-price">
-                                    <h5>$49.00</h5>
-                                    <h6>Nike Shoes</h6>
-                                    <ul class="rating d-flex justify-content-between">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-
-                    <div class="price-number">
-                        <!-- <h2>$79.00 <span><del>$65.00</del></span></h2>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima asperiores
-                            possimus ad quae.</h6> -->
-                    </div>
-
-                    <div class="slider-arrow-2">
-                        <div class="left-arrow d-lg-block d-none"></div>
-                        <div class="right-arrow d-lg-block d-none"></div>
-                    </div>
-                </div>
-                <!-- Slider 1 End -->
-
-                <!-- Slider 2 Start -->
-                <div class="banner-poster">
-                    <div class="slider-right-detail">
-                        <!-- <div class="labels">
-                            <ul class="label-15">
-                                <li>
-                                    <a href="https://www.facebook.com/">
-                                        <img src="assets-voxo/images/social-icon/1.png" class="img-fluid blur-up lazyload"
-                                            alt="facebook">
-                                        <h5 class="d-lg-block d-none">Facebook</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/">
-                                        <img src="assets-voxo/images/social-icon/2.png" class="img-fluid blur-up lazyload"
-                                            alt="Instagram">
-                                        <h5 class="d-lg-block d-none">Instagram</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/">
-                                        <img src="assets-voxo/images/social-icon/3.png" class="img-fluid blur-up lazyload"
-                                            alt="Twitter">
-                                        <h5 class="d-lg-block d-none">Twitter</h5>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <h4>New Festival Offer</h4>
-                        <div class="offer-box">
-                            <h6>65% off</h6>
-                        </div> -->
-                    </div>
-
-                    <div class="slider-bg">
-                        <!-- <div class="bg-text">
-                            <span>Nike shoes</span>
-                        </div>
-
-                        <div class="bg-circle red-gradient"></div> -->
-                        <img class="shoes-1 img-fluid blur-up lazyload" alt="" src="assets-voxo/images/shoes/slider-2.png">
-                    </div>
-
-                    <!-- <div class="sugestion-product d-xl-block d-none">
-                        <h3>Sugestion Product</h3>
-                        <h6>Our Collection</h6>
-
-                        <a href="product-left-sidebar.html" class="slider-shoes-image d-block">
-                            <div class="relative-shoes">
-                                <img src="assets-voxo/images/shoes/Slider.png" class="img-fluid blur-up lazyload" alt="">
-                                <div class="shoes-price">
-                                    <h5>$49.00</h5>
-                                    <h6>Nike Shoes</h6>
-                                    <ul class="rating d-flex justify-content-between">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-
-                    <div class="price-number">
-                        <!-- <h2>$79.00 <span><del>$65.00</del></span></h2>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima asperiores
-                            possimus ad quae.</h6> -->
-                    </div>
-
-                    <div class="slider-arrow-2">
-                        <div class="left-arrow d-lg-block d-none"></div>
-                        <div class="right-arrow d-lg-block d-none"></div>
-                    </div>
-                </div>
-                <!-- Slider 2 End -->
-
-                <!-- Slider 3 Start -->
-                <div class="banner-poster">
-                    <div class="slider-right-detail">
-                        <!-- <div class="labels">
-                            <ul class="label-15">
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <img src="assets-voxo/images/social-icon/1.png" class="img-fluid blur-up lazyload"
-                                            alt="facebook">
-                                        <h5 class="d-lg-block d-none">Facebook</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <img src="assets-voxo/images/social-icon/2.png" class="img-fluid blur-up lazyload"
-                                            alt="Instagram">
-                                        <h5 class="d-lg-block d-none">Instagram</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <img src="assets-voxo/images/social-icon/3.png" class="img-fluid blur-up lazyload"
-                                            alt="Twitter">
-                                        <h5 class="d-lg-block d-none">Twitter</h5>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <h4>New Festival Offer</h4>
-                        <div class="offer-box">
-                            <h6>65% off</h6>
-                        </div> -->
-                    </div>
-
-                    <div class="slider-bg">
-                        <!-- <div class="bg-text">
-                            <span>Nike shoes</span>
-                        </div>
-
-                        <div class="bg-circle gradient-blue"></div> -->
-                        <img class="shoes-1 img-fluid blur-up lazyload" alt="" src="assets-voxo/images/shoes/Slider.png">
-                    </div>
-
-                    <!-- <div class="sugestion-product d-xl-block d-none">
-                        <h3>Sugestion Product</h3>
-                        <h6>Our Collection</h6>
-
-                        <a href="product-left-sidebar.html" class="slider-shoes-image d-block">
-                            <div class="relative-shoes">
-                                <img src="assets-voxo/images/shoes/1-.png" class="img-fluid blur-up lazyload" alt="">
-                                <div class="shoes-price">
-                                    <h5>$49.00</h5>
-                                    <h6>Nike Shoes</h6>
-                                    <ul class="rating d-flex justify-content-between">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-
-                    <div class="price-number">
-                        <!-- <h2>$79.00 <span><del>$65.00</del></span></h2>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima asperiores
-                            possimus ad quae.</h6> -->
-                    </div>
-
-                    <div class="slider-arrow-2">
-                        <div class="left-arrow d-lg-block d-none"></div>
-                        <div class="right-arrow d-lg-block d-none"></div>
-                    </div>
-                </div>
-                <!-- Slider 3 End -->
-            </div>
+        <div class="banner">
+            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
+            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/sienta.png" alt="">
+            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/avanza.png" alt="">
         </div>
     </section>
-    <!-- home slider end -->
 
-    <section class="service-section">
+    <section class="about">
         <div class="container">
-            <div class="row g-4 g-sm-3">
-                <div class="col-4">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#shop"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Pendaftaran Mudah</h3>
-                            <span class="font-light">Dapatkan asuransi mobilmu kapanpun dan dimanapun, tanpa survei!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 ">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#secure-payment"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Pembayaran yang Aman</h3>
-                            <span class="font-light">Kami menerima berbagai macam jenis pembayaran.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#return"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Free Returns</h3>
-                            <span class="font-light">30-days free return policy.</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="about-title text-center">
+                <h2>Tentang Claimoo</h2>
             </div>
+            <div class="about-description mt-3">
+                <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi terpercaya.</p>
+            </div>
+            <a href="{{ route('dashboard-customer') }}">
+                <div class="about-footer text-center mt-3">
+                    Selengkapnya
+                </div>
+            </a>
         </div>
     </section>
 
     <!-- Custome services Section Start -->
-    <section class="service-section">
+    <section class="service-section pt-3 pb-4">
         <div class="container">
+            <div class="text-center mb-4">
+                <h2>Keunggulan Kami</h2>
+            </div>
             <div class="row g-4 g-sm-3">
                 <div class="col-xl-3 col-sm-6">
                     <div class="service-wrap">
@@ -713,7 +424,8 @@
                         </div>
                         <div class="service-content">
                             <h3 class="mb-2">Proses Klaim Cepat</h3>
-                            <span class="font-light">Dengan teknologi Machine Learning, membuat siapapun bisa menikmati cepatnya proses klaim</span>
+                            <span class="font-light">Dengan teknologi Machine Learning, membuat siapapun bisa menikmati
+                                cepatnya proses klaim</span>
                         </div>
                     </div>
                 </div>
@@ -726,7 +438,8 @@
                         </div>
                         <div class="service-content">
                             <h3 class="mb-2">Pendaftaran Mudah</h3>
-                            <span class="font-light">Dapatkan asuransi mobilmu kapanpun dan dimanapun, tanpa survei!</span>
+                            <span class="font-light">Dapatkan asuransi mobilmu kapanpun dan dimanapun, tanpa
+                                survei!</span>
                         </div>
                     </div>
                 </div>
@@ -761,11 +474,12 @@
     </section>
     <!-- Custome services Section End -->
 
-
-
     <!-- brand section start -->
     <section class="section-b-space">
         <div class="container">
+            <div class="text-center mb-4">
+                <h2>Mitra</h2>
+            </div>
             <div class="row">
                 <div class="col">
                     <div class="brand-slider">
@@ -826,20 +540,20 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-contact">
                             <div class="brand-logo">
-                                <a href="index.html" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+                                <a href="{{ route('dashboard-customer') }}" class="footer-logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
+                                        alt="logo">
                                 </a>
                             </div>
-
-                            <p class="font-light">adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence 
-                                dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi terpercaya</p>
-                                <p>Download app from:</p>
-                                <div>
-                                    <center><img src="assets-voxo/images/logos/android.png" width="100">
+                            <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
+                            </p>
+                            <p>Download app from:</p>
+                            <div>
+                                <center><img src="assets-voxo/images/logos/android.png" width="100">
                                     <img src="assets-voxo/images/logos/ios.png" width="100">
-                                    </center>
-                                </div>  
-                    </div>
+                                </center>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-lg-2 col-md-4 col-sm-6">
@@ -885,7 +599,7 @@
                                     <li>
                                         <a href="javascript:void(0)" class="font-dark">Astra Garda Oto</a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -934,21 +648,22 @@
 
                             <div class="footer-details">
                                 <ul>
-                                <li>
-                                    <span>
-                                        <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok. Jawa Barat. 16412</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
-                                    </span>
-                                </li>
+                                    <li>
+                                        <span>
+                                            <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok.
+                                                Jawa Barat. 16412</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
+                                        </span>
+                                    </li>
                                 </ul>
-                                
+
                                 <div>
                                     <img src="assets-voxo/images/logos/ojk.webp" width="200">
-                                    </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -959,7 +674,7 @@
             <div class="container">
                 <div class="row gy-3">
                     <!-- <div class="col-md-6"> -->
-                        <!-- <ul>
+                    <!-- <ul>
                             <li class="font-dark">Kami menerima</li>
                             <li>
                                 <a href="javascript:void(0)">
@@ -1023,20 +738,20 @@
                                 </div>
                                 <div class="quick-nav">
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/1.jpg" class="img-fluid blur-up lazyload"
-                                            alt="product">
+                                        <img src="assets-voxo/images/shoes/product/1.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/2.jpg" class="img-fluid blur-up lazyload"
-                                            alt="product">
+                                        <img src="assets-voxo/images/shoes/product/2.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/3.jpg" class="img-fluid blur-up lazyload"
-                                            alt="product">
+                                        <img src="assets-voxo/images/shoes/product/3.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/4.jpg" class="img-fluid blur-up lazyload"
-                                            alt="product">
+                                        <img src="assets-voxo/images/shoes/product/4.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                 </div>
                             </div>
@@ -1148,8 +863,8 @@
                             </div>
                             <div class="modal-product">
                                 <div class="modal-contain-img">
-                                    <img src="assets-voxo/images/fashion/instagram/4.jpg" class="img-fluid blur-up lazyload"
-                                        alt="">
+                                    <img src="assets-voxo/images/fashion/instagram/4.jpg"
+                                        class="img-fluid blur-up lazyload" alt="">
                                 </div>
                                 <div class="modal-contain-details">
                                     <h4>Premier Cropped Skinny Jean</h4>
@@ -1315,7 +1030,7 @@
     <!-- script js -->
     <script src="assets-voxo/js/theme-setting.js"></script>
     <script src="assets-voxo/js/script.js"></script>
-
+    <script src="assets-voxo/js/custom-script.js"></script>
 </body>
 
 </html>
