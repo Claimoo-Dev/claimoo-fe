@@ -536,7 +536,7 @@ const doScreenshot = () => {
                     '<table class="w-100">' +
                         '<tr>' +
                             '<td class="col-2 p-0"></td>' +
-                            '<td class="col-3 p-0 text-left">Gambar</td>' +
+                            '<td class="col-3 p-0 text-left">Hasil</td>' +
                             '<td class="col-1 p-0 text-center">:</td>' +
                             '<td class="col-6 p-0 text-left">'+ data.hasil + '</td>' +
                         '</tr>' +
