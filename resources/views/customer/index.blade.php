@@ -395,14 +395,16 @@
     <section class="about">
         <div class="container">
             <div class="about-title text-center">
-                <h2>Tentang Claimoo</h2>
+                <h2 class="about-title-h2">Tentang Claimoo</h2>
             </div>
             <div class="about-description mt-3">
                 <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi terpercaya.</p>
             </div>
             <a href="{{ route('dashboard-customer') }}">
-                <div class="about-footer text-center mt-3">
-                    Selengkapnya
+                <div class="text-center" style="width: 130px;">
+                    <div class="about-footer text-center mt-3">
+                        Selengkapnya
+                    </div>
                 </div>
             </a>
         </div>
