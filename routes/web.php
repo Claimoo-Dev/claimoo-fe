@@ -41,3 +41,7 @@ Route::get('/sign-up', function () {
 Route::get('/customer', function () {
     return view('customer.index');
 })->name('dashboard-customer');
+
+Route::get('/dashboard', function () {
+    return view('customer.dashboard');
+});
