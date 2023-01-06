@@ -392,21 +392,26 @@
         </div>
     </section>
 
-    <section class="about">
-        <div class="container">
-            <div class="about-title text-center">
-                <h2 class="about-title-h2">Tentang Claimoo</h2>
-            </div>
-            <div class="about-description mt-3">
-                <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi terpercaya.</p>
-            </div>
-            <a href="{{ route('dashboard-customer') }}">
-                <div class="text-center" style="width: 130px;">
-                    <div class="about-footer text-center mt-3">
-                        Selengkapnya
-                    </div>
+    <section class="about pt-0">
+        <div class="about-image">
+            <img class="blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
+        </div>
+        <div class="about-body">
+            <div class="container">
+                <div class="about-title text-center">
+                    <h2 class="about-title-h2">Tentang Claimoo</h2>
                 </div>
-            </a>
+                <div class="about-description mt-3">
+                    <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi terpercaya.</p>
+                </div>
+                <a href="{{ route('dashboard-customer') }}">
+                    <div class="text-center" style="width: 130px;">
+                        <div class="about-footer text-center mt-3">
+                            Selengkapnya
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -533,6 +538,22 @@
         </div>
     </section>
     <!-- brand section end -->
+
+    <section class="reference">
+        <div class="container">
+            <div class="reference-title">
+                <h2 class="reference-title-h2">Ajak teman Anda dan dapatkan poin nya</h2>
+            </div>
+            <div class="reference-description mt-4">
+                <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
+            </div>
+            <a href="{{ route('dashboard-customer') }}">
+                <div class="reference-footer text-center mt-4">
+                    AJAK TEMAN ANDA
+                </div>
+            </a>
+        </div>
+    </section>
 
     <!-- footer start -->
     <footer class="footer-sm-space">
