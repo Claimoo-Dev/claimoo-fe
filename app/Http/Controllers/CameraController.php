@@ -65,6 +65,10 @@ class CameraController extends Controller
         $fileName = $username . ($implodeDescription ? '-' . $implodeDescription : null) . '-' . date('His') . '.png';
         $file = $folderPath . $fileName;
 
+        if (!is_dir(public_path('images'))) {
+            mkdir(public_path('images'));    
+        }
+
         if (!is_dir(public_path('images/' . date('Y')))) {
             mkdir(public_path('images/' . date('Y')));    
         }
