@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CameraController;
+use App\Http\Controllers\CustomerPageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserController;
@@ -38,10 +39,9 @@ Route::get('/sign-up', function () {
     return view('auth.sign-up');
 });
 
-Route::get('/customer', function () {
-    return view('customer.index');
-})->name('dashboard-customer');
-
-Route::get('/dashboard', function () {
-    return view('customer.dashboard');
-});
+Route::get('customer', [CustomerPageController::class, 'index'])->name('dashboard-customer');
+Route::get('dashboard', [CustomerPageController::class, 'dashboard']);
+Route::get('perusahaan', [CustomerPageController::class, 'company']);
+Route::get('komisaris-direksi', [CustomerPageController::class, 'commissionerDirector']);
+Route::get('tenaga-ahli', [CustomerPageController::class, 'expert']);
+Route::get('partner', [CustomerPageController::class, 'partner']);

@@ -260,85 +260,57 @@
                             </nav>
                             <div class="menu-right">
                                 <ul>
-                                    <!-- <li>
-                                        <div class="search-box ">
-                                            <i data-feather="search"></i>
-                                        </div>
-                                    </li> -->
-
                                     <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
                                             <div class="cart-icon">
                                                 <i data-feather="bell"></i>
                                             </div>
-
                                         </div>
-                                        <!-- <div class="onhover-div">
-                                            <a href="wishlist.html">
-                                                <div class="wislist-empty">
-                                                    <i class="fas fa-bell"></i>
-                                                    <h6 class="mb-1">Tidak ada Notifikasi</h6>
-                                                </div>
-                                            </a>
-                                        </div> -->
                                     </li>
 
-                                    <!-- <li class="onhover-dropdown cart-dropdown">
-                                        <button type="button" class="btn btn-outline-danger btn-spacing">
-                                            <i data-feather="shopping-cart"></i>
-                                        </button>
-                                        <div class="onhover-div">
-                                            <div class="cart-menu">
-                                                <div class="cart-title">
-                                                    <h6>
-                                                        <i data-feather="shopping-bag"></i>
-                                                        <span class="label label-theme rounded-pill">5</span>
-                                                    </h6>
-                                                    <span class="d-md-none d-block">
-                                                        <i class="fas fa-arrow-right back-cart"></i>
-                                                    </span>
-                                                </div>
-                                                <ul class="custom-scroll">
-                                                    <li>
-
-                                                    </li>
-                                                    <li>
-
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="cart-btn">
-
-                                                <button onclick="location.href = 'cart.html';" type="button"
-                                                    class="btn btn-solid-default btn-block">
-                                                    Proses Pembayaran
-                                                </button>
-                                            </div>
+                                    <li class="language-icon d-none d-sm-block">
+                                        <div class="dropdown top-header-dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                                <span><i data-feather="globe"></i>ID
+                                                    <i class="fas fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="dropdownMenuLink">
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">EN</a>
+                                                </li>
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">ID</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </li> -->
+                                    </li>
+
+                                    <li class="user-icon d-none d-sm-block">
+                                        <div class="dropdown top-header-dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                                <span><i data-feather="user"></i>
+                                                    <i class="fas fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="dropdownMenuLink">
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">Log In</a>
+                                                </li>
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">Daftar</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
-                            <!-- <div class="search-full">
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <i data-feather="search" class="font-light"></i>
-                                    </span>
-                                    <input type="text" class="form-control search-type" placeholder="Cari disini...">
-                                    <span class="input-group-text close-search">
-                                        <i data-feather="x" class="font-light"></i>
-                                    </span>
-                                </div>
-                                <div class="search-suggestion">
-                                    <ul class="custom-scroll">
-                                        <li>
-
-                                        </li>
-                                        <li>
-
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -389,11 +361,44 @@
             <img class="img-fluid blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
             <img class="img-fluid blur-up lazyload" src="assets-voxo/images/sienta.png" alt="">
             <img class="img-fluid blur-up lazyload" src="assets-voxo/images/avanza.png" alt="">
+            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/pwa-claimoo.png" alt="">
         </div>
     </section>
 
     <section class="about pt-0">
-        <div class="about-image">
+        <div class="container">
+            <div class="row about-row">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img class="blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-lg-0">
+                    <div class="about-body">
+                        <div class="about-title text-center">
+                            <h2 class="about-title-h2">Tentang Claimoo</h2>
+                        </div>
+                        <div class="about-description mt-3 mt-lg-5">
+                            <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis
+                                Artificial
+                                Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan
+                                Asuransi
+                                terpercaya.</p>
+                        </div>
+                        <a href="{{ route('dashboard-customer') }}">
+                            <div class="about-footer-parent mt-3 mt-lg-5">
+                                <div class="about-footer text-center">
+                                    Selengkapnya
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="about-image">
             <img class="blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
         </div>
         <div class="about-body">
@@ -402,7 +407,9 @@
                     <h2 class="about-title-h2">Tentang Claimoo</h2>
                 </div>
                 <div class="about-description mt-3">
-                    <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi terpercaya.</p>
+                    <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial
+                        Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi
+                        terpercaya.</p>
                 </div>
                 <a href="{{ route('dashboard-customer') }}">
                     <div class="text-center" style="width: 130px;">
@@ -412,13 +419,13 @@
                     </div>
                 </a>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Custome services Section Start -->
-    <section class="service-section pt-3 pb-4">
+    <section class="service-section pt-5 pb-4">
         <div class="container">
-            <div class="text-center mb-4">
+            <div class="text-center mb-4 mb-lg-5">
                 <h2>Keunggulan Kami</h2>
             </div>
             <div class="row g-4 g-sm-3">
@@ -480,6 +487,71 @@
         </div>
     </section>
     <!-- Custome services Section End -->
+
+    <section class="package pt-5 pb-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Paket Member</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Free
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-solid-default btn-offer">Daftar</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Premium
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-solid-default btn-offer">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="poster-section ratio2_1 pt-5 pb-5">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="poster-image">
+                            <h2>Sekarang, lebih mudah memiliki asuransi mobil</h2>
+                            <p class="mt-4">Daftar, Pilih Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
+                                tinggal pada
+                                asuransi mobil yang rumit. Tonton video untuk mengetahui lebih lanjut.</p>
+                            <a href="{{ route('dashboard-customer') }}">
+                                <div class="btn btn-solid-default btn-offer text-center mt-3">
+                                    DAPATKAN PENAWARAN TERBAIK
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-lg-0 mt-4">
+                        <div class="poster-image">
+                            <img src="assets-voxo/images/sienta.png" class="img-fluid bg-img blur-up lazyload" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- brand section start -->
     <section class="section-b-space">
@@ -545,7 +617,8 @@
                 <h2 class="reference-title-h2">Ajak teman Anda dan dapatkan poin nya</h2>
             </div>
             <div class="reference-description mt-4">
-                <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
+                <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan
+                    menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
             </div>
             <a href="{{ route('dashboard-customer') }}">
                 <div class="reference-footer text-center mt-4">

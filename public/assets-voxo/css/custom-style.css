@@ -14,7 +14,28 @@
 
     .banner {
         background-color: #eff2f7;
-        height: 100vh;
+        height: 85vh;
+    }
+
+    .banner .slick-list {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide div {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide div img {
+        height: 100%;
+        object-fit: contain;
     }
 
     .about-image {
@@ -44,6 +65,10 @@
         line-height: 20px !important;
     }
 
+    .about-footer-parent {
+        width: 130px;
+    }
+
     .about-footer {
         background-color: #073f78;
         border: 2px #073f78 solid;
@@ -54,17 +79,35 @@
     }
 
     .service-section {
-        border-radius: 20px;
-        background-color: #073f78;
-        color: white;
+        background-color: #eff2f7;
+    }
+
+    .service-icon {
+        padding: 0 15px;
     }
 
     .service-icon svg {
-        fill: white !important;
+        margin-right: 0 !important;
     }
 
-    .service-content span {
-        color: white !important;
+    .service-wrap {
+        background-color: white;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .poster-section {
+        background-color: #eff2f7 !important;
+    }
+
+    .btn-offer {
+        border-radius: 10px;
+        border: 0 !important;
+    }
+
+    .btn-offer::before {
+        border-radius: 10px;
     }
 
     .reference {
@@ -97,20 +140,270 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    header .main-menu {
+        padding: 20px 0;
+    }
+
+    header .main-menu .menu-left .toggle-nav {
+        padding: 0 30px;
+    }
+
+    .brand-logo {
+        width: 180px;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .banner {
+        background-color: #eff2f7;
+        height: 90vh;
+    }
+
+    .banner .slick-list {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide div {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide div img {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .about-image {
+        width: 100%;
+        height: 300px;
+        display: block;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-body {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .about-title-h2 {
+        color: #232323;
+    }
+
+    .about-description p {
+        font-size: 14px;
+        text-align: left;
+        color: #7e7e7e;
+        line-height: 20px !important;
+    }
+
+    .about-footer-parent {
+        width: 150px;
+    }
+
+    .about-footer {
+        background-color: #073f78;
+        border: 2px #073f78 solid;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: white;
+        font-size: 14px;
+    }
+
+    .service-section {
+        background-color: #eff2f7;
+    }
+
+    .service-icon {
+        padding: 0 15px;
+    }
+
+    .service-icon svg {
+        margin-right: 0 !important;
+    }
+
+    .service-wrap {
+        background-color: white;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .poster-section {
+        background-color: #eff2f7 !important;
+    }
+
+    .btn-offer {
+        border-radius: 10px;
+        border: 0 !important;
+    }
+
+    .btn-offer::before {
+        border-radius: 10px;
+    }
+
+    .reference {
+        background-color: #eff2f7;
+        padding: 70px 0 !important;
+    }
+
+    .reference-title-h2 {
+        color: #232323;
+        text-transform: none !important;
+    }
+
+    .reference-description p {
+        font-size: 14px;
+        text-align: left;
+        color: #7e7e7e;
+        line-height: 20px !important;
+    }
+
+    .reference-footer {
+        background-color: #073f78;
+        border: 2px #073f78 solid;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: white;
+        font-size: 14px;
+        width: 200px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    
-}
+@media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+    .brand-logo {
+        width: 200px;
+    }
+
+    .banner {
+        background-color: #eff2f7;
+        height: 85vh;
+    }
+
+    .banner .slick-list {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide div {
+        height: 100%;
+    }
+
+    .banner .slick-list .slick-track .slick-slide div img {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .about-row {
+        height: 500px;
+        padding: 50px 0;
+    }
+
+    .about-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-title-h2 {
+        color: #232323;
+    }
+
+    .about-description p {
+        font-size: 20px;
+        text-align: left;
+        color: #7e7e7e;
+        line-height: 25px !important;
+    }
+
+    .about-footer-parent {
+        width: 200px;
+    }
+
+    .about-footer {
+        background-color: #073f78;
+        border: 2px #073f78 solid;
+        border-radius: 10px;
+        padding: 15px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .poster-section {
+        background-color: white !important;
+    }
+
+    .poster-image {
+        background-color: white !important;
+    }
+
+    .btn-offer {
+        border-radius: 10px;
+        border: 0 !important;
+    }
+
+    .btn-offer::before {
+        border-radius: 10px;
+    }
+
+    .reference {
+        background-color: #eff2f7;
+        padding: 70px 0 !important;
+    }
+
+    .reference-title-h2 {
+        color: #232323;
+        text-transform: none !important;
+    }
+
+    .reference-description p {
+        font-size: 14px;
+        text-align: left;
+        color: #7e7e7e;
+        line-height: 20px !important;
+    }
+
+    .reference-footer {
+        background-color: #073f78;
+        border: 2px #073f78 solid;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: white;
+        font-size: 14px;
+        width: 200px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .brand-logo {
+        width: 250px;
+    }
 }
