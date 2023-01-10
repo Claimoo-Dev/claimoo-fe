@@ -165,7 +165,7 @@ depan.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/depan.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/depan.png";
+            frame.src = "transparent/ignis/depan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/depan.png";
         }
@@ -197,7 +197,7 @@ belakang.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/belakang.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/belakang.png";
+            frame.src = "transparent/ignis/belakang.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/belakang.png";
         }
@@ -229,7 +229,7 @@ sampingKananDepan.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/samping-kanan-depan.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/samping-kanan-depan.png";
+            frame.src = "transparent/ignis/samping-kanan-depan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/samping-kanan-depan.png";
         }
@@ -261,7 +261,7 @@ sampingKiriDepan.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/samping-kiri-depan.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/samping-kiri-depan.png";
+            frame.src = "transparent/ignis/samping-kiri-depan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/samping-kiri-depan.png";
         }
@@ -293,7 +293,7 @@ sampingKananBelakang.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/samping-kanan-belakang.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/samping-kanan-belakang.png";
+            frame.src = "transparent/ignis/samping-kanan-belakang.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/samping-kanan-belakang.png";
         }
@@ -325,7 +325,7 @@ sampingKiriBelakang.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/samping-kiri-belakang.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/samping-kiri-belakang.png";
+            frame.src = "transparent/ignis/samping-kiri-belakang.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/samping-kiri-belakang.png";
         }
@@ -357,7 +357,7 @@ lampuDepanKanan.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/lampu-depan-kanan.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/lampu-depan-kanan.png";
+            frame.src = "transparent/ignis/lampu-depan-kanan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/lampu-depan-kanan.png";
         }
@@ -389,7 +389,7 @@ lampuDepanKiri.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/lampu-depan-kiri.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/lampu-depan-kiri.png";
+            frame.src = "transparent/ignis/lampu-depan-kiri.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/lampu-depan-kiri.png";
         }
@@ -421,7 +421,7 @@ lampuBelakangKanan.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/lampu-belakang-kanan.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/lampu-belakang-kanan.png";
+            frame.src = "transparent/ignis/lampu-belakang-kanan.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/lampu-belakang-kanan.png";
         }
@@ -453,7 +453,7 @@ lampuBelakangKiri.onclick = () => {
         } else if (typeCar == 'stationWagon') {
             frame.src = "transparent/mini-cooper/lampu-belakang-kiri.png";
         } else if (typeCar == 'jeep') {
-            frame.src = "transparent/jimny/lampu-belakang-kiri.png";
+            frame.src = "transparent/ignis/lampu-belakang-kiri.png";
         } else if (typeCar == 'pickup') {
             frame.src = "transparent/granmax/lampu-belakang-kiri.png";
         }
