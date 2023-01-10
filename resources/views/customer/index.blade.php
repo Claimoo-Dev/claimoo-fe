@@ -56,65 +56,6 @@
 <body class="theme-color2 light ltr">
     <!-- header start -->
     <header id="home">
-        <!-- <div class="top-header">
-            <div class="container-fluid-lg">
-                <div class="row">
-                    <div class="col-auto d-xl-block d-none">
-                        <ul class="border-list">
-                            <li><i data-feather="phone"></i> : +62 21 7783 7035</li>
-                            <li><i data-feather="mail"></i> : admin@claimoo.com</li>
-                        </ul>
-                    </div>
-                    <div class="col-auto d-sm-block d-none">
-
-                    </div>
-                    <div class="col-auto">
-                        <ul class="border-list">
-                            <li>
-
-                            </li>
-
-                            <li>
-                                <div class="dropdown">
-                                    <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                        id="dropdownMenuLink2" data-bs-toggle="dropdown">Bahasa<i
-                                            class="fas fa-chevron-down"></i></a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                                        <li class="w-100">
-                                            <a class="dropdown-item" href="javascript:void(0)">Indonesia</a>
-                                        </li>
-
-                                        <li class="w-100">
-                                            <a class="dropdown-item" href="javascript:void(0)">English</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="dropdown top-header-dropdown">
-                                    <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                        id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                        <span><i data-feather="user"></i>
-                                            <i class="fas fa-chevron-down"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                                        <li class="w-100">
-                                            <a class="dropdown-item" href="log-in.html">Log In</a>
-                                        </li>
-                                        <li class="w-100">
-                                            <a class="dropdown-item" href="sign-up.html">Daftar</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <div class="main-header navbar-searchbar">
             <div class="container-fluid-lg">
                 <div class="row">
@@ -358,10 +299,22 @@
 
     <section class="pt-0 overflow-hidden">
         <div class="banner">
-            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
-            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/sienta.png" alt="">
-            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/avanza.png" alt="">
-            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/pwa-claimoo.png" alt="">
+            <div class="slider">
+                <img class="img-fluid blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
+                <h2 class="slider-text">Lorem Ipsum Dolor Sit Amet</h2>
+            </div>
+            <div class="slider">
+                <img class="img-fluid blur-up lazyload" src="assets-voxo/images/sienta.png" alt="">
+                <h2 class="slider-text">Lorem Ipsum Dolor Sit Amet</h2>
+            </div>
+            <div class="slider">
+                <img class="img-fluid blur-up lazyload" src="assets-voxo/images/avanza.png" alt="">
+                <h2 class="slider-text">Lorem Ipsum Dolor Sit Amet</h2>
+            </div>
+            <div class="slider">
+                <img class="img-fluid blur-up lazyload" src="assets-voxo/images/pwa-claimoo.png" alt="">
+                <h2 class="slider-text">Lorem Ipsum Dolor Sit Amet</h2>
+            </div>
         </div>
     </section>
 

@@ -38,6 +38,13 @@
         object-fit: contain;
     }
 
+    .slider-text {
+        position: absolute; 
+        bottom: 10px; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+
     .about-image {
         width: 100%;
         height: 300px;
@@ -182,6 +189,13 @@
         object-fit: contain;
     }
 
+    .slider-text {
+        position: absolute; 
+        bottom: 10px; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+
     .about-image {
         width: 100%;
         height: 300px;
@@ -312,9 +326,17 @@
         height: 100%;
     }
 
-    .banner .slick-list .slick-track .slick-slide div img {
+    .banner .slick-list .slick-track .slick-slide div .slider img {
         height: 100%;
         object-fit: contain;
+        width: 100%;
+    }
+
+    .slider-text {
+        position: absolute; 
+        bottom: 10px; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
     }
 
     .about-row {
