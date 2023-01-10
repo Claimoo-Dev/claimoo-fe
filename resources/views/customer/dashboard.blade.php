@@ -3,13 +3,13 @@
 
 <head>
     <link rel="manifest" href="./manifest.json" />
-    <link rel="icon" href="assets-voxo/images/favicon/2.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets-voxo/images/favicon/2.png" />
+    <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets-voxo/images/favicon/favicon.png" />
     <meta name="theme-color" content="#e22454" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Voxo" />
-    <meta name="msapplication-TileImage" content="assets-voxo/images/favicon/2.png" />
+    <meta name="apple-mobile-web-app-title" content="Claimoo" />
+    <meta name="msapplication-TileImage" content="assets-voxo/images/favicon/favicon.png" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,11 +20,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Voxo">
-    <meta name="keywords" content="Voxo">
-    <meta name="author" content="Voxo">
-    <link rel="icon" href="assets-voxo/images/favicon/2.png" type="image/x-icon" />
-    <title>DashBoard</title>
+    <meta name="description" content="Claimoo">
+    <meta name="keywords" content="Claimoo">
+    <meta name="author" content="Claimoo">
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <title>Claimoo | DashBoard</title>
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -48,250 +48,33 @@
 
     <!-- Theme css -->
     <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/demo2.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/custom-style.css">
 
 </head>
 
 <body class="theme-color2 light ltr">
-
     <!-- header start -->
     <header class="header-style-2" id="home">
         <div class="main-header navbar-searchbar">
             <div class="container-fluid-lg">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="main-menu">
+                        <div class="main-menu main-menu-dashboard">
                             <div class="menu-left">
-                                <div class="brand-logo">
-                                    <a href="index.html">
-                                        <svg class="svg-icon">
-                                            <use class="fill-color" xlink:href="assets-voxo/svg/icons.svg#logo"></use>
-                                        </svg>
-                                        <img src="assets-voxo/images/logo.png" class="img-fluid blur-up lazyload" alt="logo">
-                                    </a>
+                                <div class="toggle-nav">
+                                    <i data-feather="align-justify" class="sidebar-bar"></i>
                                 </div>
-                                <div class="category-menu">
-                                    <div class="category-dropdown">
-                                        <div class="close-btn d-xl-none">
-                                            Category List
-                                            <span class="back-category"><i class="fa fa-angle-left"></i>
-                                            </span>
-                                        </div>
-                                        <ul>
-                                            <li class="submenu">
-                                                <a href="javascript:void(0)">watches</a>
-                                                <ul class="category-mega-menu">
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-xl-3">
-                                                                <div class="category-childmenu">
-                                                                    <div class="title-category">
-                                                                        <h6>Watch Brands</h6>
-                                                                    </div>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Coros</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Titan</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Citizen</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Casio</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Movado</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Tissot</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-3">
-                                                                <div class="category-childmenu">
-                                                                    <div class="title-category">
-                                                                        <h6>Watch Display</h6>
-                                                                    </div>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Analog</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Digital</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Hybrid</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Tactile</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a
-                                                                                href="shop-left-sidebar.html">Touchscreen</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-3">
-                                                                <div class="category-childmenu">
-                                                                    <div class="title-category">
-                                                                        <h6>Watch Style</h6>
-                                                                    </div>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Casual</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Dress</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Fashion</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Luxury</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-3">
-                                                                <div class="category-banner">
-                                                                    <img src="assets-voxo/images/electronics/banner/4.jpg"
-                                                                        class="img-fluid blur-up lazyload" alt="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="shop-left-sidebar.html">footwear</a>
-                                            </li>
-
-                                            <li class="submenu">
-                                                <a href="javascript:void(0)">clothing</a>
-                                                <ul class="category-mega-menu">
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-xl-3">
-                                                                <div class="category-childmenu">
-                                                                    <div class="title-category">
-                                                                        <h6>Women's fashion</h6>
-                                                                    </div>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Dress</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Skirts</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Western
-                                                                                wear</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Etahnic
-                                                                                wear</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Sports
-                                                                                wear</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-3">
-                                                                <div class="category-childmenu">
-                                                                    <div class="title-category">
-                                                                        <h6>Men's fashion</h6>
-                                                                    </div>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Sports
-                                                                                wear</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Etahnic
-                                                                                wear</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">Western
-                                                                                wear</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-3">
-                                                                <div class="category-childmenu">
-                                                                    <div class="title-category">
-                                                                        <h6>Accesories</h6>
-                                                                    </div>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a
-                                                                                href="shop-left-sidebar.html">earrings</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">fashion
-                                                                                jewellery</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">ties</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">caps and
-                                                                                hats</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a
-                                                                                href="shop-left-sidebar.html">cufflinks</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="shop-left-sidebar.html">precious
-                                                                                jewellery</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a
-                                                                                href="shop-left-sidebar.html">necklaces</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-3">
-                                                                <div class="category-banner">
-                                                                    <img src="assets-voxo/images/banner/1.jpg"
-                                                                        class="img-fluid blur-up lazyload" alt="">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="shop-left-sidebar.html">Accessories</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-left-sidebar.html">Home & decor</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-left-sidebar.html">Bags</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-left-sidebar.html">Kitchan</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="brand-logo">
+                                    <a href="{{ route('dashboard-customer') }}">
+                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
+                                            alt="logo">
+                                    </a>
                                 </div>
                             </div>
                             <nav>
                                 <div class="main-navbar">
                                     <div id="mainnav">
-                                        <div class="toggle-nav">
-                                            <i class="fa fa-bars sidebar-bar"></i>
-                                        </div>
+                                        <div class="me-3"></div>
                                         <ul class="nav-menu">
                                             <li class="back-btn d-xl-none">
                                                 <div class="close-btn">
@@ -300,207 +83,28 @@
                                                     </span>
                                                 </div>
                                             </li>
-                                            <li class="mega-menu dropdown home-menu">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">home</a>
-                                                <div class="mega-menu-container menu-content">
-                                                    <div class="container-fluid">
-                                                        <div class="row">
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="opensubmegamenu">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="index.html"
-                                                                                    class="megamenu-image">
-                                                                                    <img src="assets-voxo/images/demo-image/fashion.jpg"
-                                                                                        class="img-fluid blur-up lazyload"
-                                                                                        alt="">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
+                                            <li class="home-menu">
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
 
-                                                                    <div class="megamenu-image-title pb-0">
-                                                                        <h5 class="mb-0">Fashion Demo</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="opensubmegamenu">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="flower-demo.html"
-                                                                                    class="megamenu-image">
-                                                                                    <img src="assets-voxo/images/demo-image/flower.jpg"
-                                                                                        class="img-fluid blur-up lazyload"
-                                                                                        alt="">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="megamenu-image-title pb-0">
-                                                                        <h5 class="mb-0">Flowers Demo</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="opensubmegamenu">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="furniture-demo.html"
-                                                                                    class="megamenu-image">
-                                                                                    <img src="assets-voxo/images/demo-image/furniture.jpg"
-                                                                                        class="img-fluid blur-up lazyload"
-                                                                                        alt="">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="megamenu-image-title pb-0">
-                                                                        <h5 class="mb-0">Furniture Demo</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="opensubmegamenu">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="electronic-demo.html"
-                                                                                    class="megamenu-image">
-                                                                                    <img src="assets-voxo/images/demo-image/electonic.jpg"
-                                                                                        class="img-fluid blur-up lazyload"
-                                                                                        alt="">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="megamenu-image-title pb-0">
-                                                                        <h5 class="mb-0">Electronic Demo</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="opensubmegamenu">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="shoes-demo.html"
-                                                                                    class="megamenu-image">
-                                                                                    <img src="assets-voxo/images/demo-image/shoes.jpg"
-                                                                                        class="img-fluid blur-up lazyload"
-                                                                                        alt="">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="megamenu-image-title pb-0">
-                                                                        <h5 class="mb-0">Shoes Demo</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="opensubmegamenu">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="vegetables-demo.html"
-                                                                                    class="megamenu-image">
-                                                                                    <img src="assets-voxo/images/demo-image/vagetables.jpg"
-                                                                                        class="img-fluid blur-up lazyload"
-                                                                                        alt="">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="megamenu-image-title pb-0">
-                                                                        <h5 class="mb-0">Vegetables Demo</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </li>
+
                                             <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">shop</a>
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Tentang
+                                                    Kami</a>
                                                 <ul class="nav-submenu menu-content">
                                                     <li>
-                                                        <a href="shop-canvas-filter.html">Shop Canvas Filter</a>
+                                                        <a href="javascript:void(0)">Perusahaan</a>
+                                                        <a href="javascript:void(0)">Komisaris &amp; Direksi</a>
+                                                        <a href="javascript:void(0)">Tenaga Ahli</a>
+                                                        <a href="javascript:void(0)">Partner</a>
                                                     </li>
-                                                    <li>
-                                                        <a href="shop-category-slider.html">Shop Category Filter</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-filter-hide.html">Shop Filter Hide</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-left-sidebar.html">Shop Left Sidebar
-                                                            <span>Trending</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-list-infinite.html">Shop List Infinite</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-list.html">Shop List</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-no-sidebar.html">Shop No Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-right-sidebar.html">Shop Right Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-top-filter.html">Shop Top Filter</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-with-category.html">Shop With Category <span
-                                                                class="tren-budge">New</span></a>
-                                                    </li>
+
                                                 </ul>
                                             </li>
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">product</a>
-                                                <ul class="nav-submenu menu-content">
-                                                    <li>
-                                                        <a href="product-4-image.html">Product 4 Images</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-360-view.html">Product 360 View</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-bundle.html">Product Bundle</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-left-sidebar.html">Product Left Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-left-thumbnail.html">Product Left thumbnail</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-no-sidebar.html">Product No Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-right-sidebar.html">Product Right Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-right-thumbnail.html">Product Right
-                                                            thumbnail</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-sticky.html">Product Sticky</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-video-thumbnail.html">Product Video
-                                                            Thumbnail</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
+
                                             <li class="mega-menu dropdown ratio_40">
                                                 <a href="javascript:void(0)" class="nav-link menu-title">
-                                                    <div class="gradient-title">Voxo plus</div>
+                                                    <div class="gradient-title">Produk Asuransi</div>
                                                 </a>
                                                 <div class="mega-menu-container poster-bg-image menu-content">
                                                     <div class="container-fluid">
@@ -508,44 +112,18 @@
                                                             <div class="col mega-box">
                                                                 <div class="link-section">
                                                                     <div class="submenu-title">
-                                                                        <h5>Email Template</h5>
+                                                                        <h5>Simas Mobil</h5>
                                                                     </div>
                                                                     <div class="submenu-content opensubmegamenu">
                                                                         <ul class="list">
                                                                             <li>
-                                                                                <a
-                                                                                    href="../email-template/abandonment-email.html">Abandonment
-                                                                                    Email</a>
+                                                                                <a href="javascript:void(0)">All
+                                                                                    Risk</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a
-                                                                                    href="../email-template/black-friday.html">Black
-                                                                                    Fridday</a>
+                                                                                <a href="javascript:void(0)">TLO</a>
                                                                             </li>
-                                                                            <li>
-                                                                                <a
-                                                                                    href="../email-template/email-template-1.html">Email
-                                                                                    Template 1</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a
-                                                                                    href="../email-template/email-template-2.html">Email
-                                                                                    Template 2</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="../email-template/offer.html">Offer
-                                                                                    Template</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a
-                                                                                    href="../email-template/order-success-1.html">Order
-                                                                                    Success 1</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a
-                                                                                    href="../email-template/order-success-2.html">Order
-                                                                                    Success 2</a>
-                                                                            </li>
+
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -553,162 +131,32 @@
                                                             <div class="col mega-box">
                                                                 <div class="link-section">
                                                                     <div class="submenu-title">
-                                                                        <h5>Email Template</h5>
+                                                                        <h5>Zurich Autocillin</h5>
                                                                     </div>
                                                                     <div class="submenu-content opensubmegamenu">
                                                                         <ul class="list">
                                                                             <li>
-                                                                                <a
-                                                                                    href="../email-template/product-review.html">Product
-                                                                                    Review</a>
+                                                                                <a href="javascript:void(0)">All
+                                                                                    Risk</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a
-                                                                                    href="../email-template/reset-password.html">Reset
-                                                                                    Password</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a
-                                                                                    href="../email-template/welcome.html">Welcome
-                                                                                    Template</a>
+                                                                                <a href="javascript:void(0)">TLO</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
                                                                 <div class="link-section">
                                                                     <div class="submenu-title">
-                                                                        <h5>Invoice Template</h5>
+                                                                        <h5>Astra Garda Oto</h5>
                                                                     </div>
                                                                     <div class="submenu-content opensubmegamenu">
                                                                         <ul class="list">
                                                                             <li>
-                                                                                <a href="../invoice/invoice-1.html">Invoice
-                                                                                    1 Template</a>
+                                                                                <a href="javascript:void(0)">All
+                                                                                    Risk</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a href="../invoice/invoice-2.html">Invoice
-                                                                                    2 Template</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="../invoice/invoice-3.html">Invoice
-                                                                                    3 Template</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Portfolio Page</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="portfolio-2-grid.html">Portfolio
-                                                                                    2 Grid</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="portfolio-2-masonary.html">Portfolio
-                                                                                    2 Masonary</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="portfolio-3-grid.html">Portfolio
-                                                                                    3 Grid</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="portfolio-3-masonary.html">Portfolio
-                                                                                    3 Masonary</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="portfolio-4-grid.html">Portfolio
-                                                                                    4 Grid</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="portfolio-4-masonary.html">Portfolio
-                                                                                    4 Masonary</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="portfolio-no-space.html">Portfolio
-                                                                                    No Space</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Element Page</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="element-button.html">Element
-                                                                                    Button</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="element-category.html">Element
-                                                                                    Category</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a
-                                                                                    href="element-collection-banner.html">Element
-                                                                                    Collection Banner</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="element-deal-banner.html">Element
-                                                                                    Deal Banner</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="element-header.html">Element
-                                                                                    Header</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="element-home.html">Element
-                                                                                    Home</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="element-product.html">Element
-                                                                                    Product</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Cookie Bar</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="furniture-demo.html">Bottom</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="electronic-demo.html">Bottom
-                                                                                    Left</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index.html">Bottom Right</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Search</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="vegetables-demo.html">Ajax
-                                                                                    Search</a>
+                                                                                <a href="javascript:void(0)">TLO</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -719,93 +167,29 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">pages</a>
-                                                <ul class="nav-submenu menu-content">
-                                                    <li>
-                                                        <a href="404.html">404</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="log-in.html">Log In</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="sign-up.html">Register</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="forgot.html">Forgot Password</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="cart.html">cart</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="checkout.html">checkout</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="coming-soon.html">coming soon<span>trending</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="compare.html">compare</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact-us.html">contact us</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="faq.html">faq</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="order-success.html">order success</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="order-tracking.html">order tracking</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="review.html">review</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="search.html">search</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="user-dashboard.html">user dashboard</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="wishlist.html">wishlist</a>
-                                                    </li>
-                                                </ul>
+
+
+                                            <li>
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Bengkel</a>
                                             </li>
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">blog</a>
-                                                <ul class="nav-submenu menu-content">
-                                                    <li>
-                                                        <a href="blog-details.html">Blog Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-infinite-scroll.html">Blog Infinite Scroll</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-listing.html">Blog Listing</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-masonary.html">blog Masonary <span>New</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-no-sidebar.html">blog No Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
-                                                    </li>
-                                                </ul>
+
+                                            <li>
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Berita</a>
                                             </li>
+
+                                            <li>
+                                                <a href="javascript:void(0)" class="nav-link menu-title">Hubungi
+                                                    Kami</a>
+                                            </li>
+
+
                                             <li class="mobile-poster d-flex d-xl-none">
                                                 <img src="assets-voxo/images/pwa.png" class="img-fluid" alt="">
                                                 <div class="mobile-contain">
-                                                    <h5>Enjoy app-like experience</h5>
-                                                    <p class="font-light">With this Screen option you can use Website
-                                                        like an App.</p>
+                                                    <h5>Aplikasi Mobile Lite</h5>
+                                                    <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
                                                     <a href="javascript:void(0)" id="installApp"
-                                                        class="btn btn-solid-default btn-spacing w-100">ADD TO
+                                                        class="btn btn-solid-default btn-spacing w-100">TAMBAHKAN KE
                                                         HOMESCREEN</a>
                                                 </div>
                                             </li>
@@ -815,186 +199,56 @@
                             </nav>
                             <div class="menu-right">
                                 <ul>
-                                    <li>
-                                        <div class="search-box">
-                                            <i data-feather="search"></i>
+                                    <li class="onhover-dropdown wislist-dropdown bell-icon">
+                                        <div class="cart-media">
+                                            <div class="cart-icon">
+                                                <i data-feather="bell"></i>
+                                            </div>
                                         </div>
                                     </li>
-                                    <li class="onhover-dropdown">
-                                        <div class="cart-media">
-                                            <i data-feather="user"></i>
-                                        </div>
-                                        <div class="onhover-div profile-dropdown">
-                                            <ul>
-                                                <li>
-                                                    <a href="log-in.html" class="d-block">Login</a>
+
+                                    <li class="language-icon d-none d-sm-block">
+                                        <div class="dropdown top-header-dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                                <span><i data-feather="globe"></i>ID
+                                                    <i class="fas fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="dropdownMenuLink">
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">EN</a>
                                                 </li>
-                                                <li>
-                                                    <a href="sign-up.html" class="d-block">Register</a>
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">ID</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="onhover-dropdown wislist-dropdown">
-                                        <div class="cart-media">
-                                            <a href="wishlist.html">
-                                                <i data-feather="heart"></i>
-                                                <span class="label label-theme rounded-pill">5</span>
+
+                                    <li class="user-icon d-none d-sm-block">
+                                        <div class="dropdown top-header-dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                                <span><i data-feather="user"></i>
+                                                    <i class="fas fa-chevron-down"></i>
                                             </a>
-                                        </div>
-                                        <div class="onhover-div">
-                                            <a href="wishlist.html">
-                                                <div class="wislist-empty">
-                                                    <i class="fab fa-gratipay"></i>
-                                                    <h6 class="mb-1">Your wislist empty !!</h6>
-                                                    <p class="font-light mb-0">explore more and shortlist items.</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="onhover-dropdown cart-dropdown">
-                                        <button type="button" class="btn btn-solid-default btn-spacing">
-                                            <i data-feather="shopping-cart" class="pe-2"></i>
-                                            <span>$5686.25</span>
-                                        </button>
-                                        <div class="onhover-div">
-                                            <div class="cart-menu">
-                                                <div class="cart-title">
-                                                    <h6>
-                                                        <i data-feather="shopping-bag"></i>
-                                                        <span class="label label-theme rounded-pill">5</span>
-                                                    </h6>
-                                                    <span class="d-md-none d-block">
-                                                        <i class="fas fa-arrow-right back-cart"></i>
-                                                    </span>
-                                                </div>
-                                                <ul class="custom-scroll">
-                                                    <li>
-                                                        <div class="media">
-                                                            <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                                class="img-fluid blur-up lazyload" alt="">
-                                                            <div class="media-body">
-                                                                <h6>Slim Fit Plastic Coat</h6>
-                                                                <div class="qty-with-price">
-                                                                    <span>$78.00</span>
-                                                                    <span>
-                                                                        <input type="number" class="form-control"
-                                                                            value="1">
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <button type="button" class="btn-close d-block d-md-none"
-                                                                aria-label="Close">
-                                                                <i class="fas fa-times"></i>
-                                                            </button>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="media">
-                                                            <img src="assets-voxo/images/fashion/product/front/7.jpg"
-                                                                class="img-fluid blur-up lazyload" alt="">
-                                                            <div class="media-body">
-                                                                <h6>Womens Stylish Jacket</h6>
-                                                                <div class="qty-with-price">
-                                                                    <span>$24.00</span>
-                                                                    <span>
-                                                                        <input type="number" class="form-control"
-                                                                            value="1">
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <button type="button" class="btn-close d-block d-md-none"
-                                                                aria-label="Close">
-                                                                <i class="fas fa-times"></i>
-                                                            </button>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="cart-btn">
-                                                <h6 class="cart-total"><span class="font-light">Total:</span> $
-                                                    542.00</h6>
-                                                <button onclick="location.href = 'cart.html';" type="button"
-                                                    class="btn btn-solid-default btn-block">
-                                                    Proceed to payment
-                                                </button>
-                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="dropdownMenuLink">
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">Log In</a>
+                                                </li>
+                                                <li class="w-100">
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('dashboard-customer') }}">Daftar</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="search-full">
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <i data-feather="search" class="font-light"></i>
-                                    </span>
-                                    <input type="text" class="form-control search-type" placeholder="Search here..">
-                                    <span class="input-group-text close-search">
-                                        <i data-feather="x" class="font-light"></i>
-                                    </span>
-                                </div>
-                                <div class="search-suggestion">
-                                    <ul class="custom-scroll">
-                                        <li>
-                                            <div class="product-cart media">
-                                                <img src="assets-voxo/images/electronics/product/1.jpg"
-                                                    class="img-fluid blur-up lazyload" alt="">
-                                                <div class="media-body">
-                                                    <a href="javascript:void(0)">
-                                                        <h6 class="mb-1">New Smart Watch 4 ERT2</h6>
-                                                    </a>
-                                                    <ul class="rating p-0">
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <p class="mb-0 mt-1">$28.00</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="product-cart media">
-                                                <img src="assets-voxo/images/electronics/product/5.jpg"
-                                                    class="img-fluid blur-up lazyload" alt="">
-                                                <div class="media-body">
-                                                    <a href="javascript:void(0)">
-                                                        <h6 class="mb-1">Powermatic 900 W Juicer</h6>
-                                                    </a>
-                                                    <ul class="rating m-0 p-0">
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fas fa-star theme-color"></i>
-                                                        </li>
-                                                    </ul>
-                                                    <p class="mb-0 mt-1">$35.00</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1008,33 +262,33 @@
     <div class="mobile-menu d-sm-none">
         <ul>
             <li>
-                <a href="index.html">
+                <a href="javascript:void(0)" class="active">
                     <i data-feather="home"></i>
-                    <span>Home</span>
+                    <span>Beranda</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" class="toggle-category">
-                    <i data-feather="align-justify"></i>
-                    <span>Category</span>
-                </a>
-            </li>
-            <li>
-                <a href="cart.html">
+                <a href="javascript:void(0)">
                     <i data-feather="shopping-bag"></i>
-                    <span>Cart</span>
+                    <span>Belanja</span>
                 </a>
             </li>
             <li>
-                <a href="wishlist.html">
-                    <i data-feather="heart"></i>
-                    <span>Wishlist</span>
+                <a href="javascript:void(0)">
+                    <i color="red" data-feather="edit"></i>
+                    <span>Klaim</span>
                 </a>
             </li>
             <li>
-                <a href="user-dashboard.html" class="active">
+                <a href="javascript:void(0)">
+                    <i data-feather="help-circle"></i>
+                    <span>Bantuan</span>
+                </a>
+            </li>
+            <li>
+                <a href="user-dashboard.html">
                     <i data-feather="user"></i>
-                    <span>Account</span>
+                    <span>Akun</span>
                 </a>
             </li>
         </ul>
@@ -1058,15 +312,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>User Dashboard</h3>
+                    <h3>Dasbor User</h3>
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="index.html">
+                                <a href="{{ route('landing-page') }}">
                                     <i class="fas fa-home"></i>
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+                            <li class="breadcrumb-item active" aria-current="page">Dasbor User</li>
                         </ol>
                     </nav>
                 </div>
@@ -1084,42 +338,26 @@
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light active" id="tab" data-bs-toggle="tab"
                                 data-bs-target="#dash" type="button"><i
-                                    class="fas fa-angle-right"></i>Dashboard</button>
+                                    class="fas fa-angle-right"></i>Dasbor</button>
                         </li>
 
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#order"
-                                type="button"><i class="fas fa-angle-right"></i>Orders</button>
+                                type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
                         </li>
 
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab"
                                 data-bs-target="#wishlist" type="button"><i
-                                    class="fas fa-angle-right"></i>Wishlist</button>
-                        </li>
-
-                        <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab" data-bs-target="#save"
-                                type="button"><i class="fas fa-angle-right"></i>Saved
-                                Address</button>
-                        </li>
-
-                        <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="4-tab" data-bs-toggle="tab" data-bs-target="#pay"
-                                type="button"><i class="fas fa-angle-right"></i>Payment</button>
+                                    class="fas fa-angle-right"></i>Deteksi Kerusakan</button>
                         </li>
 
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab"
                                 data-bs-target="#profile" type="button"><i
-                                    class="fas fa-angle-right"></i>Profile</button>
+                                    class="fas fa-angle-right"></i>Profil</button>
                         </li>
 
-                        <li class="nav-item">
-                            <button class="nav-link font-light" id="6-tab" data-bs-toggle="tab"
-                                data-bs-target="#security" type="button"><i
-                                    class="fas fa-angle-right"></i>Security</button>
-                        </li>
                     </ul>
                 </div>
 
@@ -1133,18 +371,18 @@
                             <div class="dashboard-right">
                                 <div class="dashboard">
                                     <div class="page-title title title1 title-effect">
-                                        <h2>My Dashboard</h2>
+                                        <h2>Dasbor Saya</h2>
                                     </div>
                                     <div class="welcome-msg">
-                                        <h6 class="font-light">Hello, <span>MARK JECNO !</span></h6>
-                                        <p class="font-light">From your My Account Dashboard you have the ability to
+                                        <h6 class="font-light dashboard-text">Selamat Datang, <span>User !</span></h6><span class="badge bg-primary dashboard-badge">Premium</span>
+                                        <!-- <p class="font-light">From your My Account Dashboard you have the ability to
                                             view a snapshot of your recent account activity and update your account
-                                            information. Select a link below to view or edit information.</p>
+                                            information. Select a link below to view or edit information.</p> -->
                                     </div>
 
                                     <div class="order-box-contain my-4">
                                         <div class="row g-4">
-                                            <div class="col-lg-4 col-sm-6">
+                                            <div class="col-lg-6 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
                                                         <img src="assets-voxo/images/svg/box.png"
@@ -1154,14 +392,14 @@
                                                         <img src="assets-voxo/images/svg/box1.png"
                                                             class="img-fluid blur-up lazyload" alt="">
                                                         <div>
-                                                            <h5 class="font-light">total order</h5>
-                                                            <h3>3648</h3>
+                                                            <h5 class="font-light">total polis</h5>
+                                                            <h3>5</h3>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-6">
+                                            <div class="col-lg-6 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
                                                         <img src="assets-voxo/images/svg/sent.png"
@@ -1171,14 +409,14 @@
                                                         <img src="assets-voxo/images/svg/sent1.png"
                                                             class="img-fluid blur-up lazyload" alt="">
                                                         <div>
-                                                            <h5 class="font-light">pending orders</h5>
-                                                            <h3>215</h3>
+                                                            <h5 class="font-light">deteksi kerusakan</h5>
+                                                            <h3>10</h3>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-6">
+                                            <!-- <div class="col-lg-4 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
                                                         <img src="assets-voxo/images/svg/wishlist.png"
@@ -1193,60 +431,35 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
 
                                     <div class="box-account box-info">
                                         <div class="box-head">
-                                            <h3>Account Information</h3>
+                                            <h3>Informasi Akun</h3>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <!-- <div class="col-sm-6">
                                                 <div class="box">
                                                     <div class="box-title">
-                                                        <h4>Contact Information</h4><a
+                                                        <h4>Informasi Kontak</h4><a
                                                             href="javascript:void(0)">Edit</a>
                                                     </div>
                                                     <div class="box-content">
-                                                        <h6 class="font-light">MARK JECNO</h6>
-                                                        <h6 class="font-light">MARk-JECNO@gmail.com</h6>
+                                                        <h6 class="font-light">User</h6>
+                                                        <h6 class="font-light">user@gmail.com</h6>
                                                         <a href="javascript:void(0)">Change Password</a>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-sm-6">
                                                 <div class="box">
                                                     <div class="box-title">
-                                                        <h4>Newsletters</h4><a href="javascript:void(0)">Edit</a>
+                                                        <h4>Buletin</h4>
                                                     </div>
                                                     <div class="box-content">
-                                                        <h6 class="font-light">You are currently not subscribed to any
-                                                            newsletter.</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="box address-box">
-                                                <div class="box-title">
-                                                    <h4>Address Book</h4><a href="javascript:void(0)">Manage
-                                                        Addresses</a>
-                                                </div>
-                                                <div class="box-content">
-                                                    <div class="row g-4">
-                                                        <div class="col-sm-6">
-                                                            <h6 class="font-light">Default Billing Address</h6>
-                                                            <h6 class="font-light">You have not set a default
-                                                                billing address.</h6>
-                                                            <a href="javascript:void(0)">Edit Address</a>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <h6 class="font-light">Default Shipping Address</h6>
-                                                            <h6 class="font-light">You have not set a default
-                                                                shipping address.</h6>
-                                                            <a href="javascript:void(0)">Edit Address</a>
-                                                        </div>
+                                                        <h6 class="font-light">Saat ini Anda tidak berlangganan buletin apa pun.</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1258,359 +471,29 @@
 
                         <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="order">
                             <div class="box-head mb-3">
-                                <h3>My Order</h3>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table cart-table">
-                                    <thead>
-                                        <tr class="table-head">
-                                            <th scope="col">image</th>
-                                            <th scope="col">Order Id</th>
-                                            <th scope="col">Product Details</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">View</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="mt-0">#125021</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Outwear & Coats</p>
-                                            </td>
-                                            <td>
-                                                <p class="success-button btn btn-sm">Shipped</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0)">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/2.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="mt-0">#125367</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Outwear & Coats</p>
-                                            </td>
-                                            <td>
-                                                <p class="danger-button btn btn-sm">Pending</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0)">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/3.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125948</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Sweatshirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="success-button btn btn-sm">Shipped</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0)">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/4.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#127569</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Hoodie t-shirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="success-button btn btn-sm">Shipped</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0)">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/5.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125753</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Hoodie t-shirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="danger-button btn btn-sm">Canceled</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0)">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/6.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125021</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Sweatshirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="danger-button btn btn-sm">Canceled</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="javascript:void(0)">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="wishlist">
-                            <div class="box-head mb-3">
-                                <h3>My Wishlish</h3>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table cart-table">
-                                    <thead>
-                                        <tr class="table-head">
-                                            <th scope="col">image</th>
-                                            <th scope="col">Order Id</th>
-                                            <th scope="col">Product Details</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125021</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Outwear & Coats</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="cart.html" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                    Cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/2.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125367</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Outwear & Coats</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="cart.html" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                    Cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/3.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125948</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Sweatshirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="cart.html" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                    Cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/4.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#127569</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Hoodie t-shirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="cart.html" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                    Cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/5.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#127569</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Hoodie t-shirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="cart.html" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                    Cart</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="product-left-sidebar.html">
-                                                    <img src="assets-voxo/images/fashion/product/front/6.jpg"
-                                                        class="blur-up lazyload" alt="">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <p class="m-0">#125021</p>
-                                            </td>
-                                            <td>
-                                                <p class="fs-6 m-0">Men's Sweatshirt</p>
-                                            </td>
-                                            <td>
-                                                <p class="theme-color fs-6">$49.54</p>
-                                            </td>
-                                            <td>
-                                                <a href="cart.html" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                    Cart</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade dashboard" id="save">
-                            <div class="box-head">
-                                <h3>Save Address</h3>
-                                <button class="btn btn-solid-default btn-sm fw-bold ms-auto" data-bs-toggle="modal"
+                                <h3>Polis Saya</h3>
+                                <button class="btn btn-primary btn-sm fw-bold ms-auto" data-bs-toggle="modal"
                                     data-bs-target="#addAddress"><i class="fas fa-plus"></i>
-                                    Add New Address</button>
+                                    Beli Polis</button>
                             </div>
                             <div class="save-details-box">
                                 <div class="row g-3">
                                     <div class="col-xl-4 col-md-6">
                                         <div class="save-details">
                                             <div class="save-name">
-                                                <h5>Mark Jugal</h5>
-                                                <div class="save-position">
+                                                <h5>Polis Mobil Avanza</h5>
+                                                <!-- <div class="save-position">
                                                     <h6>Home</h6>
-                                                </div>
+                                                </div> -->
                                             </div>
 
                                             <div class="save-address">
-                                                <p class="font-light">549 Sulphur Springs Road</p>
-                                                <p class="font-light">Downers Grove, IL</p>
-                                                <p class="font-light">60515</p>
+                                                <p class="font-light">Asuransi Mobil</p>
+                                                <p class="font-light">Lorem Ipsum Dolor Sit Amet</p>
                                             </div>
 
                                             <div class="mobile">
-                                                <p class="font-light mobile">Mobile No. +1-123-456-7890</p>
-                                            </div>
-
-                                            <div class="button">
-                                                <a href="javascript:void(0)" class="btn btn-sm">Edit</a>
-                                                <a href="javascript:void(0)" class="btn btn-sm">Remove</a>
+                                                <p class="font-light mobile">No. Polis 123-456-7890</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1618,25 +501,19 @@
                                     <div class="col-xl-4 col-md-6">
                                         <div class="save-details">
                                             <div class="save-name">
-                                                <h5>Method Zaki</h5>
-                                                <div class="save-position">
-                                                    <h6>Office</h6>
-                                                </div>
+                                                <h5>Polis Mobil Avanza</h5>
+                                                <!-- <div class="save-position">
+                                                    <h6>Home</h6>
+                                                </div> -->
                                             </div>
 
                                             <div class="save-address">
-                                                <p class="font-light">549 Sulphur Springs Road</p>
-                                                <p class="font-light">Downers Grove, IL</p>
-                                                <p class="font-light">60515</p>
+                                                <p class="font-light">Asuransi Mobil</p>
+                                                <p class="font-light">Lorem Ipsum Dolor Sit Amet</p>
                                             </div>
 
                                             <div class="mobile">
-                                                <p class="font-light mobile">Mobile No. +1-123-456-7890</p>
-                                            </div>
-
-                                            <div class="button">
-                                                <a href="javascript:void(0)" class="btn btn-sm">Edit</a>
-                                                <a href="javascript:void(0)" class="btn btn-sm">Remove</a>
+                                                <p class="font-light mobile">No. Polis 123-456-7890</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1644,25 +521,19 @@
                                     <div class="col-xl-4 col-md-6">
                                         <div class="save-details">
                                             <div class="save-name">
-                                                <h5>Mark Jugal</h5>
-                                                <div class="save-position">
+                                                <h5>Polis Mobil Avanza</h5>
+                                                <!-- <div class="save-position">
                                                     <h6>Home</h6>
-                                                </div>
+                                                </div> -->
                                             </div>
 
                                             <div class="save-address">
-                                                <p class="font-light">549 Sulphur Springs Road</p>
-                                                <p class="font-light">Downers Grove, IL</p>
-                                                <p class="font-light">60515</p>
+                                                <p class="font-light">Asuransi Mobil</p>
+                                                <p class="font-light">Lorem Ipsum Dolor Sit Amet</p>
                                             </div>
 
                                             <div class="mobile">
-                                                <p class="font-light mobile">Mobile No. +1-123-456-7890</p>
-                                            </div>
-
-                                            <div class="button">
-                                                <a href="javascript:void(0)" class="btn btn-sm">Edit</a>
-                                                <a href="javascript:void(0)" class="btn btn-sm">Remove</a>
+                                                <p class="font-light mobile">No. Polis 123-456-7890</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1670,261 +541,179 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade dashboard" id="pay">
-                            <div class="box-head">
-                                <h3>Card & Payment</h3>
-                                <button class="btn btn-solid-default btn-sm fw-bold ms-auto" data-bs-toggle="modal"
-                                    data-bs-target="#addPayment"><i class="fas fa-plus"></i>
-                                    Add New Card</button>
+                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="wishlist">
+                            <div class="box-head mb-3">
+                                <h3>Daftar Foto Deteksi Kerusakan</h3>
                             </div>
-
-                            <div class="card-details-section">
-                                <div class="row g-4">
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="payment-card-detail">
-                                            <div class="card-details">
-                                                <div class="card-number">
-                                                    <h4>XXXX - XXXX - XXXX - 2548</h4>
-                                                </div>
-
-                                                <div class="valid-detail">
-                                                    <div class="title">
-                                                        <span>valid</span>
-                                                        <span>thru</span>
-                                                    </div>
-                                                    <div class="date">
-                                                        <h3>12/23</h3>
-                                                    </div>
-                                                    <div class="primary">
-                                                        <span class="badge bg-pill badge-light">primary</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="name-detail">
-                                                    <div class="name">
-                                                        <h5>mark jecno</h5>
-                                                    </div>
-                                                    <div class="card-img">
-                                                        <img src="assets-voxo/images/payment-icon/1.jpg"
-                                                            class="img-fluid blur-up lazyloaded" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="edit-card">
-                                                <a data-bs-toggle="modal" data-bs-target="#addPayment"
-                                                    href="javascript:void(0)"><i class="far fa-edit"></i> edit</a>
-                                                <a href="javascript:void(0)"><i class="far fa-minus-square"></i>
-                                                    delete</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="edit-card-mobile">
-                                            <a data-bs-toggle="modal" data-bs-target="#addPayment"
-                                                href="javascript:void(0)"><i class="far fa-edit"></i> edit</a>
-                                            <a href="javascript:void(0)"><i class="far fa-minus-square"></i>
-                                                delete</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="payment-card-detail">
-                                            <div class="card-details card-visa">
-                                                <div class="card-number">
-                                                    <h4>XXXX - XXXX - XXXX - 2548</h4>
-                                                </div>
-
-                                                <div class="valid-detail">
-                                                    <div class="title">
-                                                        <span>valid</span>
-                                                        <span>thru</span>
-                                                    </div>
-                                                    <div class="date">
-                                                        <h3>12/23</h3>
-                                                    </div>
-                                                    <div class="primary">
-                                                        <span class="badge bg-pill badge-light">primary</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="name-detail">
-                                                    <div class="name">
-                                                        <h5>mark jecno</h5>
-                                                    </div>
-                                                    <div class="card-img">
-                                                        <img src="assets-voxo/images/payment-icon/2.jpg"
-                                                            class="img-fluid blur-up lazyloaded" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="edit-card">
-                                                <a data-bs-toggle="modal" data-bs-target="#addPayment"
-                                                    href="javascript:void(0)"><i class="far fa-edit"></i> edit</a>
-                                                <a href="javascript:void(0)"><i class="far fa-minus-square"></i>
-                                                    delete</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="edit-card-mobile">
-                                            <a data-bs-toggle="modal" data-bs-target="#addPayment"
-                                                href="javascript:void(0)"><i class="far fa-edit"></i> edit</a>
-                                            <a href="javascript:void(0)"><i class="far fa-minus-square"></i>
-                                                delete</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="payment-card-detail">
-                                            <div class="card-details dabit-card">
-                                                <div class="card-number">
-                                                    <h4>XXXX - XXXX - XXXX - 2548</h4>
-                                                </div>
-
-                                                <div class="valid-detail">
-                                                    <div class="title">
-                                                        <span>valid</span>
-                                                        <span>thru</span>
-                                                    </div>
-                                                    <div class="date">
-                                                        <h3>12/23</h3>
-                                                    </div>
-                                                    <div class="primary">
-                                                        <span class="badge bg-pill badge-light">primary</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="name-detail">
-                                                    <div class="name">
-                                                        <h5>mark jecno</h5>
-                                                    </div>
-                                                    <div class="card-img">
-                                                        <img src="assets-voxo/images/payment-icon/3.jpg"
-                                                            class="img-fluid blur-up lazyloaded" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="edit-card">
-                                                <a data-bs-toggle="modal" data-bs-target="#addPayment"
-                                                    href="javascript:void(0)"><i class="far fa-edit"></i> edit</a>
-                                                <a href="javascript:void(0)"><i class="far fa-minus-square"></i>
-                                                    delete</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="edit-card-mobile">
-                                            <a data-bs-toggle="modal" data-bs-target="#addPayment"
-                                                href="javascript:void(0)"><i class="far fa-edit"></i> edit</a>
-                                            <a href="javascript:void(0)"><i class="far fa-minus-square"></i>
-                                                delete</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table cart-table">
+                                    <thead>
+                                        <tr class="table-head">
+                                            <th scope="col">foto asli</th>
+                                            <th scope="col">foto hasil</th>
+                                            <th scope="col">tipe mobil</th>
+                                            <th scope="col">status deteksi</th>
+                                            <th scope="col">deskripsi kerusakan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <p class="fs-6 m-0">MPV</p>
+                                            </td>
+                                            <td>
+                                                <p class="fs-6">Foto Layak Proses</p>
+                                            </td>
+                                            <td>
+                                                <p class="m-0">Lecet</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <p class="fs-6 m-0">SUV</p>
+                                            </td>
+                                            <td>
+                                                <p class="fs-6">Foto Tidak Layak Proses</p>
+                                            </td>
+                                            <td>
+                                                <p class="m-0"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <p class="fs-6 m-0">Jeep</p>
+                                            </td>
+                                            <td>
+                                                <p class="fs-6">Foto Layak Proses</p>
+                                            </td>
+                                            <td>
+                                                <p class="m-0">Penyok</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
                         <div class="tab-pane fade dashboard-profile dashboard" id="profile">
                             <div class="box-head">
-                                <h3>Profile</h3>
+                                <h3>Profil</h3>
                                 <a href="javascript:void(0)" data-bs-toggle="modal"
                                     data-bs-target="#resetEmail">Edit</a>
                             </div>
                             <ul class="dash-profile">
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Company Name</h6>
+                                        <h6 class="font-light">Nama Lengkap</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>Voxo Fashion</h6>
+                                        <h6>Yusuf Rijal Robbani</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Country / Region</h6>
+                                        <h6 class="font-light">Alamat</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>Downers Grove, IL</h6>
+                                        <h6>Jl. Jerman No. 146, Kalibaru, Cilodong, Kota Depok</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Year Established</h6>
+                                        <h6 class="font-light">Tanggal registrasi</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>2018</h6>
+                                        <h6>10 Januari 2023</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Total Employees</h6>
+                                        <h6 class="font-light">Nomor Telepon</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>101 - 200 People</h6>
+                                        <h6>082199717914</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Category</h6>
+                                        <h6 class="font-light">Email</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>Clothing</h6>
+                                        <h6>yusufrijalr14@gmail.com</h6>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Street Address</h6>
+                                        <h6 class="font-light">Tipe Akun</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>549 Sulphur Springs Road</h6>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="left">
-                                        <h6 class="font-light">City/State</h6>
-                                    </div>
-                                    <div class="right">
-                                        <h6>Downers Grove, IL</h6>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="left">
-                                        <h6 class="font-light">Zip</h6>
-                                    </div>
-                                    <div class="right">
-                                        <h6>60515</h6>
+                                        <h6>Premium</h6>
                                     </div>
                                 </li>
                             </ul>
 
                             <div class="box-head mt-lg-5 mt-3">
-                                <h3>Login Details</h3>
-                                <a href="javascript:void(0)" data-bs-toggle="modal"
-                                    data-bs-target="#resetEmail">Edit</a>
+                                <h3>Detail Kredensial</h3>
+                                <!-- <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#resetEmail">Edit</a> -->
                             </div>
 
                             <ul class="dash-profile">
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Email Address</h6>
+                                        <h6 class="font-light">Email</h6>
                                     </div>
                                     <div class="right">
-                                        <h6>mark.jugal@gmail.com</h6>
+                                        <h6>yusufrijalr14@gmail.com</h6>
                                     </div>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#resetEmail">Edit</a>
+                                    <!-- <a href="javascript:void(0)" data-bs-toggle="modal"
+                                        data-bs-target="#resetEmail">Edit</a> -->
                                 </li>
 
                                 <li>
                                     <div class="left">
-                                        <h6 class="font-light">Phone No.</h6>
+                                        <h6 class="font-light">Nomor Telepon </h6>
                                     </div>
                                     <div class="right">
                                         <h6>+1-202-555-0198</h6>
@@ -1935,7 +724,7 @@
 
                                 <li class="mb-0">
                                     <div class="left">
-                                        <h6 class="font-light">Password</h6>
+                                        <h6 class="font-light">Kata Sandi</h6>
                                     </div>
                                     <div class="right">
                                         <h6>●●●●●●</h6>
@@ -1945,34 +734,6 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="tab-pane fade dashboard-security dashboard" id="security">
-                            <div class="box-head">
-                                <h3>Delete Your Account</h3>
-                            </div>
-                            <div class="security-details">
-                                <h5 class="font-light mt-3">Hi <span> Mark Enderess,</span>
-                                </h5>
-                                <p class="font-light mt-1">We Are Sorry To Here You Would Like To Delete Your Account.
-                                </p>
-                            </div>
-
-                            <div class="security-details-1 mb-0">
-                                <div class="page-title">
-                                    <h4 class="fw-bold">Note</h4>
-                                </div>
-                                <p class="font-light">Deleting your account will permanently remove your profile,
-                                    personal settings, and all other associated information. Once your account is
-                                    deleted, You will be logged out and will be unable to log back in.</p>
-
-                                <p class="font-light mb-4">If you understand and agree to the above statement, and would
-                                    still like to delete your account, than click below</p>
-
-                                <button class="btn btn-solid-default btn-sm fw-bold rounded" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal">Delete Your
-                                    Account</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1980,32 +741,6 @@
     </section>
     <!-- user dashboard section end -->
 
-    <!-- Subscribe Section Start -->
-    <section class="subscribe-section section-b-space">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-6">
-                    <div class="subscribe-details">
-                        <h2 class="mb-3">Subscribe Our News</h2>
-                        <h6 class="font-light">Subscribe and receive our newsletters to follow the news about our fresh
-                            and fantastic Products.</h6>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-3">
-                    <div class="subsribe-input">
-                        <div class="input-group">
-                            <input type="text" class="form-control subscribe-input" placeholder="Your Email Address">
-                            <button class="btn btn-solid-default" type="button">Button</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Subscribe Section End -->
-
-    <!-- footer start -->
     <footer class="footer-sm-space">
         <div class="main-footer">
             <div class="container">
@@ -2013,127 +748,130 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-contact">
                             <div class="brand-logo">
-                                <a href="index.html" class="footer-logo">
-                                    <svg class="svg-icon">
-                                        <use class="fill-color" xlink:href="assets-voxo/svg/icons.svg#logo"></use>
-                                    </svg>
-                                    <img src="assets-voxo/images/logo.png" class="img-fluid blur-up lazyload" alt="logo">
+                                <a href="{{ route('landing-page') }}" class="footer-logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
+                                        alt="logo">
                                 </a>
                             </div>
-                            <ul class="contact-lists">
-                                <li>
-                                    <span>
-                                        <b>phone:</b>
-                                        <span class="font-light"> + 185659635</span>
-                                    </span>
-
-                                </li>
-                                <li>
-                                    <span>
-                                        <b>Address:</b>
-                                        <span class="font-light"> 1418 Riverwood Drive, Suite 3245
-                                            Cottonwood, CA 96052, United States</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <b>Email:</b>
-                                        <span class="font-light"> Voxo123@gmail.com</span>
-                                    </span>
-
-                                </li>
-                            </ul>
+                            <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
+                            </p>
+                            <p>Download app from:</p>
+                            <div>
+                                <center><img src="assets-voxo/images/logos/android.png" width="100">
+                                    <img src="assets-voxo/images/logos/ios.png" width="100">
+                                </center>
+                            </div>
                         </div>
                     </div>
+
                     <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="footer-links">
                             <div class="footer-title">
-                                <h3>About us</h3>
+                                <h3>Tentang Kami</h3>
                             </div>
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="index.html" class="font-dark">Home</a>
+                                        <a href="javascript:void(0)" class="font-dark">Beranda</a>
                                     </li>
                                     <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Shop</a>
+                                        <a href="javascript:void(0)" class="font-dark">Perusahaan</a>
                                     </li>
                                     <li>
-                                        <a href="about-us.html" class="font-dark">About Us</a>
+                                        <a href="javascript:void(0)" class="font-dark">Komisaris &amp; Direksi</a>
                                     </li>
                                     <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Blog</a>
+                                        <a href="javascript:void(0)" class="font-dark">Tenaga Ahli</a>
                                     </li>
                                     <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Contact</a>
+                                        <a href="javascript:void(0)" class="font-dark">Partner</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                         <div class="footer-links">
                             <div class="footer-title">
-                                <h3>New Categories</h3>
+                                <h3>Produk Asuransi</h3>
                             </div>
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Latest Shoes</a>
+                                        <a href=javascript:void(0)" class="font-dark">Simas Mobil</a>
                                     </li>
                                     <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Branded Jeans</a>
+                                        <a href="javascript:void(0)" class="font-dark">Zurich Autocilin</a>
                                     </li>
                                     <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">New Jackets</a>
+                                        <a href="javascript:void(0)" class="font-dark">Astra Garda Oto</a>
                                     </li>
-                                    <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Colorfull Hoodies</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-left-sidebar.html" class="font-dark">Shiner Goggles</a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                         <div class="footer-links">
                             <div class="footer-title">
-                                <h3>Get Help</h3>
+                                <h3>Bantuan</h3>
                             </div>
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="user-dashboard.html" class="font-dark">Your Orders</a>
+                                        <a href="javascript:void(0)" class="font-dark">Akun Anda</a>
                                     </li>
                                     <li>
-                                        <a href="user-dashboard.html" class="font-dark">Your Account</a>
+                                        <a href="javascript:void(0)" class="font-dark">Keranjang</a>
                                     </li>
                                     <li>
-                                        <a href="order-tracking.html" class="font-dark">Track Orders</a>
+                                        <a href="javascript:void(0)" class="font-dark">FAQs</a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="font-dark">Your Wishlist</a>
+                                        <a href="javascript:void(0)" class="font-dark">Kebijakan Privasi</a>
                                     </li>
                                     <li>
-                                        <a href="faq.html" class="font-dark">Shopping FAQs</a>
+                                        <a href="javascript:void(0)" class="font-dark">Hubungi Kami</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
                         <div class="footer-newsletter">
-                            <h3>Let’s stay in touch</h3>
-                            <div class="form-newsletter">
-                                <div class="input-group mb-4">
-                                    <input type="text" class="form-control" placeholder="Your Email Address">
-                                    <span class="input-group-text" id="basic-addon4"><i
-                                            class="fas fa-arrow-right"></i></span>
+                            <h3>Hubungi kami:</h3>
+                            <div class="footer-number">
+                                <div class="footer-number-image">
+                                    <img src="assets-voxo/images/shoes/other/headphone.png"
+                                        class="img-fluid blur-up lazyload" alt="">
                                 </div>
-                                <p class="font-dark mb-0">Keep up to date with our latest news and special offers.
-                                </p>
+
+                                <div class="footer-number-container">
+                                    <h3>+62 21 7783 7035</h3>
+                                </div>
+                            </div>
+
+                            <div class="footer-details">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok.
+                                                Jawa Barat. 16412</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
+                                        </span>
+                                    </li>
+                                </ul>
+
+                                <div>
+                                    <img src="assets-voxo/images/logos/ojk.webp" width="200">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2143,39 +881,13 @@
         <div class="sub-footer">
             <div class="container">
                 <div class="row gy-3">
-                    <div class="col-md-6">
-                        <ul>
-                            <li class="font-dark">We accept:</li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/1.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/2.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/3.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/4.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="mb-0 font-dark">© 2022, Voxo Theme. Made with heart by Pixelstrap</p>
+                    <div class="col-md-12">
+                        <p class="mb-0 font-dark text-center">© 2023 Claimoo. Hak Cipta Dilindungi Undang-undang</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer end -->
 
     <!-- Reset Password Modal Start -->
     <div class="modal fade reset-email-modal" id="resetEmail">
@@ -2324,23 +1036,6 @@
         </div>
     </div>
     <!-- Comfirm Delete Modal End -->
-
-    <!-- theme Setting Start -->
-    <div class="theme-setting">
-        <ul>
-            <li>
-                <button id="darkButton" class="btn btn-sm dark-buttton">Dark</button>
-            </li>
-            <li>
-                <button class="btn btn-sm rtl-button">RTL</button>
-            </li>
-            <li class="color-picker">
-                <input type="color" class="form-control form-control-color" id="ColorPicker1" value="#e22454"
-                    title="Choose your color">
-            </li>
-        </ul>
-    </div>
-    <!-- theme Setting End -->
 
     <!-- tap to top Section Start -->
     <div class="tap-to-top">

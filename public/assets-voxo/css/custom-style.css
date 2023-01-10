@@ -1,11 +1,29 @@
+.dashboard-text {
+    display: inline;
+    margin-right: 5px !important;
+}
+
+.dashboard-badge {
+    background-color: #073f78 !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     header .main-menu {
         padding: 20px 0;
     }
 
+    header .main-menu .menu-left {
+        display: flex !important;
+        align-items: center;
+    }
+
     header .main-menu .menu-left .toggle-nav {
         padding: 0 10px;
+    }
+
+    .bell-icon {
+        display: inline-block !important;
     }
 
     .brand-logo {
@@ -149,6 +167,11 @@
 @media only screen and (min-width: 600px) {
     header .main-menu {
         padding: 20px 0;
+    }
+
+    header .main-menu .menu-left {
+        display: flex !important;
+        align-items: center;
     }
 
     header .main-menu .menu-left .toggle-nav {
@@ -427,5 +450,14 @@
 @media only screen and (min-width: 1200px) {
     .brand-logo {
         width: 250px;
+    }
+
+    .main-menu-dashboard {
+        justify-content: space-between !important;
+        -webkit-box-pack: justify !important;
+    }
+
+    .menu-right {
+        margin-left: 0 !important;
     }
 }

@@ -66,7 +66,7 @@
                                     <i data-feather="align-justify" class="sidebar-bar"></i>
                                 </div>
                                 <div class="brand-logo">
-                                    <a href="{{ route('dashboard-customer') }}">
+                                    <a href="{{ route('landing-page') }}">
                                         <img src="assets-voxo/images/logo-claimoo.png"
                                             class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
@@ -220,11 +220,11 @@
                                                 aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
                                                     <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">EN</a>
+                                                        href="{{ route('landing-page') }}">EN</a>
                                                 </li>
                                                 <li class="w-100">
                                                     <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">ID</a>
+                                                        href="{{ route('landing-page') }}">ID</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -241,11 +241,11 @@
                                                 aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
                                                     <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Log In</a>
+                                                        href="{{ route('landing-page') }}">Log In</a>
                                                 </li>
                                                 <li class="w-100">
                                                     <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Daftar</a>
+                                                        href="{{ route('landing-page') }}">Daftar</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -339,7 +339,7 @@
                                 Asuransi
                                 terpercaya.</p>
                         </div>
-                        <a href="{{ route('dashboard-customer') }}">
+                        <a href="{{ route('landing-page') }}">
                             <div class="about-footer-parent mt-3 mt-lg-5">
                                 <div class="about-footer text-center">
                                     Selengkapnya
@@ -364,7 +364,7 @@
                         Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi
                         terpercaya.</p>
                 </div>
-                <a href="{{ route('dashboard-customer') }}">
+                <a href="{{ route('landing-page') }}">
                     <div class="text-center" style="width: 130px;">
                         <div class="about-footer text-center mt-3">
                             Selengkapnya
@@ -488,7 +488,7 @@
                             <p class="mt-4">Daftar, Pilih Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
                                 tinggal pada
                                 asuransi mobil yang rumit. Tonton video untuk mengetahui lebih lanjut.</p>
-                            <a href="{{ route('dashboard-customer') }}">
+                            <a href="{{ route('landing-page') }}">
                                 <div class="btn btn-solid-default btn-offer text-center mt-3">
                                     DAPATKAN PENAWARAN TERBAIK
                                 </div>
@@ -573,7 +573,7 @@
                 <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan
                     menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
             </div>
-            <a href="{{ route('dashboard-customer') }}">
+            <a href="{{ route('landing-page') }}">
                 <div class="reference-footer text-center mt-4">
                     AJAK TEMAN ANDA
                 </div>
@@ -589,7 +589,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-contact">
                             <div class="brand-logo">
-                                <a href="{{ route('dashboard-customer') }}" class="footer-logo">
+                                <a href="{{ route('landing-page') }}" class="footer-logo">
                                     <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
                                         alt="logo">
                                 </a>
