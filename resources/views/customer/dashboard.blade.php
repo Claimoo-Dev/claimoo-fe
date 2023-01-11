@@ -66,8 +66,8 @@
                                 </div>
                                 <div class="brand-logo">
                                     <a href="{{ route('dashboard-customer') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
-                                            alt="logo">
+                                        <img src="assets-voxo/images/logo-claimoo.png"
+                                            class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
                                                     <a href="javascript:void(0)" id="installApp"
-                                                        class="btn btn-solid-default btn-spacing w-100">TAMBAHKAN KE
+                                                        class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
                                                         HOMESCREEN</a>
                                                 </div>
                                             </li>
@@ -337,8 +337,7 @@
                     <ul class="nav nav-tabs custome-nav-tabs flex-column category-option" id="myTab">
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light active" id="tab" data-bs-toggle="tab"
-                                data-bs-target="#dash" type="button"><i
-                                    class="fas fa-angle-right"></i>Dasbor</button>
+                                data-bs-target="#dash" type="button"><i class="fas fa-angle-right"></i>Dasbor</button>
                         </li>
 
                         <li class="nav-item mb-2">
@@ -348,14 +347,24 @@
 
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab"
-                                data-bs-target="#wishlist" type="button"><i
-                                    class="fas fa-angle-right"></i>Deteksi Kerusakan</button>
+                                data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Deteksi
+                                Kerusakan</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab"
+                            <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab"
                                 data-bs-target="#profile" type="button"><i
                                     class="fas fa-angle-right"></i>Profil</button>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <button class="nav-link font-light" id="4-tab" data-bs-toggle="tab" data-bs-target="#reward"
+                                type="button"><i class="fas fa-angle-right"></i>Dapatkan Penghargaan</button>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#about"
+                                type="button"><i class="fas fa-angle-right"></i>Tentang Aplikasi</button>
                         </li>
 
                     </ul>
@@ -363,7 +372,7 @@
 
                 <div class="col-lg-9">
                     <div class="filter-button dash-filter dashboard">
-                        <button class="btn btn-solid-default btn-sm fw-bold filter-btn">Show Menu</button>
+                        <button class="btn btn-primary btn-sm fw-bold filter-btn">Show Menu</button>
                     </div>
 
                     <div class="tab-content" id="myTabContent">
@@ -374,7 +383,8 @@
                                         <h2>Dasbor Saya</h2>
                                     </div>
                                     <div class="welcome-msg">
-                                        <h6 class="font-light dashboard-text">Selamat Datang, <span>User !</span></h6><span class="badge bg-primary dashboard-badge">Premium</span>
+                                        <h6 class="font-light dashboard-text">Selamat Datang, <span>User !</span></h6>
+                                        <span class="badge bg-primary dashboard-badge">Premium</span>
                                         <!-- <p class="font-light">From your My Account Dashboard you have the ability to
                                             view a snapshot of your recent account activity and update your account
                                             information. Select a link below to view or edit information.</p> -->
@@ -459,7 +469,8 @@
                                                         <h4>Buletin</h4>
                                                     </div>
                                                     <div class="box-content">
-                                                        <h6 class="font-light">Saat ini Anda tidak berlangganan buletin apa pun.</h6>
+                                                        <h6 class="font-light">Saat ini Anda tidak berlangganan buletin
+                                                            apa pun.</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -734,6 +745,28 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <div class="tab-pane fade dashboard-security dashboard" id="reward">
+                            <div class="box-head">
+                                <h3>Dapatkan Penghargaan</h3>
+                            </div>
+                            <div class="security-details">
+                                <h5 class="font-light mt-3">Ajak teman Anda dan dapatkan poin nya</h5>
+                                <p class="font-light mt-3">Anda akan mendapatkan 150 poin ketika teman Anda
+                                    menyelesaikan pembelian polis pertama nya dengan
+                                    menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.
+                                </p>
+                            </div>
+
+                            <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal">Ajak Teman Anda</button>
+                        </div>
+
+                        <div class="tab-pane fade dashboard-security dashboard" id="about">
+                            <div class="box-head">
+                                <h3>Versi 1.0.0</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -915,7 +948,7 @@
                 </div>
                 <div class="modal-footer pt-0">
                     <button class="btn bg-secondary rounded-1 modal-close-button" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-solid-default rounded-1" data-bs-dismiss="modal">Save changes</button>
+                    <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save changes</button>
                 </div>
             </div>
         </div>
@@ -948,7 +981,7 @@
                 <div class="modal-footer pt-0 text-end d-block">
                     <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button"
                         data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-solid-default rounded-1" data-bs-dismiss="modal">Save Address</button>
+                    <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save Address</button>
                 </div>
             </div>
         </div>
@@ -995,7 +1028,7 @@
                 <div class="modal-footer pt-0 text-end d-block">
                     <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button"
                         data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-solid-default rounded-1" data-bs-dismiss="modal">Save Card Details</button>
+                    <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save Card Details</button>
                 </div>
             </div>
         </div>
@@ -1013,7 +1046,7 @@
                     <h4>Are you sure you want to delete your account?</h4>
                 </div>
                 <div class="modal-footer d-block text-center mb-4">
-                    <button class="btn btn-solid-default btn-sm fw-bold rounded" data-bs-target="#doneModal"
+                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#doneModal"
                         data-bs-toggle="modal" data-bs-dismiss="modal">Yes Delete account</button>
                 </div>
             </div>
@@ -1029,7 +1062,7 @@
                     <h4>Done!!! Delete Your Account</h4>
                 </div>
                 <div class="modal-footer d-block text-center mb-4">
-                    <button class="btn btn-solid-default btn-sm fw-bold rounded" data-bs-target="#exampleModalToggle"
+                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#exampleModalToggle"
                         data-bs-toggle="modal" data-bs-dismiss="modal">Okay</button>
                 </div>
             </div>

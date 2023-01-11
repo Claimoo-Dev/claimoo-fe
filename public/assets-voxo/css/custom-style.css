@@ -7,6 +7,11 @@
     background-color: #073f78 !important;
 }
 
+.btn-primary {
+    background-color: #073f78!important;
+    border-radius: 5px !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     header .main-menu {
