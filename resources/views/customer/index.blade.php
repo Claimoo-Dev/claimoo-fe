@@ -681,7 +681,7 @@
 
                     <div class="col-lg-6 mt-lg-0 mt-4">
                         <div class="poster-image">
-                            <img src="assets-voxo/images/produk/penawaran.jpg" class="img-fluid bg-img blur-up lazyload" alt="">
+                            <img src="assets-voxo/images/produk/penawaran.png" class="img-fluid bg-img blur-up lazyload" alt="">
                         </div>
                     </div>
                 </div>
