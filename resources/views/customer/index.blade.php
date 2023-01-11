@@ -61,9 +61,6 @@
                     <div class="col-lg-12">
                         <div class="main-menu">
                             <div class="menu-left">
-                                <div class="toggle-nav">
-                                    <i data-feather="align-justify" class="sidebar-bar"></i>
-                                </div>
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
                                         <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
@@ -237,6 +234,12 @@
                                                     <a class="dropdown-item" href="{{ route('landing-page') }}">Daftar</a>
                                                 </li>
                                             </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="toggle-icon .d-md-none .d-lg-block">
+                                        <div class="toggle-nav">
+                                            <i data-feather="align-justify" class="sidebar-bar"></i>
                                         </div>
                                     </li>
                                 </ul>

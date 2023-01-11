@@ -58,7 +58,8 @@
 
     .banner .slick-list .slick-track .slick-slide div img {
         height: 100%;
-        object-fit: contain;
+        /* object-fit: contain; */
+        width: 100%;
     }
 
     .slider-text {
@@ -192,6 +193,10 @@
         padding: 0 30px;
     }
 
+    .mobile-menu {
+        display: block !important;
+    }
+
     .brand-logo {
         width: 180px;
     }
@@ -223,7 +228,8 @@
 
     .banner .slick-list .slick-track .slick-slide div img {
         height: 100%;
-        object-fit: contain;
+        /* object-fit: contain; */
+        width: 100%;
     }
 
     .slider-text {
@@ -334,10 +340,18 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .mobile-menu {
+        display: block !important;
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .mobile-menu {
+        display: none !important;
+    }
+
     .brand-logo {
         width: 200px;
     }
@@ -365,7 +379,7 @@
 
     .banner .slick-list .slick-track .slick-slide div .slider img {
         height: 100%;
-        object-fit: contain;
+        /* object-fit: contain; */
         width: 100%;
     }
 
@@ -471,6 +485,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .nav-menu {
+        display: flex !important;
+    }
+
     .brand-logo {
         width: 250px;
     }

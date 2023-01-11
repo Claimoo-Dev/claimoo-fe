@@ -61,9 +61,6 @@
                     <div class="col-lg-12">
                         <div class="main-menu main-menu-dashboard">
                             <div class="menu-left">
-                                <div class="toggle-nav">
-                                    <i data-feather="align-justify" class="sidebar-bar"></i>
-                                </div>
                                 <div class="brand-logo">
                                     <a href="{{ route('dashboard-customer') }}">
                                         <img src="assets-voxo/images/logo-claimoo.png"
@@ -248,6 +245,12 @@
                                             </ul>
                                         </div>
                                     </li>
+
+                                    <li class="toggle-icon .d-md-none .d-lg-block">
+                                        <div class="toggle-nav">
+                                            <i data-feather="align-justify" class="sidebar-bar"></i>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -347,8 +350,8 @@
 
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab"
-                                data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Deteksi
-                                Kerusakan</button>
+                                data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Riwayat
+                                Deteksi</button>
                         </li>
 
                         <li class="nav-item mb-2">
@@ -419,7 +422,7 @@
                                                         <img src="assets-voxo/images/svg/sent1.png"
                                                             class="img-fluid blur-up lazyload" alt="">
                                                         <div>
-                                                            <h5 class="font-light">deteksi kerusakan</h5>
+                                                            <h5 class="font-light">riwayat deteksi</h5>
                                                             <h3>10</h3>
                                                         </div>
                                                     </div>
@@ -554,7 +557,7 @@
 
                         <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="wishlist">
                             <div class="box-head mb-3">
-                                <h3>Daftar Foto Deteksi Kerusakan</h3>
+                                <h3>Daftar Riwayat Deteksi Kerusakan</h3>
                             </div>
                             <div class="table-responsive">
                                 <table class="table cart-table">
