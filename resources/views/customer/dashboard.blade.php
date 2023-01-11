@@ -344,13 +344,13 @@
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#order"
+                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#policy"
                                 type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
                         </li>
 
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab"
-                                data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Riwayat
+                                data-bs-target="#detection" type="button"><i class="fas fa-angle-right"></i>Riwayat
                                 Deteksi</button>
                         </li>
 
@@ -368,6 +368,11 @@
                         <li class="nav-item mb-2">
                             <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#about"
                                 type="button"><i class="fas fa-angle-right"></i>Tentang Aplikasi</button>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <button class="nav-link font-light" id="6-tab" data-bs-toggle="tab" data-bs-target="#setting"
+                                type="button"><i class="fas fa-angle-right"></i>Pengaturan</button>
                         </li>
 
                     </ul>
@@ -483,7 +488,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="order">
+                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="policy">
                             <div class="box-head mb-3">
                                 <h3>Polis Saya</h3>
                                 <button class="btn btn-primary btn-sm fw-bold ms-auto" data-bs-toggle="modal"
@@ -555,7 +560,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="wishlist">
+                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="detection">
                             <div class="box-head mb-3">
                                 <h3>Daftar Riwayat Deteksi Kerusakan</h3>
                             </div>
@@ -768,6 +773,12 @@
                         <div class="tab-pane fade dashboard-security dashboard" id="about">
                             <div class="box-head">
                                 <h3>Versi 1.0.0</h3>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade dashboard-security dashboard" id="setting">
+                            <div class="box-head">
+                                <h3>Pengaturan</h3>
                             </div>
                         </div>
                     </div>
