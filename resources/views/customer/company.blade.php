@@ -61,9 +61,6 @@
                     <div class="col-lg-12">
                         <div class="main-menu">
                             <div class="menu-left">
-                                <div class="toggle-nav">
-                                    <i data-feather="align-justify" class="sidebar-bar"></i>
-                                </div>
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
                                         <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
@@ -84,7 +81,7 @@
                                                 </div>
                                             </li>
                                             <li class="home-menu">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
+                                                <a href="{{ route('landing-page') }}" class="nav-link menu-title">Beranda</a>
 
                                             </li>
 
@@ -239,6 +236,12 @@
                                             </ul>
                                         </div>
                                     </li>
+
+                                    <li class="toggle-icon .d-md-none .d-lg-block">
+                                        <div class="toggle-nav">
+                                            <i data-feather="align-justify" class="sidebar-bar"></i>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -285,11 +288,46 @@
         </ul>
     </div>
     <!-- mobile fix menu end -->
-    <!-- konten start -->
+
+    <!-- Breadcrumb section start -->
+    <section class="breadcrumb-section section-b-space">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Tentang Perusahaan</h3>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('landing-page') }}">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Tentang Perusahaan</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb section end -->
+
+    <!-- Content start -->
 
 
 
-    <!-- konten end -->
+    <!-- content end -->
 
 
     <!-- footer start -->

@@ -81,7 +81,7 @@
                                                 </div>
                                             </li>
                                             <li class="home-menu">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
+                                                <a href="{{ route('landing-page') }}" class="nav-link menu-title">Beranda</a>
 
                                             </li>
 
@@ -90,7 +90,7 @@
                                                     Kami</a>
                                                 <ul class="nav-submenu menu-content">
                                                     <li>
-                                                        <a href="javascript:void(0)">Perusahaan</a>
+                                                        <a href="{{ route('company') }}">Perusahaan</a>
                                                         <a href="javascript:void(0)">Komisaris &amp; Direksi</a>
                                                         <a href="javascript:void(0)">Tenaga Ahli</a>
                                                         <a href="javascript:void(0)">Partner</a>

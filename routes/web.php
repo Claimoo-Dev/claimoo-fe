@@ -41,7 +41,7 @@ Route::get('/sign-up', function () {
 
 Route::get('customer', [CustomerPageController::class, 'index'])->name('landing-page');
 Route::get('dashboard', [CustomerPageController::class, 'dashboard'])->name('dashboard-customer');
-Route::get('perusahaan', [CustomerPageController::class, 'company']);
+Route::get('perusahaan', [CustomerPageController::class, 'company'])->name('company');
 Route::get('komisaris-direksi', [CustomerPageController::class, 'commissionerDirector']);
 Route::get('tenaga-ahli', [CustomerPageController::class, 'expert']);
 Route::get('partner', [CustomerPageController::class, 'partner']);
