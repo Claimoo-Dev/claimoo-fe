@@ -35,4 +35,21 @@ class CustomerPageController extends Controller
     {
         return view('customer.partner');
     }
+
+    public function shop()
+    {
+        return view('customer.shop');
+    }
+    
+    public function claim()
+    {
+        $type = 'free';
+
+        return view('customer.claim')->with(compact('type'));
+    }
+
+    public function support()
+    {
+        return view('customer.support');
+    }
 }

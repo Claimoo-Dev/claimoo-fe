@@ -45,3 +45,6 @@ Route::get('perusahaan', [CustomerPageController::class, 'company']);
 Route::get('komisaris-direksi', [CustomerPageController::class, 'commissionerDirector']);
 Route::get('tenaga-ahli', [CustomerPageController::class, 'expert']);
 Route::get('partner', [CustomerPageController::class, 'partner']);
+Route::get('shop', [CustomerPageController::class, 'shop'])->name('shop');
+Route::get('claim', [CustomerPageController::class, 'claim'])->name('claim');
+Route::get('support', [CustomerPageController::class, 'support'])->name('support');

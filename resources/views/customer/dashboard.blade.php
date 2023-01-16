@@ -265,31 +265,31 @@
     <div class="mobile-menu d-sm-none">
         <ul>
             <li>
-                <a href="javascript:void(0)" class="active">
+                <a href="{{ route('landing-page') }}">
                     <i data-feather="home"></i>
                     <span>Beranda</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a href="{{ route('shop') }}">
                     <i data-feather="shopping-bag"></i>
                     <span>Belanja</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
-                    <i color="red" data-feather="edit"></i>
+                <a href="{{ route('claim') }}">
+                    <i data-feather="edit"></i>
                     <span>Klaim</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a href="{{ route('support') }}">
                     <i data-feather="help-circle"></i>
                     <span>Bantuan</span>
                 </a>
             </li>
             <li>
-                <a href="user-dashboard.html">
+                <a href="{{ route('dashboard-customer') }}" class="active">
                     <i data-feather="user"></i>
                     <span>Akun</span>
                 </a>

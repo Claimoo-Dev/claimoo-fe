@@ -25,7 +25,8 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- bootstrap css -->
     <link id="rtl-link" rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/bootstrap.css">
@@ -63,7 +64,8 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+                                        <img src="assets-voxo/images/logo-claimoo.png"
+                                            class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
 
@@ -185,7 +187,8 @@
                                                 <div class="mobile-contain">
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
-                                                    <a href="javascript:void(0)" id="installApp" class="btn btn-solid-default btn-spacing w-100">TAMBAHKAN KE
+                                                    <a href="javascript:void(0)" id="installApp"
+                                                        class="btn btn-solid-default btn-spacing w-100">TAMBAHKAN KE
                                                         HOMESCREEN</a>
                                                 </div>
                                             </li>
@@ -205,11 +208,13 @@
 
                                     <li class="language-icon d-none d-sm-block">
                                         <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
                                                 <span><i data-feather="globe"></i>ID
                                                     <i class="fas fa-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
                                                     <a class="dropdown-item" href="{{ route('landing-page') }}">EN</a>
                                                 </li>
@@ -222,16 +227,20 @@
 
                                     <li class="user-icon d-none d-sm-block">
                                         <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
                                                 <span><i data-feather="user"></i>
                                                     <i class="fas fa-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('landing-page') }}">Log In</a>
+                                                    <a class="dropdown-item" href="{{ route('landing-page') }}">Log
+                                                        In</a>
                                                 </li>
                                                 <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('landing-page') }}">Daftar</a>
+                                                    <a class="dropdown-item"
+                                                        href="{{ route('landing-page') }}">Daftar</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -256,31 +265,31 @@
     <div class="mobile-menu d-sm-none">
         <ul>
             <li>
-                <a href="javascript:void(0)" class="active">
+                <a href="{{ route('landing-page') }}" class="active">
                     <i data-feather="home"></i>
                     <span>Beranda</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a href="{{ route('shop') }}">
                     <i data-feather="shopping-bag"></i>
                     <span>Belanja</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
-                    <i color="red" data-feather="edit"></i>
+                <a href="{{ route('claim') }}">
+                    <i data-feather="edit"></i>
                     <span>Klaim</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a href="{{ route('support') }}">
                     <i data-feather="help-circle"></i>
                     <span>Bantuan</span>
                 </a>
             </li>
             <li>
-                <a href="user-dashboard.html">
+                <a href="{{ route('dashboard-customer') }}">
                     <i data-feather="user"></i>
                     <span>Akun</span>
                 </a>
@@ -290,34 +299,34 @@
     <!-- mobile fix menu end -->
 
     <section class="pt-0 overflow-hidden">
-        <div class="banner">
+        <div class="banner" id="banner">
             <div class="slider">
-                <img class="img-fluid blur-up lazyload" src="assets-voxo/images/car1.jpg" alt="">
+                <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
                 <h2 class="slider-text">Aplikasi inspeksi Mobil tercerdas di Indonesia</h2>
-                <h2 class="slider-text2">tes</h2>
+                <!-- <h2 class="slider-text2">tes</h2> -->
             </div>
-            <div class="slider">
+            <!-- <div class="slider">
                 <img class="img-fluid blur-up lazyload" src="assets-voxo/images/car3.jpg" alt="">
                 <h2 class="slider-text">Mengetahui biaya kerusakan secepat anda memfoto</h2>
-            </div>
+            </div> -->
         </div>
     </section>
 
-    <section class="about pt-0">
+    <section class="about">
         <div class="container">
             <div class="row about-row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-about-image">
                     <div class="about-image">
-                        <img class="blur-up lazyload" src="assets-voxo/images/about.jpg" alt="">
+                        <img class="img-fluid blur-up lazyload" src="assets-voxo/images/about.jpg" alt="">
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-lg-0">
+                <div class="col-lg-6 mt-lg-0 col-about-body">
                     <div class="about-body">
                         <div class="about-title text-center">
                             <h2 class="about-title-h2">Klaim Asuransi Tercepat</h2>
                         </div>
-                        <div class="about-description mt-3 mt-lg-5">
+                        <div class="about-description">
                             <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis
                                 Artificial
                                 Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan
@@ -325,7 +334,7 @@
                                 terpercaya.</p>
                         </div>
                         <a href="{{ route('landing-page') }}">
-                            <div class="about-footer-parent mt-3 mt-lg-5">
+                            <div class="about-footer-parent">
                                 <div class="about-footer text-center">
                                     Selengkapnya
                                 </div>
@@ -335,33 +344,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="about-image">
-            <img class="blur-up lazyload" src="assets-voxo/images/innova.png" alt="">
-        </div>
-        <div class="about-body">
-            <div class="container">
-                <div class="about-title text-center">
-                    <h2 class="about-title-h2">Tentang Claimoo</h2>
-                </div>
-                <div class="about-description mt-3">
-                    <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial
-                        Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan Asuransi
-                        terpercaya.</p>
-                </div>
-                <a href="{{ route('landing-page') }}">
-                    <div class="text-center" style="width: 130px;">
-                        <div class="about-footer text-center mt-3">
-                            Selengkapnya
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div> -->
     </section>
 
     <!-- Custome services Section Start -->
-    <section class="service-section pt-5 pb-4">
+    <section class="service-section">
         <div class="container">
             <div class="text-center mb-4 mb-lg-5">
                 <h2>Keunggulan Kami</h2>
@@ -426,18 +412,14 @@
     </section>
     <!-- Custome services Section End -->
 
-
-
-    <section class="package pt-5 pb-5">
+    <section class="package">
         <div class="container">
-            <div class="text-center mb-4">
+            <div class="text-center mb-4 mb-lg-5">
                 <h2>Paket Member</h2>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-
                     <div class="card-body">
-
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
@@ -460,7 +442,8 @@
 
                                                                     <div class="price-details mt-2">
                                                                         <center>
-                                                                            <h6 class="font-green">Nikmati Fitur gratis Claimoo</h6>
+                                                                            <h6 class="font-green">Nikmati Fitur gratis
+                                                                                Claimoo</h6>
                                                                         </center>
                                                                     </div>
                                                                 </div>
@@ -553,7 +536,7 @@
 
 
                 </div>
-                <div class="col-lg-6 mt-lg-0 mt-5">
+                <div class="col-lg-6 mt-lg-0 mt-3">
 
                     <div class="card-body">
                         <div class="container">
@@ -578,7 +561,8 @@
 
                                                                     <div class="price-details mt-2">
                                                                         <center>
-                                                                            <h6 class="font-green">Dapatkan keuntungan lebih </h6>
+                                                                            <h6 class="font-green">Dapatkan keuntungan
+                                                                                lebih </h6>
                                                                         </center>
                                                                     </div>
                                                                 </div>
@@ -592,7 +576,8 @@
 
 
                                                         <td>
-                                                            <a href="cart.html" class="btn btn-solid-blue">Order Sekarang</a>
+                                                            <a href="cart.html" class="btn btn-solid-blue">Order
+                                                                Sekarang</a>
 
                                                         </td>
 
@@ -661,18 +646,18 @@
         </div>
     </section>
 
-    <section class="poster-section ratio2_1 pt-5 pb-5">
+    <section class="poster-section ratio2_1">
         <div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-poster">
                         <div class="poster-image">
                             <h2>Sekarang, lebih mudah memiliki asuransi mobil</h2>
-                            <p class="mt-4">Daftar, beli Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
+                            <p>Daftar, beli Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
                                 tinggal pada
                                 asuransi mobil yang rumit. Tonton video untuk mengetahui lebih lanjut.</p>
                             <a href="{{ route('landing-page') }}">
-                                <div class="btn btn-solid-default btn-offer text-center mt-3">
+                                <div class="btn btn-solid-default btn-offer text-center">
                                     DAPATKAN PENAWARAN TERBAIK
                                 </div>
                             </a>
@@ -681,7 +666,8 @@
 
                     <div class="col-lg-6 mt-lg-0 mt-4">
                         <div class="poster-image">
-                            <img src="assets-voxo/images/produk/penawaran.png" class="img-fluid bg-img blur-up lazyload" alt="">
+                            <img src="assets-voxo/images/produk/penawaran.png" class="img-fluid bg-img blur-up lazyload"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -692,7 +678,7 @@
     <!-- brand section start -->
     <section class="section-b-space">
         <div class="container">
-            <div class="text-center mb-4">
+            <div class="text-center mb-4 mb-lg-5">
                 <h2>Mitra</h2>
             </div>
             <div class="row">
@@ -700,37 +686,44 @@
                     <div class="brand-slider">
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/1.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/1.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/2.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/2.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/3.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/3.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/5.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/5.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/6.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/6.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                         <div>
                             <div class="brand-image">
-                                <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload" alt="brand logo">
+                                <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
+                                    alt="brand logo">
                             </div>
                         </div>
                     </div>
@@ -745,12 +738,12 @@
             <div class="reference-title">
                 <h2 class="reference-title-h2">Ajak teman Anda dan dapatkan poin nya</h2>
             </div>
-            <div class="reference-description mt-4">
+            <div class="reference-description">
                 <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan
                     menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
             </div>
             <a href="{{ route('landing-page') }}">
-                <div class="reference-footer text-center mt-4">
+                <div class="reference-footer text-center">
                     AJAK TEMAN ANDA
                 </div>
             </a>
@@ -767,7 +760,8 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
+                                        alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
@@ -862,7 +856,8 @@
                             <h3>Hubungi kami:</h3>
                             <div class="footer-number">
                                 <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png" class="img-fluid blur-up lazyload" alt="">
+                                    <img src="assets-voxo/images/shoes/other/headphone.png"
+                                        class="img-fluid blur-up lazyload" alt="">
                                 </div>
 
                                 <div class="footer-number-container">
@@ -944,30 +939,38 @@
                             <div class="quick-view-image">
                                 <div class="quick-view-slider ratio_2">
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/1.jpg" class="img-fluid bg-img blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/1.jpg"
+                                            class="img-fluid bg-img blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/2.jpg" class="img-fluid bg-img blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/2.jpg"
+                                            class="img-fluid bg-img blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/3.jpg" class="img-fluid bg-img blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/3.jpg"
+                                            class="img-fluid bg-img blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/4.jpg" class="img-fluid bg-img blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/4.jpg"
+                                            class="img-fluid bg-img blur-up lazyload" alt="product">
                                     </div>
                                 </div>
                                 <div class="quick-nav">
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/1.jpg" class="img-fluid blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/1.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/2.jpg" class="img-fluid blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/2.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/3.jpg" class="img-fluid blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/3.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                     <div>
-                                        <img src="assets-voxo/images/shoes/product/4.jpg" class="img-fluid blur-up lazyload" alt="product">
+                                        <img src="assets-voxo/images/shoes/product/4.jpg"
+                                            class="img-fluid blur-up lazyload" alt="product">
                                     </div>
                                 </div>
                             </div>
@@ -1062,7 +1065,8 @@
     <!-- Coockie Section End -->
 
     <!-- Cart Successful Start -->
-    <div class="modal fade cart-modal" id="addtocart" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true">
+    <div class="modal fade cart-modal" id="addtocart" tabindex="-1" role="dialog" aria-label="myModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content ">
                 <div class="modal-header">
@@ -1078,7 +1082,8 @@
                             </div>
                             <div class="modal-product">
                                 <div class="modal-contain-img">
-                                    <img src="assets-voxo/images/fashion/instagram/4.jpg" class="img-fluid blur-up lazyload" alt="">
+                                    <img src="assets-voxo/images/fashion/instagram/4.jpg"
+                                        class="img-fluid blur-up lazyload" alt="">
                                 </div>
                                 <div class="modal-contain-details">
                                     <h4>Premier Cropped Skinny Jean</h4>
@@ -1087,9 +1092,11 @@
                                         <h5>TOTAL : <span>$1,140.00</span></h5>
                                     </div>
                                     <div class="shop-cart-button mt-3">
-                                        <a href="shop-left-sidebar.html" class="btn default-light-theme conti-button default-theme default-theme-2 rounded">CONTINUE
+                                        <a href="shop-left-sidebar.html"
+                                            class="btn default-light-theme conti-button default-theme default-theme-2 rounded">CONTINUE
                                             SHOPPING</a>
-                                        <a href="cart.html" class="btn default-light-theme conti-button default-theme default-theme-2 rounded">VIEW
+                                        <a href="cart.html"
+                                            class="btn default-light-theme conti-button default-theme default-theme-2 rounded">VIEW
                                             CART</a>
                                     </div>
                                 </div>
@@ -1101,13 +1108,15 @@
                         <div class="container">
                             <div class="row m-0">
                                 <div class="col-sm-12 p-0">
-                                    <div class="product-wrapper product-style-2 slide-4 p-0 light-arrow bottom-space spacing-slider">
+                                    <div
+                                        class="product-wrapper product-style-2 slide-4 p-0 light-arrow bottom-space spacing-slider">
                                         <div>
                                             <div class="product-box">
                                                 <div class="img-wrapper">
                                                     <div class="front">
                                                         <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/1.jpg" class="bg-img blur-up lazyload" alt="">
+                                                            <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                                class="bg-img blur-up lazyload" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1127,7 +1136,8 @@
                                                 <div class="img-wrapper">
                                                     <div class="front">
                                                         <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/2.jpg" class="bg-img blur-up lazyload" alt="">
+                                                            <img src="assets-voxo/images/fashion/product/front/2.jpg"
+                                                                class="bg-img blur-up lazyload" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1147,7 +1157,8 @@
                                                 <div class="img-wrapper">
                                                     <div class="front">
                                                         <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/3.jpg" class="bg-img blur-up lazyload" alt="">
+                                                            <img src="assets-voxo/images/fashion/product/front/3.jpg"
+                                                                class="bg-img blur-up lazyload" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1167,7 +1178,8 @@
                                                 <div class="img-wrapper">
                                                     <div class="front">
                                                         <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/4.jpg" class="bg-img blur-up lazyload" alt="">
+                                                            <img src="assets-voxo/images/fashion/product/front/4.jpg"
+                                                                class="bg-img blur-up lazyload" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
