@@ -36,7 +36,8 @@ const closeModalProgress = document.getElementById("closeModalProgress");
 const statusImage = document.getElementById("statusImage");
 const identificationImage = document.getElementById("identificationImage");
 const damage = document.getElementById("damage");
-const resultImage = document.getElementById("resultImage");
+const image = document.getElementById("image");
+const result = document.getElementById("result");
 let streamStarted = false;
 
 if (typeCar == 'mpv') {
@@ -526,63 +527,76 @@ const doScreenshot = () => {
 
                 if (data.identifikasi == 1) {
                     var identifikasi = 'Mobil';
+                } else if (data.identifikasi == null) {
+                    var damageResponse = '';
                 } else {
                     var identifikasi = 'Tidak Mobil';
                 }
 
                 if (data.hasil == 'tidak terdeteksi kerusakan') {
                     var damageResponse = 'Tidak Ada';
+                } else if (data.hasil == null) {
+                    var damageResponse = '';
                 } else {
                     var damageResponse = 'Ada';
                 }
 
-                statusImage.innerHTML = 
-                '<table class="w-100">' +
+                statusImage.innerHTML =
+                    '<table class="w-100">' +
                     '<tr>' +
-                        '<td class="col-2 p-0"></td>' +
-                        '<td class="col-3 p-0 text-left">Kelayakan Foto</td>' +
-                        '<td class="col-1 p-0 text-center">:</td>' +
-                        '<td class="col-6 p-0 text-left">'+ status + '</td>' +
+                    '<td class="col-6 p-0 text-left">Kelayakan Foto</td>' +
+                    '<td class="col-1 p-0 text-center">:</td>' +
+                    '<td class="col-5 p-0 text-left">' + status + '</td>' +
                     '</tr>' +
-                '</table>';
+                    '</table>';
 
-                identificationImage.innerHTML = 
-                '<table class="w-100">' +
+                identificationImage.innerHTML =
+                    '<table class="w-100">' +
                     '<tr>' +
-                        '<td class="col-2 p-0"></td>' +
-                        '<td class="col-3 p-0 text-left">Identifikasi Objek</td>' +
-                        '<td class="col-1 p-0 text-center">:</td>' +
-                        '<td class="col-6 p-0 text-left">'+ identifikasi + '</td>' +
+                    '<td class="col-6 p-0 text-left">Identifikasi Objek</td>' +
+                    '<td class="col-1 p-0 text-center">:</td>' +
+                    '<td class="col-5 p-0 text-left">' + identifikasi + '</td>' +
                     '</tr>' +
-                '</table>';
+                    '</table>';
 
-                damage.innerHTML = 
-                '<table class="w-100">' +
+                damage.innerHTML =
+                    '<table class="w-100">' +
                     '<tr>' +
-                        '<td class="col-2 p-0"></td>' +
-                        '<td class="col-3 p-0 text-left">Kerusakan</td>' +
-                        '<td class="col-1 p-0 text-center">:</td>' +
-                        '<td class="col-6 p-0 text-left">'+ damageResponse + '</td>' +
+                    '<td class="col-6 p-0 text-left">Kerusakan</td>' +
+                    '<td class="col-1 p-0 text-center">:</td>' +
+                    '<td class="col-5 p-0 text-left">' + damageResponse + '</td>' +
                     '</tr>' +
-                '</table>';
+                    '</table>';
 
-                // resultImage.innerHTML = 
-                //     '<table class="w-100">' +
-                //         '<tr>' +
-                //             '<td class="col-2 p-0"></td>' +
-                //             '<td class="col-3 p-0 text-left">Hasil</td>' +
-                //             '<td class="col-1 p-0 text-center">:</td>' +
-                //             '<td class="col-6 p-0 text-left">'+ data.hasil + '</td>' +
-                //         '</tr>' +
-                //     '</table>';
+                if (data.gambar != null) {
+                    image.innerHTML =
+                        '<table class="w-100">' +
+                        '<tr>' +
+                        '<td class="col-6 p-0 text-left">Keterangan Gambar</td>' +
+                        '<td class="col-1 p-0 text-center">:</td>' +
+                        '<td class="col-5 p-0 text-left">' + data.gambar + '</td>' +
+                        '</tr>' +
+                        '</table>';
+                }
+
+                if (data.hasil != null && data.hasil != 'tidak terdeteksi kerusakan') {
+                    result.innerHTML =
+                        '<table class="w-100">' +
+                        '<tr>' +
+                        '<td class="col-6 p-0 text-left">Deteksi Gambar</td>' +
+                        '<td class="col-1 p-0 text-center">:</td>' +
+                        '<td class="col-5 p-0 text-left">' + data.hasil + '</td>' +
+                        '</tr>' +
+                        '</table>';
+                }
             },
             error: function (data) {
-                statusImage.innerHTML = 
-                '<table class="w-100">' +
+                statusImage.innerHTML =
+                    '<table class="w-100">' +
                     '<tr>' +
-                        '<td class="col-12 p-0 text-center">' + data + '</td>' +
+                    '<td class="col-12 p-0 text-center">' + data + '</td>' +
                     '</tr>' +
-                '</table>';
+                    '</table>';
             }
         });
     });
@@ -601,6 +615,8 @@ $('#exampleModalCenter2').on('hidden.bs.modal', function () {
     statusImage.innerHTML = '';
     identificationImage.innerHTML = '';
     damage.innerHTML = '';
+    image.innerHTML = '';
+    result.innerHTML = '';
 });
 
 const startStream = async () => {

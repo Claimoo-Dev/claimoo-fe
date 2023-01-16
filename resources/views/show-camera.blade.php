@@ -231,7 +231,8 @@
                         <div id="statusImage"></div>
                         <div id="identificationImage"></div>
                         <div id="damage"></div>
-                        <!-- <div id="resultImage"></div> -->
+                        <div id="image"></div>
+                        <div id="result"></div>
                         <div class="mt-3 text-center" id="closeModalProgress">Tutup</div>
                     </div>
                 </div>
