@@ -259,6 +259,19 @@
     .faq-contact-detail {
         padding-left: 10px;
     }
+
+    .faq-category-group{
+        width: 300px;
+        display: flex;
+        position: relative; /* This is important for the js offsetLeft property */
+        overflow-x: scroll;
+    }
+
+    .item{
+        width: 200px;
+        background: #eee;
+        margin-right: 10px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

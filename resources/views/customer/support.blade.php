@@ -393,53 +393,19 @@
             <div class="mb-4 mb-lg-5">
                 <h3>Kategori</h3>
             </div>
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row g-4 faq-category-group" id="frames">
+                <div class="item frames-item">paul</div>
+                <div class="item frames-item">coucou</div>
+                <div class="item frames-item">jojoij</div>
+                <div class="item frames-item">zoie</div>
+                <div class="item frames-item">foez</div>
+                <div class="item frames-item">popze</div>
+                <div class="item frames-item">kvk</div>
+                <div class="item frames-item">poe</div>
+                <div class="item frames-item">hfihuazf</div>
+                <div class="item frames-item">jeeze</div>
+                <div class="item frames-item">pposd</div>
+                <div class="item frames-item">nvnn</div>
             </div>
         </div>
     </section>
@@ -659,6 +625,7 @@
     <!-- script js -->
     <script src="assets-voxo/js/theme-setting.js"></script>
     <script src="assets-voxo/js/script.js"></script>
+    <script src="assets-voxo/js/custom-script.js"></script>
 
 </body>
 
