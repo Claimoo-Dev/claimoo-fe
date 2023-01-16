@@ -528,7 +528,7 @@ const doScreenshot = () => {
                 if (data.identifikasi == 1) {
                     var identifikasi = 'Mobil';
                 } else if (data.identifikasi == null) {
-                    var damageResponse = '';
+                    var identifikasi = '';
                 } else {
                     var identifikasi = 'Tidak Mobil';
                 }
