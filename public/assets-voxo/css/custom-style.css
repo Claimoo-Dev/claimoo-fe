@@ -211,7 +211,7 @@
     .reference-description p {
         font-size: 14px;
         text-align: left;
-        color: #7e7e7e;
+        color: #232323;
         line-height: 20px !important;
         margin: 0 !important;
     }
@@ -233,6 +233,31 @@
         color: white;
         font-size: 14px;
         width: 200px;
+    }
+
+    .search-parent {
+        padding-top: 30px !important;
+    }
+
+    .search-child {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .faq-category {
+        border-top: 10px #eff2f7 solid;
+        border-bottom: 10px #eff2f7 solid;
+    }
+
+    .faq-contact-col {
+        display: flex;
+        border-top: 1px #eff2f7 solid;
+        border-bottom: 1px #eff2f7 solid;
+        padding: 20px;
+    }
+
+    .faq-contact-detail {
+        padding-left: 10px;
     }
 }
 

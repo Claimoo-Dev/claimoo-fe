@@ -182,7 +182,7 @@
 
 
                                             <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa.png" class="img-fluid" alt="">
+                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
                                                 <div class="mobile-contain">
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
