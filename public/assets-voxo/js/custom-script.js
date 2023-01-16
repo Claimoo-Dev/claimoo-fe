@@ -7,13 +7,3 @@ $(document).ready(function () {
         fade: true
     });
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-    var frames = document.getElementById('frames');
-    frames.addEventListener('click', function (e) {
-        if (e.target.classList.contains('item')) {
-            e.target.parentNode.scrollLeft = e.target.offsetLeft;
-
-        }
-    });
-});

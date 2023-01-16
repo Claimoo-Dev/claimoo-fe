@@ -37,7 +37,7 @@
 
         <button type="button" class="btn btn-outline-primary btn-modal" data-toggle="modal"
             data-target="#exampleModalCenter" onclick="lock()">
-            Select Frame
+            Pilih Frame
         </button>
 
         <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -169,7 +169,7 @@
             <div class="modal-dialog modal-dialog-custom m-0 modal-dialog-centered" role="document">
                 <div class="modal-content modal-content-custom">
                     <div class="modal-header">
-                        <h4 class="modal-title">Deskripsi</h4>
+                        <h6 class="modal-title">Apa bentuk kerusakan yang ada di bagian objek frame kendaraan Anda ini? (Dapat dipilih lebih dari 1 kerusakan) </h6>
                         <span class="text-red">*tidak wajib</span>
                     </div>
                     <div class="modal-body">
@@ -211,7 +211,7 @@
                             </div>
                         </form>
                         <div class="text-center mt-2">
-                            <button type="button" class="btn btn-primary btn-description">Save</button>
+                            <button type="button" class="btn btn-primary btn-description">Simpan</button>
                         </div>
                     </div>
                 </div>
@@ -229,7 +229,9 @@
                     </div>
                     <div class="modal-body">
                         <div id="statusImage"></div>
-                        <div id="resultImage"></div>
+                        <div id="identificationImage"></div>
+                        <div id="damage"></div>
+                        <!-- <div id="resultImage"></div> -->
                         <div class="mt-3 text-center" id="closeModalProgress">Tutup</div>
                     </div>
                 </div>

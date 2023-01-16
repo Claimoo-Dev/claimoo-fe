@@ -5,7 +5,7 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets-voxo/images/favicon/favicon.png" />
-    <meta name="theme-color" content="#e22454" />
+    <meta name="theme-color" content="#073f78" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Claimoo" />
@@ -393,19 +393,37 @@
             <div class="mb-4 mb-lg-5">
                 <h3>Kategori</h3>
             </div>
-            <div class="row g-4 faq-category-group" id="frames">
-                <div class="item frames-item">paul</div>
-                <div class="item frames-item">coucou</div>
-                <div class="item frames-item">jojoij</div>
-                <div class="item frames-item">zoie</div>
-                <div class="item frames-item">foez</div>
-                <div class="item frames-item">popze</div>
-                <div class="item frames-item">kvk</div>
-                <div class="item frames-item">poe</div>
-                <div class="item frames-item">hfihuazf</div>
-                <div class="item frames-item">jeeze</div>
-                <div class="item frames-item">pposd</div>
-                <div class="item frames-item">nvnn</div>
+            <div class="faq-category-group">
+                <a href="#home">
+                    <div>
+                        <i data-feather="clipboard"></i>
+                    </div>
+                    <h3 class="mt-2">Belanja</h3>
+                </a>
+                <a href="#news" class="mx-md-2">
+                    <div>
+                        <i data-feather="clipboard"></i>
+                    </div>
+                    <h3 class="mt-2">Informasi Umum</h3>
+                </a>
+                <a href="#contact">
+                    <div>
+                        <i data-feather="clipboard"></i>
+                    </div>
+                    <h3 class="mt-2">Akun</h3>
+                </a>
+                <a href="#about" class="mx-md-2">
+                    <div>
+                        <i data-feather="clipboard"></i>
+                    </div>
+                    <h3 class="mt-2">Penawaran & Hadiah</h3>
+                </a>
+                <a href="#support">
+                    <div>
+                        <i data-feather="clipboard"></i>
+                    </div>
+                    <h3 class="mt-2">Asuransi</h3>
+                </a>
             </div>
         </div>
     </section>

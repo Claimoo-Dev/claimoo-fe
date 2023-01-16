@@ -5,7 +5,7 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets-voxo/images/favicon/favicon.png" />
-    <meta name="theme-color" content="#e22454" />
+    <meta name="theme-color" content="#073f78" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Claimoo" />

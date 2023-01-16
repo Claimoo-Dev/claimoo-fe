@@ -41,7 +41,7 @@
                     <ul>
                         <li class="text-justify">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini.</li>
                         <li class="text-justify">Mohon pilih jenis mobil.</li>
-                        <li class="text-justify">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti
+                        <li class="text-justify">Pastikan tidak ada objek lain yang berada di dekat mobil seperti
                             tangan, pensil, kendaraan lain.</li>
                     </ul>
                     <!-- <p class="text-center fw-500 lh-1">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini</p>
@@ -51,106 +51,106 @@
         </div>
 
         <div class="row mt-3">
-            <div class="col-6" id="mpv">
+            <div class="col-6 pe-1" id="mpv">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/mpv.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/mpv.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">MPV</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-6" id="suv">
+            <div class="col-6 ps-1" id="suv">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/suv.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/suv.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">SUV</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <div class="row mt-1">
-            <div class="col-6" id="crossover">
+            <div class="col-6 pe-1" id="crossover">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/crossover.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/crossover.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Crossover</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-6" id="hatchback">
+            <div class="col-6 ps-1" id="hatchback">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/hatchback.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/hatchback.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Hatchback</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <div class="row mt-1">
-            <div class="col-6" id="sedan">
+            <div class="col-6 pe-1" id="sedan">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/sedan.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/sedan.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Sedan</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-6" id="stationWagon">
+            <div class="col-6 ps-1" id="stationWagon">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/station-wagon.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/station-wagon.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Station Wagon</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <div class="row mt-1">
-            <div class="col-6" id="jeep">
+            <div class="col-6 pe-1" id="jeep">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/jeep.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/jeep.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Jeep</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-6" id="pickup">
+            <div class="col-6 ps-1" id="pickup">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
-                        <img class="card-img-top" src="type-car-icon/pickup.png" alt="Card image cap">
+                        <img class="card-img-top" src="type-car-frame/pickup.png" alt="Card image cap">
                     </div>
-                    <div class="card-body p-0 text-center">
+                    <!-- <div class="card-body p-0 text-center">
                         <h5 class="card-title fz-1rem">Pickup</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <div class="row mt-4 mb-4">
-            <div class="col-6">
+            <div class="col-6 pe-1">
                 <div class="card bs-card br-10px text-center bg-color-blue">
                     <div class="card-body p-0 height-50px">
                         <button class="btn width-100 height-100 br-10px text-white" id="signOut">Keluar</button>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 ps-1">
                 <div class="card bs-card br-10px text-center bg-color-blue">
                     <div class="card-body p-0 height-50px">
                         <button class="btn width-100 height-100 br-10px text-white" id="feedback">Beri Masukan</button>

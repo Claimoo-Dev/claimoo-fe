@@ -32,7 +32,7 @@
         <form action="{{ url('feedback') }}" method="post" class="mt-3" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Give Feedback</label>
+                <label for="exampleFormControlTextarea1">Beri Masukan</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="description"
                     required></textarea>
             </div>
@@ -43,8 +43,8 @@
             </div>
 
             <div class="form-group mt-3">
-                <button class="btn btn-primary" type="submit">Send</button>
-                <a class="btn btn-secondary" href="{{ route('dashboard') }}">Back</a>
+                <button class="btn btn-primary" type="submit">Kirim</button>
+                <a class="btn btn-secondary" href="{{ route('dashboard') }}">Kembali</a>
             </div>
         </form>
     </div>

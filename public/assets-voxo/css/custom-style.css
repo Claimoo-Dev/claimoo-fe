@@ -261,16 +261,17 @@
     }
 
     .faq-category-group{
-        width: 300px;
-        display: flex;
-        position: relative; /* This is important for the js offsetLeft property */
-        overflow-x: scroll;
+        overflow: auto;
+        white-space: nowrap;
     }
 
-    .item{
-        width: 200px;
-        background: #eee;
-        margin-right: 10px;
+    .faq-category-group a{
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        background-color: #eff2f7;
     }
 }
 
@@ -484,6 +485,36 @@
         font-size: 14px;
         width: 200px;
     }
+
+    .faq-category {
+        border-top: 10px #eff2f7 solid;
+        border-bottom: 10px #eff2f7 solid;
+    }
+
+    .faq-contact-col {
+        display: flex;
+        border-top: 1px #eff2f7 solid;
+        border-bottom: 1px #eff2f7 solid;
+        padding: 20px;
+    }
+
+    .faq-contact-detail {
+        padding-left: 10px;
+    }
+
+    .faq-category-group{
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    .faq-category-group a{
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        background-color: #eff2f7;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -495,6 +526,22 @@
     /* .banner {
         background-color: #eff2f7;
     } */
+
+    .faq-category-group{
+        overflow: hidden;
+        white-space: normal;
+        display: flex;
+    }
+
+    .faq-category-group a{
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        background-color: #eff2f7;
+        width: 100%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

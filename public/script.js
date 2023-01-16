@@ -34,6 +34,8 @@ const iconFrameLampuKananBelakang = document.querySelector(".icon-frame-lampu-ka
 const iconFrameLampuKiriBelakang = document.querySelector(".icon-frame-lampu-kiri-belakang");
 const closeModalProgress = document.getElementById("closeModalProgress");
 const statusImage = document.getElementById("statusImage");
+const identificationImage = document.getElementById("identificationImage");
+const damage = document.getElementById("damage");
 const resultImage = document.getElementById("resultImage");
 let streamStarted = false;
 
@@ -140,7 +142,7 @@ const constraints = {
             max: 1440
         },
         facingMode: {
-            exact: 'environment'
+            exact: 'user'
         }
     }
 };
@@ -495,7 +497,7 @@ const doScreenshot = () => {
                     } else if (percentComplete >= 50 && percentComplete <= 99) {
                         progressBarProcess.innerHTML = percentComplete + '% analyzing';
                     } else {
-                        progressBarProcess.innerHTML = percentComplete + '% done';
+                        progressBarProcess.innerHTML = 'Hasil Analisa';
                     }
                 });
 
@@ -517,30 +519,62 @@ const doScreenshot = () => {
                 $('input[type=checkbox]').prop('checked', false);
 
                 if (data.status == 1) {
-                    var responseStatus = 'Foto Layak Proses';
+                    var status = 'Layak';
                 } else {
-                    var responseStatus = 'Foto Tidak Layak Proses';
+                    var status = 'Tidak Layak';
+                }
+
+                if (data.identifikasi == 1) {
+                    var identifikasi = 'Mobil';
+                } else {
+                    var identifikasi = 'Tidak Mobil';
+                }
+
+                if (data.hasil == 'tidak terdeteksi kerusakan') {
+                    var damageResponse = 'Tidak Ada';
+                } else {
+                    var damageResponse = 'Ada';
                 }
 
                 statusImage.innerHTML = 
                 '<table class="w-100">' +
                     '<tr>' +
                         '<td class="col-2 p-0"></td>' +
-                        '<td class="col-3 p-0 text-left">Status</td>' +
+                        '<td class="col-3 p-0 text-left">Kelayakan Foto</td>' +
                         '<td class="col-1 p-0 text-center">:</td>' +
-                        '<td class="col-6 p-0 text-left">'+ responseStatus + '</td>' +
+                        '<td class="col-6 p-0 text-left">'+ status + '</td>' +
                     '</tr>' +
                 '</table>';
 
-                resultImage.innerHTML = 
-                    '<table class="w-100">' +
-                        '<tr>' +
-                            '<td class="col-2 p-0"></td>' +
-                            '<td class="col-3 p-0 text-left">Hasil</td>' +
-                            '<td class="col-1 p-0 text-center">:</td>' +
-                            '<td class="col-6 p-0 text-left">'+ data.hasil + '</td>' +
-                        '</tr>' +
-                    '</table>';
+                identificationImage.innerHTML = 
+                '<table class="w-100">' +
+                    '<tr>' +
+                        '<td class="col-2 p-0"></td>' +
+                        '<td class="col-3 p-0 text-left">Identifikasi Objek</td>' +
+                        '<td class="col-1 p-0 text-center">:</td>' +
+                        '<td class="col-6 p-0 text-left">'+ identifikasi + '</td>' +
+                    '</tr>' +
+                '</table>';
+
+                damage.innerHTML = 
+                '<table class="w-100">' +
+                    '<tr>' +
+                        '<td class="col-2 p-0"></td>' +
+                        '<td class="col-3 p-0 text-left">Kerusakan</td>' +
+                        '<td class="col-1 p-0 text-center">:</td>' +
+                        '<td class="col-6 p-0 text-left">'+ damageResponse + '</td>' +
+                    '</tr>' +
+                '</table>';
+
+                // resultImage.innerHTML = 
+                //     '<table class="w-100">' +
+                //         '<tr>' +
+                //             '<td class="col-2 p-0"></td>' +
+                //             '<td class="col-3 p-0 text-left">Hasil</td>' +
+                //             '<td class="col-1 p-0 text-center">:</td>' +
+                //             '<td class="col-6 p-0 text-left">'+ data.hasil + '</td>' +
+                //         '</tr>' +
+                //     '</table>';
             },
             error: function (data) {
                 statusImage.innerHTML = 
@@ -565,7 +599,8 @@ $('#exampleModalCenter2').on('hidden.bs.modal', function () {
     progressBarProcess.innerHTML = '0%';
     $('.progress .progress-bar').css('width', '0%').attr('aria-valuenow', 0);
     statusImage.innerHTML = '';
-    resultImage.innerHTML = '';
+    identificationImage.innerHTML = '';
+    damage.innerHTML = '';
 });
 
 const startStream = async () => {
