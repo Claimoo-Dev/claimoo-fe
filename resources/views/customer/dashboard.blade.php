@@ -5,7 +5,7 @@
     <link rel="manifest" href="./manifest.json" />
     <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets-voxo/images/favicon/favicon.png" />
-    <meta name="theme-color" content="#e22454" />
+    <meta name="theme-color" content="#073f78" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Claimoo" />
@@ -63,8 +63,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('dashboard-customer') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png"
-                                            class="img-fluid blur-up lazyload" alt="logo">
+                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
@@ -181,12 +180,11 @@
 
 
                                             <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa.png" class="img-fluid" alt="">
+                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
                                                 <div class="mobile-contain">
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
-                                                    <a href="javascript:void(0)" id="installApp"
-                                                        class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
+                                                    <a href="javascript:void(0)" id="installApp" class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
                                                         HOMESCREEN</a>
                                                 </div>
                                             </li>
@@ -206,20 +204,16 @@
 
                                     <li class="language-icon d-none d-sm-block">
                                         <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                                 <span><i data-feather="globe"></i>ID
                                                     <i class="fas fa-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">EN</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">EN</a>
                                                 </li>
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">ID</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">ID</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -227,20 +221,16 @@
 
                                     <li class="user-icon d-none d-sm-block">
                                         <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                                 <span><i data-feather="user"></i>
                                                     <i class="fas fa-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Log In</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">Log In</a>
                                                 </li>
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Daftar</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">Daftar</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -339,35 +329,28 @@
                 <div class="col-lg-3">
                     <ul class="nav nav-tabs custome-nav-tabs flex-column category-option" id="myTab">
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light active" id="tab" data-bs-toggle="tab"
-                                data-bs-target="#dash" type="button"><i class="fas fa-angle-right"></i>Dasbor</button>
+                            <button class="nav-link font-light active" id="tab" data-bs-toggle="tab" data-bs-target="#dash" type="button"><i class="fas fa-angle-right"></i>Dasbor</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#order"
-                                type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
+                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#order" type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab"
-                                data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Riwayat
+                            <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Riwayat
                                 Deteksi</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab"
-                                data-bs-target="#profile" type="button"><i
-                                    class="fas fa-angle-right"></i>Profil</button>
+                            <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"><i class="fas fa-angle-right"></i>Profil</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="4-tab" data-bs-toggle="tab" data-bs-target="#reward"
-                                type="button"><i class="fas fa-angle-right"></i>Dapatkan Penghargaan</button>
+                            <button class="nav-link font-light" id="4-tab" data-bs-toggle="tab" data-bs-target="#reward" type="button"><i class="fas fa-angle-right"></i>Dapatkan Penghargaan</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#about"
-                                type="button"><i class="fas fa-angle-right"></i>Tentang Aplikasi</button>
+                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"><i class="fas fa-angle-right"></i>Tentang Aplikasi</button>
                         </li>
 
                     </ul>
@@ -398,12 +381,10 @@
                                             <div class="col-lg-6 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
-                                                        <img src="assets-voxo/images/svg/box.png"
-                                                            class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/box.png" class="img-fluid blur-up lazyload" alt="">
                                                     </div>
                                                     <div class="order-box-contain">
-                                                        <img src="assets-voxo/images/svg/box1.png"
-                                                            class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/box1.png" class="img-fluid blur-up lazyload" alt="">
                                                         <div>
                                                             <h5 class="font-light">total polis</h5>
                                                             <h3>5</h3>
@@ -415,12 +396,10 @@
                                             <div class="col-lg-6 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
-                                                        <img src="assets-voxo/images/svg/sent.png"
-                                                            class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/sent.png" class="img-fluid blur-up lazyload" alt="">
                                                     </div>
                                                     <div class="order-box-contain">
-                                                        <img src="assets-voxo/images/svg/sent1.png"
-                                                            class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/sent1.png" class="img-fluid blur-up lazyload" alt="">
                                                         <div>
                                                             <h5 class="font-light">riwayat deteksi</h5>
                                                             <h3>10</h3>
@@ -486,8 +465,7 @@
                         <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="order">
                             <div class="box-head mb-3">
                                 <h3>Polis Saya</h3>
-                                <button class="btn btn-primary btn-sm fw-bold ms-auto" data-bs-toggle="modal"
-                                    data-bs-target="#addAddress"><i class="fas fa-plus"></i>
+                                <button class="btn btn-primary btn-sm fw-bold ms-auto" data-bs-toggle="modal" data-bs-target="#addAddress"><i class="fas fa-plus"></i>
                                     Beli Polis</button>
                             </div>
                             <div class="save-details-box">
@@ -574,14 +552,12 @@
                                         <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
@@ -597,14 +573,12 @@
                                         <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
@@ -620,14 +594,12 @@
                                         <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                        class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
@@ -648,8 +620,7 @@
                         <div class="tab-pane fade dashboard-profile dashboard" id="profile">
                             <div class="box-head">
                                 <h3>Profil</h3>
-                                <a href="javascript:void(0)" data-bs-toggle="modal"
-                                    data-bs-target="#resetEmail">Edit</a>
+                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#resetEmail">Edit</a>
                             </div>
                             <ul class="dash-profile">
                                 <li>
@@ -732,8 +703,7 @@
                                     <div class="right">
                                         <h6>+1-202-555-0198</h6>
                                     </div>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#resetEmail">Edit</a>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#resetEmail">Edit</a>
                                 </li>
 
                                 <li class="mb-0">
@@ -743,8 +713,7 @@
                                     <div class="right">
                                         <h6>●●●●●●</h6>
                                     </div>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#resetEmail">Edit</a>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#resetEmail">Edit</a>
                                 </li>
                             </ul>
                         </div>
@@ -761,8 +730,7 @@
                                 </p>
                             </div>
 
-                            <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-toggle="modal"
-                                data-bs-target="#deleteModal">Ajak Teman Anda</button>
+                            <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-toggle="modal" data-bs-target="#deleteModal">Ajak Teman Anda</button>
                         </div>
 
                         <div class="tab-pane fade dashboard-security dashboard" id="about">
@@ -785,8 +753,7 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
-                                        alt="logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
@@ -881,8 +848,7 @@
                             <h3>Hubungi kami:</h3>
                             <div class="footer-number">
                                 <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png"
-                                        class="img-fluid blur-up lazyload" alt="">
+                                    <img src="assets-voxo/images/shoes/other/headphone.png" class="img-fluid blur-up lazyload" alt="">
                                 </div>
 
                                 <div class="footer-number-container">
@@ -982,8 +948,7 @@
                     </form>
                 </div>
                 <div class="modal-footer pt-0 text-end d-block">
-                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button"
-                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button" data-bs-dismiss="modal">Close</button>
                     <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save Address</button>
                 </div>
             </div>
@@ -1029,8 +994,7 @@
                     </form>
                 </div>
                 <div class="modal-footer pt-0 text-end d-block">
-                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button"
-                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button" data-bs-dismiss="modal">Close</button>
                     <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save Card Details</button>
                 </div>
             </div>
@@ -1049,8 +1013,7 @@
                     <h4>Are you sure you want to delete your account?</h4>
                 </div>
                 <div class="modal-footer d-block text-center mb-4">
-                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#doneModal"
-                        data-bs-toggle="modal" data-bs-dismiss="modal">Yes Delete account</button>
+                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#doneModal" data-bs-toggle="modal" data-bs-dismiss="modal">Yes Delete account</button>
                 </div>
             </div>
         </div>
@@ -1065,8 +1028,7 @@
                     <h4>Done!!! Delete Your Account</h4>
                 </div>
                 <div class="modal-footer d-block text-center mb-4">
-                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#exampleModalToggle"
-                        data-bs-toggle="modal" data-bs-dismiss="modal">Okay</button>
+                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Okay</button>
                 </div>
             </div>
         </div>

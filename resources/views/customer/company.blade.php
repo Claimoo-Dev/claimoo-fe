@@ -181,7 +181,7 @@
 
 
                                             <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa.png" class="img-fluid" alt="">
+                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
                                                 <div class="mobile-contain">
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
@@ -325,7 +325,46 @@
 
     <!-- Content start -->
 
+    <!-- Details Blog Section Start -->
+    <section class="masonary-blog-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12 col-md-12 order-md-1 ratio_square">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="blog-details">
+                                <div class="blog-image-box">
+                                    <img src="assets-voxo/images/perusahaan.jpg" alt="" class="card-img-top">
+                                    <div class="blog-title">
 
+                                    </div>
+                                </div>
+
+                                <div class="blog-detail-contain">
+
+                                    <h2 class="card-title">Tentang Claimoo</h2>
+                                    <p class="firt-latter">Claimoo merupakan aplikasi Klaim dan Inspeksi mobil berdasarkan deteksi kerusakan berbasis Artificial Intelligence. Tanpa adanya berbagai batasan seperti broker dan biaya fiktif, menjadikan Claimoo sistem klaim yang cerdas, cepat dan handal.</p>
+                                    <br />
+                                    <p class="">Claimoo adalah unit bisnis dari PT. Inovasi Teknologi Cerdas, Kami telah berkomitmen untuk memberikan keahlian mendalam di bidang-bidang utama: Data Science, Artificial Intelligence, Machine Learning, Big Data. Fokus kami adalah untuk memberikan Sistem Cerdas Buatan kelas dunia, solusi bisnis canggih, dan hubungan pelanggan yang sangat baik dan tahan lama dengan dukungan yang sangat baik dari tim profesional kami. Membuat proses klaim mobil anda menjadi lebih mudah dengan meamnfaatkan Sistem Kecerdasan Buatan yang bagus.</p>
+                                    <br />
+                                    <p class="">Klaim adalah tuntutan yang diajukan oleh Pemegang Polis kepada perusahaan Asuransi selaku Penanggung Asuransi, untuk memenuhi hak Pemegang Polis sesuai yang tertera dalam Polis, Biasanya berupa biaya ganti rugi atas suatu insiden. Ketika pemegang polis asuransi mengalami insiden, dalam kasus asuransi mobil yaitu kecelakaan, mereka harus melalui beberapa mekanisme untuk mengajukan klaim asuransi mereka. Pertama, pengguna wajib melaporkan insiden kecelakaan kepada perusahaan asuransi serta mengisi formulir untuk pengajuan klaim. Kemudian perusahan asuransi akan mengirimkan tenaga ahli dari bengkel mitra untuk melakukan inspeksi secara manual pada mobil dan mencatat kerusakannya. Kemudian hasil dari inspeksi akan dilaporkan ke perusahan asuransi untuk kemudian diproses klaimnya.</p>
+                                    <br />
+                                    <p class="">Tahapan tersebut memiliki kekurangan dari segi efisiensi waktu dan biaya. Hal ini dikarenakan pada tahap inspeksi diperlukan waktu selama berhari-hari dan harus mengeluarkan uang yang banyak untuk upah tenaga ahli. Selain itu, tahapan ini juga memperbesar kemungkinan terjadinya penipuan dalam proses pengajuan klaim. Penipuan yang dilakukan biasanya dengan melaporkan kerusakan yang sebenarnya tidak ada pada mobil pemegang polis. Atau bisa juga dengan memperparah kerusakan mobil secara disengaja supaya nilai klaim yang dikeluarkan perusahaan asuransi semakin tinggi. Penipuan ini akan menimbulkan kerugian yang besar bagi perusahaan asuransi.</p>
+                                    <br />
+                                    <p>Perkembangan di bidang artificial intelligence (AI) diharapkan dapat membantu dalam otomatisasi proses inspeksi kerusakan kendaraan sehingga proses tersebut dapat diselesaikan secara singkat serta meminimalisir terjadinya penipuan dalam proses klaim.</p>
+                                    <p class="">Kami pun memberikan kemudahan untuk Anda melalui mitra Asuransi terpercaya Anda untuk mengajukan klaim melalui aplikasi kami, cepat, hemat, mudah! Selamat tinggal proses ribet dan lama!</p>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Details Blog Section End -->
 
     <!-- content end -->
 
