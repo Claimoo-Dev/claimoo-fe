@@ -216,6 +216,15 @@
         margin: 0 !important;
     }
 
+    .referenceimg {
+        background-color: #fff;
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-image: url("../images/bgmobilm.png");
+        padding: 70px 0 !important;
+    }
+
     .reference-footer {
         background-color: #073f78;
         border: 2px #073f78 solid;
@@ -419,6 +428,15 @@
         margin: 0 !important;
     }
 
+    .referenceimg {
+        background-color: #fff;
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-image: url("../images/bgmobilm.png");
+        padding: 70px 0 !important;
+    }
+
     .reference-footer {
         background-color: #073f78;
         border: 2px #073f78 solid;
@@ -602,4 +620,13 @@
     .menu-right {
         margin-left: 0 !important;
     }
+    .referenceimg {
+        background-color: #fff;
+        width: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-image: url("../images/bgmobil.jpg");
+        padding: 70px 0 !important;
+    }
+
 }

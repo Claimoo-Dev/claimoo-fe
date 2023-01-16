@@ -83,7 +83,7 @@
                                                 </div>
                                             </li>
                                             <li class="home-menu">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
+                                                <a href="{{ route('landing-page') }}" class="nav-link menu-title">Beranda</a>
 
                                             </li>
 
@@ -92,9 +92,9 @@
                                                     Kami</a>
                                                 <ul class="nav-submenu menu-content">
                                                     <li>
-                                                        <a href="javascript:void(0)">Perusahaan</a>
-                                                        <a href="javascript:void(0)">Komisaris &amp; Direksi</a>
-                                                        <a href="javascript:void(0)">Tenaga Ahli</a>
+                                                        <a href="{{ route('company') }}">Perusahaan</a>
+                                                        <a href="{{ route('commissionerDirector') }}">Komisaris &amp; Direksi</a>
+                                                        <a href="{{ route('expert') }}">Tenaga Ahli</a>
                                                         <a href="javascript:void(0)">Partner</a>
                                                     </li>
 
@@ -183,7 +183,7 @@
 
 
                                             <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa.png" class="img-fluid" alt="">
+                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
                                                 <div class="mobile-contain">
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
