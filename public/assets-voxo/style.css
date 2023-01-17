@@ -36,6 +36,10 @@ body {
     font-size: 24px !important;
 }
 
+.fz-18 {
+    font-size: 18px !important;
+}
+
 .fz-1rem {
     font-size: 1rem !important;
 }
@@ -70,4 +74,13 @@ body {
 
 .text-justify {
     text-align: justify;
+}
+
+.tnc {
+    padding: 5px 0 !important;
+    text-align: center;
+}
+
+.tnc img {
+    width: 50% !important;
 }

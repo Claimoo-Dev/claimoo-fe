@@ -36,14 +36,29 @@
         <div class="row mt-3">
             <div class="col-12">
                 <div class="card bs-card br-10px p-3">
-                    <p class="text-center fw-500">Hai {{ $user->data->name }}</p>
-                    <p class="text-center fw-500 m-0">Syarat & Ketentuan :</p>
-                    <ul>
+                    <p class="text-center fw-500 fz-18">Hai {{ $user->data->name }}</p>
+                    <p class="text-center fw-500 fz-18">Syarat & Ketentuan :</p>
+                    <div class="tnc">
+                        <img class="img-fluid" src="tnc/tnc-1.png" alt="">
+                    </div>
+                    <div class="tnc">
+                        <img class="img-fluid" src="tnc/tnc-2.png" alt="">
+                    </div>
+                    <div class="tnc">
+                        <img class="img-fluid" src="tnc/tnc-3.png" alt="">
+                    </div>
+                    <div class="tnc">
+                        <img class="img-fluid" src="tnc/tnc-4.png" alt="">
+                    </div>
+                    <div class="tnc">
+                        <img class="img-fluid" src="tnc/tnc-5.png" alt="">
+                    </div>
+                    <!-- <ul>
                         <li class="text-justify">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini.</li>
                         <li class="text-justify">Mohon pilih jenis mobil.</li>
                         <li class="text-justify">Pastikan tidak ada objek lain yang berada di dekat mobil seperti
                             tangan, pensil, kendaraan lain.</li>
-                    </ul>
+                    </ul> -->
                     <!-- <p class="text-center fw-500 lh-1">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini</p>
                     <p class="text-center fw-500 lh-1">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti tangan, pensil, kendaraan lain</p> -->
                 </div>
