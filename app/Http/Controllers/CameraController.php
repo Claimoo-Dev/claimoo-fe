@@ -83,6 +83,16 @@ class CameraController extends Controller
         
         file_put_contents($file, $decode);
 
+        // Load the original file into GD
+        $path = public_path('images/' . date('Y/m/d/')) . $fileName;
+        $original = imagecreatefrompng($path);
+
+        // Rotate the image by 90 degrees
+        $rotated = imagerotate($original, 90, 0);
+
+        // Save the rotated image
+        imagepng($rotated, public_path('images/' . date('Y/m/d/')) . $fileName);
+
         $machineLearning = Http::post('http://210.247.245.51:55888/image_quality', [
             'path' => "../../../../../var/www/claimoo-fe/public/images/" . date('Y/m/d/') . $fileName,
         ]);
