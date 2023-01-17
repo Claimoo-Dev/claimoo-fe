@@ -39,19 +39,19 @@
                     <p class="text-center fw-500 fz-18">Hai {{ $user->data->name }}</p>
                     <p class="text-center fw-500 fz-18">Syarat & Ketentuan :</p>
                     <div class="tnc">
-                        <img class="img-fluid" src="tnc/tnc-1.png" alt="">
+                        <img class="img-fluid" src="tnc/tnc1.png" alt="">
                     </div>
                     <div class="tnc">
-                        <img class="img-fluid" src="tnc/tnc-2.png" alt="">
+                        <img class="img-fluid" src="tnc/tnc2.png" alt="">
                     </div>
                     <div class="tnc">
-                        <img class="img-fluid" src="tnc/tnc-3.png" alt="">
+                        <img class="img-fluid" src="tnc/tnc3.png" alt="">
                     </div>
                     <div class="tnc">
-                        <img class="img-fluid" src="tnc/tnc-4.png" alt="">
+                        <img class="img-fluid" src="tnc/tnc4.png" alt="">
                     </div>
                     <div class="tnc">
-                        <img class="img-fluid" src="tnc/tnc-5.png" alt="">
+                        <img class="img-fluid" src="tnc/tnc5.png" alt="">
                     </div>
                     <!-- <ul>
                         <li class="text-justify">Mohon izinkan kamera & lokasi untuk menggunakan layanan ini.</li>
