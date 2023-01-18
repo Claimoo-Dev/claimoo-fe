@@ -333,11 +333,11 @@
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#order" type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
+                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#policy" type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Riwayat
+                            <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab" data-bs-target="#detection" type="button"><i class="fas fa-angle-right"></i>Riwayat
                                 Deteksi</button>
                         </li>
 

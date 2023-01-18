@@ -112,8 +112,10 @@ class CameraController extends Controller
                 'latitude' => $latitude,
                 'image' => $fileName,
                 'description' => $descriptions,
-                'status' => $response->status == 1 ? "Foto Layak Proses" : "Foto Tidak Layak Proses",
-                'status_description' => $response->status == 0 ? $response->hasil : null
+                'status' => $response->status,
+                'identification' => $response->identifikasi,
+                'image_description' => $response->gambar,
+                'result_description' => $response->hasil
             ]);
         }
 
