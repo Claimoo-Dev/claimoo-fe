@@ -591,12 +591,10 @@ const doScreenshot = () => {
                 }
             },
             error: function (xhr) {
-                var err = JSON.parse(xhr.responseText);
-
                 statusImage.innerHTML =
                     '<table class="w-100">' +
                     '<tr>' +
-                    '<td class="col-12 p-0 text-center">' + err.message + '</td>' +
+                    '<td class="col-12 p-0 text-center">Terjadi Kesalahan</td>' +
                     '</tr>' +
                     '</table>';
             }
