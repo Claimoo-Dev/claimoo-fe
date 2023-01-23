@@ -28,7 +28,7 @@
 
         <div class="table-responsive mt-3">
             <table class="table table-striped caption-top">
-                <caption>Daftar Gambar {{ $user->data->name }} </caption>
+                <caption>Daftar Gambar Layak Oleh {{ $user->data->name }} </caption>
                 <thead>
                     <tr>
                         <th>No</th>
