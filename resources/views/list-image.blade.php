@@ -35,19 +35,26 @@
                         <th>Foto</th>
                         <th>Tipe Mobil</th>
                         <th>Tipe Frame</th>
-                        <th>Kerusakan</th>
+                        <!-- <th>Kerusakan</th> -->
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($images->data as $image)
+
+                    @php
+                    $replace = str_replace("-","/", $image->created_date);
+
+                    $src = "images/" . $replace . "/" . $image->image;
+                    @endphp
+
                     <tr>
                         <td class="text-center">{{ $loop->iteration }}</td>
                         <td>
-                            <img class="img-fluid my-image" src="assets-voxo/images/avanza.png" alt="">
+                            <img class="img-fluid my-image" src="{{ $src }}" alt="">
                         </td>
                         <td class="text-center text-uppercase">{{ $image->type_car }}</td>
                         <td class="text-center text-capitalize">{{ $image->type_frame }}</td>
-                        <td>Lecet</td>
+                        <!-- <td>Lecet</td> -->
                     </tr>
                     @endforeach
                 </tbody>
