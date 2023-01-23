@@ -30,6 +30,7 @@ Route::get('verify', [UserController::class, 'verifiedEmail']);
 Route::post('forgot-password', [UserController::class, 'sendLinkForgotPassword'])->name('sendLinkForgotPassword');
 Route::get('reset-password', [UserController::class, 'requestResetPassword'])->name('resetPassword');
 Route::post('reset-password', [UserController::class, 'resetPassword'])->name('postResetPassword');
+Route::get('list-image', [CameraController::class, 'listImage'])->name('list-image');
 
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');

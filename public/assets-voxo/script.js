@@ -8,6 +8,7 @@ const jeep = document.getElementById('jeep');
 const pickup = document.getElementById('pickup');
 const signOut = document.getElementById('signOut');
 const feedback = document.getElementById('feedback');
+const listImage = document.getElementById('listImage');
 
 mpv.onclick = () => {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -71,6 +72,10 @@ signOut.onclick = () => {
 
 feedback.onclick = () => {
     window.location.href = 'feedback';
+};
+
+listImage.onclick = () => {
+    window.location.href = 'list-image';
 };
 
 navigator.geolocation.getCurrentPosition(function (position) {

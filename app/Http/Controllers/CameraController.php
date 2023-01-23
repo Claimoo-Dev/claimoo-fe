@@ -112,7 +112,7 @@ class CameraController extends Controller
                 'latitude' => $latitude,
                 'image' => $fileName,
                 'description' => $descriptions,
-                'status' => $response->status,
+                'status' => $response->status == 1 ? "1" : "0",
                 'identification' => $response->identifikasi,
                 'image_description' => $response->gambar,
                 'result_description' => $response->hasil
@@ -120,5 +120,33 @@ class CameraController extends Controller
         }
 
         return response()->json($response);
+    }
+
+    public function listImage()
+    {
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/members/' . $userCode);
+
+        $user = json_decode($result->body());
+
+        $apiListImages = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/upload?member_code=' . $userCode . '&status=0');
+
+        $images = json_decode($apiListImages->body());
+
+        return view('list-image')->with(compact('user', 'images'));
     }
 }
