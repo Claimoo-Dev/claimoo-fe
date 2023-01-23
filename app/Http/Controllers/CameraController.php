@@ -143,7 +143,7 @@ class CameraController extends Controller
             'X-Channel' => 'cust_mobile_app',
             'Authorization' => $token,
             'Content-Type' => 'application/json'
-        ])->get('http://staging.claimoo.com:55777/v1/upload?member_code=' . $userCode . '&status=0');
+        ])->get('http://staging.claimoo.com:55777/v1/upload?member_code=' . $userCode . '&status=1');
 
         $images = json_decode($apiListImages->body());
 
