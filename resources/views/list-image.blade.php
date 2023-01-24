@@ -94,7 +94,6 @@
             $.ajax({
                 type: "GET",
                 url: "/testing?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
-                url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
