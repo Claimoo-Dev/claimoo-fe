@@ -90,7 +90,6 @@
         var endDate = document.getElementById("endDate").value;
 
         function date() {
-            $.support.cors = true;
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
