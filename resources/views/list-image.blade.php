@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Claimoo - List Image</title>
 
     <!-- font-awesome css -->
@@ -91,16 +90,14 @@
         var endDate = document.getElementById("endDate").value;
 
         function date() {
+            $.support.cors = true;
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
-                crossDomain: true,
-                dataType: 'jsonp',
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    'Content-Type': 'application/json'
                 },
                 success: function (data) {
                     $('#tbody').remove();
@@ -181,13 +178,10 @@
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
-                crossDomain: true,
-                dataType: 'jsonp',
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    'Content-Type': 'application/json'
                 },
                 success: function (data) {
                     $('#tbody').remove();
@@ -269,13 +263,10 @@
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
-                crossDomain: true,
-                dataType: 'jsonp',
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    'Content-Type': 'application/json'
                 },
                 success: function (data) {
                     $('#tbody').remove();
