@@ -363,7 +363,7 @@
 
                 <div class="col-lg-9">
                     <div class="filter-button dash-filter dashboard">
-                        <button class="btn btn-primary btn-sm fw-bold filter-btn">Show Menu</button>
+                        <button class="btn btn-primary btn-sm fw-bold filter-btn">Tampilkan Menu</button>
                     </div>
 
                     <div class="tab-content" id="myTabContent">
@@ -450,7 +450,7 @@
                                                     </div>
                                                 </div>
                                             </div> -->
-                                            <div class="col-sm-6">
+                                            <!-- <div class="col-sm-6">
                                                 <div class="box">
                                                     <div class="box-title">
                                                         <h4>Buletin</h4>
@@ -460,7 +460,7 @@
                                                             apa pun.</h6>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

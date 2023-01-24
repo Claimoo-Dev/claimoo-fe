@@ -139,14 +139,6 @@ class CameraController extends Controller
 
         $user = json_decode($result->body());
 
-        $apiListImages = Http::withHeaders([
-            'X-Channel' => 'cust_mobile_app',
-            'Authorization' => $token,
-            'Content-Type' => 'application/json'
-        ])->get('http://staging.claimoo.com:55777/v1/upload?member_code=' . $userCode . '&status=1');
-
-        $images = json_decode($apiListImages->body());
-
-        return view('list-image')->with(compact('user', 'images'));
+        return view('list-image')->with(compact('user', 'token'));
     }
 }

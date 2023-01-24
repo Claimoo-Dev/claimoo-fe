@@ -605,18 +605,19 @@
 
             if (windowTop >= headerHeight) {
                 $header.addClass("nav-down");
+                $header.addClass("nav-up");
             } else {
                 $header.removeClass("nav-down");
                 $header.removeClass("nav-up");
             }
 
-            if ($header.hasClass("nav-down")) {
-                if (windowTop < lastScrollTop) {
-                    $header.addClass("nav-up");
-                } else {
-                    $header.removeClass("nav-up");
-                }
-            }
+            // if ($header.hasClass("nav-down")) {
+                // if (windowTop < lastScrollTop) {
+                    // $header.addClass("nav-up");
+                // } else {
+                    // $header.removeClass("nav-up");
+                // }
+            // }
             $("#lastscrolltop").text("LastscrollTop: " + lastScrollTop);
 
             lastScrollTop = windowTop;
