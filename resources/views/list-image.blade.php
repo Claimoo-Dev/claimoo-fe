@@ -86,13 +86,15 @@
 
         var token = document.getElementById("token").value;
         var memberCode = document.getElementById("memberCode").value;
-        var startDate = document.getElementById("startDate").value;
-        var endDate = document.getElementById("endDate").value;
-
+        
         function date() {
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
+
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
+                crossDomain: true,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
@@ -171,12 +173,15 @@
         };
 
         function nextPage() {
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
             var page = parseInt(document.getElementById("page").value) + 1;
             document.getElementById("page").value = page;
 
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
+                crossDomain: true,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
@@ -256,12 +261,15 @@
         };
 
         function previousPage() {
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
             var page = parseInt(document.getElementById("page").value) - 1;
             document.getElementById("page").value = page;
 
             $.ajax({
                 type: "GET",
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
+                crossDomain: true,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
