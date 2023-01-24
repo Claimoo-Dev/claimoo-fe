@@ -92,6 +92,7 @@
         function date() {
             $.ajax({
                 type: "GET",
+                crossDomain: true,
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
                 headers: {
                     'Authorization': token,
@@ -176,6 +177,7 @@
 
             $.ajax({
                 type: "GET",
+                crossDomain: true,
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
@@ -261,6 +263,7 @@
 
             $.ajax({
                 type: "GET",
+                crossDomain: true,
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
