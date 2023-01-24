@@ -91,10 +91,8 @@
 
         function date() {
             $.ajax({
-                type: "GET",
-                crossDomain: true,
-                url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
-                dataType: 'json',
+                type: "POST",
+                url: "http://staging.claimoo.com:55777/v1/upload/list?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
@@ -177,10 +175,8 @@
             document.getElementById("page").value = page;
 
             $.ajax({
-                type: "GET",
-                crossDomain: true,
-                url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
-                dataType: 'json',
+                type: "POST",
+                url: "http://staging.claimoo.com:55777/v1/upload/list?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
@@ -264,10 +260,8 @@
             document.getElementById("page").value = page;
 
             $.ajax({
-                type: "GET",
-                crossDomain: true,
-                url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
-                dataType: 'json',
+                type: "POST",
+                url: "http://staging.claimoo.com:55777/v1/upload/list?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
