@@ -67,23 +67,6 @@
     <script src="assets-voxo/js/bootstrap/bootstrap.bundle.min.js"></script>
 
     <script>
-        var modal = document.getElementById("myModal");
-        var img = document.getElementsByClassName("my-image");
-        var modalImg = document.getElementById("img01");
-
-        for (let i = 0; i < img.length; i++) {
-            img[i].onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        }
-        
-        var span = document.getElementsByClassName("close")[0];
-        
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
         var token = document.getElementById("token").value;
         var memberCode = document.getElementById("memberCode").value;
         
@@ -167,6 +150,23 @@
                         
                     //     $('#option-parent').append(button);
                     // }
+
+                    var modal = document.getElementById("myModal");
+                    var img = document.getElementsByClassName("my-image");
+                    var modalImg = document.getElementById("img01");
+
+                    for (let i = 0; i < img.length; i++) {
+                        img[i].onclick = function () {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                        }
+                    }
+                    
+                    var span = document.getElementsByClassName("close")[0];
+                    
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
                 }
             });
         };
@@ -254,6 +254,23 @@
                         
                     //     $('#option-parent').append(button);
                     // }
+
+                    var modal = document.getElementById("myModal");
+                    var img = document.getElementsByClassName("my-image");
+                    var modalImg = document.getElementById("img01");
+
+                    for (let i = 0; i < img.length; i++) {
+                        img[i].onclick = function () {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                        }
+                    }
+                    
+                    var span = document.getElementsByClassName("close")[0];
+                    
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
                 }
             });
         };
@@ -341,6 +358,23 @@
                         
                     //     $('#option-parent').append(button);
                     // }
+
+                    var modal = document.getElementById("myModal");
+                    var img = document.getElementsByClassName("my-image");
+                    var modalImg = document.getElementById("img01");
+
+                    for (let i = 0; i < img.length; i++) {
+                        img[i].onclick = function () {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                        }
+                    }
+                    
+                    var span = document.getElementsByClassName("close")[0];
+                    
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
                 }
             });
         };
