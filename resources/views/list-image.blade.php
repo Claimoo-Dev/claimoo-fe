@@ -122,51 +122,51 @@
                     trHTML += '</tbody>';
                     $('#table').append(trHTML);
 
-                    // var count = parseInt(data.pagination.count) /  10;
-                    // var lastPage = Math.ceil(count);
-                    // var page = data.pagination.current_page;
+                    var count = parseInt(data.pagination.count) /  10;
+                    var lastPage = Math.ceil(count);
+                    var page = data.pagination.current_page;
 
-                    // if (count > 1 && page > 1 && lastPage > page) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
-                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // } else if (count > 1 && page == 1) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // } else if (count > 1 && lastPage == page) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // }
-
-                    if (data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    if (count > 1 && page > 1 && lastPage > page) {
                         var button = '<div class="text-center" id="option">' +
-                            '<button class="btn btn-primary me-1" onclick="previousPage()"> < </button>' +
+                            '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
                             '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
-                    } else if (data.pagination.has_next_page && !data.pagination.has_previous_page) {
+                    } else if (count > 1 && page == 1) {
                         var button = '<div class="text-center" id="option">' +
                             '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
-                    } else if (!data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    } else if (count > 1 && lastPage == page) {
                         var button = '<div class="text-center" id="option">' +
                             '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
                     }
+
+                    // if (data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary me-1" onclick="previousPage()"> < </button>' +
+                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // } else if (data.pagination.has_next_page && !data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // } else if (!data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // }
                 }
             });
         };
@@ -209,51 +209,51 @@
                     trHTML += '</tbody>';
                     $('#table').append(trHTML);
 
-                    // var count = parseInt(data.pagination.count) /  10;
-                    // var lastPage = Math.ceil(count);
-                    // var page = data.pagination.current_page;
+                    var count = parseInt(data.pagination.count) /  10;
+                    var lastPage = Math.ceil(count);
+                    var page = data.pagination.current_page;
 
-                    // if (count > 1 && page > 1 && lastPage > page) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
-                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // } else if (count > 1 && page == 1) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // } else if (lastPage == page) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // }
-
-                    if (data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    if (count > 1 && page > 1 && lastPage > page) {
                         var button = '<div class="text-center" id="option">' +
-                            '<button class="btn btn-primary me-1" onclick="previousPage()"> < </button>' +
+                            '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
                             '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
-                    } else if (data.pagination.has_next_page && !data.pagination.has_previous_page) {
+                    } else if (count > 1 && page == 1) {
                         var button = '<div class="text-center" id="option">' +
                             '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
-                    } else if (!data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    } else if (lastPage == page) {
                         var button = '<div class="text-center" id="option">' +
                             '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
                     }
+
+                    // if (data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary me-1" onclick="previousPage()"> < </button>' +
+                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // } else if (data.pagination.has_next_page && !data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // } else if (!data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // }
                 }
             });
         };
@@ -296,51 +296,51 @@
                     trHTML += '</tbody>';
                     $('#table').append(trHTML);
 
-                    // var count = parseInt(data.pagination.count) /  10;
-                    // var lastPage = Math.ceil(count);
-                    // var page = data.pagination.current_page;
+                    var count = parseInt(data.pagination.count) /  10;
+                    var lastPage = Math.ceil(count);
+                    var page = data.pagination.current_page;
 
-                    // if (count > 1 && page > 1 && lastPage > page) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
-                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // } else if (count > 1 && page == 1) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // } else if (lastPage == page) {
-                    //     var button = '<div class="text-center" id="option">' +
-                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
-                    //     '</div>';
-                        
-                    //     $('#option-parent').append(button);
-                    // }
-
-                    if (data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    if (count > 1 && page > 1 && lastPage > page) {
                         var button = '<div class="text-center" id="option">' +
-                            '<button class="btn btn-primary me-1" onclick="previousPage()"> < </button>' +
+                            '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
                             '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
-                    } else if (data.pagination.has_next_page && !data.pagination.has_previous_page) {
+                    } else if (count > 1 && page == 1) {
                         var button = '<div class="text-center" id="option">' +
                             '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
-                    } else if (!data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    } else if (lastPage == page) {
                         var button = '<div class="text-center" id="option">' +
                             '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
                         '</div>';
                         
                         $('#option-parent').append(button);
                     }
+
+                    // if (data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary me-1" onclick="previousPage()"> < </button>' +
+                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // } else if (data.pagination.has_next_page && !data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary" onclick="nextPage()"> > </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // } else if (!data.pagination.has_next_page && data.pagination.has_previous_page) {
+                    //     var button = '<div class="text-center" id="option">' +
+                    //         '<button class="btn btn-primary" onclick="previousPage()"> < </button>' +
+                    //     '</div>';
+                        
+                    //     $('#option-parent').append(button);
+                    // }
                 }
             });
         };
