@@ -76,7 +76,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/list-image-user?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
+                url: "/list-image-user?member_code=" + memberCode + "&status=1&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
@@ -179,7 +179,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/list-image-user?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
+                url: "/list-image-user?member_code=" + memberCode + "&status=1&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
@@ -283,7 +283,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "/list-image-user?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
+                url: "/list-image-user?member_code=" + memberCode + "&status=1&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
                     'X-Channel': 'cust_mobile_app',
