@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
     <title>Claimoo - List Image</title>
 
@@ -92,7 +93,6 @@
         function date() {
             $.ajax({
                 type: "GET",
-                crossDomain: true,
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=1",
                 headers: {
                     'Authorization': token,
@@ -177,7 +177,6 @@
 
             $.ajax({
                 type: "GET",
-                crossDomain: true,
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
@@ -263,7 +262,6 @@
 
             $.ajax({
                 type: "GET",
-                crossDomain: true,
                 url: "http://staging.claimoo.com:55777/v1/upload?member_code=" + memberCode + "&status=0&limit=10&start_date=" + startDate + "&end_date=" + endDate + "&page=" + page,
                 headers: {
                     'Authorization': token,
