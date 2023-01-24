@@ -142,7 +142,7 @@ class CameraController extends Controller
         return view('list-image')->with(compact('user', 'token'));
     }
 
-    public function testing(Request $request)
+    public function listImageUser(Request $request)
     {
         $userCode = Cookie::get('user_code');
         $token = Cookie::get('auth_token');
