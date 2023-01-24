@@ -141,4 +141,28 @@ class CameraController extends Controller
 
         return view('list-image')->with(compact('user', 'token'));
     }
+
+    public function testing(Request $request)
+    {
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $startDate = $request->start_date;
+        $endDate = $request->end_date;
+        $page = $request->page;
+
+        $backend = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get("http://staging.claimoo.com:55777/v1/upload?member_code=" . $userCode . "&status=0&limit=10&start_date=" . $startDate . "&end_date=" . $endDate . "&page=" . $page);
+
+        $result = json_decode($backend->body());
+
+        return response()->json($result);
+    }
 }
