@@ -327,7 +327,32 @@
                     </div>
                 </a>
             </div>
+        </section>
 
+        <section class="help-section">
+            <div class="container">
+                <div class="mb-4">
+                    <h3 class="help-title">Butuh bantuan? Hubungi layanan pelanggan kami di :</h3>
+                </div>
+                <div class="help-parent">
+                    <div class="help-item text-center">
+                        <img class="img-fluid" src="assets-voxo/images/telp.png" alt="">
+                        <p> Telepon </p>
+                    </div>
+                    <div class="help-item ms-1 me-1 text-center">
+                        <img class="img-fluid" src="assets-voxo/images/email.png" alt="">
+                        <p> Email </p>
+                    </div>
+                    <div class="help-item me-1 text-center">
+                        <img class="img-fluid" src="assets-voxo/images/wa.png" alt="">
+                        <p> WhatsApp </p>
+                    </div>
+                    <div class="help-item text-center">
+                        <img class="img-fluid" src="assets-voxo/images/chat.png" alt="">
+                        <p> Chat </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
