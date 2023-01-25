@@ -57,7 +57,7 @@
     <!-- header start -->
     <header id="home">
         <div class="main-header navbar-searchbar">
-            <div class="container-fluid-lg">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="main-menu">
@@ -68,134 +68,7 @@
                                             class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
-
                             </div>
-                            <nav>
-                                <div class="main-navbar">
-                                    <div id="mainnav">
-                                        <div class="me-3"></div>
-                                        <ul class="nav-menu">
-                                            <li class="back-btn d-xl-none">
-                                                <div class="close-btn">
-                                                    Menu
-                                                    <span class="mobile-back"><i class="fa fa-angle-left"></i>
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            <li class="home-menu">
-                                                <a href="{{ route('landing-page') }}" class="nav-link menu-title">Beranda</a>
-
-                                            </li>
-
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Tentang
-                                                    Kami</a>
-                                                <ul class="nav-submenu menu-content">
-                                                    <li>
-                                                        <a href="{{ route('company') }}">Perusahaan</a>
-                                                        <a href="{{ route('commissionerDirector') }}">Komisaris &amp; Direksi</a>
-                                                        <a href="{{ route('expert') }}">Tenaga Ahli</a>
-                                                        <a href="javascript:void(0)">Partner</a>
-                                                    </li>
-
-                                                </ul>
-                                            </li>
-
-                                            <li class="mega-menu dropdown ratio_40">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">
-                                                    <div class="gradient-title">Produk Asuransi</div>
-                                                </a>
-                                                <div class="mega-menu-container poster-bg-image menu-content">
-                                                    <div class="container-fluid">
-                                                        <div class="row row-cols-5">
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Simas Mobil</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Zurich Autocillin</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Astra Garda Oto</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Bengkel</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Berita</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Hubungi
-                                                    Kami</a>
-                                            </li>
-
-
-                                            <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
-                                                <div class="mobile-contain">
-                                                    <h5>Aplikasi Mobile Lite</h5>
-                                                    <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
-                                                    <a href="javascript:void(0)" id="installApp"
-                                                        class="btn btn-solid-default btn-spacing w-100">TAMBAHKAN KE
-                                                        HOMESCREEN</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
                             <div class="menu-right">
                                 <ul>
                                     <li class="onhover-dropdown wislist-dropdown">
@@ -206,48 +79,8 @@
                                         </div>
                                     </li>
 
-                                    <li class="language-icon d-none d-sm-block">
-                                        <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                                <span><i data-feather="globe"></i>ID
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('landing-page') }}">EN</a>
-                                                </li>
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('landing-page') }}">ID</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li class="user-icon d-none d-sm-block">
-                                        <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                                <span><i data-feather="user"></i>
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('landing-page') }}">Log
-                                                        In</a>
-                                                </li>
-                                                <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('landing-page') }}">Daftar</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li class="toggle-icon .d-md-none .d-lg-block">
-                                        <div class="toggle-nav">
+                                    <li class="modal-icon">
+                                        <div class="modal-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <i data-feather="align-justify" class="sidebar-bar"></i>
                                         </div>
                                     </li>
@@ -262,7 +95,7 @@
     <!-- header end -->
 
     <!-- mobile fix menu start -->
-    <div class="mobile-menu d-sm-none">
+    <div class="mobile-menu">
         <ul>
             <li>
                 <a href="{{ route('landing-page') }}" class="active">
@@ -298,465 +131,212 @@
     </div>
     <!-- mobile fix menu end -->
 
-    <section class="pt-0 overflow-hidden">
-        <div class="banner" id="banner">
-            <div class="slider">
-                <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
-                <h2 class="slider-text">Aplikasi inspeksi Mobil tercerdas di Indonesia</h2>
-                <!-- <h2 class="slider-text2">tes</h2> -->
-            </div>
-            <!-- <div class="slider">
-                <img class="img-fluid blur-up lazyload" src="assets-voxo/images/car3.jpg" alt="">
-                <h2 class="slider-text">Mengetahui biaya kerusakan secepat anda memfoto</h2>
-            </div> -->
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <div class="row about-row">
-                <div class="col-lg-6 col-about-image">
-                    <div class="about-image">
-                        <img class="img-fluid blur-up lazyload" src="assets-voxo/images/about.jpg" alt="">
-                    </div>
+    <div class="content-container">
+        <section class="section-banner overflow-hidden">
+            <div class="banner" id="banner">
+                <div class="slider">
+                    <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
+                    <h2 class="slider-text">Aplikasi inspeksi Mobil tercerdas di Indonesia</h2>
                 </div>
-
-                <div class="col-lg-6 mt-lg-0 col-about-body">
-                    <div class="about-body">
-                        <div class="about-title text-center">
-                            <h2 class="about-title-h2">Klaim Asuransi Tercepat</h2>
-                        </div>
-                        <div class="about-description">
-                            <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis
-                                Artificial
-                                Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan
-                                Asuransi
-                                terpercaya.</p>
-                        </div>
-                        <a href="{{ route('landing-page') }}">
-                            <div class="about-footer-parent">
-                                <div class="about-footer text-center">
-                                    Selengkapnya
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                <div class="slider">
+                    <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
+                    <h2 class="slider-text">Testing</h2>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Custome services Section Start -->
-    <section class="service-section">
-        <div class="container">
-            <div class="text-center mb-4 mb-lg-5">
-                <h2>Keunggulan Kami</h2>
-            </div>
-            <div class="row g-4 g-sm-3">
-                <div class="col-xl-3 col-sm-6">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#customer"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Proses Klaim Cepat</h3>
-                            <span class="font-light">Dengan teknologi Machine Learning, membuat siapapun bisa menikmati
-                                cepatnya proses klaim</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#shop"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Pendaftaran Mudah</h3>
-                            <span class="font-light">Dapatkan asuransi mobilmu kapanpun dan dimanapun, tanpa
-                                survei!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#secure-payment"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Pembayaran yang Aman</h3>
-                            <span class="font-light">Kami menerima berbagai macam jenis pembayaran.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <svg>
-                                <use xlink:href="assets-voxo/svg/icons.svg#return"></use>
-                            </svg>
-                        </div>
-                        <div class="service-content">
-                            <h3 class="mb-2">Free Returns</h3>
-                            <span class="font-light">30-days free return policy.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Custome services Section End -->
-
-    <section class="package">
-        <div class="container">
-            <div class="text-center mb-4 mb-lg-5">
-                <h2>Paket Member</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="comparemodal-body">
-                                        <div class="table-wrapper table-responsive ratio_asos">
-                                            <table class="table table-striped-1">
-                                                <tbody>
-                                                    <tr class="table-product-details">
-                                                        <td>
-                                                            <div class="product-box">
-
-                                                                <div class="product-details">
-                                                                    <div>
-                                                                        <a href="javascript:void(0)">
-                                                                            <center>
-                                                                                <h6 class="fw-bold">Reguler</h6>
-                                                                            </center>
-                                                                        </a>
-                                                                    </div>
-
-                                                                    <div class="price-details mt-2">
-                                                                        <center>
-                                                                            <h6 class="font-green">Nikmati Fitur gratis
-                                                                                Claimoo</h6>
-                                                                        </center>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-
-                                                    </tr>
-
-                                                    <tr class="table-cart-button">
-
-
-                                                        <td>
-                                                            <a href="cart.html" class="btn btn-solid-blue">Daftar</a>
-
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                        <td>
-                                                            <center>Deteksi Kerusakan</center>
-                                                        </td>
-
-
-                                                    </tr>
-
-
-                                                    <tr>
-
-
-                                                        <td>
-                                                            <center>Tingkat Kerusakan</code>
-                                                        </td>
-
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                        <td>
-
-                                                            <center>Estimasi Biaya</center>
-
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <code>
-                                                                <center><s>Bengkel Resmi</s></center>
-                                                            </code>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <code>
-                                                                <center><s>Tanpa Survey</s></center>
-                                                            </code>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <code>
-                                                                <center><s>Klaim Cepat</s></center>
-                                                            </code>
-                                                        </td>
-
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div class="col-lg-6 mt-lg-0 mt-3">
-
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="comparemodal-body">
-                                        <div class="table-wrapper table-responsive ratio_asos">
-                                            <table class="table table-striped-1">
-                                                <tbody>
-                                                    <tr class="table-product-details">
-                                                        <td>
-                                                            <div class="product-box">
-
-                                                                <div class="product-details">
-                                                                    <div>
-                                                                        <a href="javascript:void(0)">
-                                                                            <center>
-                                                                                <h6 class="fw-bold">Prioritas</h6>
-                                                                            </center>
-                                                                        </a>
-                                                                    </div>
-
-                                                                    <div class="price-details mt-2">
-                                                                        <center>
-                                                                            <h6 class="font-green">Dapatkan keuntungan
-                                                                                lebih </h6>
-                                                                        </center>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-
-                                                    </tr>
-
-                                                    <tr class="table-cart-button">
-
-
-                                                        <td>
-                                                            <a href="cart.html" class="btn btn-solid-blue">Order
-                                                                Sekarang</a>
-
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                        <td>
-                                                            <center>Deteksi Kerusakan</center>
-                                                        </td>
-
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                        <td>
-                                                            <center>Tingkat Kerusakan</center>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                        <td>
-                                                            <center>Estimasi Biaya</center>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <center>Bengkel Resmi</center>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <center>Tanpa Survey</center>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <center>Klaim Cepat</center>
-                                                        </td>
-
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="poster-section ratio2_1">
-        <div>
+        <section class="about">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-poster">
-                        <div class="poster-image">
-                            <h2>Sekarang, lebih mudah memiliki asuransi mobil</h2>
-                            <p>Daftar, beli Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
-                                tinggal pada
-                                asuransi mobil yang rumit. Tonton video untuk mengetahui lebih lanjut.</p>
+                <div class="row about-row">
+                    <div class="col-4 col-about-image pe-1">
+                        <div class="about-image">
+                            <img class="img-fluid blur-up lazyload" src="assets-voxo/images/about.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-8 ps-1 col-about-body">
+                        <div class="about-body">
+                            <div class="about-title">
+                                <h3 class="about-title-h3">Klaim Asuransi Tercepat</h3>
+                            </div>
+                            <div class="about-description">
+                                <p>Claimoo adalah aplikasi klaim & inspeksi mobil berdasarkan deteksi kerusakan berbasis
+                                    Artificial
+                                    Intelligence dengan menyediakan sistem yang cerdas dan handal. Bekerjasama dengan
+                                    Asuransi
+                                    terpercaya.</p>
+                            </div>
                             <a href="{{ route('landing-page') }}">
-                                <div class="btn btn-solid-default btn-offer text-center">
-                                    DAPATKAN PENAWARAN TERBAIK
+                                <div class="about-footer-parent">
+                                    <div class="about-footer text-center">
+                                        Selengkapnya
+                                    </div>
                                 </div>
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="col-lg-6 mt-lg-0 mt-4">
-                        <div class="poster-image">
-                            <img src="assets-voxo/images/produk/penawaran.png" class="img-fluid bg-img blur-up lazyload"
-                                alt="">
-                        </div>
+        <section class="service-section">
+            <div class="container">
+                <div class="mb-4">
+                    <h3 class="service-title">Keunggulan Kami</h3>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <img class="img-fluid" src="assets-voxo/images/easy-registration.png" alt="">
+                        <p>Pendaftaran Mudah</p>
+                    </div>
+                    <div class="column me-1 ms-1">
+                        <img class="img-fluid" src="assets-voxo/images/quick-claim.png" alt="">
+                        <p>Proses Klaim Cepat</p>
+                    </div>
+                    <div class="column">
+                        <img class="img-fluid" src="assets-voxo/images/secure-payment.png" alt="">
+                        <p>Pembayaran Aman</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- brand section start -->
-    <section class="section-b-space">
-        <div class="container">
-            <div class="text-center mb-4 mb-lg-5">
-                <h2>Mitra</h2>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="brand-slider">
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/1.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
-                            </div>
+        <section class="package">
+            <div class="container">
+                <div class="mb-4">
+                    <h3 class="service-title">Paket Member</h3>
+                </div>
+                <div class="card mb-3 package-card">
+                    <div class="row g-0">
+                        <div class="col-4 package-image">
+                            <img src="assets-voxo/images/reguler.png" class="img-fluid rounded-start">
                         </div>
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/2.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/3.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/5.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/6.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="brand-image">
-                                <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
-                                    alt="brand logo">
+                        <div class="col-8">
+                            <div class="card-body ps-0">
+                                <h5 class="card-title package-card-title">Reguler</h5>
+                                <p class="card-text">Nikmati fitur gratis deteksi kerusakan, tingkat kerusakan, estimasi
+                                    biaya</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- brand section end -->
 
-    <section class="referenceimg">
-        <div class="container">
-            <div class="reference-title">
-                <h2 class="reference-title-h2">Ajak teman Anda dan dapatkan poin nya</h2>
-            </div>
-            <div class="reference-description">
-                <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan
-                    menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
-            </div>
-            <a href="{{ route('landing-page') }}">
-                <div class="reference-footer text-center">
-                    AJAK TEMAN ANDA
+                <div class="card package-card">
+                    <div class="row g-0">
+                        <div class="col-4 package-image">
+                            <img src="assets-voxo/images/priority.png" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body ps-0">
+                                <h5 class="card-title package-card-title">Prioritas</h5>
+                                <p class="card-text">Dengan membeli Polis Asuransi melalui kami, anda
+                                    akan mendapatkan benefit klaim dengan teknologi AI
+                                    yang cepat dan akurat, tanpa survey dan diberikan
+                                    rekomendasi bengkel yang sesuai kebutuhan Anda</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </a>
-        </div>
+            </div>
+        </section>
 
-    </section>
+        <section class="poster-section ratio2_1">
+            <div class="container">
+                <div class="poster-image">
+                    <h3>Sekarang, lebih mudah memiliki asuransi mobil</h3>
+                    <p>Daftar, beli Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
+                        tinggal pada
+                        asuransi mobil yang rumit. Tonton video untuk mengetahui lebih lanjut.</p>
+                    <a href="{{ route('landing-page') }}">
+                        <div class="btn-offer text-center">
+                            Dapatkan Penawaran Terbaik
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-b-space">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h3 class="service-title">Mitra</h3>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="brand-slider">
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/1.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/2.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/3.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/5.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/6.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="brand-image">
+                                    <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
+                                        alt="brand logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="referenceimg">
+            <div class="container">
+                <div class="reference-title">
+                    <h3 class="reference-title-h3">Ajak teman Anda dan dapatkan poin nya</h3>
+                </div>
+                <div class="reference-description">
+                    <p>Anda akan mendapatkan 150 poin ketika teman Anda menyelesaikan pembelian polis pertama nya dengan
+                        menggunakan kode referensi Anda. Gunakan poin Anda untuk mendapatkan hadiah.</p>
+                </div>
+                <a href="{{ route('landing-page') }}">
+                    <div class="reference-footer text-center">
+                        Ajak Teman Anda
+                    </div>
+                </a>
+            </div>
+
+        </section>
+    </div>
 
     <!-- footer start -->
     <footer class="footer-sm-space">
         <div class="main-footer">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-12">
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
@@ -766,16 +346,16 @@
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
                             </p>
-                            <p>Download app from:</p>
+                            <!-- <p>Download app from:</p>
                             <div>
                                 <center><img src="assets-voxo/images/logos/android.png" width="100">
                                     <img src="assets-voxo/images/logos/ios.png" width="100">
                                 </center>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Tentang Kami</h3>
@@ -802,7 +382,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Produk Asuransi</h3>
@@ -824,7 +404,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Bantuan</h3>
@@ -851,7 +431,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
+                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
                         <div class="footer-newsletter">
                             <h3>Hubungi kami:</h3>
                             <div class="footer-number">
@@ -885,38 +465,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
         <div class="sub-footer">
             <div class="container">
                 <div class="row gy-3">
-                    <!-- <div class="col-md-6"> -->
-                    <!-- <ul>
-                            <li class="font-dark">Kami menerima</li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/1.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/2.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/3.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="assets-voxo/images/payment-icon/4.jpg" class="img-fluid blur-up lazyload"
-                                        alt="payment icon"></a>
-                            </li>
-                        </ul> -->
-                    <!-- </div> -->
                     <div class="col-md-12">
                         <p class="mb-0 font-dark text-center">© 2023 Claimoo. Hak Cipta Dilindungi Undang-undang</p>
                     </div>
@@ -926,283 +481,74 @@
     </footer>
     <!-- footer end -->
 
-
-
-    <!-- Quick view modal start -->
-    <div class="modal fade quick-view-modal" id="quick-view">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="modal-body">
-                    <div class="row gy-4">
-                        <div class="col-lg-6">
-                            <div class="quick-view-image">
-                                <div class="quick-view-slider ratio_2">
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/1.jpg"
-                                            class="img-fluid bg-img blur-up lazyload" alt="product">
-                                    </div>
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/2.jpg"
-                                            class="img-fluid bg-img blur-up lazyload" alt="product">
-                                    </div>
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/3.jpg"
-                                            class="img-fluid bg-img blur-up lazyload" alt="product">
-                                    </div>
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/4.jpg"
-                                            class="img-fluid bg-img blur-up lazyload" alt="product">
-                                    </div>
-                                </div>
-                                <div class="quick-nav">
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/1.jpg"
-                                            class="img-fluid blur-up lazyload" alt="product">
-                                    </div>
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/2.jpg"
-                                            class="img-fluid blur-up lazyload" alt="product">
-                                    </div>
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/3.jpg"
-                                            class="img-fluid blur-up lazyload" alt="product">
-                                    </div>
-                                    <div>
-                                        <img src="assets-voxo/images/shoes/product/4.jpg"
-                                            class="img-fluid blur-up lazyload" alt="product">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="product-right">
-                                <h2 class="mb-2">Latest Sports Shoes</h2>
-                                <ul class="rating mt-1">
-                                    <li>
-                                        <i class="fas fa-star theme-color"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star theme-color"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star theme-color"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star"></i>
-                                    </li>
-                                    <li class="font-light">(In stock)</li>
-                                </ul>
-                                <div class="price mt-3">
-                                    <h3>$20.00</h3>
-                                </div>
-                                <div class="color-types">
-                                    <h4>colors</h4>
-                                    <ul class="color-variant mb-0">
-                                        <li class="bg-half-light selected">
-                                        </li>
-                                        <li class="bg-light1"></li>
-                                        <li class="bg-blue1"></li>
-                                        <li class="bg-black1"></li>
-                                    </ul>
-                                </div>
-                                <div class="size-detail">
-                                    <h4>size</h4>
-                                    <ul class="">
-                                        <li class="selected">S</li>
-                                        <li>M</li>
-                                        <li>L</li>
-                                        <li>XL</li>
-                                    </ul>
-                                </div>
-                                <div class="product-details">
-                                    <h4>product details</h4>
-                                    <ul>
-                                        <li>
-                                            <span class="font-light">Style :</span> Boat Shoe
-                                        </li>
-                                        <li>
-                                            <span class="font-light">Catgory :</span> Sports Shoes
-                                        </li>
-                                        <li>
-                                            <span class="font-light">Tags:</span> Summer
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-btns">
-                                    <a href="cart.html" class="btn btn-solid-default btn-sm">Add to cart</a>
-                                    <a href="product-left-sidebar.html" class="btn btn-solid-default btn-sm">View
-                                        details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Quick view modal end -->
-
-    <!-- Newsletter modal start -->
-    <!-- untuk news letter-->
-    <!-- Newsletter modal end -->
-
-    <!-- Coockie Section Start -->
-    <!-- <div class="cookie-bar-section">
-        <img src="assets-voxo/images/cookie.png" alt="">
-        <div class="content">
-            <h3>Cookies Consent</h3>
-            <p class="font-light">This website use cookies to ensure you get the best experience on our website.</p>
-            <div class="cookie-buttons">
-                <button class="btn btn-solid-default" id="button">I understand</button>
-                <a href="javascript:void(0)" class="btn default-light1">Learn more</a>
-            </div>
-        </div>
-    </div> -->
-    <!-- Coockie Section End -->
-
-    <!-- Cart Successful Start -->
-    <div class="modal fade cart-modal" id="addtocart" tabindex="-1" role="dialog" aria-label="myModalLabel"
+    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content ">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
                 <div class="modal-body">
-                    <div class="modal-contain">
-                        <div>
-                            <div class="modal-messages">
-                                <i class="fas fa-check"></i> 3-stripes full-zip hoodie successfully added to
-                                you cart.
-                            </div>
-                            <div class="modal-product">
-                                <div class="modal-contain-img">
-                                    <img src="assets-voxo/images/fashion/instagram/4.jpg"
-                                        class="img-fluid blur-up lazyload" alt="">
-                                </div>
-                                <div class="modal-contain-details">
-                                    <h4>Premier Cropped Skinny Jean</h4>
-                                    <p class="font-light my-2">Yellow, Qty : 3</p>
-                                    <div class="product-total">
-                                        <h5>TOTAL : <span>$1,140.00</span></h5>
-                                    </div>
-                                    <div class="shop-cart-button mt-3">
-                                        <a href="shop-left-sidebar.html"
-                                            class="btn default-light-theme conti-button default-theme default-theme-2 rounded">CONTINUE
-                                            SHOPPING</a>
-                                        <a href="cart.html"
-                                            class="btn default-light-theme conti-button default-theme default-theme-2 rounded">VIEW
-                                            CART</a>
-                                    </div>
-                                </div>
+                    <div class="menu">
+                        <a href="#">Beranda</a>
+                    </div>
+                    <div class="menu">
+                        <div class="dropdown">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                Tentang Kami
+                            </a>
+
+                            <div class="collapse" id="collapseExample">
+                                <ul class="menu-child">
+                                    <a href="">
+                                        <li class="menu-child-item"> Perusahaan </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Komisaris & Direksi </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Tenaga Ahli </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Partner </li>
+                                    </a>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="menu">
+                        <div class="dropdown">
+                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
+                                aria-controls="collapseExample1">
+                                Produk Asuransi
+                            </a>
 
-                    <div class="ratio_asos mt-4">
-                        <div class="container">
-                            <div class="row m-0">
-                                <div class="col-sm-12 p-0">
-                                    <div
-                                        class="product-wrapper product-style-2 slide-4 p-0 light-arrow bottom-space spacing-slider">
-                                        <div>
-                                            <div class="product-box">
-                                                <div class="img-wrapper">
-                                                    <div class="front">
-                                                        <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/1.jpg"
-                                                                class="bg-img blur-up lazyload" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-details text-center">
-                                                    <div class="rating-details d-block text-center">
-                                                        <span class="font-light grid-content">B&Y Jacket</span>
-                                                    </div>
-                                                    <div class="main-price mt-0 d-block text-center">
-                                                        <h3 class="theme-color">$78.00</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="product-box">
-                                                <div class="img-wrapper">
-                                                    <div class="front">
-                                                        <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/2.jpg"
-                                                                class="bg-img blur-up lazyload" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-details text-center">
-                                                    <div class="rating-details d-block text-center">
-                                                        <span class="font-light grid-content">B&Y Jacket</span>
-                                                    </div>
-                                                    <div class="main-price mt-0 d-block text-center">
-                                                        <h3 class="theme-color">$78.00</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="product-box">
-                                                <div class="img-wrapper">
-                                                    <div class="front">
-                                                        <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/3.jpg"
-                                                                class="bg-img blur-up lazyload" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-details text-center">
-                                                    <div class="rating-details d-block text-center">
-                                                        <span class="font-light grid-content">B&Y Jacket</span>
-                                                    </div>
-                                                    <div class="main-price mt-0 d-block text-center">
-                                                        <h3 class="theme-color">$78.00</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="product-box">
-                                                <div class="img-wrapper">
-                                                    <div class="front">
-                                                        <a href="product-left-sidebar.html">
-                                                            <img src="assets-voxo/images/fashion/product/front/4.jpg"
-                                                                class="bg-img blur-up lazyload" alt="">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-details text-center">
-                                                    <div class="rating-details d-block text-center">
-                                                        <span class="font-light grid-content">B&Y Jacket</span>
-                                                    </div>
-                                                    <div class="main-price mt-0 d-block text-center">
-                                                        <h3 class="theme-color">$78.00</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="collapse" id="collapseExample1">
+                                <ul class="menu-child">
+                                    <a href="">
+                                        <li class="menu-child-item"> All Risk </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> TLO </li>
+                                    </a>
+                                </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Bengkel</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Berita</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Hubungi Kami</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Cart Successful End -->
 
     <!-- tap to top Section Start -->
     <div class="tap-to-top">

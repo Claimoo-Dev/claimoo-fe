@@ -13,12 +13,14 @@
 }
 
 .banner {
-    /* height: 100% !important; */
     background-color: #eff2f7;
+    border-radius: 10px;
 }
 
 .img-banner {
     width: 100% !important;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -32,10 +34,6 @@
         align-items: center;
     }
 
-    header .main-menu .menu-left .toggle-nav {
-        padding: 0 10px;
-    }
-
     .bell-icon {
         display: inline-block !important;
     }
@@ -44,34 +42,56 @@
         width: 150px;
     }
 
-    /* .banner {
+    .modal-header {
+        padding: 30px 0 !important;
+    }
+
+    .btn-close {
+        color: black !important;
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    .modal-body {
+        text-align: center;
+    }
+    
+    .menu {
+        padding: 20px;
         background-color: #eff2f7;
-    } */
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .menu a {
+        color: black;
+    }
+
+    .menu-child {
+        list-style-position: inside;
+        text-align: left;
+    }
+
+    .menu-child-item {
+        display: list-item;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .section-banner {
+        padding: 0 10px !important;
+        height: 200px;
+    }
+
+    .banner, .slick-list, .slick-track, .slick-slide, .slick-slide div, .slider, .img-banner {
+        height: 100%;
+    }
 
     .slider {
         display: block !important;
     }
-
-    /* .banner .slick-list {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide div {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide div img {
-        height: 100%;
-        width: 100%;
-    } */
 
     .slider-text {
         position: absolute; 
@@ -81,55 +101,31 @@
         color: #eff2f7;
     }
 
-    .slider-text2 {
-        position: absolute; 
-        bottom: 80px; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        color: #eff2f7;
-    }
-
     .about {
-        padding: 50px 0 !important;
-    }
-
-    .col-about-image {
-        padding: 0 !important;
+        padding: 20px 0 !important;
     }
 
     .about-image {
-        /* width: 100%;
-        height: 100%; */
-        display: block;
-    }
-
-    .col-about-body {
-        padding-top: 20px !important;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     .about-description {
-        padding: 30px 0 !important;
+        padding: 10px 0 !important;
     }
 
-    /* .about-image img {
-        width: 100%;
-        height: 100%;
-    } */
-
-    /* .about-body {
-        padding-top: 25px;
-        padding-bottom: 50px;
-    } */
-
-    .about-title-h2 {
+    .about-title-h3 {
         color: #232323;
-        word-spacing: 5px;
+        word-spacing: 3px;
+        font-weight: bold;
+        font-size: 12px !important;
     }
 
     .about-description p {
-        font-size: 14px;
+        font-size: 10px;
         text-align: left;
-        color: #7e7e7e;
+        color: #232323;
         line-height: 20px !important;
         margin: 0 !important;
     }
@@ -144,76 +140,116 @@
         border-radius: 10px;
         padding: 5px 10px;
         color: white;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .service-section {
         background-color: #eff2f7;
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
     }
 
-    .service-icon {
-        padding: 0 15px;
+    .service-title {
+        font-weight: bold;
+        word-spacing: 3px;
+        color: #232323;
+        font-size: 12px !important;
     }
 
-    .service-icon svg {
-        margin-right: 0 !important;
+    .columns {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
     }
-
-    .service-wrap {
+      
+    .column {
+        display: flex;
         background-color: white;
-        height: 200px;
         border-radius: 10px;
+        align-items: center;
+        padding: 15px 5px;
+        flex: 30%;
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 
+    .column img {
+        width: 25% !important;
+    }
+
+    .column p {
+        margin: 0 0 0 5px !important;
+        font-size: 10px !important;
+    }
+
     .package {
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
+    }
+
+    .package-card {
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+        border-radius: 10px;
+    }
+
+    .package-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .package-image img {
+        width: 75% !important;
+    }
+    
+    .package-card-title {
+        font-weight: bold;
+        font-size: 12px !important;
+    }
+
+    .card-text {
+        font-size: 10px !important;
     }
 
     .poster-section {
         background-color: #eff2f7 !important;
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
     }
 
     .btn-offer {
+        background-color: #073f78;
+        border: 2px #073f78 solid;
         border-radius: 10px;
-        border: 0 !important;
+        padding: 5px 10px;
+        color: white;
+        font-size: 12px !important;
+        width: 210px;
     }
 
     .btn-offer::before {
         border-radius: 10px;
     }
 
+    .poster-image {
+        height: 300px !important;
+        background-image: url("../images/produk/penawaran.png");
+        background-repeat: no-repeat;
+        background-size: 350px;
+        background-position: center bottom;
+    }
+
+    .poster-image h3 {
+        color: #232323;
+        font-weight: bold;
+        font-size: 12px !important;
+    }
+
     .poster-image p {
-        padding: 30px 0 !important;
+        padding: 10px 0 !important;
+        font-size: 10px !important;
         margin: 0 !important;
     }
 
     .section-b-space {
-        padding: 50px 0 !important;
-    }
-
-    .referenceimg {
-        background-color: #eff2f7;
-        padding: 50px 0 !important;
-    }
-
-    .reference-description {
-        padding: 30px 0 !important;
-    }
-
-    .reference-title-h2 {
-        color: #232323;
-        text-transform: none !important;
-    }
-
-    .reference-description p {
-        font-size: 14px;
-        text-align: left;
-        color: #232323;
-        line-height: 20px !important;
-        margin: 0 !important;
+        padding: 20px 0 !important;
     }
 
     .referenceimg {
@@ -222,7 +258,26 @@
         background-position: right;
         background-repeat: no-repeat;
         background-image: url("../images/bgmobilm.png");
-        padding: 70px 0 !important;
+        padding: 20px 0 !important;
+    }
+
+    .reference-description {
+        padding: 10px 0 !important;
+    }
+
+    .reference-title-h3 {
+        color: #232323;
+        text-transform: none !important;
+        font-weight: bold;
+        font-size: 12px !important;
+    }
+
+    .reference-description p {
+        font-size: 10px;
+        text-align: left;
+        color: #232323;
+        line-height: 10px !important;
+        margin: 0 !important;
     }
 
     .reference-footer {
@@ -231,8 +286,8 @@
         border-radius: 10px;
         padding: 5px 10px;
         color: white;
-        font-size: 14px;
-        width: 200px;
+        font-size: 12px;
+        width: 150px;
     }
 
     .search-parent {
@@ -277,6 +332,22 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    body {
+        background-color: lightgrey;
+    }
+
+    header {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    .main-header {
+        max-width: 600px;
+        margin: 0 auto;
+        right: 0;
+    }
+
     header .main-menu {
         padding: 20px 0;
     }
@@ -286,16 +357,46 @@
         align-items: center;
     }
 
-    header .main-menu .menu-left .toggle-nav {
-        padding: 0 30px;
+    .toggle-icon {
+        margin-left: 10px !important;
+    }
+
+    header .main-menu .menu-right .toggle-nav {
+        display: block;
     }
 
     .mobile-menu {
         display: block !important;
+        max-width: 600px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .content-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .section-banner {
+        padding: 0 10px !important;
+        background-color: white;
+        height: 200px;
+    }
+
+    .banner, .slick-list, .slick-track, .slick-slide, .slick-slide div, .slider, .img-banner {
+        height: 100%;
+    }
+
+    footer {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 70px !important;
+        background-color: white;
     }
 
     .brand-logo {
-        width: 180px;
+        width: 150px;
     }
 
     .dropdown-toggle::after {
@@ -306,30 +407,57 @@
         display: block !important;
     }
 
-    /* .banner {
+    .modal-open {
+        padding: 0 !important;
+    }
+
+    .modal-navbar {
+        max-width: 600px;
+        margin: 0 auto;
+        right: 0;
+    }
+
+    .modal-dialog {
+        max-width: 600px;
+    }
+
+    .modal-header {
+        padding: 30px 0 !important;
+    }
+
+    .btn-close {
+        color: black !important;
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    .modal-body {
+        text-align: center;
+    }
+    
+    .menu {
+        padding: 20px;
         background-color: #eff2f7;
-    } */
-
-    /* .banner .slick-list {
-        height: 100%;
+        margin: 10px;
+        border-radius: 10px;
     }
 
-    .banner .slick-list .slick-track {
-        height: 100%;
+    .menu a {
+        color: black;
     }
 
-    .banner .slick-list .slick-track .slick-slide {
-        height: 100%;
+    .menu-child {
+        list-style-position: inside;
+        text-align: left;
     }
 
-    .banner .slick-list .slick-track .slick-slide div {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide div img {
-        height: 100%;
-        width: 100%;
-    } */
+    .menu-child-item {
+        display: list-item;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: white;
+        border-radius: 10px;
+    } 
 
     .slider-text {
         position: absolute; 
@@ -338,55 +466,38 @@
         transform: translate(-50%, -50%);
     }
 
-    /* .about-image {
-        width: 100%;
-        height: 300px;
-        display: block;
-    } */
-
-    /* .about-image img {
-        width: 100%;
-        height: 100%;
-    } */
-
-    /* .about-body {
-        padding-top: 25px;
-        padding-bottom: 50px;
-    } */
-
     .about {
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
+        background-color: white;
     }
 
     .about-image {
-        /* width: 100%;
-        height: 100%; */
-        display: block;
-    }
-
-    .col-about-body {
-        padding-top: 20px !important;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     .about-description {
-        padding: 30px 0 !important;
+        padding: 10px 0 !important;
     }
 
-    .about-title-h2 {
+    .about-title-h3 {
         color: #232323;
-        word-spacing: 5px;
+        word-spacing: 3px;
+        font-weight: bold;
+        font-size: 12px !important;
     }
 
     .about-description p {
-        font-size: 14px;
+        font-size: 10px;
         text-align: left;
-        color: #7e7e7e;
+        color: #232323;
         line-height: 20px !important;
         margin: 0 !important;
     }
 
     .about-footer-parent {
-        width: 150px;
+        width: 130px;
     }
 
     .about-footer {
@@ -395,76 +506,118 @@
         border-radius: 10px;
         padding: 5px 10px;
         color: white;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .service-section {
         background-color: #eff2f7;
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
     }
 
-    .service-icon {
-        padding: 0 15px;
+    .service-title {
+        font-weight: bold;
+        word-spacing: 3px;
+        color: #232323;
+        font-size: 12px !important;
     }
 
-    .service-icon svg {
-        margin-right: 0 !important;
+    .columns {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
     }
-
-    .service-wrap {
+      
+    .column {
+        display: flex;
         background-color: white;
-        height: 200px;
         border-radius: 10px;
+        align-items: center;
+        padding: 15px 5px;
+        flex: 30%;
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 
+    .column img {
+        width: 25% !important;
+    }
+
+    .column p {
+        margin: 0 0 0 5px !important;
+        font-size: 10px !important;
+    }
+
     .package {
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
+        background-color: white;
+    }
+
+    .package-card {
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+        border-radius: 10px;
+    }
+
+    .package-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .package-image img {
+        width: 75% !important;
+    }
+    
+    .package-card-title {
+        font-weight: bold;
+        font-size: 12px !important;
+    }
+
+    .card-text {
+        font-size: 10px !important;
     }
 
     .poster-section {
         background-color: #eff2f7 !important;
-        padding: 50px 0 !important;
+        padding: 20px 0 !important;
     }
 
     .btn-offer {
+        background-color: #073f78;
+        border: 2px #073f78 solid;
         border-radius: 10px;
-        border: 0 !important;
+        padding: 5px 10px;
+        color: white;
+        font-size: 12px !important;
+        width: 210px;
     }
 
     .btn-offer::before {
         border-radius: 10px;
     }
 
+    .poster-image {
+        height: 300px !important;
+        background-image: url("../images/produk/penawaran.png");
+        background-repeat: no-repeat;
+        background-size: 400px;
+        background-position: center bottom;
+    }
+
+    .poster-image h3 {
+        color: #232323;
+        font-weight: bold;
+        font-size: 12px !important;
+    }
+
     .poster-image p {
-        padding: 30px 0 !important;
+        padding: 10px 0 !important;
+        font-size: 10px !important;
         margin: 0 !important;
     }
 
     .section-b-space {
-        padding: 50px 0 !important;
-    }
-
-    .referenceimg {
-        background-color: #eff2f7;
-        padding: 50px 0 !important;
-    }
-
-    .reference-title-h2 {
-        color: #232323;
-        text-transform: none !important;
-    }
-
-    .reference-description {
-        padding: 30px 0 !important;
-    }
-
-    .reference-description p {
-        font-size: 14px;
-        text-align: left;
-        color: #7e7e7e;
-        line-height: 20px !important;
-        margin: 0 !important;
+        padding: 20px 0 !important;
+        background-color: white;
     }
 
     .referenceimg {
@@ -473,7 +626,26 @@
         background-position: right;
         background-repeat: no-repeat;
         background-image: url("../images/bgmobilm.png");
-        padding: 70px 0 !important;
+        padding: 20px 0 !important;
+    }
+
+    .reference-title-h3 {
+        color: #232323;
+        text-transform: none !important;
+        font-weight: bold;
+        font-size: 12px !important;
+    }
+
+    .reference-description {
+        padding: 10px 0 !important;
+    }
+
+    .reference-description p {
+        font-size: 10px;
+        text-align: left;
+        color: #7e7e7e;
+        line-height: 10px !important;
+        margin: 0 !important;
     }
 
     .reference-footer {
@@ -482,8 +654,8 @@
         border-radius: 10px;
         padding: 5px 10px;
         color: white;
-        font-size: 14px;
-        width: 200px;
+        font-size: 12px;
+        width: 150px;
     }
 
     .faq-category {
@@ -515,203 +687,4 @@
         text-decoration: none;
         background-color: #eff2f7;
     }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .mobile-menu {
-        display: block !important;
-    }
-
-    /* .banner {
-        background-color: #eff2f7;
-    } */
-
-    .faq-category-group{
-        overflow: hidden;
-        white-space: normal;
-        display: flex;
-    }
-
-    .faq-category-group a{
-        display: inline-block;
-        color: black;
-        text-align: center;
-        padding: 15px;
-        text-decoration: none;
-        background-color: #eff2f7;
-        width: 100%;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .mobile-menu {
-        display: none !important;
-    }
-
-    .brand-logo {
-        width: 200px;
-    }
-
-    /* .banner {
-        background-color: #eff2f7;
-    }
-
-    .banner .slick-list {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide div {
-        height: 100%;
-    }
-
-    .banner .slick-list .slick-track .slick-slide div .slider img {
-        height: 100%;
-        width: 100%;
-    } */
-
-    .slider-text {
-        position: absolute; 
-        bottom: 10px; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-    }
-
-    /* .about-row {
-        height: 500px;
-        padding: 50px 0;
-    } */
-
-    /* .about-image {
-        width: 100%;
-        height: 100%;
-    } */
-
-    /* .about-image img {
-        width: 100%;
-        height: 100%;
-    } */
-
-    .col-about-body {
-        padding: 60px 0 !important;
-    }
-
-    .about-title-h2 {
-        color: #232323;
-    }
-
-    .about-description p {
-        font-size: 20px;
-        text-align: left;
-        color: #7e7e7e;
-        line-height: 25px !important;
-    }
-
-    .about-footer-parent {
-        width: 200px;
-    }
-
-    .about-footer {
-        background-color: #073f78;
-        border: 2px #073f78 solid;
-        border-radius: 10px;
-        padding: 5px 10px;
-        color: white;
-        font-size: 20px;
-    }
-
-    .poster-section {
-        background-color: white !important;
-    }
-
-    .col-poster {
-        padding: 50px 0 !important;
-    }
-
-    .poster-image {
-        background-color: white !important;
-    }
-
-    .btn-offer {
-        border-radius: 10px;
-        border: 0 !important;
-    }
-
-    .btn-offer::before {
-        border-radius: 10px;
-    }
-
-    .reference {
-        background-color: #eff2f7;
-        padding: 70px 0 !important;
-    }
-
-    .referenceimg {
-        background-color: #fff;
-        width: 100%;
-        background-position: right;
-        background-repeat: no-repeat;
-        background-image: url("../images/bgmobil.jpg");
-        padding: 70px 0 !important;
-    }
-
-    .reference-title-h2 {
-        color: #232323;
-        text-transform: none !important;
-    }
-
-    .reference-description p {
-        font-size: 14px;
-        text-align: left;
-        color: #7e7e7e;
-        line-height: 20px !important;
-    }
-
-    .reference-footer {
-        background-color: #073f78;
-        border: 2px #073f78 solid;
-        border-radius: 10px;
-        padding: 5px 10px;
-        color: white;
-        font-size: 14px;
-        width: 200px;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .nav-menu {
-        display: flex !important;
-    }
-
-    .brand-logo {
-        width: 250px;
-    }
-
-    .main-menu-dashboard {
-        justify-content: space-between !important;
-        -webkit-box-pack: justify !important;
-    }
-
-    .menu-right {
-        margin-left: 0 !important;
-    }
-    .referenceimg {
-        background-color: #fff;
-        width: 100%;
-        background-position: right;
-        background-repeat: no-repeat;
-        background-image: url("../images/bgmobil.jpg");
-        padding: 70px 0 !important;
-    }
-
 }
