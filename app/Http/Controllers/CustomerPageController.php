@@ -25,7 +25,7 @@ class CustomerPageController extends Controller
     {
         return view('customer.commissioner_director');
     }
-    
+
     public function expert()
     {
         return view('customer.expert');
@@ -40,7 +40,7 @@ class CustomerPageController extends Controller
     {
         return view('customer.shop');
     }
-    
+
     public function claim()
     {
         $type = 'free';

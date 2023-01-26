@@ -25,8 +25,7 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- bootstrap css -->
     <link id="rtl-link" rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/bootstrap.css">
@@ -64,8 +63,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png"
-                                            class="img-fluid blur-up lazyload" alt="logo">
+                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
@@ -166,7 +164,7 @@
                                     Asuransi
                                     terpercaya.</p>
                             </div>
-                            <a href="{{ route('landing-page') }}">
+                            <a href="{{ route('company') }}">
                                 <div class="about-footer-parent">
                                     <div class="about-footer text-center">
                                         Selengkapnya
@@ -266,44 +264,37 @@
                         <div class="brand-slider">
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/1.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/1.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/2.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/2.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/3.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/3.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/5.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/5.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/6.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/6.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                             <div>
                                 <div class="brand-image">
-                                    <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload"
-                                        alt="brand logo">
+                                    <img src="assets-voxo/images/brand/4.png" class="img-fluid blur-up lazyload" alt="brand logo">
                                 </div>
                             </div>
                         </div>
@@ -335,22 +326,31 @@
                     <h3 class="help-title">Butuh bantuan? Hubungi layanan pelanggan kami di :</h3>
                 </div>
                 <div class="help-parent">
+
                     <div class="help-item text-center">
-                        <img class="img-fluid" src="assets-voxo/images/telp.png" alt="">
-                        <p> Telepon </p>
+                        <a href="tel:+622177837035">
+                            <img class="img-fluid" src="assets-voxo/images/telp.png" alt="">
+                            <p> Telepon </p>
+
                     </div>
+                    </a>
                     <div class="help-item ms-1 me-1 text-center">
-                        <img class="img-fluid" src="assets-voxo/images/email.png" alt="">
-                        <p> Email </p>
-                    </div>
+                        <a href="mailto:admin@claimoo.com">
+                            <img class="img-fluid" src="assets-voxo/images/email.png" alt="">
+                            <p> Email </p>
+                    </div></a>
+
                     <div class="help-item me-1 text-center">
-                        <img class="img-fluid" src="assets-voxo/images/wa.png" alt="">
-                        <p> WhatsApp </p>
+                        <a href="https://wa.me/628111460579">
+                            <img class="img-fluid" src="assets-voxo/images/wa.png" alt="">
+                            <p> WhatsApp </p>
+                        </a>
                     </div>
                     <div class="help-item text-center">
-                        <img class="img-fluid" src="assets-voxo/images/chat.png" alt="">
-                        <p> Chat </p>
-                    </div>
+                        <a href="chat">
+                            <img class="img-fluid" src="assets-voxo/images/chat.png" alt="">
+                            <p> Chat </p>
+                    </div></a>
                 </div>
             </div>
         </section>
@@ -365,8 +365,7 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
-                                        alt="logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
@@ -506,8 +505,7 @@
     </footer>
     <!-- footer end -->
 
-    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
@@ -519,20 +517,19 @@
                     </div>
                     <div class="menu">
                         <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 Tentang Kami
                             </a>
 
                             <div class="collapse" id="collapseExample">
                                 <ul class="menu-child">
-                                    <a href="">
+                                    <a href="{{ route('company') }}">
                                         <li class="menu-child-item"> Perusahaan </li>
                                     </a>
-                                    <a href="">
+                                    <a href="{{ route('commissionerDirector') }}">
                                         <li class="menu-child-item"> Komisaris & Direksi </li>
                                     </a>
-                                    <a href="">
+                                    <a href="{{ route('expert') }}">
                                         <li class="menu-child-item"> Tenaga Ahli </li>
                                     </a>
                                     <a href="">
@@ -544,8 +541,7 @@
                     </div>
                     <div class="menu">
                         <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
-                                aria-controls="collapseExample1">
+                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
                                 Produk Asuransi
                             </a>
 
