@@ -56,145 +56,21 @@
     <!-- header start -->
     <header class="header-style-2" id="home">
         <div class="main-header navbar-searchbar">
-            <div class="container-fluid-lg">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="main-menu main-menu-dashboard">
+                        <div class="main-menu">
                             <div class="menu-left">
                                 <div class="brand-logo">
-                                    <a href="{{ route('dashboard-customer') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+                                    <a href="{{ route('landing-page') }}">
+                                        <img src="assets-voxo/images/logo-claimoo.png"
+                                            class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
-                            <nav>
-                                <div class="main-navbar">
-                                    <div id="mainnav">
-                                        <div class="me-3"></div>
-                                        <ul class="nav-menu">
-                                            <li class="back-btn d-xl-none">
-                                                <div class="close-btn">
-                                                    Menu
-                                                    <span class="mobile-back"><i class="fa fa-angle-left"></i>
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            <li class="home-menu">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
-
-                                            </li>
-
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Tentang
-                                                    Kami</a>
-                                                <ul class="nav-submenu menu-content">
-                                                    <li>
-                                                        <a href="javascript:void(0)">Perusahaan</a>
-                                                        <a href="javascript:void(0)">Komisaris &amp; Direksi</a>
-                                                        <a href="javascript:void(0)">Tenaga Ahli</a>
-                                                        <a href="javascript:void(0)">Partner</a>
-                                                    </li>
-
-                                                </ul>
-                                            </li>
-
-                                            <li class="mega-menu dropdown ratio_40">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">
-                                                    <div class="gradient-title">Produk Asuransi</div>
-                                                </a>
-                                                <div class="mega-menu-container poster-bg-image menu-content">
-                                                    <div class="container-fluid">
-                                                        <div class="row row-cols-5">
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Simas Mobil</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Zurich Autocillin</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Astra Garda Oto</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Bengkel</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Berita</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Hubungi
-                                                    Kami</a>
-                                            </li>
-
-
-                                            <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
-                                                <div class="mobile-contain">
-                                                    <h5>Aplikasi Mobile Lite</h5>
-                                                    <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
-                                                    <a href="javascript:void(0)" id="installApp" class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
-                                                        HOMESCREEN</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
                             <div class="menu-right">
                                 <ul>
-                                    <li class="onhover-dropdown wislist-dropdown bell-icon">
+                                    <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
                                             <div class="cart-icon">
                                                 <i data-feather="bell"></i>
@@ -202,42 +78,8 @@
                                         </div>
                                     </li>
 
-                                    <li class="language-icon d-none d-sm-block">
-                                        <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                                <span><i data-feather="globe"></i>ID
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">EN</a>
-                                                </li>
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">ID</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li class="user-icon d-none d-sm-block">
-                                        <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                                <span><i data-feather="user"></i>
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">Log In</a>
-                                                </li>
-                                                <li class="w-100">
-                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">Daftar</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li class="toggle-icon .d-md-none .d-lg-block">
-                                        <div class="toggle-nav">
+                                    <li class="modal-icon">
+                                        <div class="modal-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <i data-feather="align-justify" class="sidebar-bar"></i>
                                         </div>
                                     </li>
@@ -252,7 +94,7 @@
     <!-- header end -->
 
     <!-- mobile fix menu start -->
-    <div class="mobile-menu d-sm-none">
+    <div class="mobile-menu">
         <ul>
             <li>
                 <a href="{{ route('landing-page') }}">
@@ -329,33 +171,41 @@
                 <div class="col-lg-3">
                     <ul class="nav nav-tabs custome-nav-tabs flex-column category-option" id="myTab">
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light active" id="tab" data-bs-toggle="tab" data-bs-target="#dash" type="button"><i class="fas fa-angle-right"></i>Dasbor</button>
+                            <button class="nav-link font-light active" id="tab" data-bs-toggle="tab"
+                                data-bs-target="#dash" type="button"><i class="fas fa-angle-right"></i>Dasbor</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#policy" type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
+                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#policy"
+                                type="button"><i class="fas fa-angle-right"></i>Polis Saya</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab" data-bs-target="#detection" type="button"><i class="fas fa-angle-right"></i>Riwayat
+                            <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab"
+                                data-bs-target="#detection" type="button"><i class="fas fa-angle-right"></i>Riwayat
                                 Deteksi</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"><i class="fas fa-angle-right"></i>Profil</button>
+                            <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile" type="button"><i
+                                    class="fas fa-angle-right"></i>Profil</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="4-tab" data-bs-toggle="tab" data-bs-target="#reward" type="button"><i class="fas fa-angle-right"></i>Dapatkan Penghargaan</button>
+                            <button class="nav-link font-light" id="4-tab" data-bs-toggle="tab" data-bs-target="#reward"
+                                type="button"><i class="fas fa-angle-right"></i>Dapatkan Penghargaan</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"><i class="fas fa-angle-right"></i>Tentang Aplikasi</button>
+                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#about"
+                                type="button"><i class="fas fa-angle-right"></i>Tentang Aplikasi</button>
                         </li>
 
                         <li class="nav-item mb-2">
-                            <button class="nav-link font-light" id="6-tab" data-bs-toggle="tab" data-bs-target="#setting"
-                                type="button"><i class="fas fa-angle-right"></i>Pengaturan</button>
+                            <button class="nav-link font-light" id="6-tab" data-bs-toggle="tab"
+                                data-bs-target="#setting" type="button"><i
+                                    class="fas fa-angle-right"></i>Pengaturan</button>
                         </li>
 
                     </ul>
@@ -386,10 +236,12 @@
                                             <div class="col-lg-6 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
-                                                        <img src="assets-voxo/images/svg/box.png" class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/box.png"
+                                                            class="img-fluid blur-up lazyload" alt="">
                                                     </div>
                                                     <div class="order-box-contain">
-                                                        <img src="assets-voxo/images/svg/box1.png" class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/box1.png"
+                                                            class="img-fluid blur-up lazyload" alt="">
                                                         <div>
                                                             <h5 class="font-light">total polis</h5>
                                                             <h3>5</h3>
@@ -401,10 +253,12 @@
                                             <div class="col-lg-6 col-sm-6">
                                                 <div class="order-box">
                                                     <div class="order-box-image">
-                                                        <img src="assets-voxo/images/svg/sent.png" class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/sent.png"
+                                                            class="img-fluid blur-up lazyload" alt="">
                                                     </div>
                                                     <div class="order-box-contain">
-                                                        <img src="assets-voxo/images/svg/sent1.png" class="img-fluid blur-up lazyload" alt="">
+                                                        <img src="assets-voxo/images/svg/sent1.png"
+                                                            class="img-fluid blur-up lazyload" alt="">
                                                         <div>
                                                             <h5 class="font-light">riwayat deteksi</h5>
                                                             <h3>10</h3>
@@ -470,7 +324,8 @@
                         <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="policy">
                             <div class="box-head mb-3">
                                 <h3>Polis Saya</h3>
-                                <button class="btn btn-primary btn-sm fw-bold ms-auto" data-bs-toggle="modal" data-bs-target="#addAddress"><i class="fas fa-plus"></i>
+                                <button class="btn btn-primary btn-sm fw-bold ms-auto" data-bs-toggle="modal"
+                                    data-bs-target="#addAddress"><i class="fas fa-plus"></i>
                                     Beli Polis</button>
                             </div>
                             <div class="save-details-box">
@@ -551,18 +406,21 @@
                                             <th scope="col">tipe mobil</th>
                                             <th scope="col">status deteksi</th>
                                             <th scope="col">deskripsi kerusakan</th>
+                                            <th scope="col">tanggal</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
@@ -578,12 +436,14 @@
                                         <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
@@ -599,12 +459,14 @@
                                         <tr>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
                                                 <a href="#">
-                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                                    <img src="assets-voxo/images/fashion/product/front/1.jpg"
+                                                        class="blur-up lazyload" alt="">
                                                 </a>
                                             </td>
                                             <td>
@@ -625,7 +487,8 @@
                         <div class="tab-pane fade dashboard-profile dashboard" id="profile">
                             <div class="box-head">
                                 <h3>Profil</h3>
-                                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#resetEmail">Edit</a>
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                    data-bs-target="#resetEmail">Edit</a>
                             </div>
                             <ul class="dash-profile">
                                 <li>
@@ -708,7 +571,8 @@
                                     <div class="right">
                                         <h6>+1-202-555-0198</h6>
                                     </div>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#resetEmail">Edit</a>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                        data-bs-target="#resetEmail">Edit</a>
                                 </li>
 
                                 <li class="mb-0">
@@ -718,7 +582,8 @@
                                     <div class="right">
                                         <h6>●●●●●●</h6>
                                     </div>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#resetEmail">Edit</a>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                        data-bs-target="#resetEmail">Edit</a>
                                 </li>
                             </ul>
                         </div>
@@ -735,7 +600,8 @@
                                 </p>
                             </div>
 
-                            <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-toggle="modal" data-bs-target="#deleteModal">Ajak Teman Anda</button>
+                            <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal">Ajak Teman Anda</button>
                         </div>
 
                         <div class="tab-pane fade dashboard-security dashboard" id="about">
@@ -760,25 +626,26 @@
         <div class="main-footer">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-12">
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
+                                        alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
                             </p>
-                            <p>Download app from:</p>
+                            <!-- <p>Download app from:</p>
                             <div>
                                 <center><img src="assets-voxo/images/logos/android.png" width="100">
                                     <img src="assets-voxo/images/logos/ios.png" width="100">
                                 </center>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Tentang Kami</h3>
@@ -805,7 +672,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Produk Asuransi</h3>
@@ -827,7 +694,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Bantuan</h3>
@@ -854,12 +721,13 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
+                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
                         <div class="footer-newsletter">
                             <h3>Hubungi kami:</h3>
                             <div class="footer-number">
                                 <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png" class="img-fluid blur-up lazyload" alt="">
+                                    <img src="assets-voxo/images/shoes/other/headphone.png"
+                                        class="img-fluid blur-up lazyload" alt="">
                                 </div>
 
                                 <div class="footer-number-container">
@@ -887,7 +755,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -901,6 +769,75 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="menu">
+                        <a href="#">Beranda</a>
+                    </div>
+                    <div class="menu">
+                        <div class="dropdown">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                Tentang Kami
+                            </a>
+
+                            <div class="collapse" id="collapseExample">
+                                <ul class="menu-child">
+                                    <a href="">
+                                        <li class="menu-child-item"> Perusahaan </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Komisaris & Direksi </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Tenaga Ahli </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Partner </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="dropdown">
+                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
+                                aria-controls="collapseExample1">
+                                Produk Asuransi
+                            </a>
+
+                            <div class="collapse" id="collapseExample1">
+                                <ul class="menu-child">
+                                    <a href="">
+                                        <li class="menu-child-item"> All Risk </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> TLO </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Bengkel</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Berita</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Reset Password Modal Start -->
     <div class="modal fade reset-email-modal" id="resetEmail">
@@ -959,7 +896,8 @@
                     </form>
                 </div>
                 <div class="modal-footer pt-0 text-end d-block">
-                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button"
+                        data-bs-dismiss="modal">Close</button>
                     <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save Address</button>
                 </div>
             </div>
@@ -1005,7 +943,8 @@
                     </form>
                 </div>
                 <div class="modal-footer pt-0 text-end d-block">
-                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn bg-secondary text-white rounded-1 modal-close-button"
+                        data-bs-dismiss="modal">Close</button>
                     <button class="btn btn-primary rounded-1" data-bs-dismiss="modal">Save Card Details</button>
                 </div>
             </div>
@@ -1024,7 +963,8 @@
                     <h4>Are you sure you want to delete your account?</h4>
                 </div>
                 <div class="modal-footer d-block text-center mb-4">
-                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#doneModal" data-bs-toggle="modal" data-bs-dismiss="modal">Yes Delete account</button>
+                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#doneModal"
+                        data-bs-toggle="modal" data-bs-dismiss="modal">Yes Delete account</button>
                 </div>
             </div>
         </div>
@@ -1039,7 +979,8 @@
                     <h4>Done!!! Delete Your Account</h4>
                 </div>
                 <div class="modal-footer d-block text-center mb-4">
-                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Okay</button>
+                    <button class="btn btn-primary btn-sm fw-bold rounded" data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal" data-bs-dismiss="modal">Okay</button>
                 </div>
             </div>
         </div>

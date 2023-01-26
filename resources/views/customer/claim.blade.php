@@ -97,7 +97,7 @@
     <!-- header end -->
 
     <!-- mobile fix menu start -->
-    <div class="mobile-menu d-sm-none">
+    <div class="mobile-menu">
         <ul>
             <li>
                 <a href="{{ route('landing-page') }}">
