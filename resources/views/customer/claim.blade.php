@@ -145,15 +145,15 @@
                     <label for="year" class="form-label select-label">Tahun Produksi Mobil</label>
                     <select class="year form-control" id="year"></select>
                 </div>
-                <div class="form-parent">
+                <div class="form-parent mt-2">
                     <label for="brand" class="form-label select-label">Merek Mobil</label>
                     <select class="brand form-control" id="brand" disabled></select>
                 </div>
-                <div class="form-parent">
+                <div class="form-parent mt-2">
                     <label for="type" class="form-label select-label">Tipe Mobil</label>
                     <select class="type form-control" id="type" disabled></select>
                 </div>
-                <div class="form-parent">
+                <div class="form-parent mt-2">
                     <label for="seri" class="form-label select-label">Seri Mobil</label>
                     <select class="seri form-control" id="seri" disabled></select>
                 </div>
