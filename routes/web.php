@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CameraController;
+use App\Http\Controllers\ClaimController;
 use App\Http\Controllers\CustomerPageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FeedbackController;
@@ -32,6 +33,14 @@ Route::get('reset-password', [UserController::class, 'requestResetPassword'])->n
 Route::post('reset-password', [UserController::class, 'resetPassword'])->name('postResetPassword');
 Route::get('list-image', [CameraController::class, 'listImage'])->name('list-image');
 Route::get('list-image-user', [CameraController::class, 'listImageUser']);
+
+// API Claim
+Route::prefix('claim')->group(function () {
+    Route::get('list-year', [ClaimController::class, 'listYear']);
+    Route::get('list-brand', [ClaimController::class, 'listCarBrandByYear']);
+    Route::get('list-type', [ClaimController::class, 'listCarTypeByCarBrand']);
+    Route::get('list-seri', [ClaimController::class, 'listCarSeriByCarType']);
+});
 
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');

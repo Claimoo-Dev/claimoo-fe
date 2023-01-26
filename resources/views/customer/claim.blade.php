@@ -46,10 +46,12 @@
     <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/slick/slick-theme.css">
 
+    <!-- select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <!-- Theme css -->
     <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/demo2.css">
     <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/custom-style.css">
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/custom-style-claim.css">
 
 </head>
 
@@ -57,147 +59,21 @@
     <!-- header start -->
     <header class="header-style-2" id="home">
         <div class="main-header navbar-searchbar">
-            <div class="container-fluid-lg">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="main-menu main-menu-dashboard">
+                        <div class="main-menu">
                             <div class="menu-left">
                                 <div class="brand-logo">
-                                    <a href="{{ route('dashboard-customer') }}">
+                                    <a href="{{ route('landing-page') }}">
                                         <img src="assets-voxo/images/logo-claimoo.png"
                                             class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
-                            <nav>
-                                <div class="main-navbar">
-                                    <div id="mainnav">
-                                        <div class="me-3"></div>
-                                        <ul class="nav-menu">
-                                            <li class="back-btn d-xl-none">
-                                                <div class="close-btn">
-                                                    Menu
-                                                    <span class="mobile-back"><i class="fa fa-angle-left"></i>
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            <li class="home-menu">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Beranda</a>
-
-                                            </li>
-
-                                            <li class="dropdown">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Tentang
-                                                    Kami</a>
-                                                <ul class="nav-submenu menu-content">
-                                                    <li>
-                                                        <a href="javascript:void(0)">Perusahaan</a>
-                                                        <a href="javascript:void(0)">Komisaris &amp; Direksi</a>
-                                                        <a href="javascript:void(0)">Tenaga Ahli</a>
-                                                        <a href="javascript:void(0)">Partner</a>
-                                                    </li>
-
-                                                </ul>
-                                            </li>
-
-                                            <li class="mega-menu dropdown ratio_40">
-                                                <a href="javascript:void(0)" class="nav-link menu-title">
-                                                    <div class="gradient-title">Produk Asuransi</div>
-                                                </a>
-                                                <div class="mega-menu-container poster-bg-image menu-content">
-                                                    <div class="container-fluid">
-                                                        <div class="row row-cols-5">
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Simas Mobil</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col mega-box">
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Zurich Autocillin</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="link-section">
-                                                                    <div class="submenu-title">
-                                                                        <h5>Astra Garda Oto</h5>
-                                                                    </div>
-                                                                    <div class="submenu-content opensubmegamenu">
-                                                                        <ul class="list">
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">All
-                                                                                    Risk</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="javascript:void(0)">TLO</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Bengkel</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Berita</a>
-                                            </li>
-
-                                            <li>
-                                                <a href="javascript:void(0)" class="nav-link menu-title">Hubungi
-                                                    Kami</a>
-                                            </li>
-
-
-                                            <li class="mobile-poster d-flex d-xl-none">
-                                                <img src="assets-voxo/images/pwa-claimoo.png" class="img-fluid" alt="">
-                                                <div class="mobile-contain">
-                                                    <h5>Aplikasi Mobile Lite</h5>
-                                                    <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
-                                                    <a href="javascript:void(0)" id="installApp"
-                                                        class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
-                                                        HOMESCREEN</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
                             <div class="menu-right">
                                 <ul>
-                                    <li class="onhover-dropdown wislist-dropdown bell-icon">
+                                    <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
                                             <div class="cart-icon">
                                                 <i data-feather="bell"></i>
@@ -205,50 +81,8 @@
                                         </div>
                                     </li>
 
-                                    <li class="language-icon d-none d-sm-block">
-                                        <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                                <span><i data-feather="globe"></i>ID
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
-                                                <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">EN</a>
-                                                </li>
-                                                <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">ID</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li class="user-icon d-none d-sm-block">
-                                        <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
-                                                <span><i data-feather="user"></i>
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
-                                                <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Log In</a>
-                                                </li>
-                                                <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Daftar</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-
-                                    <li class="toggle-icon .d-md-none .d-lg-block">
-                                        <div class="toggle-nav">
+                                    <li class="modal-icon">
+                                        <div class="modal-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <i data-feather="align-justify" class="sidebar-bar"></i>
                                         </div>
                                     </li>
@@ -300,235 +134,39 @@
     <!-- mobile fix menu end -->
 
     @if ($type == 'free')
-    
-    <section class="term">
-        <div class="container">
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success mt-3">{{ $message }}</div>
-            @endif
 
-            @if ($message = Session::get('error'))
-            <div class="alert alert-danger mt-3">{{ $message }}</div>
-            @endif
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="card term-condition-card">
-                        <h3 class="card-header term-condition-card-header text-center">Syarat & Ketentuan :</h3>
-                        <ul class="term-condition-card-body">
-                            <li>Mohon izinkan kamera & lokasi untuk menggunakan layanan ini.</li>
-                            <li class="mt-2">Mohon pilih jenis mobil.</li>
-                            <li class="mt-2">Pastikan tidak ada obyek lain yang berada di dekat mobil seperti
-                                tangan, pensil, kendaraan lain.</li>
-                        </ul>
-                    </div>
+    <div class="content-container">
+        <section class="term">
+            <div class="container">
+                <div class="mb-4">
+                    <h3 class="service-title">Detail mobil Anda</h3>
                 </div>
+                <div class="form-parent">
+                    <label for="year" class="form-label select-label">Tahun Produksi Mobil</label>
+                    <select class="year form-control" id="year"></select>
+                </div>
+                <div class="form-parent">
+                    <label for="brand" class="form-label select-label">Merek Mobil</label>
+                    <select class="brand form-control" id="brand" disabled></select>
+                </div>
+                <div class="form-parent">
+                    <label for="type" class="form-label select-label">Tipe Mobil</label>
+                    <select class="type form-control" id="type" disabled></select>
+                </div>
+                <div class="form-parent">
+                    <label for="seri" class="form-label select-label">Seri Mobil</label>
+                    <select class="seri form-control" id="seri" disabled></select>
+                </div>
+
+                <div class="button-photo" id="button-photo">Foto</div>
             </div>
-
-            <div class="row mt-3">
-                <div class="col-lg-3 col-md-6 col-6 pr-5px" id="mpv">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/mpv.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">MPV</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px" id="suv">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/suv.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">SUV</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pr-5px mt-3 mt-lg-0" id="crossover">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/crossover.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Crossover</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px mt-3 mt-lg-0" id="hatchback">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/hatchback.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Hatchback</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pr-5px mt-3" id="sedan">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/sedan.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Sedan</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px mt-3" id="stationWagon">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/station-wagon.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Station Wagon</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pr-5px mt-3" id="jeep">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/jeep.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Jeep</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px mt-3" id="pickup">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/pickup.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Pickup</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="row mt-1">
-                <div class="col-lg-3 col-md-6 col-6 pr-5px" id="crossover">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/crossover.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Crossover</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px" id="hatchback">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/hatchback.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Hatchback</h3>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="row mt-1">
-                <div class="col-lg-3 col-md-6 col-6 pr-5px" id="sedan">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/sedan.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Sedan</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px" id="stationWagon">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/station-wagon.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Station Wagon</h3>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="row mt-1">
-                <div class="col-lg-3 col-md-6 col-6 pr-5px" id="jeep">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/jeep.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Jeep</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 pl-5px" id="pickup">
-                    <div class="card card-car">
-                        <div class="p-2">
-                            <img class="card-img-top" src="type-car-icon/pickup.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 class="card-title mb-0">Pickup</h3>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </section>
+        </section>
+    </div>
 
     @else
-    
+
     <section class="term">
         <div class="container">
-            <h3 class="text-center">Pilih Polis Anda</h3>
-            <div class="row mt-4">
-                <div class="col-lg-4 col-md-4 col-6 pr-5px">
-                    <div class="card">
-                        <img src="assets-voxo/images/avanza.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title">Polis Mobil Avanza</h3>
-                            <p class="card-text">Asuransi Mobil</p>
-                            <p class="card-text">No. Polis 123-456-7890</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6 pl-5px">
-                    <div class="card">
-                        <img src="assets-voxo/images/avanza.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title">Polis Mobil Avanza</h3>
-                            <p class="card-text">Asuransi Mobil</p>
-                            <p class="card-text">No. Polis 123-456-7890</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6 pr-5px mt-3 mt-md-0">
-                    <div class="card">
-                        <img src="assets-voxo/images/avanza.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title">Polis Mobil Avanza</h3>
-                            <p class="card-text">Asuransi Mobil</p>
-                            <p class="card-text">No. Polis 123-456-7890</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-6 pl-5px mt-3">
-                    <div class="card">
-                        <img src="assets-voxo/images/avanza.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3 class="card-title">Polis Mobil Avanza</h3>
-                            <p class="card-text">Asuransi Mobil</p>
-                            <p class="card-text">No. Polis 123-456-7890</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -538,7 +176,7 @@
         <div class="main-footer">
             <div class="container">
                 <div class="row gy-4">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-12">
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
@@ -548,16 +186,16 @@
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
                             </p>
-                            <p>Download app from:</p>
+                            <!-- <p>Download app from:</p>
                             <div>
                                 <center><img src="assets-voxo/images/logos/android.png" width="100">
                                     <img src="assets-voxo/images/logos/ios.png" width="100">
                                 </center>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Tentang Kami</h3>
@@ -584,7 +222,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Produk Asuransi</h3>
@@ -606,7 +244,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-12">
                         <div class="footer-links">
                             <div class="footer-title">
                                 <h3>Bantuan</h3>
@@ -633,7 +271,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
+                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
                         <div class="footer-newsletter">
                             <h3>Hubungi kami:</h3>
                             <div class="footer-number">
@@ -667,7 +305,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -681,6 +319,75 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="menu">
+                        <a href="#">Beranda</a>
+                    </div>
+                    <div class="menu">
+                        <div class="dropdown">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                aria-controls="collapseExample">
+                                Tentang Kami
+                            </a>
+
+                            <div class="collapse" id="collapseExample">
+                                <ul class="menu-child">
+                                    <a href="">
+                                        <li class="menu-child-item"> Perusahaan </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Komisaris & Direksi </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Tenaga Ahli </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> Partner </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="dropdown">
+                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
+                                aria-controls="collapseExample1">
+                                Produk Asuransi
+                            </a>
+
+                            <div class="collapse" id="collapseExample1">
+                                <ul class="menu-child">
+                                    <a href="">
+                                        <li class="menu-child-item"> All Risk </li>
+                                    </a>
+                                    <a href="">
+                                        <li class="menu-child-item"> TLO </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Bengkel</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Berita</a>
+                    </div>
+                    <div class="menu">
+                        <a href="#">Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- tap to top Section Start -->
     <div class="tap-to-top">
@@ -721,6 +428,158 @@
     <!-- script js -->
     <script src="assets-voxo/js/theme-setting.js"></script>
     <script src="assets-voxo/js/script.js"></script>
+
+    <!-- select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script type="text/javascript">
+        $('.year').select2({
+            placeholder: 'Pilih Tahun Produksi',
+            ajax: {
+                url: '/claim/list-year',
+                dataType: 'json',
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.tahun,
+                                id: item.tahun
+                            }
+                        })
+                    };
+                },
+                cache: true            
+            }
+        }); 
+        
+        $('.brand').select2({
+            placeholder: 'Pilih Merek Mobil',
+            ajax: {
+                url: '/claim/list-brand',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        year: document.getElementById("year").value
+                    }
+
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.merek,
+                                id: item.merek
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('.type').select2({
+            placeholder: 'Pilih Tipe Mobil',
+            ajax: {
+                url: '/claim/list-type',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        year: document.getElementById("year").value,
+                        brand: document.getElementById("brand").value
+                    }
+                    
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.tipe,
+                                id: item.tipe
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('.seri').select2({
+            placeholder: 'Pilih Seri Mobil',
+            ajax: {
+                url: '/claim/list-seri',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        year: document.getElementById("year").value,
+                        brand: document.getElementById("brand").value,
+                        type: document.getElementById("type").value
+                    }
+                    
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.seri,
+                                id: item.seri
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('#year').change(function(){
+            $("#brand").empty();
+            $("#type").empty();
+            $("#seri").empty();
+        });
+
+        $('#brand').change(function(){
+            $("#type").empty();
+            $("#seri").empty();
+        });
+
+        $('#type').change(function(){
+            $("#seri").empty();
+        })
+
+        $('.year').on('select2:select', function (e) {
+            $('.brand').removeAttr('disabled');
+        });
+
+        $('.brand').on('select2:select', function (e) {
+            $('.type').removeAttr('disabled');
+        });
+
+        $('.type').on('select2:select', function (e) {
+            $('.seri').removeAttr('disabled');
+        });
+
+        $("#button-photo").click(function(){
+            if( $('#type').has('option').length > 0 ) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    position.coords.latitude, position.coords.longitude;
+                });
+    
+                navigator.mediaDevices.getUserMedia({
+                    video: true
+                });
+    
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    window.location.href = 'camera?type_car=mpv&latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
+                });
+            }
+
+        });
+    </script>
 
 </body>
 

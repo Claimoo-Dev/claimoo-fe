@@ -364,6 +364,51 @@
         text-decoration: none;
         background-color: #eff2f7;
     }
+
+    .term {
+        padding: 20px 0 !important;
+    }
+
+    span.select2-container {
+        width: 100% !important;
+    }
+
+    span.selection {
+        width: 100% !important;
+    }
+
+    ul.select2-results__options {
+        display: grid;
+    }
+
+    li.select2-results__option {
+        font-size: 10px;
+    }
+
+    .select-label {
+        font-size: 12px !important;
+        display: block;
+    }
+
+    span.select2-selection__placeholder {
+        font-size: 10px;
+    }
+
+    span.select2-selection__rendered {
+        font-size: 10px;
+    }
+
+    .button-photo {
+        padding: 5px;
+        width: 100px;
+        background-color: #073f78;
+        border-radius: 10px;
+        margin: 10px auto;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -758,5 +803,51 @@
         padding: 15px;
         text-decoration: none;
         background-color: #eff2f7;
+    }
+
+    .term {
+        padding: 20px 0 !important;
+        background-color: white;
+    }
+
+    span.select2-container {
+        width: 100% !important;
+    }
+
+    span.selection {
+        width: 100% !important;
+    }
+
+    ul.select2-results__options {
+        display: grid;
+    }
+
+    li.select2-results__option {
+        font-size: 10px;
+    }
+
+    .select-label {
+        font-size: 12px !important;
+        display: block;
+    }
+
+    span.select2-selection__placeholder {
+        font-size: 10px;
+    }
+
+    span.select2-selection__rendered {
+        font-size: 10px;
+    }
+
+    .button-photo {
+        padding: 5px;
+        width: 100px;
+        background-color: #073f78;
+        border-radius: 10px;
+        margin: 10px auto;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 }
