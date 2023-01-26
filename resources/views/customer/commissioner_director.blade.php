@@ -331,11 +331,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="poster-image">
+                        <div class="">
                             <h2>Komisaris Utama</h2>
                             <h3 class="mt-4">Rinaldi Anwar, S.Si..MM.(act).FSAI..AAIJ..AAK</h3>
-                            <p class="mt-4">Rinaldi mendapat gelar Sarjana Matematika untuk bidang minat Aktuaria dari Universitas Indonesia (UI) dan gelar Magister Manajemen dalam Manajemen Asuransi dan lmu Aktuaria dari Fakultas Ekonomi Uniuersitas Indonesia (UI) join- program dengan CIDA (Canadian International Development Agency).</p>
-                            <p class="mmt-4">Dia mendapat gelar profesi sebagai Fellow Society of Aktuaris Indonesia (FSAI) dari Persatuan Aktuaris Indonesia (PAI). Ahli Asuransi Jiwa Indonesia Jiwa (AAIJ) dari Asosiasi Ahli Manajemen Asuransi Indonesia (AAMAI). dan Ahli Asuransi Kesehatan (AAK) dari Perhimpunan Ahli Manajemen Jaminan dan Ahli Asuransi Kesehatan Indonesia (PAMJAKI).</p>
                         </div>
                     </div>
 
@@ -350,29 +348,29 @@
     </section>
 
     <!-- Direktur -->
+
     <section class="poster-section ratio2_1 pt-5 pb-5">
         <div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="poster-image">
-                            <img src="assets-voxo/images/produk/agung.jpg" class="img-fluid bg-img blur-up lazyload" alt="">
+                        <div class="">
+                            <h2>Direktur</h2>
+                            <h3 class="mt-4">Agung Sutikno, S.Kom., M.M.S.I</h3>
                         </div>
                     </div>
 
                     <div class="col-lg-6 mt-lg-0 mt-4">
                         <div class="poster-image">
-                            <h2>Direktur</h2>
-                            <h3 class="mt-4">Agung Sutikno, S.Kom., M.M.S.I</h3>
-                            <p class="mt-4">Rinaldi mendapat gelar Sarjana Matematika untuk bidang minat Aktuaria dari Universitas Indonesia (UI) dan gelar Magister Manajemen dalam Manajemen Asuransi dan lmu Aktuaria dari Fakultas Ekonomi Uniuersitas Indonesia (UI) join- program dengan CIDA (Canadian International Development Agency).</p>
-                            <p class="mmt-4">Dia mendapat gelar profesi sebagai Fellow Society of Aktuaris Indonesia (FSAI) dari Persatuan Aktuaris Indonesia (PAI). Ahli Asuransi Jiwa Indonesia Jiwa (AAIJ) dari Asosiasi Ahli Manajemen Asuransi Indonesia (AAMAI). dan Ahli Asuransi Kesehatan (AAK) dari Perhimpunan Ahli Manajemen Jaminan dan Ahli Asuransi Kesehatan Indonesia (PAMJAKI).</p>
+                            <img src="assets-voxo/images/produk/agung.jpg" class="img-fluid bg-img blur-up lazyload" alt="">
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- content end -->
 

@@ -55,7 +55,7 @@ Route::get('dashboard', [CustomerPageController::class, 'dashboard'])->name('das
 Route::get('perusahaan', [CustomerPageController::class, 'company'])->name('company');
 Route::get('komisaris-direksi', [CustomerPageController::class, 'commissionerDirector'])->name('commissionerDirector');
 Route::get('tenaga-ahli', [CustomerPageController::class, 'expert'])->name('expert');
-Route::get('partner', [CustomerPageController::class, 'partner']);
+Route::get('mitra', [CustomerPageController::class, 'partner'])->name('partner');
 Route::get('shop', [CustomerPageController::class, 'shop'])->name('shop');
 Route::get('claim', [CustomerPageController::class, 'claim'])->name('claim');
 Route::get('support', [CustomerPageController::class, 'support'])->name('support');

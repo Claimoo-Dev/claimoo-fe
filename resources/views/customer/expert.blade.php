@@ -353,7 +353,6 @@
                                         <div>
                                             <h5>Fullstack Developer</h5>
                                             <h3 class="text-hide">Fendy Setiawan</h3>
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" type="button" class="btn btn-light-white">Shop now <i class="fas fa-chevron-right ms-2"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -379,7 +378,6 @@
                                         <div>
                                             <h5>Fullstack Developer</h5>
                                             <h3 class="text-hide">Yusuf Rijal Robbani</h3>
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" type="button" class="btn btn-light-white">Shop now <i class="fas fa-chevron-right ms-2"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -405,7 +403,6 @@
                                         <div>
                                             <h5>Data Scientist</h5>
                                             <h3 class="text-hide">M. Remzy</h3>
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" type="button" class="btn btn-light-white">Shop now <i class="fas fa-chevron-right ms-2"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -431,7 +428,6 @@
                                         <div>
                                             <h5>Data Scientist</h5>
                                             <h3 class="text-hide">Harum Ananda</h3>
-                                            <button onclick="location.href = 'shop-left-sidebar.html';" type="button" class="btn btn-light-white">Shop now <i class="fas fa-chevron-right ms-2"></i></button>
                                         </div>
                                     </div>
                                 </div>
