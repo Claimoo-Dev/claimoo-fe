@@ -436,6 +436,7 @@
         $('.year').select2({
             placeholder: 'Pilih Tahun Produksi',
             ajax: {
+                type: 'GET',
                 url: '/claim/list-year',
                 dataType: 'json',
                 processResults: function (data) {
@@ -455,6 +456,7 @@
         $('.brand').select2({
             placeholder: 'Pilih Merek Mobil',
             ajax: {
+                type: 'GET',
                 url: '/claim/list-brand',
                 dataType: 'json',
                 data: function (params) {
@@ -482,6 +484,7 @@
         $('.type').select2({
             placeholder: 'Pilih Tipe Mobil',
             ajax: {
+                type: 'GET',
                 url: '/claim/list-type',
                 dataType: 'json',
                 data: function (params) {
@@ -510,6 +513,7 @@
         $('.seri').select2({
             placeholder: 'Pilih Seri Mobil',
             ajax: {
+                type: 'GET',
                 url: '/claim/list-seri',
                 dataType: 'json',
                 data: function (params) {
