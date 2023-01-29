@@ -137,7 +137,7 @@
                     <!-- <h2 class="slider-text">Aplikasi inspeksi Mobil tercerdas di Indonesia</h2> -->
                 </div>
                 <div class="slider">
-                    <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
+                    <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/banner2.jpg" alt="">
 
                 </div>
             </div>
@@ -245,7 +245,7 @@
                     <p>Daftar, beli Polis, dan Klaim langsung dari ponsel Anda. Ucapkan selamat
                         tinggal pada
                         asuransi mobil yang rumit. Tonton video untuk mengetahui lebih lanjut.</p>
-                    <a href="{{ route('landing-page') }}">
+                    <a href="{{ route('shop') }}">
                         <div class="btn-offer text-center">
                             Dapatkan Penawaran Terbaik
                         </div>
@@ -387,19 +387,19 @@
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="javascript:void(0)" class="font-dark">Beranda</a>
+                                        <a href="{{ route('landing-page') }}" class="font-dark">Beranda</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)" class="font-dark">Perusahaan</a>
+                                        <a href="{{ route('company') }}" class="font-dark">Perusahaan</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)" class="font-dark">Komisaris &amp; Direksi</a>
+                                        <a href="{{ route('commissionerDirector') }}" class="font-dark">Komisaris &amp; Direksi</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)" class="font-dark">Tenaga Ahli</a>
+                                        <a href="{{ route('expert') }}" class="font-dark">Tenaga Ahli</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)" class="font-dark">Partner</a>
+                                        <a href="" class="font-dark">Partner</a>
                                     </li>
                                 </ul>
                             </div>
@@ -505,6 +505,7 @@
     </footer>
     <!-- footer end -->
 
+    <!-- Modal Menu Start -->
     <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
@@ -513,7 +514,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="menu">
-                        <a href="#">Beranda</a>
+                        <a href="{{ route('landing-page') }}">Beranda</a>
                     </div>
                     <div class="menu">
                         <div class="dropdown">
@@ -570,6 +571,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Menu End -->
 
     <!-- tap to top Section Start -->
     <div class="tap-to-top">

@@ -63,8 +63,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('dashboard-customer') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png"
-                                            class="img-fluid blur-up lazyload" alt="logo">
+                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
@@ -185,8 +184,7 @@
                                                 <div class="mobile-contain">
                                                     <h5>Aplikasi Mobile Lite</h5>
                                                     <p class="font-light">Jadikan web ini ke versi aplikasi mobile.</p>
-                                                    <a href="javascript:void(0)" id="installApp"
-                                                        class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
+                                                    <a href="javascript:void(0)" id="installApp" class="btn btn-primary btn-spacing w-100">TAMBAHKAN KE
                                                         HOMESCREEN</a>
                                                 </div>
                                             </li>
@@ -206,20 +204,16 @@
 
                                     <li class="language-icon d-none d-sm-block">
                                         <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                                 <span><i data-feather="globe"></i>ID
                                                     <i class="fas fa-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">EN</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">EN</a>
                                                 </li>
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">ID</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">ID</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -227,20 +221,16 @@
 
                                     <li class="user-icon d-none d-sm-block">
                                         <div class="dropdown top-header-dropdown">
-                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                            <a class="dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                                                 <span><i data-feather="user"></i>
                                                     <i class="fas fa-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu dropdown-menu-end"
-                                                aria-labelledby="dropdownMenuLink">
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Log In</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">Log In</a>
                                                 </li>
                                                 <li class="w-100">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('dashboard-customer') }}">Daftar</a>
+                                                    <a class="dropdown-item" href="{{ route('dashboard-customer') }}">Daftar</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -341,46 +331,93 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Lorem Ipsum Dolor Sit Amet
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Bagaimana cara mengajukan klaim melalui Claimoo?
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Lorem Ipsum Dolor Sit Amet
+                                    Tertanggung dapat membuat laporan klaim melalui aplikasi mobile claimoo dengan proses yang telah disediakan. Laporan harus dibuat tidak lebih dari 5 (lima) hari kalendar dari tanggal kejadian.<br />
+                                    Untuk mengajukan klaim, temukan polis mu dalam menu Polis Saya.<br /><br />
+
+                                    Dokumen yang dibutuhkan pada aplikasi Claimoo hanya Kartu identitas tertanggung (KTP / SIM) atau kartu identitas karyawan yang mengajukan atas nama perusahaan yang telah diunggah pada halaman profil anda.<br />
+                                    Pastikan KTP/SIM tidak blur atau terpotong dan dibawah pencahayaan yang cukup<br /><br />
+
+                                    Claimoo akan menjaga kerahasiaan dan tidak akan menyebarluaskan data diri pribadi kamu untuk alasan apa pun.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Lorem Ipsum Dolor Sit Amet
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Bisakah saya melakukan klaim tanpa mengizinkan akses untuk lokasi dan kamera?
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Lorem Ipsum Dolor Sit Amet
+                                    Untuk bisa melakukan klaim, kamu harus memberikan izin untuk mengakses lokasimu. Kamu bisa merubah setting pada smartphone yang digunakan, kemudian izinkan lokasi dan kamera.<br />
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Lorem Ipsum Dolor Sit Amet
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Mengapa saya mengalami kesulitan untuk menerima OTP?
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Lorem Ipsum Dolor Sit Amet
+                                    Mohon pastikan email yang kamu daftarkan tidak ada kesalahan penulisan. Atau kamu bisa klik “Kirim Ulang OTP”
                                 </div>
                             </div>
                         </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                    Apakah semua merek mobil bisa diansurasikan di Claimoo?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Ya, Anda bisa mengasuransikan semua merek mobil di Claimoo
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                    Bagaimana menentukan harga asuransi ketika membeli asuransi kendaraan lewat Claimoo?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Premi asuransi ditentukan dari jenis polis dan fitur yang Anda pilih dan sudah diatur oleh pedoman OJK.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                    Bagaimana cara membeli asuransi di Claimoo?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Berikut adalah cara membeli asuransi di Claimoo:<br />
+
+                                    - Isi data kendaraan, dan pilih jenis proteksi dan coverage tambahan. Lalu kirimkan semua dokumen yang dibutuhkan.<br />
+                                    - BAYAR Lakukan pembayaran dengan metode pilihan Anda.<br />
+                                    - SURVEI kendaraan Anda secara mandiri melalui handphone atau minta untuk mendatangkan surveyor ke lokasi Anda di waktu pilihan Anda.<br />
+                                    - POLIS TERCETAK dokumen polis elektronik Anda (e-polis) akan tercetak dalam kurun waktu 24 jam setelah proses survei di-approve. e-polis akan dikirimkan ke alamat email yang teregistrasi dan proteksi kendaraan Anda akan mulai efektif.
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -394,12 +431,7 @@
                 <h3>Kategori</h3>
             </div>
             <div class="faq-category-group">
-                <a href="#home">
-                    <div>
-                        <i data-feather="clipboard"></i>
-                    </div>
-                    <h3 class="mt-2">Belanja</h3>
-                </a>
+
                 <a href="#news" class="mx-md-2">
                     <div>
                         <i data-feather="clipboard"></i>
@@ -428,30 +460,37 @@
         </div>
     </section>
 
-    <section class="faq-contact section-b-space">
+    <section class="help-section">
         <div class="container">
-            <div class="mb-4 mb-lg-5">
-                <h3>Hubungi Kami</h3>
+            <div class="mb-4">
+                <h3 class="help-title">Butuh bantuan? Hubungi layanan pelanggan kami di :</h3>
             </div>
-            <div class="row g-4">
-                <div class="col-12 faq-contact-col">
-                    <div>
-                        <i data-feather="phone"></i>
-                    </div>
-                    <div class="faq-contact-detail">
-                        Telepon Kami
-                    </div>
+            <div class="help-parent">
+
+                <div class="help-item text-center">
+                    <a href="tel:+622177837035">
+                        <img class="img-fluid" src="assets-voxo/images/telp.png" alt="">
+                        <p> Telepon </p>
+
                 </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-12 faq-contact-col">
-                    <div>
-                        <i data-feather="mail"></i>
-                    </div>
-                    <div class="faq-contact-detail">
-                        Email Kami
-                    </div>
+                </a>
+                <div class="help-item ms-1 me-1 text-center">
+                    <a href="mailto:admin@claimoo.com">
+                        <img class="img-fluid" src="assets-voxo/images/email.png" alt="">
+                        <p> Email </p>
+                </div></a>
+
+                <div class="help-item me-1 text-center">
+                    <a href="https://wa.me/628111460579">
+                        <img class="img-fluid" src="assets-voxo/images/wa.png" alt="">
+                        <p> WhatsApp </p>
+                    </a>
                 </div>
+                <div class="help-item text-center">
+                    <a href="chat">
+                        <img class="img-fluid" src="assets-voxo/images/chat.png" alt="">
+                        <p> Chat </p>
+                </div></a>
             </div>
         </div>
     </section>
@@ -464,18 +503,12 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
-                                        alt="logo">
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
                             </p>
-                            <p>Download app from:</p>
-                            <div>
-                                <center><img src="assets-voxo/images/logos/android.png" width="100">
-                                    <img src="assets-voxo/images/logos/ios.png" width="100">
-                                </center>
-                            </div>
+
                         </div>
                     </div>
 
@@ -560,8 +593,7 @@
                             <h3>Hubungi kami:</h3>
                             <div class="footer-number">
                                 <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png"
-                                        class="img-fluid blur-up lazyload" alt="">
+                                    <img src="assets-voxo/images/shoes/other/headphone.png" class="img-fluid blur-up lazyload" alt="">
                                 </div>
 
                                 <div class="footer-number-container">
