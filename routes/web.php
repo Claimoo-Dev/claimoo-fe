@@ -56,7 +56,15 @@ Route::get('perusahaan', [CustomerPageController::class, 'company'])->name('comp
 Route::get('komisaris-direksi', [CustomerPageController::class, 'commissionerDirector'])->name('commissionerDirector');
 Route::get('tenaga-ahli', [CustomerPageController::class, 'expert'])->name('expert');
 Route::get('mitra', [CustomerPageController::class, 'partner'])->name('partner');
-Route::get('shop', [CustomerPageController::class, 'shop'])->name('shop');
 Route::get('claim', [CustomerPageController::class, 'claim'])->name('claim');
 Route::get('support', [CustomerPageController::class, 'support'])->name('support');
 Route::get('list-image-customer', [CameraController::class, 'listImageCustomer']);
+
+Route::prefix('shop')->group(function () {
+    Route::get('', [CustomerPageController::class, 'shop'])->name('shop');
+    Route::get('product', [CustomerPageController::class, 'shopProduct']);
+    Route::get('detail', [CustomerPageController::class, 'shopDetail']);
+    Route::get('feature', [CustomerPageController::class, 'shopFeature']);
+    Route::get('personal-data', [CustomerPageController::class, 'shopPersonalData']);
+    Route::get('checkout', [CustomerPageController::class, 'shopCheckout']);
+});

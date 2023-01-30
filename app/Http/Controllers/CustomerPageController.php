@@ -102,4 +102,29 @@ class CustomerPageController extends Controller
     {
         return view('customer.support');
     }
+
+    public function shopProduct()
+    {
+        return view('customer.shop-product');
+    }
+    
+    public function shopDetail()
+    {
+        return view('customer.shop-detail');
+    }
+
+    public function shopFeature()
+    {
+        return view('customer.shop-feature');
+    }
+
+    public function shopPersonalData()
+    {
+        return view('customer.shop-personal-data');
+    }
+
+    public function shopCheckout()
+    {
+        return view('customer.shop-checkout');
+    }
 }
