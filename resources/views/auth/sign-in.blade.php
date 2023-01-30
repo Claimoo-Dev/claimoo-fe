@@ -38,8 +38,6 @@
 </head>
 
 <body class="theme-color2 light ltr">
-
-
     <!-- Log In Section Start -->
     <div class="login-section">
         <div class="materialContainer">
@@ -88,7 +86,8 @@
                     </div>
                 </form>
 
-                <p class="mt-0">Belum punya akun? <a href="{{ url('sign-up') }}" class="theme-color">Daftar sekarang</a></p>
+                <p class="mt-0">Belum punya akun? <a href="{{ url('sign-up') }}" class="theme-color">Daftar sekarang</a>
+                </p>
 
             </div>
         </div>
@@ -130,6 +129,8 @@
                 });
             }, 500);
         });
+
     </script>
 </body>
+
 </html>

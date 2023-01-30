@@ -99,6 +99,8 @@ class CameraController extends Controller
 
         $response = json_decode($machineLearning->body());
 
+        rename($file, $folderPath . $response->status . '-' . $fileName);
+
         if ($machineLearning->ok()) {
             $backend = Http::withHeaders([
                 'X-Channel' => 'cust_mobile_app',
@@ -160,6 +162,30 @@ class CameraController extends Controller
             'Authorization' => $token,
             'Content-Type' => 'application/json'
         ])->get("http://staging.claimoo.com:55777/v1/upload?member_code=" . $userCode . "&status=1&limit=10&start_date=" . $startDate . "&end_date=" . $endDate . "&page=" . $page);
+
+        $result = json_decode($backend->body());
+
+        return response()->json($result);
+    }
+
+    public function listImageCustomer(Request $request)
+    {
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $startDate = $request->start_date;
+        $endDate = $request->end_date;
+        $page = $request->page;
+
+        $backend = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get("http://staging.claimoo.com:55777/v1/claim?member_code=" . $userCode . "&status=1&limit=10&start_date=" . $startDate . "&end_date=" . $endDate . "&page=" . $page);
 
         $result = json_decode($backend->body());
 

@@ -59,3 +59,4 @@ Route::get('mitra', [CustomerPageController::class, 'partner'])->name('partner')
 Route::get('shop', [CustomerPageController::class, 'shop'])->name('shop');
 Route::get('claim', [CustomerPageController::class, 'claim'])->name('claim');
 Route::get('support', [CustomerPageController::class, 'support'])->name('support');
+Route::get('list-image-customer', [CameraController::class, 'listImageCustomer']);

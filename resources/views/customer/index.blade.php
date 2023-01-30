@@ -134,11 +134,11 @@
             <div class="banner" id="banner">
                 <div class="slider">
                     <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
-                    <h2 class="slider-text">Aplikasi inspeksi Mobil tercerdas di Indonesia</h2>
+                    <!-- <h2 class="slider-text">Aplikasi inspeksi Mobil tercerdas di Indonesia</h2> -->
                 </div>
                 <div class="slider">
                     <img class="img-fluid blur-up lazyload img-banner" src="assets-voxo/images/car5.jpg" alt="">
-                    <h2 class="slider-text">Testing</h2>
+                    <!-- <h2 class="slider-text">Testing</h2> -->
                 </div>
             </div>
         </section>

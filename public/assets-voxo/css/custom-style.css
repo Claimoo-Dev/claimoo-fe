@@ -1,6 +1,7 @@
 .dashboard-text {
     display: inline;
     margin-right: 5px !important;
+    font-size: 12px !important;
 }
 
 .dashboard-badge {
@@ -419,12 +420,44 @@
         font-size: 12px;
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
+
+    .breadcrumb-section {
+        padding: 70px 0 !important;
+    }
+
+    .filter-button {
+        padding: 0 !important;
+    }
+
+    .filter-btn {
+        font-size: 12px !important;
+    }
+
+    .dashboard {
+        padding: 0 !important;
+    }
+
+    .fz-12 {
+        font-size: 12px !important;
+    }
+
+    .img-order-box {
+        width: 30px !important;
+    }
+
+    .btn-change-password {
+        padding: 5px 0;
+        background-color: lightgray;
+        border-radius: 10px;
+        width: 150px;
+        text-align: center;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body {
-        background-color: lightgrey;
+        background-color: #eff2f7;
     }
 
     header {
@@ -869,5 +902,26 @@
         color: white;
         font-size: 12px;
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .breadcrumb-section {
+        padding: 70px 0 !important;
+    }
+
+    .filter-button {
+        display: block;
+        padding: 0 !important;
+    }
+
+    .filter-btn {
+        font-size: 12px !important;
+    }
+
+    .dashboard {
+        padding: 0 !important;
+    }
+
+    .fz-12 {
+        font-size: 12px !important;
     }
 }
