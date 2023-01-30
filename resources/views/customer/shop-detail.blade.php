@@ -66,12 +66,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
-<<<<<<< HEAD
-                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
-                                            class="img-fluid blur-up lazyload" alt="logo">
-=======
-                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
->>>>>>> eb03000 (update agung)
+                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
                             </div>
@@ -156,12 +151,7 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-<<<<<<< HEAD
-                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload"
-                                        alt="logo">
-=======
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
->>>>>>> eb03000 (update agung)
+                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload" alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
