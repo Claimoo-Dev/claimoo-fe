@@ -3,13 +3,13 @@
 
 <head>
     <link rel="manifest" href="./manifest.json" />
-    <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets-voxo/images/favicon/favicon.png" />
+    <link rel="icon" href="{{ asset('assets-voxo/images/favicon/favicon.png') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('assets-voxo/images/favicon/favicon.png') }}" />
     <meta name="theme-color" content="#073f78" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Claimoo" />
-    <meta name="msapplication-TileImage" content="assets-voxo/images/favicon/favicon.png" />
+    <meta name="msapplication-TileImage" content="{{ asset('assets-voxo/images/favicon/favicon.png') }}" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
     <meta name="description" content="Claimoo">
     <meta name="keywords" content="Claimoo">
     <meta name="author" content="Claimoo">
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
     <title>Claimoo | Beli Polis</title>
 
     <!-- Google font -->
@@ -31,27 +31,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- bootstrap css -->
-    <link id="rtl-link" rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/bootstrap.css">
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/bootstrap.css') }}">
 
     <!-- font-awesome css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/font-awesome.css') }}">
 
     <!-- feather icon css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/feather-icon.css') }}">
 
     <!-- animation css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/animate.css') }}">
 
     <!-- slick css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/slick/slick-theme.css') }}">
 
     <!-- select2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- Theme css -->
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/demo2.css">
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/custom-style.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/demo2.css') }}">
+    <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/custom-style.css') }}">
 
 </head>
 
@@ -66,7 +66,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png"
+                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
                                             class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
@@ -134,7 +134,29 @@
     <!-- mobile fix menu end -->
 
     <div class="content-container">
-        
+        <section class="term">
+            <div class="container">
+                <div class="mb-4">
+                    <h3 class="shop-title">Detail mobil Anda</h3>
+                </div>
+                <div class="form-parent">
+                    <label for="year" class="form-label select-label">Tahun Produksi Mobil</label>
+                    <select class="year form-control" id="year"></select>
+                </div>
+                <div class="form-parent mt-2">
+                    <label for="brand" class="form-label select-label">Merek Mobil</label>
+                    <select class="brand form-control" id="brand"></select>
+                </div>
+                <div class="form-parent mt-2">
+                    <label for="type" class="form-label select-label">Tipe Mobil</label>
+                    <select class="type form-control" id="type"></select>
+                </div>
+                <div class="form-parent mt-2">
+                    <label for="seri" class="form-label select-label">Seri Mobil</label>
+                    <select class="seri form-control" id="seri"></select>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="footer-sm-space">
@@ -145,8 +167,8 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
-                                        alt="logo">
+                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
+                                        class="img-fluid blur-up lazyload" alt="logo">
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
@@ -365,37 +387,174 @@
     <div class="bg-overlay"></div>
 
     <!-- latest jquery-->
-    <script src="assets-voxo/js/jquery-3.5.1.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/jquery-3.5.1.min.js') }}"></script>
 
     <!-- Add To Home js -->
-    <script src="assets-voxo/js/pwa.js"></script>
+    <script src="{{ asset('assets-voxo/js/pwa.js') }}"></script>
 
     <!-- Bootstrap js-->
-    <script src="assets-voxo/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
     <!-- feather icon js-->
-    <script src="assets-voxo/js/feather/feather.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/feather/feather.min.js') }}"></script>
 
     <!-- lazyload js-->
-    <script src="assets-voxo/js/lazysizes.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/lazysizes.min.js') }}"></script>
 
     <!-- Slick js-->
-    <script src="assets-voxo/js/slick/slick.js"></script>
-    <script src="assets-voxo/js/slick/slick-animation.min.js"></script>
-    <script src="assets-voxo/js/slick/custom_slick.js"></script>
+    <script src="{{ asset('assets-voxo/js/slick/slick.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/slick/slick-animation.min.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/slick/custom_slick.js') }}"></script>
 
     <!-- Filter Hide and show Js -->
-    <script src="assets-voxo/js/filter.js"></script>
+    <script src="{{ asset('assets-voxo/js/filter.js') }}"></script>
 
     <!-- Notify js-->
-    <script src="assets-voxo/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/bootstrap/bootstrap-notify.min.js') }}"></script>
 
     <!-- script js -->
-    <script src="assets-voxo/js/theme-setting.js"></script>
-    <script src="assets-voxo/js/script.js"></script>
+    <script src="{{ asset('assets-voxo/js/theme-setting.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/script.js') }}"></script>
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script type="text/javascript">
+        $('.year').select2({
+            placeholder: 'Pilih Tahun Produksi',
+            ajax: {
+                type: 'GET',
+                url: '/claim/list-year',
+                dataType: 'json',
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.tahun,
+                                id: item.tahun
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('.brand').select2({
+            placeholder: 'Pilih Merek Mobil',
+            ajax: {
+                type: 'GET',
+                url: '/claim/list-brand',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        year: document.getElementById("year").value
+                    }
+
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.merek,
+                                id: item.merek
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('.type').select2({
+            placeholder: 'Pilih Tipe Mobil',
+            ajax: {
+                type: 'GET',
+                url: '/claim/list-type',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        year: document.getElementById("year").value,
+                        brand: document.getElementById("brand").value
+                    }
+
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.tipe,
+                                id: item.tipe
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('.seri').select2({
+            placeholder: 'Pilih Seri Mobil',
+            ajax: {
+                type: 'GET',
+                url: '/claim/list-seri',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        year: document.getElementById("year").value,
+                        brand: document.getElementById("brand").value,
+                        type: document.getElementById("type").value
+                    }
+
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.seri,
+                                id: item.seri
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
+        $('#year').change(function () {
+            $("#brand").empty();
+            $("#type").empty();
+            $("#seri").empty();
+        });
+
+        $('#brand').change(function () {
+            $("#type").empty();
+            $("#seri").empty();
+        });
+
+        $('#type').change(function () {
+            $("#seri").empty();
+        });
+
+        $('.year').on('select2:select', function (e) {
+            $('.brand').removeAttr('disabled');
+        });
+
+        $('.brand').on('select2:select', function (e) {
+            $('.type').removeAttr('disabled');
+        });
+
+        $('.type').on('select2:select', function (e) {
+            $('.seri').removeAttr('disabled');
+        });
+
+    </script>
 
 </body>
 

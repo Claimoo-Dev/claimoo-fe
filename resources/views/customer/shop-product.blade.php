@@ -3,13 +3,13 @@
 
 <head>
     <link rel="manifest" href="./manifest.json" />
-    <link rel="icon" href="assets-voxo/images/favicon/favicon.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets-voxo/images/favicon/favicon.png" />
+    <link rel="icon" href="{{ asset('assets-voxo/images/favicon/favicon.png') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('assets-voxo/images/favicon/favicon.png') }}" />
     <meta name="theme-color" content="#073f78" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Claimoo" />
-    <meta name="msapplication-TileImage" content="assets-voxo/images/favicon/favicon.png" />
+    <meta name="msapplication-TileImage" content="{{ asset('assets-voxo/images/favicon/favicon.png') }}" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
     <meta name="description" content="Claimoo">
     <meta name="keywords" content="Claimoo">
     <meta name="author" content="Claimoo">
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
     <title>Claimoo | Beli Polis</title>
 
     <!-- Google font -->
@@ -31,27 +31,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- bootstrap css -->
-    <link id="rtl-link" rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/bootstrap.css">
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/bootstrap.css') }}">
 
     <!-- font-awesome css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/font-awesome.css') }}">
 
     <!-- feather icon css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/feather-icon.css') }}">
 
     <!-- animation css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/animate.css') }}">
 
     <!-- slick css -->
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="assets-voxo/css/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/vendors/slick/slick-theme.css') }}">
 
     <!-- select2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- Theme css -->
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/demo2.css">
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets-voxo/css/custom-style.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/demo2.css') }}">
+    <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/custom-style.css') }}">
 
 </head>
 
@@ -66,7 +66,7 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
-                                        <img src="assets-voxo/images/logo-claimoo.png"
+                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
                                             class="img-fluid blur-up lazyload" alt="logo">
                                     </a>
                                 </div>
@@ -145,7 +145,7 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload"
+                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload"
                                         alt="logo">
                                 </a>
                             </div>
@@ -365,34 +365,34 @@
     <div class="bg-overlay"></div>
 
     <!-- latest jquery-->
-    <script src="assets-voxo/js/jquery-3.5.1.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/jquery-3.5.1.min.js') }}"></script>
 
     <!-- Add To Home js -->
-    <script src="assets-voxo/js/pwa.js"></script>
+    <script src="{{ asset('assets-voxo/js/pwa.js') }}"></script>
 
     <!-- Bootstrap js-->
-    <script src="assets-voxo/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
     <!-- feather icon js-->
-    <script src="assets-voxo/js/feather/feather.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/feather/feather.min.js') }}"></script>
 
     <!-- lazyload js-->
-    <script src="assets-voxo/js/lazysizes.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/lazysizes.min.js') }}"></script>
 
     <!-- Slick js-->
-    <script src="assets-voxo/js/slick/slick.js"></script>
-    <script src="assets-voxo/js/slick/slick-animation.min.js"></script>
-    <script src="assets-voxo/js/slick/custom_slick.js"></script>
+    <script src="{{ asset('assets-voxo/js/slick/slick.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/slick/slick-animation.min.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/slick/custom_slick.js') }}"></script>
 
     <!-- Filter Hide and show Js -->
-    <script src="assets-voxo/js/filter.js"></script>
+    <script src="{{ asset('assets-voxo/js/filter.js') }}"></script>
 
     <!-- Notify js-->
-    <script src="assets-voxo/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script src="{{ asset('assets-voxo/js/bootstrap/bootstrap-notify.min.js') }}"></script>
 
     <!-- script js -->
-    <script src="assets-voxo/js/theme-setting.js"></script>
-    <script src="assets-voxo/js/script.js"></script>
+    <script src="{{ asset('assets-voxo/js/theme-setting.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/script.js') }}"></script>
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>

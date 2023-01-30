@@ -452,6 +452,12 @@
         width: 150px;
         text-align: center;
     }
+
+    .shop-title {
+        font-weight: bold;
+        color: #232323;
+        font-size: 12px !important;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
