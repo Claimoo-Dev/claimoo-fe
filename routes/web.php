@@ -63,7 +63,7 @@ Route::get('list-image-customer', [CameraController::class, 'listImageCustomer']
 Route::prefix('shop')->group(function () {
     Route::get('', [CustomerPageController::class, 'shop'])->name('shop');
     Route::get('product', [CustomerPageController::class, 'shopProduct']);
-    Route::get('detail', [CustomerPageController::class, 'shopDetail']);
+    Route::get('detail', [CustomerPageController::class, 'shopDetail'])->name('shopDetail');
     Route::get('feature', [CustomerPageController::class, 'shopFeature']);
     Route::get('personal-data', [CustomerPageController::class, 'shopPersonalData']);
     Route::get('checkout', [CustomerPageController::class, 'shopCheckout']);

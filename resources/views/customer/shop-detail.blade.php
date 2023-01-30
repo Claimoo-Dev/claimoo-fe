@@ -66,8 +66,12 @@
                             <div class="menu-left">
                                 <div class="brand-logo">
                                     <a href="{{ route('landing-page') }}">
+<<<<<<< HEAD
                                         <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
                                             class="img-fluid blur-up lazyload" alt="logo">
+=======
+                                        <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+>>>>>>> eb03000 (update agung)
                                     </a>
                                 </div>
                             </div>
@@ -134,7 +138,14 @@
     <!-- mobile fix menu end -->
 
     <div class="content-container">
-        
+        <section>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+            </ul>
+        </section>
     </div>
 
     <footer class="footer-sm-space">
@@ -145,8 +156,12 @@
                         <div class="footer-contact">
                             <div class="brand-logo">
                                 <a href="{{ route('landing-page') }}" class="footer-logo">
+<<<<<<< HEAD
                                     <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload"
                                         alt="logo">
+=======
+                                    <img src="assets-voxo/images/logo-claimoo.png" class="img-fluid blur-up lazyload" alt="logo">
+>>>>>>> eb03000 (update agung)
                                 </a>
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
@@ -285,8 +300,7 @@
         </div>
     </footer>
 
-    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
@@ -298,8 +312,7 @@
                     </div>
                     <div class="menu">
                         <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
+                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 Tentang Kami
                             </a>
 
@@ -323,8 +336,7 @@
                     </div>
                     <div class="menu">
                         <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
-                                aria-controls="collapseExample1">
+                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
                                 Produk Asuransi
                             </a>
 
