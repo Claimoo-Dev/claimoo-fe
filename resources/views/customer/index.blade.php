@@ -531,7 +531,7 @@
                                     <a href="{{ route('expert') }}">
                                         <li class="menu-child-item"> Tenaga Ahli </li>
                                     </a>
-                                    <a href="">
+                                    <a href="{{ route('partner') }}">
                                         <li class="menu-child-item"> Partner </li>
                                     </a>
                                 </ul>
