@@ -253,34 +253,34 @@
     <!-- header end -->
 
     <!-- mobile fix menu start -->
-    <div class="mobile-menu d-sm-none">
+    <div class="mobile-menu">
         <ul>
             <li>
-                <a href="javascript:void(0)" class="active">
+                <a href="{{ route('landing-page') }}" class="active">
                     <i data-feather="home"></i>
                     <span>Beranda</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a href="{{ route('shop') }}">
                     <i data-feather="shopping-bag"></i>
                     <span>Belanja</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
-                    <i color="red" data-feather="edit"></i>
+                <a href="{{ route('claim') }}">
+                    <i data-feather="edit"></i>
                     <span>Klaim</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)">
+                <a href="{{ route('support') }}">
                     <i data-feather="help-circle"></i>
                     <span>Bantuan</span>
                 </a>
             </li>
             <li>
-                <a href="user-dashboard.html">
+                <a href="{{ route('dashboard-customer') }}">
                     <i data-feather="user"></i>
                     <span>Akun</span>
                 </a>
@@ -389,12 +389,7 @@
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
                             </p>
-                            <p>Download app from:</p>
-                            <div>
-                                <center><img src="assets-voxo/images/logos/android.png" width="100">
-                                    <img src="assets-voxo/images/logos/ios.png" width="100">
-                                </center>
-                            </div>
+
                         </div>
                     </div>
 
