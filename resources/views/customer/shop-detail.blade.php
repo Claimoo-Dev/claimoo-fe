@@ -53,6 +53,8 @@
     <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/demo2.css') }}">
     <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/custom-style.css') }}">
 
+
+
 </head>
 
 <body class="theme-color2 light ltr">
@@ -96,7 +98,7 @@
     <!-- header end -->
 
     <!-- mobile fix menu start -->
-    <div class="mobile-menu">
+    <!-- <div class="mobile-menu">
         <ul>
             <li>
                 <a href="{{ route('landing-page') }}">
@@ -129,21 +131,110 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <!-- mobile fix menu end -->
 
     <div class="content-container">
         <section>
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
-            </ul>
+            <div class="container">
+                <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-manfaat-tab" data-bs-toggle="pill" data-bs-target="#pills-manfaat" type="button" role="tab" aria-controls="pills-manfaat" aria-selected="true"><i class="fas fa-user-shield"></i> Manfaat</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-sk-tab" data-bs-toggle="pill" data-bs-target="#pills-sk" type="button" role="tab" aria-controls="pills-sk" aria-selected="false"><i class="fas fa-tasks"></i> S &amp; K</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-klaim-tab" data-bs-toggle="pill" data-bs-target="#pills-klaim" type="button" role="tab" aria-controls="pills-klaim" aria-selected="false"><i class="fas fa-calendar-plus"></i> Klaim</button>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content mb-4" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-manfaat" role="tabpanel" aria-labelledby="pills-manfaat-tab" tabindex="0">Manfaat</div>
+                    <div class="tab-pane fade" id="pills-sk" role="tabpanel" aria-labelledby="pills-sk-tab" tabindex="0">Syarat & Ketentuan</div>
+                    <div class="tab-pane fade" id="pills-klaim" role="tabpanel" aria-labelledby="pills-klaim-tab" tabindex="0">Klaim</div>
+                </div>
+            </div>
         </section>
+
+        <section>
+
+        </section>
+
+        <div class="container">
+            <h3 class="reference-title-h3 mb-3">Fitur</h3>
+            <div class="card mb-0 package-card">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="card-body">
+                            <h5 class="card-title package-card-title">Fasilitas Derek (Khusus Kecelakaan)</h5>
+                            <p class="card-text">Fasilitas derek gratis bagi Anda yang mengalami kecelakaan saat berkendara untuk wilayah Jabodetabek, Surabaya, Bandung, Semarang, Palembang, Makassar, Medan. Untuk wilayah yang tidak terjangkau mobil derek Autocillin dan rekanan, Anda dapat mengajukan penggantian biaya derek maksimum 0.5% dari harga pertanggungan atau maksimum Rp 500 ribu per kejadian).</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card package-card">
+                <div class="row g-0">
+
+                    <div class="col-12">
+                        <div class="card-body">
+                            <h5 class="card-title package-card-title">Autocillin Mobile Claim</h5>
+                            <p class="card-text">Autocillin Mobile Claim adalah aplikasi yang akan memudahkan proses klaim untuk kendaraan Anda. Aplikasi ini dapat diunduh melalui Android Google Play Store dan Apple App Store</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+
+                <div class="card mb-2 package-card">
+                    <div class="row g-0">
+                        <div class="col-8">
+                            <div class="card-body ps-4">
+                                <h5 class="card-title package-card-title">Bengkel Tersedia</h5>
+                                <p class="card-text">Memiliki lebih dari 517 bengkel rekanan yang tersebar di berbagai kota di seluruh Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="col-4 package-image">
+                            <a href="{{ route('landing-page') }}">
+                                <div class="reference-klaim text-center">
+                                    Lihat
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card package-card">
+                    <div class="row g-0">
+
+                        <div class="col-8">
+                            <div class="card-body ps-4">
+
+                                <h5 class="card-text package-card-title">Brosur Produk</h5>
+                            </div>
+                        </div>
+                        <div class="col-4 package-image">
+                            <a href="{{ route('landing-page') }}">
+                                <div class="reference-klaim text-center">
+                                    Lihat
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <footer class="footer-sm-space">
+    <!-- <footer class="footer-sm-space">
         <div class="main-footer">
             <div class="container">
                 <div class="row gy-4">
@@ -156,12 +247,7 @@
                             </div>
                             <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
                             </p>
-                            <!-- <p>Download app from:</p>
-                            <div>
-                                <center><img src="assets-voxo/images/logos/android.png" width="100">
-                                    <img src="assets-voxo/images/logos/ios.png" width="100">
-                                </center>
-                            </div> -->
+
                         </div>
                     </div>
 
@@ -241,41 +327,7 @@
                         </div>
                     </div>
 
-                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                        <div class="footer-newsletter">
-                            <h3>Hubungi kami:</h3>
-                            <div class="footer-number">
-                                <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png"
-                                        class="img-fluid blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="footer-number-container">
-                                    <h3>+62 21 7783 7035</h3>
-                                </div>
-                            </div>
-
-                            <div class="footer-details">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok.
-                                                Jawa Barat. 16412</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
-                                        </span>
-                                    </li>
-                                </ul>
-
-                                <div>
-                                    <img src="assets-voxo/images/logos/ojk.webp" width="200">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                   
                 </div>
             </div>
         </div>
@@ -288,7 +340,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
