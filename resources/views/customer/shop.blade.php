@@ -106,14 +106,14 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('shop') }}">
+                <a href="{{ route('shop') }}" class="active">
                     <i data-feather="shopping-bag"></i>
                     <span>Belanja</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('claim') }}">
-                    <i color="red" data-feather="edit"></i>
+                    <i data-feather="edit"></i>
                     <span>Klaim</span>
                 </a>
             </li>
@@ -145,16 +145,42 @@
                 </div>
                 <div class="form-parent mt-2">
                     <label for="brand" class="form-label select-label">Merek Mobil</label>
-                    <select class="brand form-control" id="brand"></select>
+                    <select class="brand form-control" id="brand" disabled></select>
                 </div>
                 <div class="form-parent mt-2">
                     <label for="type" class="form-label select-label">Tipe Mobil</label>
-                    <select class="type form-control" id="type"></select>
+                    <select class="type form-control" id="type" disabled></select>
                 </div>
                 <div class="form-parent mt-2">
                     <label for="seri" class="form-label select-label">Seri Mobil</label>
-                    <select class="seri form-control" id="seri"></select>
+                    <select class="seri form-control" id="seri" disabled></select>
                 </div>
+
+                <div class="mt-3 fz-12">Mobil Anda belum tersedia? <a data-bs-toggle="modal" data-bs-target="#addCar"
+                        class="click-here">Klik di sini</a></div>
+
+                <div class="mt-3 mb-2 car-price">
+                    <label for="carPrice" class="fz-12">Harga Mobil</label>
+                    <span class="fz-12">Rp 193.885.000 - Rp 262.315.000</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text span-car-price" id="basic-addon1">Rp</span>
+                    <input type="text" class="form-control input-car-price" id="carPrice">
+                </div>
+
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" data-bs-toggle="modal" data-bs-target="#addAccessories">
+                    <label class="form-check-label fz-12" for="flexCheckDefault">
+                        Tambahkan Aksesoris Mobil
+                    </label>
+                </div>
+
+                <div class="form-parent mt-3">
+                    <label for="plate" class="form-label select-label">Plat Wilayah</label>
+                    <select class="form-control" id="plate"></select>
+                </div>
+
+                <div class="btn btn-primary mt-3 btn-shop">Cari</div>
             </div>
         </section>
     </div>
@@ -371,6 +397,76 @@
                     <div class="menu">
                         <a href="#">Hubungi Kami</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-navbar" id="addCar" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header modal-header-add-car">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Tentang Mobil Anda</h5>
+                    <button type="button" class="btn-close btn-close-add-car" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-body-add-car">
+                    <div class="parent-add-car">
+                        <div class="personal-data">Data Pribadi</div>
+                        <div class="mt-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
+                        </div>
+    
+                        <div class="mt-3">
+                            <label for="email" class="form-label">Email (Opsional)</label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                        </div>
+    
+                        <label for="phone" class="form-label mt-3">Nomor Telepon</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">+62</span>
+                            <input type="text" class="form-control" placeholder="Masukkan nomor telepon Anda" id="phone">
+                        </div>                        
+                    </div>
+
+                    <div class="parent-add-car mt-3">
+                        <div class="personal-data">Tentang Mobil Anda</div>
+                        <div class="mt-3">
+                            <label for="brand" class="form-label">Merek Mobil</label>
+                            <input type="text" class="form-control" id="brand" placeholder="Masukkan merek mobil Anda">
+                        </div>
+    
+                        <div class="mt-3">
+                            <label for="type" class="form-label">Jenis Mobil</label>
+                            <input type="text" class="form-control" id="type" placeholder="Masukkan jenis mobil Anda">
+                        </div>
+    
+                        <div class="mt-3">
+                            <label for="seri" class="form-label">Seri Mobil</label>
+                            <input type="text" class="form-control" id="seri" placeholder="Masukkan seri mobil Anda">
+                        </div>
+                    </div>
+
+                    <div class="btn btn-primary btn-shop mt-3">Simpan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-navbar" id="addAccessories" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header modal-header-add-car">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Aksesoris Mobil Anda</h5>
+                    <button type="button" class="btn-close btn-close-add-car" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-body-add-car">
+                    <div class="add-accessories-title">Pilih Aksesoris Kendaraan Anda</div>
+                    <div class="add-accessories-subtitle">Maksimum 10% dari harga kendaraan</div>
                 </div>
             </div>
         </div>

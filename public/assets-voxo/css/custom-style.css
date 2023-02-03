@@ -458,6 +458,272 @@
         color: #232323;
         font-size: 12px !important;
     }
+
+    .span-car-price {
+        border-right-color: white !important;
+        background-color: white;
+        font-size: 12px;
+    }
+
+    .input-car-price {
+        border-left-color: white !important;
+    }
+
+    .click-here {
+        color: #073f78;
+        font-weight: bold;
+    }
+
+    .car-price {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-shop {
+        width: 100%;
+    }
+
+    .modal-header-add-car {
+        justify-content: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .btn-close-add-car {
+        width: 100% !important;
+        text-align: right !important;
+        padding: 0 !important;
+        margin-right: 15px !important;
+        margin-top: 0px !important;
+    }
+
+    .modal-body-add-car {
+        text-align: left !important;
+        background-color: #eff2f7;
+    }
+
+    .parent-add-car {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .personal-data {
+        border-bottom: 1px solid black;
+    }
+
+    .add-accessories-title {
+        color: #073f78;
+        font-weight: bold;
+    }
+
+    .add-accessories-subtitle {
+        color: grey;
+    }
+
+    .header-parent {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .header-child-arrow {
+        font-size: 20px;
+        font-weight: bold;
+        color: #073f78;
+    }
+
+    .header-child-title-parent {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .header-line {
+        margin: 0 !important;
+    }
+
+    .product-upper {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        align-items: center;
+    }
+
+    .product-upper-item {
+        font-weight: 500;
+        font-size: 12px;
+        background-color: #eff2f7;
+        padding: 8px;
+        border: 1px lightgray solid;
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-badge {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        font-size: 12px;
+        color: white;
+    }
+
+    .product-badge-item {
+        padding: 1px 5px;
+        border-radius: 10px;
+    }
+
+    .product-badge-item:nth-child(1) {
+        background-color: #073f78;
+    }
+
+    .product-badge-item:nth-child(2) {
+        background-color: green;
+    }
+
+    .product-badge-item:nth-child(3) {
+        background-color: indigo;
+    }
+
+    .products {
+        padding: 20px 0;
+        background-color: #eff2f7;
+    }
+
+    .product {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .product-header {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .product-header-icon {
+        width: 40px;
+    }
+
+    .product-header-title {
+        margin-left: 10px;
+    }
+
+    .product-header-title-name {
+        color: grey
+    }
+
+    .product-header-title-type {
+        color: #073f78;
+        font-weight: bold;
+    }
+
+    .product-body {
+        padding: 10px;
+    }
+
+    .benefits {
+        padding: 0 !important;
+        border-width: 0px !important;
+        font-size: 12px;
+    }
+
+    .product-footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid lightgray;
+        padding: 10px;
+    }
+
+    .product-footer-button {
+        display: flex;
+    }
+
+    .btn-detail {
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        width: 70px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .btn-buy {
+        padding: 10px;
+        background-color: #073f78;
+        color: white;
+        border-radius: 10px;
+        width: 70px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .sort-modal-body {
+        text-align: left !important;
+    }
+
+    .risk-expansion {
+        background-color: #eff2f7;
+        padding: 20px 0;
+    }
+
+    .risk {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    
+    .risk-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: white;
+        border: 1px lightgray solid;
+    }
+
+    .risk-footer {
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .risk-footer-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .risk-footer-button {
+        padding: 10px;
+        width: 100px;
+        color: white;
+        background-color: #073f78;
+        font-weight: 500;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .total-premi {
+        padding: 10px 0;
+    }
+
+    .required-document {
+        background-color: #eff2f7;
+        padding: 20px 0;
+    }
+
+    .required-document-group {
+        background-color: white;
+        padding: 10px;
+    }
+
+    .policy-holder {
+        background-color: #eff2f7;
+        padding: 20px 0;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -931,5 +1197,270 @@
         font-size: 12px !important;
     }
 
+    .img-order-box {
+        width: 30px !important;
+    }
 
+    .btn-change-password {
+        padding: 5px 0;
+        background-color: lightgray;
+        border-radius: 10px;
+        width: 150px;
+        text-align: center;
+    }
+
+    .shop-title {
+        font-weight: bold;
+        color: #232323;
+        font-size: 12px !important;
+    }
+
+    .span-car-price {
+        border-right-color: white !important;
+        background-color: white;
+        font-size: 12px;
+    }
+
+    .input-car-price {
+        border-left-color: white !important;
+    }
+
+    .click-here {
+        color: #073f78;
+        font-weight: bold;
+    }
+
+    .car-price {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-shop {
+        width: 100%;
+    }
+
+    .modal-header-add-car {
+        justify-content: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .btn-close-add-car {
+        width: 100%;
+        text-align: right;
+        padding: 0 !important;
+        margin-right: 15px !important;
+        margin-top: 15px !important;
+    }
+
+    .modal-body-add-car {
+        text-align: left !important;
+        background-color: #eff2f7;
+    }
+
+    .parent-add-car {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .personal-data {
+        border-bottom: 1px solid black;
+    }
+
+    .add-accessories-title {
+        color: #073f78;
+        font-weight: bold;
+    }
+
+    .add-accessories-subtitle {
+        color: grey;
+    }
+
+    .header-parent {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .header-child-arrow {
+        font-size: 20px;
+        font-weight: bold;
+        color: #073f78;
+    }
+
+    .header-child-title-parent {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+
+    .header-line {
+        margin: 0 !important;
+    }
+
+    .product-upper {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        align-items: center;
+    }
+
+    .product-upper-item {
+        font-weight: 500;
+        font-size: 12px;
+        background-color: #eff2f7;
+        padding: 8px;
+        border: 1px lightgray solid;
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-badge {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        font-size: 12px;
+        color: white;
+    }
+
+    .product-badge-item {
+        padding: 1px 5px;
+        border-radius: 10px;
+    }
+
+    .product-badge-item:nth-child(1) {
+        background-color: #073f78;
+    }
+
+    .product-badge-item:nth-child(2) {
+        background-color: green;
+    }
+
+    .product-badge-item:nth-child(3) {
+        background-color: indigo;
+    }
+
+    .products {
+        padding: 20px 0;
+        background-color: #eff2f7;
+    }
+
+    .product {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .product-header {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .product-header-icon {
+        width: 40px;
+    }
+
+    .product-header-title {
+        margin-left: 10px;
+    }
+
+    .product-header-title-name {
+        color: grey
+    }
+
+    .product-header-title-type {
+        color: #073f78;
+        font-weight: bold;
+    }
+
+    .product-body {
+        padding: 10px;
+    }
+
+    .benefits {
+        padding: 0 !important;
+        border-width: 0px !important;
+        font-size: 12px;
+    }
+
+    .product-footer {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid lightgray;
+        padding: 10px;
+    }
+
+    .product-footer-button {
+        display: flex;
+    }
+
+    .btn-detail {
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        width: 70px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .btn-buy {
+        padding: 10px;
+        background-color: #073f78;
+        color: white;
+        border-radius: 10px;
+        width: 70px;
+        text-align: center;
+        font-weight: 500;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    }
+
+    .sort-modal-body {
+        text-align: left !important;
+    }
+
+    .risk-expansion {
+        background-color: #eff2f7;
+        padding: 20px 0;
+    }
+
+    .risk {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    
+    .risk-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: white;
+        border: 1px lightgray solid;
+    }
+
+    .risk-footer {
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 600px;
+        background-color: white;
+    }
+
+    .risk-footer-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .risk-footer-button {
+        padding: 10px;
+        width: 100px;
+        color: white;
+        background-color: #073f78;
+        font-weight: 500;
+        border-radius: 10px;
+        text-align: center;
+    }
 }

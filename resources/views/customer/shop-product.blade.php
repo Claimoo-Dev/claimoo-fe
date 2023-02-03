@@ -60,294 +60,205 @@
     <header class="header-style-2" id="home">
         <div class="main-header navbar-searchbar">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-menu">
-                            <div class="menu-left">
-                                <div class="brand-logo">
-                                    <a href="{{ route('landing-page') }}">
-                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
-                                            class="img-fluid blur-up lazyload" alt="logo">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="menu-right">
-                                <ul>
-                                    <li class="onhover-dropdown wislist-dropdown">
-                                        <div class="cart-media">
-                                            <div class="cart-icon">
-                                                <i data-feather="bell"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="modal-icon">
-                                        <div class="modal-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i data-feather="align-justify" class="sidebar-bar"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="header-parent">
+                    <div class="header-child-arrow">
+                        <</div> <div class="header-child-title-parent">
+                            <div class="header-child-title">B | DAIHATSU ALL NEW XENIA 1.3 M MT</div>
+                            <div class="header-child-subtitle">Total Nilai pertanggungan IDR Rp 200.000.000</div>
                     </div>
+                </div>
+            </div>
+            <hr class="header-line">
+            <div class="container">
+                <div class="product-upper">
+                    <div class="product-upper-item" data-bs-toggle="modal" data-bs-target="#sortModal">Urutkan</div>
+                    <div class="product-upper-item ms-1 me-1">Filter</div>
+                    <div class="product-upper-item">Bandingkan</div>
                 </div>
             </div>
         </div>
     </header>
     <!-- header end -->
 
-    <!-- mobile fix menu start -->
-    <div class="mobile-menu">
-        <ul>
-            <li>
-                <a href="{{ route('landing-page') }}">
-                    <i data-feather="home"></i>
-                    <span>Beranda</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('shop') }}">
-                    <i data-feather="shopping-bag"></i>
-                    <span>Belanja</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('claim') }}">
-                    <i color="red" data-feather="edit"></i>
-                    <span>Klaim</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('support') }}">
-                    <i data-feather="help-circle"></i>
-                    <span>Bantuan</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('dashboard-customer') }}">
-                    <i data-feather="user"></i>
-                    <span>Akun</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
-
     <div class="content-container">
-        
+        <section class="products">
+            <div class="container">
+                <div class="product mb-3">
+                    <div class="product-badge">
+                        <div class="product-badge-item">Terlaris</div>
+                        <div class="product-badge-item">Klaim Cepat</div>
+                        <div class="product-badge-item">Penerbitan Cepat</div>
+                    </div>
+                    <div class="product-header">
+                        <div class="product-header-icon">
+                            <img src="{{ asset('assets-voxo/images/zurich.png') }}" class="img-fluid" alt="">
+                        </div>
+                        <div class="product-header-title">
+                            <div class="product-header-title-name">Zurich Insurance</div>
+                            <div class="product-header-title-type">Autocilin Total Loss</div>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="list-group">
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Fasilitas Derek (Khusus kecelakaan total)
+                            </li>
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Hotline 24 jam/7 hari
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div>Premi per Tahun</div>
+                            <div>Rp 760.190</div>
+                        </div>
+                        <div class="product-footer-button">
+                            <div class="btn-detail me-2">Detail</div>
+                            <div class="btn-buy">Beli</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product mb-3">
+                    <div class="product-header">
+                        <div class="product-header-icon">
+                            <img src="{{ asset('assets-voxo/images/zurich.png') }}" class="img-fluid" alt="">
+                        </div>
+                        <div class="product-header-title">
+                            <div class="product-header-title-name">Zurich Insurance</div>
+                            <div class="product-header-title-type">Autocilin Comprehensive</div>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="list-group">
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Emergency Road Assistance (ERA) dan Fasilitas Derek Autocillin
+                            </li>
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Jaminan Keaslian Suku Cadang dan Garansi Perbaikan 6 Bulan
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div>Premi per Tahun</div>
+                            <div>Rp 4.161.040</div>
+                        </div>
+                        <div class="product-footer-button">
+                            <div class="btn-detail me-2">Detail</div>
+                            <div class="btn-buy">Beli</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product mb-3">
+                    <div class="product-header">
+                        <div class="product-header-icon">
+                            <img src="{{ asset('assets-voxo/images/mag.png') }}" class="img-fluid" alt="">
+                        </div>
+                        <div class="product-header-title">
+                            <div class="product-header-title-name">Asuransi MAG</div>
+                            <div class="product-header-title-type">MAG Auto Total Loss</div>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="list-group">
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Manfaat Penggantian Biaya Derek dan Ambulans
+                            </li>
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Hotline 24 jam/7 hari
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div>Premi per Tahun</div>
+                            <div>Rp 760.190</div>
+                        </div>
+                        <div class="product-footer-button">
+                            <div class="btn-detail me-2">Detail</div>
+                            <div class="btn-buy">Beli</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product-header">
+                        <div class="product-header-icon">
+                            <img src="{{ asset('assets-voxo/images/mag.png') }}" class="img-fluid" alt="">
+                        </div>
+                        <div class="product-header-title">
+                            <div class="product-header-title-name">Asuransi MAG</div>
+                            <div class="product-header-title-type">MAG Auto Total Loss</div>
+                        </div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="list-group">
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Manfaat Penggantian Biaya Derek dan Ambulans
+                            </li>
+                            <li class="list-group-item benefits">
+                                <input class="form-check-input me-1" type="checkbox" checked>
+                                Hotline 24 jam/7 hari
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <div>
+                            <div>Premi per Tahun</div>
+                            <div>Rp 760.190</div>
+                        </div>
+                        <div class="product-footer-button">
+                            <div class="btn-detail me-2">Detail</div>
+                            <div class="btn-buy">Beli</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <footer class="footer-sm-space">
-        <div class="main-footer">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-12">
-                        <div class="footer-contact">
-                            <div class="brand-logo">
-                                <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload"
-                                        alt="logo">
-                                </a>
-                            </div>
-                            <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
-                            </p>
-                            <!-- <p>Download app from:</p>
-                            <div>
-                                <center><img src="assets-voxo/images/logos/android.png" width="100">
-                                    <img src="assets-voxo/images/logos/ios.png" width="100">
-                                </center>
-                            </div> -->
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Tentang Kami</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Beranda</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Perusahaan</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Komisaris &amp; Direksi</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Tenaga Ahli</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Partner</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Produk Asuransi</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href=javascript:void(0)" class="font-dark">Simas Mobil</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Zurich Autocilin</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Astra Garda Oto</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Bantuan</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Akun Anda</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Keranjang</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">FAQs</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Kebijakan Privasi</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Hubungi Kami</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                        <div class="footer-newsletter">
-                            <h3>Hubungi kami:</h3>
-                            <div class="footer-number">
-                                <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png"
-                                        class="img-fluid blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="footer-number-container">
-                                    <h3>+62 21 7783 7035</h3>
-                                </div>
-                            </div>
-
-                            <div class="footer-details">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok.
-                                                Jawa Barat. 16412</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
-                                        </span>
-                                    </li>
-                                </ul>
-
-                                <div>
-                                    <img src="assets-voxo/images/logos/ojk.webp" width="200">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="sub-footer">
-            <div class="container">
-                <div class="row gy-3">
-                    <div class="col-md-12">
-                        <p class="mb-0 font-dark text-center">© 2023 Claimoo. Hak Cipta Dilindungi Undang-undang</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade modal-navbar" id="sortModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="menu">
-                        <a href="#">Beranda</a>
+                <div class="modal-body sort-modal-body">
+                    <div>Urutkan dari</div>
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Harga premi rendah ke tinggi
+                        </label>
                     </div>
-                    <div class="menu">
-                        <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
-                                Tentang Kami
-                            </a>
-
-                            <div class="collapse" id="collapseExample">
-                                <ul class="menu-child">
-                                    <a href="">
-                                        <li class="menu-child-item"> Perusahaan </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Komisaris & Direksi </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Tenaga Ahli </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Partner </li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Harga premi tinggi ke rendah
+                        </label>
                     </div>
-                    <div class="menu">
-                        <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
-                                aria-controls="collapseExample1">
-                                Produk Asuransi
-                            </a>
-
-                            <div class="collapse" id="collapseExample1">
-                                <ul class="menu-child">
-                                    <a href="">
-                                        <li class="menu-child-item"> All Risk </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> TLO </li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Alfabet A-Z
+                        </label>
                     </div>
-                    <div class="menu">
-                        <a href="#">Bengkel</a>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Berita</a>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Hubungi Kami</a>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            Alfabet Z-A
+                        </label>
                     </div>
                 </div>
             </div>
