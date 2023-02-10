@@ -5,6 +5,7 @@ use App\Http\Controllers\ClaimController;
 use App\Http\Controllers\CustomerPageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,8 @@ Route::prefix('claim')->group(function () {
     Route::get('list-brand', [ClaimController::class, 'listCarBrandByYear']);
     Route::get('list-type', [ClaimController::class, 'listCarTypeByCarBrand']);
     Route::get('list-seri', [ClaimController::class, 'listCarSeriByCarType']);
+    Route::get('list-plate', [ClaimController::class, 'listPlate']);
+    Route::get('price-car', [ClaimController::class, 'getPriceCar']);
 });
 
 Route::get('/forgot-password', function () {
@@ -60,11 +63,22 @@ Route::get('claim', [CustomerPageController::class, 'claim'])->name('claim');
 Route::get('support', [CustomerPageController::class, 'support'])->name('support');
 Route::get('list-image-customer', [CameraController::class, 'listImageCustomer']);
 
+Route::get('user', [UserController::class, 'show']);
+
 Route::prefix('shop')->group(function () {
     Route::get('', [CustomerPageController::class, 'shop'])->name('shop');
-    Route::get('product', [CustomerPageController::class, 'shopProduct']);
-    Route::get('detail', [CustomerPageController::class, 'shopDetail'])->name('shopDetail');
-    Route::get('feature', [CustomerPageController::class, 'shopFeature']);
-    Route::get('personal-data', [CustomerPageController::class, 'shopPersonalData']);
+    Route::get('product', [CustomerPageController::class, 'shopProduct'])->name('shopProduct');
+    Route::get('detail/{id}', [CustomerPageController::class, 'shopDetail'])->name('shopDetail');
+    Route::get('feature', [CustomerPageController::class, 'shopFeature'])->name('shopFeature');
+    Route::get('personal-data', [CustomerPageController::class, 'shopPersonalData'])->name('shopPersonalData');
+    Route::get('car-data', [CustomerPageController::class, 'shopCarData']);
     Route::get('checkout', [CustomerPageController::class, 'shopCheckout']);
+    
+    Route::post('request-car', [ShopController::class, 'requestCar']);
+    Route::post('search-product', [ShopController::class, 'searchProduct']);
+    Route::post('set-product-id', [ShopController::class, 'setProductId']);
+    Route::post('step2', [ShopController::class, 'step2']);
+    Route::post('risk-expansion', [ShopController::class, 'riskExpansion']);
+    Route::post('step3', [ShopController::class, 'step3'])->name('shopStep3');
+    Route::post('step4', [ShopController::class, 'step4'])->name('shopStep4');
 });

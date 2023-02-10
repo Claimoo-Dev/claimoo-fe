@@ -24,6 +24,7 @@
     <meta name="keywords" content="Claimoo">
     <meta name="author" content="Claimoo">
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Claimoo | Beli Polis</title>
 
     <!-- Google font -->
@@ -61,9 +62,11 @@
         <div class="main-header navbar-searchbar">
             <div class="container">
                 <div class="header-parent">
-                    <div class="header-child-arrow">
-                        <</div> <div class="header-child-title-parent">
-                            <div class="header-child-title">Pemegang Polis</div>
+                    <a href="{{ route('shopFeature') }}">
+                        <i data-feather="chevron-left" class="header-child-arrow"></i>
+                    </a>
+                    <div class="header-child-title-parent">
+                        <div class="header-child-title">Pemegang Polis</div>
                     </div>
                 </div>
             </div>
@@ -75,42 +78,55 @@
         <section class="total-premi">
             <div class="container">
                 <div>Total Premi</div>
-                <div>Rp 760.190</div>
+                <div>Rp @currency($totalPremi)</div>
             </div>
         </section>
         <section class="required-document">
             <div class="container">
                 <div class="required-document-group">
                     <div class="required-document-header">Dokumen Yang Diperlukan</div>
+                    <hr>
                     <div class="required-document-body">
-
+                        <div>
+                            <label for="idCardImage" class="form-label">KTP</label>
+                            <input class="form-control" type="file" id="idCardImage">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="policy-holder">
             <div class="container">
-                <div class="policy-holder-header">Detail Pemegang Polis</div>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="name"
-                        placeholder="Nama Lengkap">
+                <div class="policy-holder-group">
+                    <div class="policy-holder-header">Detail Pemegang Polis</div>
+                    <hr>
+                    <div class="mb-3">
+                        <div class="policy-holder-name">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <label>Sesuai dengan KTP</label>
+                        </div>
+                        <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Nomor Telepon</label>
+                        <div class="input-group">
+                            <span class="input-group-text group-phone-number" id="basic-addon1">+62</span>
+                            <input type="text" class="form-control" placeholder="Nomor Telepon" id="phone">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <div class="policy-holder-name">
+                            <label for="date" class="form-label">Tanggal Aktif Polis</label>
+                            <label>Periode 12 bulan</label>
+                        </div>
+                        <input type="date" class="form-control" id="date" placeholder="Pilih Tanggal Mulai">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">No. Telepon</label>
-                    <input type="text" class="form-control" id="phone"
-                        placeholder="Nomor Telepon">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email"
-                        placeholder="Email">
-                </div>
-                <div class="mb-3">
-                    <label for="date" class="form-label">Tanggal Aktif Polis</label>
-                    <input type="date" class="form-control" id="date"
-                        placeholder="Pilih Tanggal Mulai">
-                </div>
+                <div class="btn btn-primary mt-3 btn-shop" id="policyHolderBtn">Lanjut</div>
             </div>
         </section>
     </div>
@@ -157,6 +173,45 @@
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        $('#name').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/user",
+                success: function (response) {
+                    $("#name").val(response.data.name);
+                    $("#email").val(response.data.email);
+                    $("#phone").val(response.data.phone);
+                }
+            });
+        });
+
+        $('#policyHolderBtn').click(function() {
+            var formData = new FormData();
+            var idCardImage = $('#idCardImage')[0].files;
+
+            formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+            formData.append('id_card_image', idCardImage[0]);
+            formData.append('name', $("#name").val());
+            formData.append('phone', $("#phone").val());
+            formData.append('email', $("#email").val());
+            formData.append('date', $("#date").val());
+
+            $.ajax({
+                type: "POST",
+                url: "/shop/step3",
+                data: formData,
+                contentType: false,
+                processData: false,
+                dataType: 'json',
+                success: function (response) {
+                    window.location.href = '{{ url("/shop/car-data") }}';
+                }
+            });
+        });
+
+    </script>
 
 </body>
 

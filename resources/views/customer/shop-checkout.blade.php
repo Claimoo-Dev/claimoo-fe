@@ -55,40 +55,17 @@
 
 </head>
 
-<body class="theme-color2 light ltr">
+<body class="theme-color2 light ltr bg-shop">
     <!-- header start -->
-    <header class="header-style-2" id="home">
+    <header class="header-style-2 bg-white" id="home">
         <div class="main-header navbar-searchbar">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-menu">
-                            <div class="menu-left">
-                                <div class="brand-logo">
-                                    <a href="{{ route('landing-page') }}">
-                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
-                                            class="img-fluid blur-up lazyload" alt="logo">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="menu-right">
-                                <ul>
-                                    <li class="onhover-dropdown wislist-dropdown">
-                                        <div class="cart-media">
-                                            <div class="cart-icon">
-                                                <i data-feather="bell"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="modal-icon">
-                                        <div class="modal-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i data-feather="align-justify" class="sidebar-bar"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="header-parent">
+                    <a href="#">
+                        <i data-feather="chevron-left" class="header-child-arrow"></i>
+                    </a>
+                    <div class="header-child-title-parent">
+                        <div class="header-child-title">Review Pembelian</div>
                     </div>
                 </div>
             </div>
@@ -96,262 +73,105 @@
     </header>
     <!-- header end -->
 
-    <!-- mobile fix menu start -->
-    <div class="mobile-menu">
-        <ul>
-            <li>
-                <a href="{{ route('landing-page') }}">
-                    <i data-feather="home"></i>
-                    <span>Beranda</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('shop') }}">
-                    <i data-feather="shopping-bag"></i>
-                    <span>Belanja</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('claim') }}">
-                    <i color="red" data-feather="edit"></i>
-                    <span>Klaim</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('support') }}">
-                    <i data-feather="help-circle"></i>
-                    <span>Bantuan</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('dashboard-customer') }}">
-                    <i data-feather="user"></i>
-                    <span>Akun</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
-
     <div class="content-container">
-        
-    </div>
-
-    <footer class="footer-sm-space">
-        <div class="main-footer">
+        <section class="review">
             <div class="container">
-                <div class="row gy-4">
-                    <div class="col-12">
-                        <div class="footer-contact">
-                            <div class="brand-logo">
-                                <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}" class="img-fluid blur-up lazyload"
-                                        alt="logo">
-                                </a>
-                            </div>
-                            <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
-                            </p>
-                            <!-- <p>Download app from:</p>
-                            <div>
-                                <center><img src="assets-voxo/images/logos/android.png" width="100">
-                                    <img src="assets-voxo/images/logos/ios.png" width="100">
-                                </center>
-                            </div> -->
-                        </div>
+                <div class="review-header-logo">
+                    <div class="review-header-logo-img">
+                        <img src="{{ asset('assets-voxo/images/' . $data->data->data_insurance->thumbnail_insurance) }}" class="img-fluid" alt="">
                     </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Tentang Kami</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Beranda</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Perusahaan</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Komisaris &amp; Direksi</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Tenaga Ahli</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Partner</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Produk Asuransi</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href=javascript:void(0)" class="font-dark">Simas Mobil</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Zurich Autocilin</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Astra Garda Oto</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Bantuan</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Akun Anda</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Keranjang</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">FAQs</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Kebijakan Privasi</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Hubungi Kami</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                        <div class="footer-newsletter">
-                            <h3>Hubungi kami:</h3>
-                            <div class="footer-number">
-                                <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png"
-                                        class="img-fluid blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="footer-number-container">
-                                    <h3>+62 21 7783 7035</h3>
-                                </div>
-                            </div>
-
-                            <div class="footer-details">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok.
-                                                Jawa Barat. 16412</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
-                                        </span>
-                                    </li>
-                                </ul>
-
-                                <div>
-                                    <img src="assets-voxo/images/logos/ojk.webp" width="200">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                    <div class="review-header-logo-text">{{ $data->data->data_insurance->product_insurance_name }}</div>
+                </div>
+                <div class="review-header-active mt-2">
+                    <div>Masa Aktif Polis</div>
+                    <div>{{ $data->data->data_insurance->policy_active_date }}</div>
+                </div>
+                <div class="review-header-active">
+                    <div>Total Nilai Pertanggungan</div>
+                    <div>Rp @currency($data->data->data_insurance->total_sum_insured)</div>
                 </div>
             </div>
-        </div>
-        <div class="sub-footer">
+        </section>
+        <section class="review-policy mt-2">
             <div class="container">
-                <div class="row gy-3">
-                    <div class="col-md-12">
-                        <p class="mb-0 font-dark text-center">© 2023 Claimoo. Hak Cipta Dilindungi Undang-undang</p>
+                <div class="review-policy-header review-policy-display ">
+                    <div>Pemegang Polis</div>
+                    <i data-feather="chevron-down" data-bs-toggle="collapse" href="#policyHolder" role="button"
+                        aria-expanded="false" aria-controls="policyHolder"></i>
+                </div>
+                <div class="collapse mt-2" id="policyHolder">
+                    <div class="review-policy-display">
+                        <div>Nama</div>
+                        <div>{{ $data->data->data_policy_holders->fullname }}</div>
+                    </div>
+                    <div class="review-policy-display">
+                        <div>Email</div>
+                        <div>{{ $data->data->data_policy_holders->email }}</div>
+                    </div>
+                    <div class="review-policy-display">
+                        <div>No. Telepon</div>
+                        <div>{{ $data->data->data_policy_holders->phone }}</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </section>
+        <section class="review-policy mt-2">
+            <div class="container">
+                <div class="review-policy-header review-policy-display ">
+                    <div>Detail Kendaraan</div>
+                    <i data-feather="chevron-down" data-bs-toggle="collapse" href="#vehicleDetail" role="button"
+                        aria-expanded="false" aria-controls="vehicleDetail"></i>
                 </div>
-                <div class="modal-body">
-                    <div class="menu">
-                        <a href="#">Beranda</a>
+                <div class="collapse mt-2" id="vehicleDetail">
+                    <div class="review-policy-display">
+                        <div>Nomor Plat</div>
+                        <div>{{ $data->data->data_vehicle_details->plat_number }}</div>
                     </div>
-                    <div class="menu">
-                        <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
-                                Tentang Kami
-                            </a>
-
-                            <div class="collapse" id="collapseExample">
-                                <ul class="menu-child">
-                                    <a href="">
-                                        <li class="menu-child-item"> Perusahaan </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Komisaris & Direksi </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Tenaga Ahli </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Partner </li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="review-policy-display">
+                        <div>Merek Mobil</div>
+                        <div>{{ $data->data->data_vehicle_details->brand_car }}</div>
                     </div>
-                    <div class="menu">
-                        <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
-                                aria-controls="collapseExample1">
-                                Produk Asuransi
-                            </a>
-
-                            <div class="collapse" id="collapseExample1">
-                                <ul class="menu-child">
-                                    <a href="">
-                                        <li class="menu-child-item"> All Risk </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> TLO </li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="review-policy-display">
+                        <div>Tipe Mobil</div>
+                        <div>{{ $data->data->data_vehicle_details->type_car }}</div>
                     </div>
-                    <div class="menu">
-                        <a href="#">Bengkel</a>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Berita</a>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Hubungi Kami</a>
+                    <div class="review-policy-display">
+                        <div>Seri Mobil</div>
+                        <div>{{ $data->data->data_vehicle_details->car_series }}</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="review-term mt-2">
+            <div class="container">
+                <div class="review-term-header">
+                    <input class="form-check-input term-check" type="checkbox" id="term">
+                    <label class="ms-2" for="term">Saya setuju dan telah membaca syarat & ketentuan pembelian dan polis
+                        asuransi produk</label>
+                </div>
+                <div class="review-term-description">
+                    <div>Dengan menandai kotak ini, saya menyatakan bahwa setiap informasi/keterangan diatas adalah
+                        benar dan sesuai dengan ketentuan produk asuransi yang saya pilih.</div>
+                </div>
+            </div>
+        </section>
+        <section class="review-subtotal mt-2">
+            <div class="container">
+                <div class="review-subtotal-header review-policy-display">
+                    <div>Total Pembelian</div>
+                    <div>Rp @currency($data->data->data_purchase_total->total_price_premi)</div>
+                </div>
+                <div class="review-policy-display review-subtotal-subheader">
+                    <div>Harga Premi</div>
+                    <div>Rp @currency($data->data->data_purchase_total->total_premi_years)</div>
+                </div>
+                <!-- <div class="review-policy-display">
+                    <div>Biaya Admin</div>
+                    <div>+ Rp 10.000</div>
+                </div> -->
+            </div>
+            <div class="btn btn-primary mt-5 btn-shop">Pilih Pembayaran</div>
+        </section>
     </div>
 
     <!-- tap to top Section Start -->

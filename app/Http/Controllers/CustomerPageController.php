@@ -105,26 +105,109 @@ class CustomerPageController extends Controller
 
     public function shopProduct()
     {
-        return view('customer.shop-product');
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        $plate = Cookie::get('plate');
+        $brand = Cookie::get('brand');
+        $type = Cookie::get('type');
+        $seri = Cookie::get('seri');
+        $totalPrice = Cookie::get('total_price');
+        $orderId = Cookie::get('order_id');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/insurance/product?price=' . $totalPrice);
+
+        $products = json_decode($result->body());
+        $count = count($products->data);
+
+        return view('customer.shop-product')->with(compact('products', 'count', 'plate', 'brand', 'type', 'seri', 'totalPrice', 'orderId'));
     }
     
-    public function shopDetail()
+    public function shopDetail($id)
     {
-        return view('customer.shop-detail');
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        $totalPrice = Cookie::get('total_price');
+        $orderId = Cookie::get('order_id');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/insurance/product/detail/' . $id . '?price=' . $totalPrice);
+
+        $product = json_decode($result->body());
+
+        return view('customer.shop-detail')->with(compact('product', 'orderId'));
     }
 
     public function shopFeature()
     {
-        return view('customer.shop-feature');
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        $orderId = Cookie::get('order_id');
+        $premiPerYear = 0;
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/insurance/risk-expansion?member_code=' . $userCode . '&order_polis_id=' . $orderId);
+
+        $risks = json_decode($result->body());
+        $count = count($risks->data);
+
+        return view('customer.shop-feature')->with(compact('risks', 'premiPerYear', 'count', 'orderId'));
     }
 
     public function shopPersonalData()
     {
-        return view('customer.shop-personal-data');
+        $totalPremi = Cookie::get('total_premi');
+
+        return view('customer.shop-personal-data')->with(compact('totalPremi'));
+    }
+
+    public function shopCarData()
+    {
+        $totalPremi = Cookie::get('total_premi');
+        $plate = Cookie::get('plate');
+
+        return view('customer.shop-car-data')->with(compact('totalPremi', 'plate'));
     }
 
     public function shopCheckout()
     {
-        return view('customer.shop-checkout');
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        $orderId = Cookie::get('order_id');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/order/polis/summary?member_code=' . $userCode . '&order_polis_id=' . $orderId);
+
+        $data = json_decode($result->body());
+
+        return view('customer.shop-checkout')->with(compact('data'));
     }
 }

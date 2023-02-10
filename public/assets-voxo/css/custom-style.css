@@ -9,7 +9,12 @@
 }
 
 .btn-primary {
-    background-color: #073f78!important;
+    background-color: #073f78 !important;
+    border-radius: 5px !important;
+}
+
+.btn-disable {
+    background-color: lightgray !important;
     border-radius: 5px !important;
 }
 
@@ -22,6 +27,10 @@
     width: 100% !important;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.bg-shop {
+    background-color: #eff2f7;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -56,7 +65,7 @@
     .modal-body {
         text-align: center;
     }
-    
+
     .menu {
         padding: 20px;
         background-color: #eff2f7;
@@ -86,7 +95,13 @@
         height: 200px;
     }
 
-    .banner, .slick-list, .slick-track, .slick-slide, .slick-slide div, .slider, .img-banner {
+    .banner,
+    .slick-list,
+    .slick-track,
+    .slick-slide,
+    .slick-slide div,
+    .slider,
+    .img-banner {
         height: 100%;
     }
 
@@ -95,9 +110,9 @@
     }
 
     .slider-text {
-        position: absolute; 
-        bottom: 10px; 
-        left: 50%; 
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
         transform: translate(-50%, -50%);
         color: #eff2f7;
     }
@@ -162,7 +177,7 @@
         flex-wrap: wrap;
         width: 100%;
     }
-      
+
     .column {
         display: flex;
         background-color: white;
@@ -200,7 +215,7 @@
     .package-image img {
         width: 75% !important;
     }
-    
+
     .package-card-title {
         font-weight: bold;
         font-size: 12px !important;
@@ -308,7 +323,7 @@
         flex-wrap: wrap;
         width: 100%;
     }
-      
+
     .help-item {
         background-color: white;
         border-radius: 10px;
@@ -352,12 +367,12 @@
         padding-left: 10px;
     }
 
-    .faq-category-group{
+    .faq-category-group {
         overflow: auto;
         white-space: nowrap;
     }
 
-    .faq-category-group a{
+    .faq-category-group a {
         display: inline-block;
         color: black;
         text-align: center;
@@ -472,6 +487,7 @@
     .click-here {
         color: #073f78;
         font-weight: bold;
+        cursor: pointer;
     }
 
     .car-price {
@@ -508,7 +524,30 @@
     }
 
     .personal-data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         border-bottom: 1px solid black;
+    }
+
+    .auto-fill {
+        padding: 0 5px;
+        background-color: lightgray;
+        border-radius: 5px;
+    }
+
+    .group-phone-number {
+        background-color: white !important;
+    }
+
+    .add-accessories-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .add-accessories-check {
+        width: 20px;
+        height: 20px;
     }
 
     .add-accessories-title {
@@ -518,6 +557,21 @@
 
     .add-accessories-subtitle {
         color: grey;
+    }
+
+    .add-accessories-body {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .add-accessories-detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .header-parent {
@@ -584,6 +638,10 @@
         background-color: indigo;
     }
 
+    .product-badge-item:nth-child(4) {
+        background-color: #ff9738;
+    }
+
     .products {
         padding: 20px 0;
         background-color: #eff2f7;
@@ -648,6 +706,10 @@
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 
+    .btn-detail:hover {
+        color: #073f78 !important;
+    }
+
     .btn-buy {
         padding: 10px;
         background-color: #073f78;
@@ -659,13 +721,18 @@
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 
+    .btn-buy:hover {
+        color: white;
+    }
+
     .sort-modal-body {
         text-align: left !important;
     }
 
     .risk-expansion {
         background-color: #eff2f7;
-        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 100px;
     }
 
     .risk {
@@ -673,7 +740,7 @@
         flex-direction: column;
         margin: 10px 0;
     }
-    
+
     .risk-header {
         display: flex;
         align-items: center;
@@ -683,11 +750,26 @@
         border: 1px lightgray solid;
     }
 
+    .risk-header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .risk-check {
+        width: 20px;
+        height: 20px;
+    }
+
+    .risk-price {
+        white-space: nowrap;
+    }
+
     .risk-footer {
         padding: 20px 0;
         position: fixed;
         bottom: 0;
         width: 100%;
+        background-color: white;
     }
 
     .risk-footer-group {
@@ -706,13 +788,17 @@
         text-align: center;
     }
 
+    .risk-footer-button:hover {
+        color: white;
+    }
+
     .total-premi {
         padding: 10px 0;
     }
 
     .required-document {
         background-color: #eff2f7;
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     .required-document-group {
@@ -722,9 +808,262 @@
 
     .policy-holder {
         background-color: #eff2f7;
+        padding: 10px 0;
+    }
+
+    .policy-holder-group {
+        background-color: white;
+        padding: 10px;
+    }
+
+    .policy-holder-active {
+        display: flex;
+        align-items: center;
+    }
+
+    .policy-holder-name {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* .car-condition-btn-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    .car-condition-btn {
+        text-align: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    } */
+
+    .car-condition-ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        align-items: center;
+    }
+
+    .car-condition-ul li {
+        width: 49%;
+    }
+
+    .car-condition-ul li button {
+        font-weight: 500 !important;
+        font-size: 12px !important;
+        background-color: #eff2f7 !important;
+        padding: 8px !important;
+        border: 1px lightgray solid !important;
+        width: 100%;
+        text-align: center;
+        color: black;
+    }
+
+    .review {
+        background-color: white;
         padding: 20px 0;
     }
-    
+
+    .review-header-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .review-header-logo-img {
+        width: 40px;
+    }
+
+    .review-header-logo-text {
+        margin-left: 10px;
+        color: #073f78;
+        font-weight: 500;
+    }
+
+    .review-header-active {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .review-policy {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-policy-display {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .review-policy-header {
+        border-bottom: 1px lightgray solid;
+    }
+
+    .review-term {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-term-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px lightgray solid;
+        padding-bottom: 5px;
+    }
+
+    .term-check {
+        width: 30px;
+        height: 20px;
+    }
+
+    .review-term-description {
+        padding-top: 5px;
+    }
+
+    .review-subtotal {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-subtotal-header {
+        border-bottom: 1px lightgray solid;
+        padding-bottom: 5px;
+    }
+
+    .review-subtotal-subheader {
+        padding-top: 5px;
+    }
+
+    .offcanvas {
+        height: 65% !important;
+    }
+
+    .total-accessories {
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-upper-nav-detail {
+        width: 32%;
+    }
+
+    .product-upper-item-detail {
+        font-weight: 500 !important;
+        font-size: 12px !important;
+        background-color: #eff2f7 !important;
+        padding: 8px !important;
+        border: 1px lightgray solid !important;
+        width: 100%;
+        text-align: center;
+        color: black;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        border: 1px #073f78 solid !important;
+        color: black !important;
+    }
+
+    .product-detail-section {
+        padding: 20px 0 !important;
+        background-color: #eff2f7;
+    }
+
+    .product-detail-benefit {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail-benefit-header {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .product-detail-benefit-header-img {
+        width: 40px;
+    }
+
+    .product-detail-benefit-header-title {
+        font-weight: 500;
+    }
+
+    .product-detail-feature {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail-feature-header {
+        padding: 10px 0;
+    }
+
+    .product-detail-feature-header-title {
+        font-weight: 500;
+    }
+
+    .product-detail-garage {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-detail-garage-title {
+        font-weight: 500;
+    }
+
+    .product-detail-garage-subtitle {
+        line-height: 1rem;
+    }
+
+    .product-detail-garage-btn {
+        background-color: #073f78;
+        padding: 10px 15px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+    }
+
+    .product-detail-garage-btn:hover {
+        color: white;
+    }
+
+    .product-detail-brochure {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail-footer-section {
+        padding: 20px 0;
+        background-color: white;
+    }
+
+    .product-detail-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-detail-footer-btn {
+        padding: 10px 20px;
+        background-color: #073f78;
+        color: white;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+
     .reference-klaim {
         background-color: #073f78;
         border: 2px #073f78 solid;
@@ -790,7 +1129,13 @@
         height: 200px;
     }
 
-    .banner, .slick-list, .slick-track, .slick-slide, .slick-slide div, .slider, .img-banner {
+    .banner,
+    .slick-list,
+    .slick-track,
+    .slick-slide,
+    .slick-slide div,
+    .slider,
+    .img-banner {
         height: 100%;
     }
 
@@ -840,7 +1185,7 @@
     .modal-body {
         text-align: center;
     }
-    
+
     .menu {
         padding: 20px;
         background-color: #eff2f7;
@@ -863,12 +1208,12 @@
         margin: 5px 0;
         background-color: white;
         border-radius: 10px;
-    } 
+    }
 
     .slider-text {
-        position: absolute; 
-        bottom: 10px; 
-        left: 50%; 
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
         transform: translate(-50%, -50%);
     }
 
@@ -933,7 +1278,7 @@
         flex-wrap: wrap;
         width: 100%;
     }
-      
+
     .column {
         display: flex;
         background-color: white;
@@ -972,7 +1317,7 @@
     .package-image img {
         width: 75% !important;
     }
-    
+
     .package-card-title {
         font-weight: bold;
         font-size: 12px !important;
@@ -1068,7 +1413,7 @@
         background-color: #eff2f7;
         padding: 20px 0 !important;
     }
-    
+
     .help-title {
         font-weight: bold;
         color: #232323;
@@ -1081,7 +1426,7 @@
         flex-wrap: wrap;
         width: 100%;
     }
-      
+
     .help-item {
         background-color: white;
         border-radius: 10px;
@@ -1116,12 +1461,12 @@
         padding-left: 10px;
     }
 
-    .faq-category-group{
+    .faq-category-group {
         overflow: auto;
         white-space: nowrap;
     }
 
-    .faq-category-group a{
+    .faq-category-group a {
         display: inline-block;
         color: black;
         text-align: center;
@@ -1238,6 +1583,7 @@
     .click-here {
         color: #073f78;
         font-weight: bold;
+        cursor: pointer;
     }
 
     .car-price {
@@ -1259,7 +1605,7 @@
         text-align: right;
         padding: 0 !important;
         margin-right: 15px !important;
-        margin-top: 15px !important;
+        margin-top: 0px !important;
     }
 
     .modal-body-add-car {
@@ -1274,7 +1620,31 @@
     }
 
     .personal-data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         border-bottom: 1px solid black;
+    }
+
+    .auto-fill {
+        padding: 0 5px;
+        background-color: lightgray;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .group-phone-number {
+        background-color: white !important;
+    }
+
+    .add-accessories-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .add-accessories-check {
+        width: 20px;
+        height: 20px;
     }
 
     .add-accessories-title {
@@ -1286,6 +1656,21 @@
         color: grey;
     }
 
+    .add-accessories-body {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .add-accessories-detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .header-parent {
         display: flex;
         align-items: center;
@@ -1293,8 +1678,6 @@
     }
 
     .header-child-arrow {
-        font-size: 20px;
-        font-weight: bold;
         color: #073f78;
     }
 
@@ -1332,7 +1715,7 @@
         font-size: 12px;
         color: white;
     }
-    
+
     .reference-klaim {
         background-color: #073f78;
         border: 2px #073f78 solid;
@@ -1358,6 +1741,10 @@
 
     .product-badge-item:nth-child(3) {
         background-color: indigo;
+    }
+
+    .product-badge-item:nth-child(4) {
+        background-color: #ff9738;
     }
 
     .products {
@@ -1424,6 +1811,10 @@
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 
+    .btn-detail:hover {
+        color: black !important;
+    }
+
     .btn-buy {
         padding: 10px;
         background-color: #073f78;
@@ -1435,13 +1826,18 @@
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
     }
 
+    .btn-buy:hover {
+        color: white;
+    }
+
     .sort-modal-body {
         text-align: left !important;
     }
 
     .risk-expansion {
         background-color: #eff2f7;
-        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 100px;
     }
 
     .risk {
@@ -1449,7 +1845,7 @@
         flex-direction: column;
         margin: 10px 0;
     }
-    
+
     .risk-header {
         display: flex;
         align-items: center;
@@ -1457,6 +1853,20 @@
         padding: 10px;
         background-color: white;
         border: 1px lightgray solid;
+    }
+
+    .risk-header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .risk-check {
+        width: 20px;
+        height: 20px;
+    }
+
+    .risk-price {
+        white-space: nowrap;
     }
 
     .risk-footer {
@@ -1482,5 +1892,284 @@
         font-weight: 500;
         border-radius: 10px;
         text-align: center;
+    }
+
+    .risk-footer-button:hover {
+        color: white;
+    }
+
+    .total-premi {
+        padding: 10px 0;
+        background-color: white;
+    }
+
+    .required-document {
+        background-color: #eff2f7;
+        padding: 10px 0;
+    }
+
+    .required-document-group {
+        background-color: white;
+        padding: 10px;
+    }
+
+    .policy-holder {
+        background-color: #eff2f7;
+        padding: 10px 0;
+    }
+
+    .policy-holder-group {
+        background-color: white;
+        padding: 10px;
+    }
+
+    .policy-holder-active {
+        display: flex;
+        align-items: center;
+    }
+
+    .policy-holder-name {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* .car-condition-btn-group {
+        display: flex;
+        justify-content: center;
+    } */
+
+    .car-condition-ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        align-items: center;
+    }
+
+    .car-condition-ul li {
+        width: 49%;
+    }
+
+    .car-condition-ul li button {
+        font-weight: 500 !important;
+        font-size: 12px !important;
+        background-color: #eff2f7 !important;
+        padding: 8px !important;
+        border: 1px lightgray solid !important;
+        width: 100%;
+        text-align: center;
+        color: black;
+    }
+
+    /* .car-condition-btn {
+        text-align: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+    } */
+
+    .review {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-header-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .review-header-logo-img {
+        width: 40px;
+    }
+
+    .review-header-logo-text {
+        margin-left: 10px;
+        color: #073f78;
+        font-weight: 500;
+    }
+
+    .review-header-active {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .review-policy {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-policy-display {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .review-policy-header {
+        border-bottom: 1px lightgray solid;
+    }
+
+    .review-term {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-term-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px lightgray solid;
+        padding-bottom: 5px;
+    }
+
+    .term-check {
+        width: 20px;
+        height: 20px;
+    }
+
+    .review-term-description {
+        padding-top: 5px;
+    }
+
+    .review-subtotal {
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .review-subtotal-header {
+        border-bottom: 1px lightgray solid;
+        padding-bottom: 5px;
+    }
+
+    .review-subtotal-subheader {
+        padding-top: 5px;
+    }
+
+    .offcanvas {
+        max-width: 600px;
+        margin: 0 auto;
+        height: 65% !important;
+    }
+
+    .total-accessories {
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-upper-nav-detail {
+        width: 32%;
+    }
+
+    .product-upper-item-detail {
+        font-weight: 500 !important;
+        font-size: 12px !important;
+        background-color: #eff2f7 !important;
+        padding: 8px !important;
+        border: 1px lightgray solid !important;
+        width: 100%;
+        text-align: center;
+        color: black;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        border: 1px #073f78 solid !important;
+        color: black !important;
+    }
+
+    .product-detail-section {
+        padding: 20px 0 !important;
+        background-color: #eff2f7;
+    }
+
+    .product-detail-benefit {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail-benefit-header {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .product-detail-benefit-header-img {
+        width: 40px;
+    }
+
+    .product-detail-benefit-header-title {
+        font-weight: 500;
+    }
+
+    .product-detail-feature {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail-feature-header {
+        padding: 10px 0;
+    }
+
+    .product-detail-feature-header-title {
+        font-weight: 500;
+    }
+
+    .product-detail-garage {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-detail-garage-title {
+        font-weight: 500;
+    }
+
+    .product-detail-garage-subtitle {
+        line-height: 1rem;
+    }
+
+    .product-detail-garage-btn {
+        background-color: #073f78;
+        padding: 10px 15px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+    }
+
+    .product-detail-garage-btn:hover {
+        color: white;
+    }
+
+    .product-detail-brochure {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail-footer-section {
+        padding: 20px 0;
+        background-color: white;
+    }
+
+    .product-detail-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-detail-footer-btn {
+        padding: 10px 20px;
+        background-color: #073f78;
+        color: white;
+        font-weight: 500;
+        border-radius: 10px;
     }
 }

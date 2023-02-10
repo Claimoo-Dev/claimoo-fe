@@ -23,6 +23,7 @@
     <meta name="description" content="Claimoo">
     <meta name="keywords" content="Claimoo">
     <meta name="author" content="Claimoo">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
     <title>Claimoo | Beli Polis</title>
 
@@ -60,78 +61,18 @@
     <header class="header-style-2" id="home">
         <div class="main-header navbar-searchbar">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-menu">
-                            <div class="menu-left">
-                                <div class="brand-logo">
-                                    <a href="{{ route('landing-page') }}">
-                                        <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
-                                            class="img-fluid blur-up lazyload" alt="logo">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="menu-right">
-                                <ul>
-                                    <li class="onhover-dropdown wislist-dropdown">
-                                        <div class="cart-media">
-                                            <div class="cart-icon">
-                                                <i data-feather="bell"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="modal-icon">
-                                        <div class="modal-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i data-feather="align-justify" class="sidebar-bar"></i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="header-parent">
+                    <a href="{{ route('landing-page') }}">
+                        <i data-feather="chevron-left" class="header-child-arrow"></i>
+                    </a>
+                    <div class="header-child-title-parent">
+                        <div class="header-child-title">Asuransi Mobil</div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- header end -->
-
-    <!-- mobile fix menu start -->
-    <div class="mobile-menu">
-        <ul>
-            <li>
-                <a href="{{ route('landing-page') }}">
-                    <i data-feather="home"></i>
-                    <span>Beranda</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('shop') }}" class="active">
-                    <i data-feather="shopping-bag"></i>
-                    <span>Belanja</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('claim') }}">
-                    <i data-feather="edit"></i>
-                    <span>Klaim</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('support') }}">
-                    <i data-feather="help-circle"></i>
-                    <span>Bantuan</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('dashboard-customer') }}">
-                    <i data-feather="user"></i>
-                    <span>Akun</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!-- mobile fix menu end -->
 
     <div class="content-container">
         <section class="term">
@@ -161,245 +102,29 @@
 
                 <div class="mt-3 mb-2 car-price">
                     <label for="carPrice" class="fz-12">Harga Mobil</label>
-                    <span class="fz-12">Rp 193.885.000 - Rp 262.315.000</span>
+                    <span class="fz-12" id="carPriceRange">Rp 0 - Rp 0</span>
                 </div>
                 <div class="input-group">
                     <span class="input-group-text span-car-price" id="basic-addon1">Rp</span>
                     <input type="text" class="form-control input-car-price" id="carPrice">
                 </div>
 
-                <div class="form-check mt-3">
-                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" data-bs-toggle="modal" data-bs-target="#addAccessories">
-                    <label class="form-check-label fz-12" for="flexCheckDefault">
+                <div class="add-accessories-btn mt-3">
+                    <input class="form-check-input add-accessories-check" type="checkbox" id="addAccessoriesBtn"
+                        data-bs-toggle="modal" data-bs-target="#addAccessories">
+                    <label class="fz-12 ms-2" for="addAccessoriesBtn">
                         Tambahkan Aksesoris Mobil
                     </label>
                 </div>
 
                 <div class="form-parent mt-3">
                     <label for="plate" class="form-label select-label">Plat Wilayah</label>
-                    <select class="form-control" id="plate"></select>
+                    <select class="plate form-control" id="plate"></select>
                 </div>
 
-                <div class="btn btn-primary mt-3 btn-shop">Cari</div>
+                <button class="btn btn-search btn-primary mt-3 btn-shop" id="btn-search" disabled>Cari</button>
             </div>
         </section>
-    </div>
-
-    <footer class="footer-sm-space">
-        <div class="main-footer">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-12">
-                        <div class="footer-contact">
-                            <div class="brand-logo">
-                                <a href="{{ route('landing-page') }}" class="footer-logo">
-                                    <img src="{{ asset('assets-voxo/images/logo-claimoo.png') }}"
-                                        class="img-fluid blur-up lazyload" alt="logo">
-                                </a>
-                            </div>
-                            <p class="font-light">Jl. Tole Iskandar No. 66, Depok, Jawa Barat 16412
-                            </p>
-                            <!-- <p>Download app from:</p>
-                            <div>
-                                <center><img src="assets-voxo/images/logos/android.png" width="100">
-                                    <img src="assets-voxo/images/logos/ios.png" width="100">
-                                </center>
-                            </div> -->
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Tentang Kami</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Beranda</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Perusahaan</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Komisaris &amp; Direksi</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Tenaga Ahli</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Partner</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Produk Asuransi</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href=javascript:void(0)" class="font-dark">Simas Mobil</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Zurich Autocilin</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Astra Garda Oto</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="footer-links">
-                            <div class="footer-title">
-                                <h3>Bantuan</h3>
-                            </div>
-                            <div class="footer-content">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Akun Anda</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Keranjang</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">FAQs</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Kebijakan Privasi</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" class="font-dark">Hubungi Kami</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                        <div class="footer-newsletter">
-                            <h3>Hubungi kami:</h3>
-                            <div class="footer-number">
-                                <div class="footer-number-image">
-                                    <img src="assets-voxo/images/shoes/other/headphone.png"
-                                        class="img-fluid blur-up lazyload" alt="">
-                                </div>
-
-                                <div class="footer-number-container">
-                                    <h3>+62 21 7783 7035</h3>
-                                </div>
-                            </div>
-
-                            <div class="footer-details">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <b>Alamat: </b><span class="font-light">Jl. Tole Iskandar No. 66, Depok.
-                                                Jawa Barat. 16412</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <b>Email: </b><span class="font-light"> admin@claimoo.com</span>
-                                        </span>
-                                    </li>
-                                </ul>
-
-                                <div>
-                                    <img src="assets-voxo/images/logos/ojk.webp" width="200">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="sub-footer">
-            <div class="container">
-                <div class="row gy-3">
-                    <div class="col-md-12">
-                        <p class="mb-0 font-dark text-center">© 2023 Claimoo. Hak Cipta Dilindungi Undang-undang</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="modal fade modal-navbar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="menu">
-                        <a href="#">Beranda</a>
-                    </div>
-                    <div class="menu">
-                        <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                                aria-controls="collapseExample">
-                                Tentang Kami
-                            </a>
-
-                            <div class="collapse" id="collapseExample">
-                                <ul class="menu-child">
-                                    <a href="">
-                                        <li class="menu-child-item"> Perusahaan </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Komisaris & Direksi </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Tenaga Ahli </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> Partner </li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="dropdown">
-                            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false"
-                                aria-controls="collapseExample1">
-                                Produk Asuransi
-                            </a>
-
-                            <div class="collapse" id="collapseExample1">
-                                <ul class="menu-child">
-                                    <a href="">
-                                        <li class="menu-child-item"> All Risk </li>
-                                    </a>
-                                    <a href="">
-                                        <li class="menu-child-item"> TLO </li>
-                                    </a>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Bengkel</a>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Berita</a>
-                    </div>
-                    <div class="menu">
-                        <a href="#">Hubungi Kami</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="modal fade modal-navbar" id="addCar" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -413,43 +138,49 @@
                 </div>
                 <div class="modal-body modal-body-add-car">
                     <div class="parent-add-car">
-                        <div class="personal-data">Data Pribadi</div>
+                        <div class="personal-data">
+                            <div>Data Pribadi</div>
+                            <div class="auto-fill" id="autoFill">Isi Otomatis</div>
+                        </div>
                         <div class="mt-3">
                             <label for="name" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
                         </div>
-    
+
                         <div class="mt-3">
                             <label for="email" class="form-label">Email (Opsional)</label>
                             <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
                         </div>
-    
+
                         <label for="phone" class="form-label mt-3">Nomor Telepon</label>
                         <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1">+62</span>
-                            <input type="text" class="form-control" placeholder="Masukkan nomor telepon Anda" id="phone">
-                        </div>                        
+                            <span class="input-group-text group-phone-number" id="basic-addon1">+62</span>
+                            <input type="text" class="form-control" placeholder="Masukkan nomor telepon Anda"
+                                id="phone">
+                        </div>
                     </div>
 
                     <div class="parent-add-car mt-3">
                         <div class="personal-data">Tentang Mobil Anda</div>
                         <div class="mt-3">
-                            <label for="brand" class="form-label">Merek Mobil</label>
-                            <input type="text" class="form-control" id="brand" placeholder="Masukkan merek mobil Anda">
+                            <label for="carBrand" class="form-label">Merek Mobil</label>
+                            <input type="text" class="form-control" id="carBrand"
+                                placeholder="Masukkan merek mobil Anda">
                         </div>
-    
+
                         <div class="mt-3">
-                            <label for="type" class="form-label">Jenis Mobil</label>
-                            <input type="text" class="form-control" id="type" placeholder="Masukkan jenis mobil Anda">
+                            <label for="carType" class="form-label">Jenis Mobil</label>
+                            <input type="text" class="form-control" id="carType"
+                                placeholder="Masukkan jenis mobil Anda">
                         </div>
-    
+
                         <div class="mt-3">
-                            <label for="seri" class="form-label">Seri Mobil</label>
-                            <input type="text" class="form-control" id="seri" placeholder="Masukkan seri mobil Anda">
+                            <label for="carSeri" class="form-label">Seri Mobil</label>
+                            <input type="text" class="form-control" id="carSeri" placeholder="Masukkan seri mobil Anda">
                         </div>
                     </div>
 
-                    <div class="btn btn-primary btn-shop mt-3">Simpan</div>
+                    <button class="btn btn-request btn-primary btn-shop mt-3" id="btn-request" disabled>Simpan</button>
                 </div>
             </div>
         </div>
@@ -460,13 +191,341 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header modal-header-add-car">
-                    <h5 class="modal-title" id="exampleModalToggleLabel">Aksesoris Mobil Anda</h5>
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Aksesoris Mobil</h5>
                     <button type="button" class="btn-close btn-close-add-car" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body modal-body-add-car">
                     <div class="add-accessories-title">Pilih Aksesoris Kendaraan Anda</div>
                     <div class="add-accessories-subtitle">Maksimum 10% dari harga kendaraan</div>
+
+                    <div class="mt-3 add-accessories-body" id="kacaFilmGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="kacaFilmCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title">Kaca Film</div>
+                                <div class="add-accessories-detail-name d-none" id="kacaFilmName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="kacaFilmPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="kacaFilm"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Kaca Film</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="brandAccessories" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessories" placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessories" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessories" placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessories" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessories">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-save btn-primary btn-shop" id="btn-save" disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 add-accessories-body" id="soundSystemGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="soundSystemCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title">Sound System</div>
+                                <div class="add-accessories-detail-name d-none" id="soundSystemName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="soundSystemPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="soundSystem"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Sound System</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="brandAccessoriesSoundSystem" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessoriesSoundSystem"
+                                    placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessoriesSoundSystem" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessoriesSoundSystem"
+                                    placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessoriesSoundSystem" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessoriesSoundSystem">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-shop" id="btn-save-sound-system"
+                                    disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 add-accessories-body" id="karpetMobilGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="karpetMobilCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title">Karpet Mobil</div>
+                                <div class="add-accessories-detail-name d-none" id="karpetMobilName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="karpetMobilPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="karpetMobil"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Karpet Mobil</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="brandAccessoriesKarpetMobil" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessoriesKarpetMobil"
+                                    placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessoriesKarpetMobil" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessoriesKarpetMobil"
+                                    placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessoriesKarpetMobil" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessoriesKarpetMobil">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-shop" id="btn-save-karpet-mobil"
+                                    disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 add-accessories-body" id="velgBanGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="velgBanCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title">Velg & Ban</div>
+                                <div class="add-accessories-detail-name d-none" id="velgBanName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="velgBanPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="velgBan"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Velg & Ban</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="brandAccessoriesVelgBan" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessoriesVelgBan"
+                                    placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessoriesVelgBan" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessoriesVelgBan" placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessoriesVelgBan" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessoriesVelgBan">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-shop" id="btn-save-velg-ban" disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 add-accessories-body" id="jokMobilGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="jokMobilCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title">Jok Mobil</div>
+                                <div class="add-accessories-detail-name d-none" id="jokMobilName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="jokMobilPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="jokMobil"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Jok Mobil</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="brandAccessoriesJokMobil" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessoriesJokMobil"
+                                    placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessoriesJokMobil" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessoriesJokMobil" placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessoriesJokMobil" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessoriesJokMobil">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-shop" id="btn-save-jok-mobil"
+                                    disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 add-accessories-body" id="bodyKitGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="bodyKitCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title">Body Kit</div>
+                                <div class="add-accessories-detail-name d-none" id="bodyKitName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="bodyKitPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="bodyKit"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Body Kit</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="brandAccessoriesBodyKit" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessoriesBodyKit"
+                                    placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessoriesBodyKit" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessoriesBodyKit" placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessoriesBodyKit" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessoriesBodyKit">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-shop" id="btn-save-body-kit" disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 add-accessories-body" id="lainnyaGroup">
+                        <div>
+                            <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
+                                id="lainnyaCheck">
+                        </div>
+                        <div class="ms-2 add-accessories-detail">
+                            <div>
+                                <div class="add-accessories-detail-title" id="titleLainnya">Lainnya</div>
+                                <div class="add-accessories-detail-name d-none" id="lainnyaName"></div>
+                            </div>
+                            <div class="add-accessories-detail-price d-none" id="lainnyaPrice"></div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="lainnya"
+                        aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Lainnya</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <div>
+                                <label for="nameAccessories" class="form-label">Nama Aksesoris</label>
+                                <input type="text" class="form-control" id="nameAccessories"
+                                    placeholder="Nama Aksesoris" value="Lainnya">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="brandAccessoriesLainnya" class="form-label">Merek</label>
+                                <input type="text" class="form-control" id="brandAccessoriesLainnya"
+                                    placeholder="Merek">
+                            </div>
+
+                            <div class="mt-3">
+                                <label for="typeAccessoriesLainnya" class="form-label">Tipe</label>
+                                <input type="text" class="form-control" id="typeAccessoriesLainnya" placeholder="Tipe">
+                            </div>
+
+                            <label for="priceAccessoriesLainnya" class="form-label mt-3">Harga</label>
+                            <div class="input-group">
+                                <span class="input-group-text group-phone-number fz-12" id="basic-addon1">Rp</span>
+                                <input type="text" class="form-control" id="priceAccessoriesLainnya">
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-shop" id="btn-save-lainnya" disabled>Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="total-accessories mt-5">
+                        <div class="total-accessories-price">
+                            <div>Harga Aksesoris</div>
+                            <div id="subtotal">Rp 0</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" id="btnAccessories" disabled>Tambah</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -511,9 +570,13 @@
     <!-- script js -->
     <script src="{{ asset('assets-voxo/js/theme-setting.js') }}"></script>
     <script src="{{ asset('assets-voxo/js/script.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/custom-script.js') }}"></script>
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- sweetalert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script type="text/javascript">
         $('.year').select2({
@@ -522,6 +585,13 @@
                 type: 'GET',
                 url: '/claim/list-year',
                 dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        search: params.term
+                    }
+
+                    return query;
+                },
                 processResults: function (data) {
                     return {
                         results: $.map(data.data, function (item) {
@@ -623,6 +693,33 @@
             }
         });
 
+        $('.plate').select2({
+            placeholder: 'Pilih Wilayah',
+            ajax: {
+                type: 'GET',
+                url: '/claim/list-plate',
+                dataType: 'json',
+                data: function (params) {
+                    var query = {
+                        keyword: params.term
+                    }
+
+                    return query;
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (item) {
+                            return {
+                                text: item.plate + ' (' + item.Area + ')',
+                                id: item.plate
+                            }
+                        })
+                    };
+                },
+                cache: true
+            }
+        });
+
         $('#year').change(function () {
             $("#brand").empty();
             $("#type").empty();
@@ -636,6 +733,7 @@
 
         $('#type').change(function () {
             $("#seri").empty();
+            $("#btn-search").attr('disabled', true);
         });
 
         $('.year').on('select2:select', function (e) {
@@ -650,7 +748,265 @@
             $('.seri').removeAttr('disabled');
         });
 
+        $('.seri').on('select2:select', function (e) {
+            if ($('.plate').val()) {
+                $('.btn-search').removeAttr('disabled');
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/claim/price-car",
+                data: {
+                    year: $('#year').val(),
+                    brand: $('#brand').val(),
+                    type: $('#type').val(),
+                    seri: $('#seri').val()
+                },
+                success: function (data) {
+                    $.each(data.data, function (i, item) {
+                        var lowestPrice = formatRupiah(item.harga_terendah.toString());
+                        var highestPrice = formatRupiah(item.harga_tertinggi.toString());
+                        var price = formatRupiah(item.harga.toString());
+
+                        $("#carPriceRange").html("Rp " + lowestPrice + " - Rp " +
+                            highestPrice);
+                        $("#carPrice").val(price);
+                    });
+                }
+            });
+        });
+
+        $('.plate').on('select2:select', function () {
+            if ($('.seri').val()) {
+                $('.btn-search').removeAttr('disabled');
+            }
+        });
+
+        $("#carPrice").keyup(function () {
+            $("#carPrice").val(formatRupiah(this.value));
+        });
+
+        $("#phone").keyup(function () {
+            $("#phone").val(formatNumber(this.value));
+        });
+
+        $("#name").keyup(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $('#btn-request').removeAttr('disabled');
+            } else {
+                $('#btn-request').attr('disabled', true);
+            }
+        });
+
+        $("#email").keyup(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $('#btn-request').removeAttr('disabled');
+            } else {
+                $('#btn-request').attr('disabled', true);
+            }
+        });
+
+        $("#phone").keyup(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $('#btn-request').removeAttr('disabled');
+            } else {
+                $('#btn-request').attr('disabled', true);
+            }
+        });
+
+        $("#carBrand").keyup(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $('#btn-request').removeAttr('disabled');
+            } else {
+                $('#btn-request').attr('disabled', true);
+            }
+        });
+
+        $("#carType").keyup(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $('#btn-request').removeAttr('disabled');
+            } else {
+                $('#btn-request').attr('disabled', true);
+            }
+        });
+
+        $("#carSeri").keyup(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $('#btn-request').removeAttr('disabled');
+            } else {
+                $('#btn-request').attr('disabled', true);
+            }
+        });
+
+        $("#btn-request").click(function () {
+            if ($('#name').val() && $('#phone').val() && $('#carBrand').val() && $('#carType').val() && $(
+                    '#carSeri').val()) {
+                $.ajax({
+                    type: "POST",
+                    url: "/shop/request-car",
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content'),
+                        name: $('#name').val(),
+                        email: $('#email').val(),
+                        phone: $('#phone').val(),
+                        brand: $('#carBrand').val(),
+                        type: $('#carType').val(),
+                        seri: $('#carSeri').val()
+                    },
+                    success: function (data) {
+                        Swal.fire({
+                            icon: 'success',
+                            text: 'Pengajuan mobil Anda sedang di proses',
+                            confirmButtonColor: '#073f78'
+                        }).then(function () {
+                            window.location.href = 'shop';
+                        });
+                    }
+                });
+            }
+        });
+
+        $('#autoFill').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/user",
+                success: function (response) {
+                    $("#name").val(response.data.name);
+                    $("#email").val(response.data.email);
+                    $("#phone").val(response.data.phone);
+                }
+            });
+        });
+
+        $('#btnAccessories').click(function () {
+            var sum = 0;
+            $("input:checkbox[name=accessories]:checked").each(function () {
+                sum = sum + parseInt($(this).val());
+            });
+
+            var carPrice = $('#carPrice').val();
+            carPrice = carPrice.split('.').join("");
+
+            var maxAccessories = carPrice * 10 / 100;
+
+            if (maxAccessories == 0) {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Mohon isi detail mobil Anda',
+                    confirmButtonColor: '#073f78'
+                });
+            } else if (sum > maxAccessories) {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Harga Aksesoris Maksimum IDR ' + formatRupiah(maxAccessories.toString()),
+                    confirmButtonColor: '#073f78'
+                });
+            } else {
+                $('#addAccessories').modal('hide');
+            }
+
+        });
+
+        $('#addAccessoriesBtn').click(function () {
+            $('#addAccessoriesBtn').prop('checked', true);
+        });
+
+        $('#addAccessories').on('hide.bs.modal', function () {
+            var sum = 0;
+            $("input:checkbox[name=accessories]:checked").each(function () {
+                sum = sum + parseInt($(this).val());
+            });
+
+            var carPrice = $('#carPrice').val();
+            carPrice = carPrice.split('.').join("");
+
+            var maxAccessories = carPrice * 10 / 100;
+
+            if (sum > maxAccessories) {
+                $('#addAccessoriesBtn').prop('checked', false);
+
+                $("input:checkbox[name=accessories]:checked").each(function () {
+                    $(this).prop('checked', false);
+                });
+
+                $('#kacaFilmName').addClass('d-none');
+                $('#kacaFilmPrice').addClass('d-none');
+
+                $('#soundSystemName').addClass('d-none');
+                $('#soundSystemPrice').addClass('d-none');
+
+                $('#karpetMobilName').addClass('d-none');
+                $('#karpetMobilPrice').addClass('d-none');
+
+                $('#velgBanName').addClass('d-none');
+                $('#velgBanPrice').addClass('d-none');
+
+                $('#jokMobilName').addClass('d-none');
+                $('#jokMobilPrice').addClass('d-none');
+
+                $('#bodyKitName').addClass('d-none');
+                $('#bodyKitPrice').addClass('d-none');
+
+                $('#lainnyaName').addClass('d-none');
+                $('#lainnyaPrice').addClass('d-none');
+
+                $("#subtotal").html("Rp 0");
+            }
+
+            if (sum == 0) {
+                $('#addAccessoriesBtn').prop('checked', false);
+            }
+        });
+
+        var arrayAccessories = [];
+
+        $(".btn-search").click(function () {
+            if ($('.seri').val() && $('.plate').val()) {
+                var totalPriceAccessories = 0;
+
+                $.each(arrayAccessories, function (i, item) {
+                    totalPriceAccessories = totalPriceAccessories + parseInt(item.price);
+                });
+
+                var carPrice = $('#carPrice').val();
+                carPrice = carPrice.split('.').join("");
+
+                $.ajax({
+                    type: "POST",
+                    url: "/shop/search-product",
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content'),
+                        year: $('#year').val(),
+                        brand: $('#brand').val(),
+                        type: $('#type').val(),
+                        seri: $('#seri').val(),
+                        price: carPrice,
+                        is_car_accessories: arrayAccessories.length,
+                        accessories: arrayAccessories,
+                        total_price_accessories: totalPriceAccessories,
+                        plate: $('.plate').val()
+                    },
+                    success: function (data) {
+                        window.location.href = 'shop/product'
+                    }
+                });
+            }
+        });
+
     </script>
+    <script src="{{ asset('assets-voxo/js/kaca-film.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/sound-system.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/karpet-mobil.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/velg-ban.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/jok-mobil.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/body-kit.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/lainnya.js') }}"></script>
 
 </body>
 

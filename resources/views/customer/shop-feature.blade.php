@@ -24,6 +24,7 @@
     <meta name="keywords" content="Claimoo">
     <meta name="author" content="Claimoo">
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Claimoo | Beli Polis</title>
 
     <!-- Google font -->
@@ -61,9 +62,11 @@
         <div class="main-header navbar-searchbar">
             <div class="container">
                 <div class="header-parent">
-                    <div class="header-child-arrow">
-                        <</div> <div class="header-child-title-parent">
-                            <div class="header-child-title">Perluasan Risiko</div>
+                    <a href="{{ route('shopProduct') }}">
+                        <i data-feather="chevron-left" class="header-child-arrow"></i>
+                    </a>
+                    <div class="header-child-title-parent">
+                        <div class="header-child-title">Perluasan Risiko</div>
                     </div>
                 </div>
             </div>
@@ -76,59 +79,58 @@
             <div class="container">
                 <div>Pilih perluasan risiko untuk perlindungan mobil Anda</div>
                 <div class="risks mt-3">
+                    @foreach ($risks->data as $key => $risk)
                     <div class="risk">
-                        <div class="risk-header">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="checkbox1">
-                                <label class="form-check-label" for="checkbox1">
-                                    Huru-hara dan Kerusakan
-                                </label>
+                        @if ($risk->is_selected)
+                        <div class="risk-header" data-bs-toggle="modal" data-bs-target="#riskModal">
+                            @else
+                            <div class="risk-header">
+                                @endif
+                                <div class="form-check risk-header-left">
+                                    <div>
+                                        @if ($risk->status)
+                                        <input class="form-check-input risk-check" name="risk_check" type="checkbox"
+                                            value="{{ $risk->price }}" data-id="{{ $risk->id }}"
+                                            data-value="{{ $risk->title }}" id="checkbox{{ $key }}" checked disabled>
+                                        @else
+                                        <input class="form-check-input risk-check" name="risk_check" type="checkbox"
+                                            value="{{ $risk->price }}" data-id="{{ $risk->id }}"
+                                            data-value="{{ $risk->title }}" id="checkbox{{ $key }}">
+                                        @endif
+                                    </div>
+                                    <div>
+                                        <label class="form-check-label ms-2" for="checkbox{{ $key }}">
+                                            {{ $risk->title }}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-flex risk-header-right">
+                                    @if (!$risk->is_selected)
+                                    <div class="risk-price">+Rp @currency($risk->price)</div>
+                                    @else
+                                    <div class="risk-price"></div>
+                                    @endif
+                                    <i data-feather="chevron-down" data-bs-toggle="collapse"
+                                        href="#collapseExample{{ $key }}" role="button" aria-expanded="false"
+                                        aria-controls="collapseExample"></i>
+                                </div>
                             </div>
-                            <div class="d-flex">
-                                <div>+Rp 70.018</div>
-                                <i data-feather="chevron-down" data-bs-toggle="collapse" href="#collapseExample"
-                                    role="button" aria-expanded="false" aria-controls="collapseExample"></i>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body">
-                                Jaminan ganti rugi atau biaya perbaikan atas kehilangan/kerusakan pada kendaraan yang secara
-                                langsung oleh kerusuhan, pemogokan, penghalangan bekerja, tawuran, huru-hara, pembangkitan
-                                rakyat atau revolusi.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="risk">
-                        <div class="risk-header">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="checkbox2">
-                                <label class="form-check-label" for="checkbox2">
-                                    Terorisme dan Sabotase
-                                </label>
-                            </div>
-                            <div class="d-flex">
-                                <div>+Rp 70.018</div>
-                                <i data-feather="chevron-down" data-bs-toggle="collapse" href="#collapseExample1"
-                                    role="button" aria-expanded="false" aria-controls="collapseExample1"></i>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseExample1">
-                            <div class="card card-body">
-                                Jaminan ganti rugi atau biaya perbaikan atas kehilangan/ kerusakan pada kendaraan yang
-                                secara langsung disebabkan oleh tindakan terorisme dan sabotase.
+                            <div class="collapse" id="collapseExample{{ $key }}">
+                                <div class="card card-body">
+                                    {{ $risk->description }}
+                                </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
         </section>
         <section class="risk-footer">
             <div class="container">
                 <div class="risk-footer-group">
                     <div>
                         <div>Premi per Tahun</div>
-                        <div>Rp 760.190</div>
+                        <div id="premiPerYearText">Rp {{ $premiPerYear }}</div>
                     </div>
                     <div class="risk-footer-button">Beli</div>
                 </div>
@@ -136,13 +138,25 @@
         </section>
     </div>
 
-    <!-- tap to top Section Start -->
-    <div class="tap-to-top">
-        <a href="#home">
-            <i class="fas fa-chevron-up"></i>
-        </a>
+    <input type="hidden" value="{{ $premiPerYear }}" id="premiPerYear">
+    <input type="hidden" value="{{ $count }}" id="count">
+    <input type="hidden" value="{{ $orderId }}" id="orderId">
+
+    <div class="modal fade modal-navbar" id="riskModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header modal-header-add-car">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Pilih Benefit Anda</h5>
+                    <button type="button" class="btn-close btn-close-add-car" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- tap to top Section End -->
 
     <div class="bg-overlay"></div>
 
@@ -175,9 +189,77 @@
     <!-- script js -->
     <script src="{{ asset('assets-voxo/js/theme-setting.js') }}"></script>
     <script src="{{ asset('assets-voxo/js/script.js') }}"></script>
+    <script src="{{ asset('assets-voxo/js/custom-script.js') }}"></script>
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        var count = $("#count").val();
+
+        for (let i = 0; i < count; i++) {
+            $("#checkbox" + i).click(function () {
+                if ($(this).attr('checked')) {
+                    $(this).attr('checked', false);
+
+                    var value = $(this).val();
+                    var premiPerYear = $("#premiPerYear").val();
+                    var premiPerYearTotal = parseInt(premiPerYear) - parseInt(value);
+
+                    $("#premiPerYearText").html('Rp ' + formatRupiah(premiPerYearTotal.toString()));
+
+                    $("#premiPerYear").val(premiPerYearTotal);
+                } else {
+                    $(this).attr('checked', true);
+
+                    var value = $(this).val();
+                    var premiPerYear = $("#premiPerYear").val();
+                    var premiPerYearTotal = parseInt(value) + parseInt(premiPerYear);
+
+                    $("#premiPerYearText").html('Rp ' + formatRupiah(premiPerYearTotal.toString()));
+
+                    $("#premiPerYear").val(premiPerYearTotal);
+                }
+            });
+        }
+
+        $(".risk-footer-button").click(function () {
+            var checkbox = $("input:checkbox[name=risk_check]:checked");
+
+            if (checkbox.length > 0) {
+                var isRiskExpansion = 1;
+            } else {
+                var isRiskExpansion = 0;
+            }
+
+            var risks = [];
+
+            checkbox.each(function () {
+                var data = new Object();
+                data.id = $(this).data("id");
+                data.title = $(this).data("value");
+                data.price = $(this).val();
+
+                risks.push(data);
+            });
+
+            $.ajax({
+                type: "POST",
+                url: "/shop/risk-expansion",
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    order_id: $("#orderId").val(),
+                    is_risk_expansion: isRiskExpansion,
+                    total_price_premi: $("#premiPerYear").val(),
+                    risk_expansion: risks
+                },
+                success: function (data) {
+                    window.location.href = '{{ url("/shop/personal-data") }}';
+                }
+            });
+        });
+
+    </script>
 
 </body>
 

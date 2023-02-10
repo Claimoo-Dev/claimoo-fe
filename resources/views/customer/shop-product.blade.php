@@ -24,6 +24,7 @@
     <meta name="keywords" content="Claimoo">
     <meta name="author" content="Claimoo">
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Claimoo | Beli Polis</title>
 
     <!-- Google font -->
@@ -61,10 +62,12 @@
         <div class="main-header navbar-searchbar">
             <div class="container">
                 <div class="header-parent">
-                    <div class="header-child-arrow">
-                        <</div> <div class="header-child-title-parent">
-                            <div class="header-child-title">B | DAIHATSU ALL NEW XENIA 1.3 M MT</div>
-                            <div class="header-child-subtitle">Total Nilai pertanggungan IDR Rp 200.000.000</div>
+                    <a href="{{ route('shop') }}">
+                        <i data-feather="chevron-left" class="header-child-arrow"></i>
+                    </a>
+                    <div class="header-child-title-parent">
+                        <div class="header-child-title">{{ $plate }} | {{ $brand }} {{ $type }} {{ $seri }}</div>
+                        <div class="header-child-subtitle">Total Nilai pertanggungan IDR @currency($totalPrice)</div>
                     </div>
                 </div>
             </div>
@@ -83,149 +86,70 @@
     <div class="content-container">
         <section class="products">
             <div class="container">
+                @foreach ($products->data as $key => $product)
                 <div class="product mb-3">
                     <div class="product-badge">
+                        @if ($product->is_best_sell)
                         <div class="product-badge-item">Terlaris</div>
+                        @endif
+
+                        @if ($product->is_quick_claim)
                         <div class="product-badge-item">Klaim Cepat</div>
+                        @endif
+
+                        @if ($product->is_fast_publish)
                         <div class="product-badge-item">Penerbitan Cepat</div>
-                    </div>
-                    <div class="product-header">
-                        <div class="product-header-icon">
-                            <img src="{{ asset('assets-voxo/images/zurich.png') }}" class="img-fluid" alt="">
-                        </div>
-                        <div class="product-header-title">
-                            <div class="product-header-title-name">Zurich Insurance</div>
-                            <div class="product-header-title-type">Autocilin Total Loss</div>
-                        </div>
-                    </div>
-                    <div class="product-body">
-                        <ul class="list-group">
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Fasilitas Derek (Khusus kecelakaan total)
-                            </li>
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Hotline 24 jam/7 hari
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product-footer">
-                        <div>
-                            <div>Premi per Tahun</div>
-                            <div>Rp 760.190</div>
-                        </div>
-                        <div class="product-footer-button">
-                            <div class="btn-detail me-2">Detail</div>
-                            <div class="btn-buy">Beli</div>
-                        </div>
-                    </div>
-                </div>
+                        @endif
 
-                <div class="product mb-3">
-                    <div class="product-header">
+                        @if ($product->is_recommend)
+                        <div class="product-badge-item">Direkomendasikan</div>
+                        @endif
+                    </div>
+                    <div class="product-header mt-1">
                         <div class="product-header-icon">
-                            <img src="{{ asset('assets-voxo/images/zurich.png') }}" class="img-fluid" alt="">
+                            <img src="{{ asset('assets-voxo/images/' . $product->thumbnail) }}" class="img-fluid" alt="">
                         </div>
                         <div class="product-header-title">
-                            <div class="product-header-title-name">Zurich Insurance</div>
-                            <div class="product-header-title-type">Autocilin Comprehensive</div>
+                            <div class="product-header-title-name">{{ $product->insurance_name }}</div>
+                            <div class="product-header-title-type">{{ $product->insurance_product }}</div>
                         </div>
                     </div>
                     <div class="product-body">
-                        <ul class="list-group">
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Emergency Road Assistance (ERA) dan Fasilitas Derek Autocillin
-                            </li>
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Jaminan Keaslian Suku Cadang dan Garansi Perbaikan 6 Bulan
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product-footer">
-                        <div>
-                            <div>Premi per Tahun</div>
-                            <div>Rp 4.161.040</div>
-                        </div>
-                        <div class="product-footer-button">
-                            <div class="btn-detail me-2">Detail</div>
-                            <div class="btn-buy">Beli</div>
-                        </div>
-                    </div>
-                </div>
+                        <ul class="list-group list-group-{{ $key }}">
+                            @php
+                            $facilities = json_decode($product->facility);
+                            @endphp
 
-                <div class="product mb-3">
-                    <div class="product-header">
-                        <div class="product-header-icon">
-                            <img src="{{ asset('assets-voxo/images/mag.png') }}" class="img-fluid" alt="">
-                        </div>
-                        <div class="product-header-title">
-                            <div class="product-header-title-name">Asuransi MAG</div>
-                            <div class="product-header-title-type">MAG Auto Total Loss</div>
-                        </div>
-                    </div>
-                    <div class="product-body">
-                        <ul class="list-group">
+                            @foreach ($facilities as $facility)
                             <li class="list-group-item benefits">
                                 <input class="form-check-input me-1" type="checkbox" checked>
-                                Manfaat Penggantian Biaya Derek dan Ambulans
+                                {{ $facility }}
                             </li>
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Hotline 24 jam/7 hari
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="product-footer">
                         <div>
                             <div>Premi per Tahun</div>
-                            <div>Rp 760.190</div>
+                            <div>Rp @currency($product->total_price)</div>
                         </div>
                         <div class="product-footer-button">
-                            <div class="btn-detail me-2">Detail</div>
+                            <a href="{{ route('shopDetail', ['id' => $product->id_product ]) }}" class="btn-detail me-2">Detail</a>
                             <div class="btn-buy">Beli</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="product">
-                    <div class="product-header">
-                        <div class="product-header-icon">
-                            <img src="{{ asset('assets-voxo/images/mag.png') }}" class="img-fluid" alt="">
-                        </div>
-                        <div class="product-header-title">
-                            <div class="product-header-title-name">Asuransi MAG</div>
-                            <div class="product-header-title-type">MAG Auto Total Loss</div>
-                        </div>
-                    </div>
-                    <div class="product-body">
-                        <ul class="list-group">
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Manfaat Penggantian Biaya Derek dan Ambulans
-                            </li>
-                            <li class="list-group-item benefits">
-                                <input class="form-check-input me-1" type="checkbox" checked>
-                                Hotline 24 jam/7 hari
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product-footer">
-                        <div>
-                            <div>Premi per Tahun</div>
-                            <div>Rp 760.190</div>
-                        </div>
-                        <div class="product-footer-button">
-                            <div class="btn-detail me-2">Detail</div>
-                            <div class="btn-buy">Beli</div>
-                        </div>
-                    </div>
-                </div>
+                <input type="hidden" value="{{ $product->id_insurance }}" id="insuranceId">
+                <input type="hidden" value="{{ $product->id_product }}" id="productId">
+                <input type="hidden" value="{{ $product->insurance_name }}" id="insuranceName">
+                <input type="hidden" value="{{ $product->insurance_product }}" id="productName">
+                <input type="hidden" value="{{ $product->total_price }}" id="premiPerYear">
+                @endforeach
             </div>
         </section>
     </div>
+
+    <input type="hidden" id="count" value="{{ $count }}">
 
     <div class="modal fade modal-navbar" id="sortModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -264,6 +188,8 @@
             </div>
         </div>
     </div>
+
+    <input type="hidden" value="{{ $orderId }}" id="orderId">
 
     <!-- tap to top Section Start -->
     <div class="tap-to-top">
@@ -307,6 +233,64 @@
 
     <!-- select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        var count = $("#count").val();
+        
+        for (let i = 0; i < count; i++) {
+            var limit = 2
+            var more = 0
+
+            $(".list-group-" + i + " li").each(function (index) {
+                if (index >= limit) {
+                    $(this).hide();
+                    more++;
+                }
+            });
+
+            if (more) {
+                $(".list-group-" + i).append('<li class="list-group-item benefits more">Lihat Selengkapnya</li>');
+                $(".list-group-" + i).append(
+                    '<li class="list-group-item benefits less" style="display: none;">Lihat Sedikit</li>');
+            }
+
+            $(".list-group-" + i + " li.more").click(function () {
+                $(".list-group-" + i + " li").each(function (index) {
+                    $(this).show();
+                });
+                $(".list-group-" + i + " li.more").hide();
+                $(".list-group-" + i + " li.less").show();
+            });
+
+            $(".list-group-" + i + " li.less").click(function () {
+                $(".list-group-" + i + " li").each(function (index) {
+                    if (index >= limit) {
+                        $(this).hide();
+                        $(".list-group-" + i + " li.more").show();
+                    }
+                });
+            });
+        }
+
+        $(".btn-buy").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/shop/step2",
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    order_id: $("#orderId").val(),
+                    insurance_id: $("#insuranceId").val(),
+                    product_id: $('#productId').val(),
+                    insurance_name: $("#insuranceName").val(),
+                    product_name: $("#productName").val(),
+                    premi_per_year: $('#premiPerYear').val()
+                },
+                success: function (data) {
+                    window.location.href = '{{ url("/shop/feature") }}';
+                }
+            });
+        });
+    </script>
 
 </body>
 

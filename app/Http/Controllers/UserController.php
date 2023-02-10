@@ -136,4 +136,24 @@ class UserController extends Controller
             return back()->with('error', 'Something Wrong');
         }
     }
+
+    public function show()
+    {
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/members/' . $userCode);
+
+        $user = json_decode($result->body());
+
+        return response()->json($user);
+    }
 }
