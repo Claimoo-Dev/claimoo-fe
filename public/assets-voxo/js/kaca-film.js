@@ -1,5 +1,5 @@
 $("#priceAccessories").keyup(function () {
-    $("#priceAccessories").val(formatRupiah(this.value));
+    $("#priceAccessories").val(this.value);
 });
 
 $("#brandAccessories").keyup(function () {
