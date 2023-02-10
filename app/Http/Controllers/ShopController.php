@@ -250,7 +250,7 @@ class ShopController extends Controller
             'X-Channel' => 'cust_mobile_app',
             'Authorization' => $token,
             'Content-Type' => 'application/json'
-        ])->post('http://staging.claimoo.com:55777/v1/order/polis/step3', [
+        ])->post('http://staging.claimoo.com:55777/v1/order/polis/step4', [
             'order_polis_id' => $orderId,
             'member_code' => $userCode,
             'plat_number' => $plate,
