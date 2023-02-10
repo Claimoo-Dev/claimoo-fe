@@ -993,7 +993,7 @@
                         plate: $('.plate').val()
                     },
                     success: function (data) {
-                        window.location.href = 'shop/product'
+                        window.location.href = '{{ url("/shop/product") }}'
                     }
                 });
             }
