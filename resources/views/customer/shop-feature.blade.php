@@ -130,7 +130,7 @@
                 <div class="risk-footer-group">
                     <div>
                         <div>Premi per Tahun</div>
-                        <div id="premiPerYearText">Rp {{ $premiPerYear }}</div>
+                        <div id="premiPerYearText">Rp  @currency($premiPerYear)</div>
                     </div>
                     <div class="risk-footer-button">Beli</div>
                 </div>
