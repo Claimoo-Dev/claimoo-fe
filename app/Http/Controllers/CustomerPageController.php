@@ -157,7 +157,7 @@ class CustomerPageController extends Controller
         $userCode = Cookie::get('user_code');
         $token = Cookie::get('auth_token');
         $orderId = Cookie::get('order_id');
-        $premiPerYear = Cookie::get('total_price');
+        $premiPerYear = Cookie::get('premi_per_year');
         
         if (!$token) {
             return redirect('sign-in');

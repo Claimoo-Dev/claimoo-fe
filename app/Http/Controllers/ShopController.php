@@ -140,6 +140,8 @@ class ShopController extends Controller
         $productInsurance = $request->product_insurance;
         $premiPerYear = $request->premi_per_year;
 
+        Cookie::queue('premi_per_year', $premiPerYear);
+
         $backend = Http::withHeaders([
             'X-Channel' => 'cust_mobile_app',
             'Authorization' => $token,
