@@ -113,6 +113,39 @@ $("#lainnyaGroup").click(function () {
     }
 });
 
+$("#lainnyaCheck").click(function () {
+    if ($("#lainnyaCheck").is(':checked')) {
+        $('#lainnyaCheck').prop('checked', true);
+
+        var offcanvas = new bootstrap.Offcanvas(document.getElementById("lainnya"));
+        offcanvas.show();
+    } else {
+        $('#lainnyaCheck').prop('checked', false);
+
+        $('#lainnyaName').addClass('d-none');
+        $('#lainnyaPrice').addClass('d-none');
+
+        $('#lainnyaCheck').val(0);
+
+        var sum = 0;
+        $("input:checkbox[name=accessories]:checked").each(function () {
+            sum = sum + parseInt($(this).val());
+        });
+
+        $("#subtotal").html("Rp " + formatRupiah(sum.toString()));
+
+        if (sum > 0) {
+            $("#btnAccessories").removeAttr('disabled');
+        } else {
+            $("#btnAccessories").attr('disabled', true);
+        }
+
+        arrayAccessories = $.grep(arrayAccessories, function (query) {
+            return query.name !== $('#nameAccessories').val();
+        });
+    }
+});
+
 $('#lainnya').on('hide.bs.offcanvas', function () {
     if ($("#lainnyaName").hasClass('d-none') && $("#lainnyaPrice").hasClass('d-none')) {
         $('#lainnyaCheck').prop('checked', false);

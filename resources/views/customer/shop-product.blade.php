@@ -56,9 +56,9 @@
 
 </head>
 
-<body class="theme-color2 light ltr">
+<body class="theme-color2 light ltr" style="background-color: #eff2f7;">
     <!-- header start -->
-    <header class="header-style-2" id="home">
+    <header class="header-style-2" id="home" style="background-color: white;">
         <div class="main-header navbar-searchbar">
             <div class="container">
                 <div class="header-parent">
@@ -135,7 +135,7 @@
                         </div>
                         <div class="product-footer-button">
                             <a href="{{ route('shopDetail', ['id' => $product->id_product ]) }}" class="btn-detail me-2">Detail</a>
-                            <div class="btn-buy">Beli</div>
+                            <div class="btn-buy btn-buy{{ $key }}">Beli</div>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                 <input type="hidden" value="{{ $product->id_product }}" id="productId">
                 <input type="hidden" value="{{ $product->insurance_name }}" id="insuranceName">
                 <input type="hidden" value="{{ $product->insurance_product }}" id="productName">
-                <input type="hidden" value="{{ $product->total_price }}" id="premiPerYear">
+                <input type="hidden" value="{{ $product->total_price }}" id="premiPerYear{{ $key }}">
                 @endforeach
             </div>
         </section>
@@ -270,26 +270,27 @@
                     }
                 });
             });
+            
+            $(".btn-buy" + i).click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/shop/step2",
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content'),
+                        order_id: $("#orderId").val(),
+                        insurance_id: $("#insuranceId").val(),
+                        product_id: $('#productId').val(),
+                        insurance_name: $("#insuranceName").val(),
+                        product_name: $("#productName").val(),
+                        premi_per_year: $('#premiPerYear' + i).val()
+                    },
+                    success: function (data) {
+                        window.location.href = '{{ url("/shop/feature") }}';
+                    }
+                });
+            });
         }
 
-        $(".btn-buy").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "/shop/step2",
-                data: {
-                    _token: $('meta[name="csrf-token"]').attr('content'),
-                    order_id: $("#orderId").val(),
-                    insurance_id: $("#insuranceId").val(),
-                    product_id: $('#productId').val(),
-                    insurance_name: $("#insuranceName").val(),
-                    product_name: $("#productName").val(),
-                    premi_per_year: $('#premiPerYear').val()
-                },
-                success: function (data) {
-                    window.location.href = '{{ url("/shop/feature") }}';
-                }
-            });
-        });
     </script>
 
 </body>

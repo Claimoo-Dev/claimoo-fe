@@ -103,6 +103,39 @@ $("#bodyKitGroup").click(function () {
     }
 });
 
+$("#bodyKitCheck").click(function () {
+    if ($("#bodyKitCheck").is(':checked')) {
+        $('#bodyKitCheck').prop('checked', true);
+
+        var offcanvas = new bootstrap.Offcanvas(document.getElementById("bodyKit"));
+        offcanvas.show();
+    } else {
+        $('#bodyKitCheck').prop('checked', false);
+
+        $('#bodyKitName').addClass('d-none');
+        $('#bodyKitPrice').addClass('d-none');
+
+        $('#bodyKitCheck').val(0);
+
+        var sum = 0;
+        $("input:checkbox[name=accessories]:checked").each(function () {
+            sum = sum + parseInt($(this).val());
+        });
+
+        $("#subtotal").html("Rp " + formatRupiah(sum.toString()));
+
+        if (sum > 0) {
+            $("#btnAccessories").removeAttr('disabled');
+        } else {
+            $("#btnAccessories").attr('disabled', true);
+        }
+
+        arrayAccessories = $.grep(arrayAccessories, function (query) {
+            return query.name !== 'Body Kit';
+        });
+    }
+});
+
 $('#bodyKit').on('hide.bs.offcanvas', function () {
     if ($("#bodyKitName").hasClass('d-none') && $("#bodyKitPrice").hasClass('d-none')) {
         $('#bodyKitCheck').prop('checked', false);

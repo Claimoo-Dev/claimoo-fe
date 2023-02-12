@@ -103,6 +103,39 @@ $("#velgBanGroup").click(function () {
     }
 });
 
+$("#velgBanCheck").click(function () {
+    if ($("#velgBanCheck").is(':checked')) {
+        $('#velgBanCheck').prop('checked', true);
+
+        var offcanvas = new bootstrap.Offcanvas(document.getElementById("velgBan"));
+        offcanvas.show();
+    } else {
+        $('#velgBanCheck').prop('checked', false);
+
+        $('#velgBanName').addClass('d-none');
+        $('#velgBanPrice').addClass('d-none');
+
+        $('#velgBanCheck').val(0);
+
+        var sum = 0;
+        $("input:checkbox[name=accessories]:checked").each(function () {
+            sum = sum + parseInt($(this).val());
+        });
+
+        $("#subtotal").html("Rp " + formatRupiah(sum.toString()));
+
+        if (sum > 0) {
+            $("#btnAccessories").removeAttr('disabled');
+        } else {
+            $("#btnAccessories").attr('disabled', true);
+        }
+
+        arrayAccessories = $.grep(arrayAccessories, function (query) {
+            return query.name !== 'Velg & Ban';
+        });
+    }
+});
+
 $('#velgBan').on('hide.bs.offcanvas', function () {
     if ($("#velgBanName").hasClass('d-none') && $("#velgBanPrice").hasClass('d-none')) {
         $('#velgBanCheck').prop('checked', false);

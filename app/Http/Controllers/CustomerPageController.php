@@ -172,6 +172,12 @@ class CustomerPageController extends Controller
         $risks = json_decode($result->body());
         $count = count($risks->data);
 
+        foreach ($risks->data ?? [] as $risk) {
+            if ($risk->status == true) {
+                $premiPerYear = $premiPerYear + $risk->price;
+            }
+        }
+
         return view('customer.shop-feature')->with(compact('risks', 'premiPerYear', 'count', 'orderId'));
     }
 

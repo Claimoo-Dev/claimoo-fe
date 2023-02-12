@@ -62,9 +62,9 @@
         <div class="main-header navbar-searchbar">
             <div class="container">
                 <div class="header-parent">
-                    <a href="{{ route('landing-page') }}">
+                    <div href="{{ route('landing-page') }}" id="backToHome">
                         <i data-feather="chevron-left" class="header-child-arrow"></i>
-                    </a>
+                    </div>
                     <div class="header-child-title-parent">
                         <div class="header-child-title">Asuransi Mobil</div>
                     </div>
@@ -199,12 +199,12 @@
                     <div class="add-accessories-title">Pilih Aksesoris Kendaraan Anda</div>
                     <div class="add-accessories-subtitle">Maksimum 10% dari harga kendaraan</div>
 
-                    <div class="mt-3 add-accessories-body" id="kacaFilmGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="kacaFilmCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="kacaFilmGroup">
                             <div>
                                 <div class="add-accessories-detail-title">Kaca Film</div>
                                 <div class="add-accessories-detail-name d-none" id="kacaFilmName"></div>
@@ -242,12 +242,12 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 add-accessories-body" id="soundSystemGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="soundSystemCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="soundSystemGroup">
                             <div>
                                 <div class="add-accessories-detail-title">Sound System</div>
                                 <div class="add-accessories-detail-name d-none" id="soundSystemName"></div>
@@ -288,12 +288,12 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 add-accessories-body" id="karpetMobilGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="karpetMobilCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="karpetMobilGroup">
                             <div>
                                 <div class="add-accessories-detail-title">Karpet Mobil</div>
                                 <div class="add-accessories-detail-name d-none" id="karpetMobilName"></div>
@@ -334,12 +334,12 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 add-accessories-body" id="velgBanGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="velgBanCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="velgBanGroup">
                             <div>
                                 <div class="add-accessories-detail-title">Velg & Ban</div>
                                 <div class="add-accessories-detail-name d-none" id="velgBanName"></div>
@@ -378,12 +378,12 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 add-accessories-body" id="jokMobilGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="jokMobilCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="jokMobilGroup">
                             <div>
                                 <div class="add-accessories-detail-title">Jok Mobil</div>
                                 <div class="add-accessories-detail-name d-none" id="jokMobilName"></div>
@@ -423,12 +423,12 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 add-accessories-body" id="bodyKitGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="bodyKitCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="bodyKitGroup">
                             <div>
                                 <div class="add-accessories-detail-title">Body Kit</div>
                                 <div class="add-accessories-detail-name d-none" id="bodyKitName"></div>
@@ -467,12 +467,12 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 add-accessories-body" id="lainnyaGroup">
+                    <div class="mt-3 add-accessories-body">
                         <div>
                             <input class="form-check-input add-accessories-check" name="accessories" type="checkbox"
                                 id="lainnyaCheck">
                         </div>
-                        <div class="ms-2 add-accessories-detail">
+                        <div class="ms-2 add-accessories-detail" id="lainnyaGroup">
                             <div>
                                 <div class="add-accessories-detail-title" id="titleLainnya">Lainnya</div>
                                 <div class="add-accessories-detail-name d-none" id="lainnyaName"></div>
@@ -724,15 +724,23 @@
             $("#brand").empty();
             $("#type").empty();
             $("#seri").empty();
+            $("#carPriceRange").html("Rp 0 - Rp 0");
+            $("#carPrice").val("");
+            $("#btn-search").attr('disabled', true);
         });
 
         $('#brand').change(function () {
             $("#type").empty();
             $("#seri").empty();
+            $("#carPriceRange").html("Rp 0 - Rp 0");
+            $("#carPrice").val("");
+            $("#btn-search").attr('disabled', true);
         });
 
         $('#type').change(function () {
             $("#seri").empty();
+            $("#carPriceRange").html("Rp 0 - Rp 0");
+            $("#carPrice").val("");
             $("#btn-search").attr('disabled', true);
         });
 
@@ -997,6 +1005,16 @@
                     }
                 });
             }
+        });
+
+        $('#backToHome').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/shop/forget-cookie",
+                success: function (data) {
+                    window.location.href = '{{ route("landing-page") }}';
+                }
+            });
         });
 
     </script>

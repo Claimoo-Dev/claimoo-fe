@@ -54,13 +54,11 @@
     <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/demo2.css') }}">
     <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets-voxo/css/custom-style.css') }}">
 
-
-
 </head>
 
-<body class="theme-color2 light ltr">
+<body class="theme-color2 light ltr" style="background-color: #eff2f7;">
     <!-- header start -->
-    <header class="header-style-2" id="home">
+    <header class="header-style-2" id="home" style="background-color: white;">
         <div class="main-header navbar-searchbar">
             <div class="container">
                 <div class="header-parent">

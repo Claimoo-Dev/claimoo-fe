@@ -103,6 +103,39 @@ $("#karpetMobilGroup").click(function () {
     }
 });
 
+$("#karpetMobilCheck").click(function () {
+    if ($("#karpetMobilCheck").is(':checked')) {
+        $('#karpetMobilCheck').prop('checked', true);
+
+        var offcanvas = new bootstrap.Offcanvas(document.getElementById("karpetMobil"));
+        offcanvas.show();
+    } else {
+        $('#karpetMobilCheck').prop('checked', false);
+
+        $('#karpetMobilName').addClass('d-none');
+        $('#karpetMobilPrice').addClass('d-none');
+
+        $('#karpetMobilCheck').val(0);
+
+        var sum = 0;
+        $("input:checkbox[name=accessories]:checked").each(function () {
+            sum = sum + parseInt($(this).val());
+        });
+
+        $("#subtotal").html("Rp " + formatRupiah(sum.toString()));
+
+        if (sum > 0) {
+            $("#btnAccessories").removeAttr('disabled');
+        } else {
+            $("#btnAccessories").attr('disabled', true);
+        }
+
+        arrayAccessories = $.grep(arrayAccessories, function (query) {
+            return query.name !== 'Karpet Mobil';
+        });
+    }
+});
+
 $('#karpetMobil').on('hide.bs.offcanvas', function () {
     if ($("#karpetMobilName").hasClass('d-none') && $("#karpetMobilPrice").hasClass('d-none')) {
         $('#karpetMobilCheck').prop('checked', false);

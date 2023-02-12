@@ -81,4 +81,5 @@ Route::prefix('shop')->group(function () {
     Route::post('risk-expansion', [ShopController::class, 'riskExpansion']);
     Route::post('step3', [ShopController::class, 'step3'])->name('shopStep3');
     Route::post('step4', [ShopController::class, 'step4'])->name('shopStep4');
+    Route::get('forget-cookie', [ShopController::class, 'forgetCookie'])->name('forgetCookie');
 });

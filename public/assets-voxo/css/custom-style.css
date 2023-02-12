@@ -616,14 +616,16 @@
     .product-badge {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: space-between;
         font-size: 12px;
         color: white;
     }
 
     .product-badge-item {
         padding: 1px 5px;
-        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .product-badge-item:nth-child(1) {
@@ -972,7 +974,8 @@
     }
 
     .product-detail-section {
-        padding: 20px 0 !important;
+        padding-top: 20px;
+        padding-bottom: 100px;
         background-color: #eff2f7;
     }
 
@@ -1047,6 +1050,9 @@
 
     .product-detail-footer-section {
         padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
         background-color: white;
     }
 
@@ -1711,7 +1717,7 @@
     .product-badge {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: center;
         font-size: 12px;
         color: white;
     }
@@ -1728,7 +1734,9 @@
 
     .product-badge-item {
         padding: 1px 5px;
-        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
     }
 
     .product-badge-item:nth-child(1) {
@@ -1824,10 +1832,12 @@
         text-align: center;
         font-weight: 500;
         box-shadow: 0 5px 15px 0 rgb(0 0 0 / 9%);
+        cursor: pointer;
     }
 
     .btn-buy:hover {
         color: white;
+        cursor: pointer;
     }
 
     .sort-modal-body {
@@ -1892,10 +1902,12 @@
         font-weight: 500;
         border-radius: 10px;
         text-align: center;
+        cursor: pointer;
     }
 
     .risk-footer-button:hover {
         color: white;
+        cursor: pointer;
     }
 
     .total-premi {
@@ -2081,7 +2093,8 @@
     }
 
     .product-detail-section {
-        padding: 20px 0 !important;
+        padding-top: 20px;
+        padding-bottom: 100px;
         background-color: #eff2f7;
     }
 
@@ -2156,6 +2169,10 @@
 
     .product-detail-footer-section {
         padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 600px;
         background-color: white;
     }
 
@@ -2171,5 +2188,6 @@
         color: white;
         font-weight: 500;
         border-radius: 10px;
+        cursor: pointer;
     }
 }

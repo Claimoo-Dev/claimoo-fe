@@ -103,6 +103,39 @@ $("#soundSystemGroup").click(function () {
     }
 });
 
+$("#soundSystemCheck").click(function () {
+    if ($("#soundSystemCheck").is(':checked')) {
+        $('#soundSystemCheck').prop('checked', true);
+        
+        var offcanvas = new bootstrap.Offcanvas(document.getElementById("soundSystem"));
+        offcanvas.show();
+    } else {
+        $('#soundSystemCheck').prop('checked', false);
+
+        $('#soundSystemName').addClass('d-none');
+        $('#soundSystemPrice').addClass('d-none');
+
+        $('#soundSystemCheck').val(0);
+
+        var sum = 0;
+        $("input:checkbox[name=accessories]:checked").each(function () {
+            sum = sum + parseInt($(this).val());
+        });
+
+        $("#subtotal").html("Rp " + formatRupiah(sum.toString()));
+
+        if (sum > 0) {
+            $("#btnAccessories").removeAttr('disabled');
+        } else {
+            $("#btnAccessories").attr('disabled', true);
+        }
+
+        arrayAccessories = $.grep(arrayAccessories, function (query) {
+            return query.name !== 'Sound System';
+        });
+    }
+});
+
 $('#soundSystem').on('hide.bs.offcanvas', function () {
     if ($("#soundSystemName").hasClass('d-none') && $("#soundSystemPrice").hasClass('d-none')) {
         $('#soundSystemCheck').prop('checked', false);

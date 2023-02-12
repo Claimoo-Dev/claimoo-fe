@@ -103,6 +103,39 @@ $("#kacaFilmGroup").click(function () {
     }
 });
 
+$("#kacaFilmCheck").click(function () {
+    if ($("#kacaFilmCheck").is(':checked')) {
+        $('#kacaFilmCheck').prop('checked', true);
+        
+        var offcanvas = new bootstrap.Offcanvas(document.getElementById("kacaFilm"));
+        offcanvas.show();
+    } else {
+        $('#kacaFilmCheck').prop('checked', false);
+
+        $('#kacaFilmName').addClass('d-none');
+        $('#kacaFilmPrice').addClass('d-none');
+
+        $('#kacaFilmCheck').val(0);
+
+        var sum = 0;
+        $("input:checkbox[name=accessories]:checked").each(function () {
+            sum = sum + parseInt($(this).val());
+        });
+
+        $("#subtotal").html("Rp " + formatRupiah(sum.toString()));
+
+        if (sum > 0) {
+            $("#btnAccessories").removeAttr('disabled');
+        } else {
+            $("#btnAccessories").attr('disabled', true);
+        }
+
+        arrayAccessories = $.grep(arrayAccessories, function (query) {
+            return query.name !== 'Kaca Film';
+        });
+    }
+});
+
 $('#kacaFilm').on('hide.bs.offcanvas', function () {
     if ($("#kacaFilmName").hasClass('d-none') && $("#kacaFilmPrice").hasClass('d-none')) {
         $('#kacaFilmCheck').prop('checked', false);

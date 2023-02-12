@@ -277,4 +277,37 @@ class ShopController extends Controller
 
         return response()->json($response);
     }
+
+    public function forgetCookie()
+    {
+        Cookie::queue(
+            Cookie::forget('plate')
+        );
+
+        Cookie::queue(
+            Cookie::forget('brand')
+        );
+
+        Cookie::queue(
+            Cookie::forget('type')
+        );
+
+        Cookie::queue(
+            Cookie::forget('seri')
+        );
+
+        Cookie::queue(
+            Cookie::forget('total_price')
+        );
+
+        Cookie::queue(
+            Cookie::forget('order_id')
+        );
+
+        Cookie::queue(
+            Cookie::forget('total_premi')
+        );
+
+        return response()->json(true);
+    }
 }
