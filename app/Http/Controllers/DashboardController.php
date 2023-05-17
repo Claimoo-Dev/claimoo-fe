@@ -30,6 +30,7 @@ class DashboardController extends Controller
             return redirect('sign-in');
         }
 
-        return view('dashboard')->with(compact('user'));
+        // return view('dashboard')->with(compact('user'));
+        return view('collection.index')->with(compact('user'));
     }
 }

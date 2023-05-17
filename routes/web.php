@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CameraController;
 use App\Http\Controllers\ClaimController;
+use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\CustomerPageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FeedbackController;
@@ -82,4 +83,11 @@ Route::prefix('shop')->group(function () {
     Route::post('step3', [ShopController::class, 'step3'])->name('shopStep3');
     Route::post('step4', [ShopController::class, 'step4'])->name('shopStep4');
     Route::get('forget-cookie', [ShopController::class, 'forgetCookie'])->name('forgetCookie');
+});
+
+Route::prefix('collection')->group(function () {
+    Route::get('', [CollectionController::class, 'index'])->name('collection');
+    Route::post('upload-image', [CollectionController::class, 'uploadImage'])->name('collection-upload-image');
+    Route::get('image', [CollectionController::class, 'image'])->name('collection-image');
+    Route::post('description', [CollectionController::class, 'storeDescription'])->name('collection-store-description');
 });
