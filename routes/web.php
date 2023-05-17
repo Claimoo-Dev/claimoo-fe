@@ -87,6 +87,7 @@ Route::prefix('shop')->group(function () {
 
 Route::prefix('collection')->group(function () {
     Route::get('', [CollectionController::class, 'index'])->name('collection');
+    Route::post('upload-image-dashboard', [CollectionController::class, 'uploadImageDashboard'])->name('collection-upload-image-dashboard');
     Route::post('upload-image', [CollectionController::class, 'uploadImage'])->name('collection-upload-image');
     Route::get('image', [CollectionController::class, 'image'])->name('collection-image');
     Route::post('description', [CollectionController::class, 'storeDescription'])->name('collection-store-description');

@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 ps-1" id="suv">
+            <div class="col-6 ps-1" id="suv" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/suv.png" alt="Card image cap">
@@ -80,14 +80,14 @@
         </div>
 
         <div class="row mt-1">
-            <div class="col-6 pe-1" id="crossover">
+            <div class="col-6 pe-1" id="crossover" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/crossover.png" alt="Card image cap">
                     </div>
                 </div>
             </div>
-            <div class="col-6 ps-1" id="hatchback">
+            <div class="col-6 ps-1" id="hatchback" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/hatchback.png" alt="Card image cap">
@@ -97,14 +97,14 @@
         </div>
 
         <div class="row mt-1">
-            <div class="col-6 pe-1" id="sedan">
+            <div class="col-6 pe-1" id="sedan" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/sedan.png" alt="Card image cap">
                     </div>
                 </div>
             </div>
-            <div class="col-6 ps-1" id="stationWagon">
+            <div class="col-6 ps-1" id="stationWagon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/station-wagon.png" alt="Card image cap">
@@ -114,14 +114,14 @@
         </div>
 
         <div class="row mt-1">
-            <div class="col-6 pe-1" id="jeep">
+            <div class="col-6 pe-1" id="jeep" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/jeep.png" alt="Card image cap">
                     </div>
                 </div>
             </div>
-            <div class="col-6 ps-1" id="pickup">
+            <div class="col-6 ps-1" id="pickup" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card bs-card br-10px">
                     <div class="p-2">
                         <img class="card-img-top" src="type-car-frame/pickup.png" alt="Card image cap">
@@ -144,7 +144,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="{{ route('collection-upload-image') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('collection-upload-image-dashboard') }}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="form-group">
                             <label for="foto">Upload Foto</label>
                             <input type="file" class="form-control-file" id="foto" name="image">
@@ -209,55 +210,31 @@
         };
 
         suv.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=suv&latitude=' + position.coords.latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','suv',1);
         };
 
         crossover.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=crossover&latitude=' + position.coords
-                    .latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','crossover',1);
         };
 
         hatchback.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=hatchback&latitude=' + position.coords
-                    .latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','hatchback',1);
         };
 
         sedan.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=sedan&latitude=' + position.coords.latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','sedan',1);
         };
 
         stationWagon.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=stationWagon&latitude=' + position.coords
-                    .latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','station wagon',1);
         };
 
         jeep.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=jeep&latitude=' + position.coords.latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','jeep',1);
         };
 
         pickup.onclick = () => {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                window.location.href = 'collection?type_car=pickup&latitude=' + position.coords.latitude +
-                    '&longitude=' + position.coords.longitude;
-            });
+            setCookie('type_car','pickup',1);
         };
 
         signOut.onclick = () => {

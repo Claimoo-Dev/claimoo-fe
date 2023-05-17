@@ -28,6 +28,49 @@ class CollectionController extends Controller
         return view('collection.camera');
     }
 
+    public function uploadImageDashboard(Request $request)
+    {
+        $userCode = Cookie::get('user_code');
+        $token = Cookie::get('auth_token');
+        
+        if (!$token) {
+            return redirect('sign-in');
+        }
+
+        $result = Http::withHeaders([
+            'X-Channel' => 'cust_mobile_app',
+            'Authorization' => $token,
+            'Content-Type' => 'application/json'
+        ])->get('http://staging.claimoo.com:55777/v1/members/' . $userCode);
+
+        $user = json_decode($result->body());
+
+        $username = $user->data->name;
+        
+        $imageName = $username . '-' . date('His') . '.' . $request->image->extension();       
+        $request->image->move(public_path('images/' . date('Y/m/d/')), $imageName);
+
+        if (!is_dir(public_path('images'))) {
+            mkdir(public_path('images'));    
+        }
+
+        if (!is_dir(public_path('images/' . date('Y')))) {
+            mkdir(public_path('images/' . date('Y')));    
+        }
+
+        if (!is_dir(public_path('images/' . date('Y/m')))) {
+            mkdir(public_path('images/' . date('Y/m')));
+        }
+
+        if (!is_dir(public_path('images/' . date('Y/m/d')))) {
+            mkdir(public_path('images/' . date('Y/m/d')));
+        }
+
+        Cookie::queue('image_file_source', date('Y/m/d/') . $imageName, 60);
+
+        return to_route('collection-image');
+    }
+
     public function uploadImage(Request $request)
     {
         $userCode = Cookie::get('user_code');
@@ -111,6 +154,8 @@ class CollectionController extends Controller
             return redirect('sign-in');
         }
 
+        $typeCar = Cookie::get('type_car');
+        $typeFrame = Cookie::get('type_frame');
         $imageFileSource = Cookie::get('image_file_source');
 
         if (!$imageFileSource) {
@@ -127,6 +172,8 @@ class CollectionController extends Controller
 
         $collection                     = new Collection();
         $collection->member_code        = $user->data->member_code;
+        $collection->type_car           = $typeCar;
+        $collection->type_frame         = $typeFrame;
         $collection->image              = $imageFileSource;
         $collection->damage_severity    = $request->damage_severity;
         $collection->estimated_cost     = $request->estimated_cost;

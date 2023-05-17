@@ -46,6 +46,66 @@
                     </label>
                 </div>
             </div>
+            <div class="mb-3">
+                <label class="form-label">Kaca</label>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Kaca Retak" id="kacaRetak">
+                    <label class="form-check-label" for="kacaRetak">
+                        Retak
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Kaca Pecah" id="kacaPecah">
+                    <label class="form-check-label" for="kacaPecah">
+                        Pecah
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Lampu</label>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Lampu Retak" id="lampuRetak">
+                    <label class="form-check-label" for="lampuRetak">
+                        Retak
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Lampu Pecah" id="lampuPecah">
+                    <label class="form-check-label" for="lampuPecah">
+                        Pecah
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Spion</label>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Spion Patah" id="spionPatah">
+                    <label class="form-check-label" for="spionPatah">
+                        Patah
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Spion Gores" id="spionGores">
+                    <label class="form-check-label" for="spionGores">
+                        Gores
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Velg</label>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Velg Gores" id="velgGores">
+                    <label class="form-check-label" for="velgGores">
+                        Gores
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="descriptions[]" type="checkbox" value="Velg Penyok" id="velgPenyok">
+                    <label class="form-check-label" for="velgPenyok">
+                        Penyok
+                    </label>
+                </div>
+            </div>
             <div class="form-floating mb-3">
                 <input type="number" name="damage_severity" class="form-control" id="damageSeverity" placeholder="10">
                 <label for="damageSeverity">% Tingkat Keparahan Kerusakan</label>

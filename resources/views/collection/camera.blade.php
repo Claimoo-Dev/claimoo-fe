@@ -218,7 +218,6 @@
         const lampuBelakangKanan = document.querySelector('.lampu-belakang-kanan');
         const lampuBelakangKiri = document.querySelector('.lampu-belakang-kiri');
         const typeCar = getCookie('type_car');
-        const typeFrame = document.getElementById("typeFrame");
         const iconFrameDepan = document.querySelector(".icon-frame-depan");
         const iconFrameBelakang = document.querySelector(".icon-frame-belakang");
         const iconFrameKananDepan = document.querySelector(".icon-frame-kanan-depan");
@@ -340,7 +339,7 @@
                     max: 1440
                 },
                 facingMode: {
-                    exact: 'user'
+                    exact: 'environment'
                 }
             }
         };
@@ -368,7 +367,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "depan";
+            setCookie('type_frame','depan',1);
         };
 
         belakang.onclick = () => {
@@ -394,7 +393,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "belakang";
+            setCookie('type_frame','belakang',1);
         };
 
         sampingKananDepan.onclick = () => {
@@ -420,7 +419,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "kanan depan";
+            setCookie('type_frame','kanan depan',1);
         };
 
         sampingKiriDepan.onclick = () => {
@@ -446,7 +445,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "kiri depan";
+            setCookie('type_frame','kiri depan',1);
         };
 
         sampingKananBelakang.onclick = () => {
@@ -472,7 +471,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "kanan belakang";
+            setCookie('type_frame','kanan belakang',1);
         };
 
         sampingKiriBelakang.onclick = () => {
@@ -498,7 +497,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "kiri belakang";
+            setCookie('type_frame','kiri belakang',1);
         };
 
         lampuDepanKanan.onclick = () => {
@@ -524,7 +523,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "lampu kanan depan";
+            setCookie('type_frame','lampu kanan depan',1);
         };
 
         lampuDepanKiri.onclick = () => {
@@ -550,7 +549,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "lampu kiri depan";
+            setCookie('type_frame','lampu kiri depan',1);
         };
 
         lampuBelakangKanan.onclick = () => {
@@ -576,7 +575,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "lampu kanan belakang";
+            setCookie('type_frame','lampu kanan belakang',1);
         };
 
         lampuBelakangKiri.onclick = () => {
@@ -602,7 +601,7 @@
 
             screenshot.classList.remove('d-none');
             back.classList.remove('d-none');
-            typeFrame.value = "lampu kiri belakang";
+            setCookie('type_frame','lampu kiri belakang',1);
         };
 
         const doScreenshot = () => {
@@ -617,8 +616,7 @@
                 url: "{{ route('collection-upload-image') }}",
                 data: {
                     _token: $('meta[name="csrf-token"]').attr('content'),
-                    image: dataURL,
-                    type_frame: typeFrame.value
+                    image: dataURL
                 },
                 success: function (data) {
                     window.location.href = "{{ route('collection-image') }}";

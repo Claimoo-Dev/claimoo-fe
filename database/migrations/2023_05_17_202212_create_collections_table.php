@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('collections', function (Blueprint $table) {
             $table->id();
             $table->string('member_code');
+            $table->string('type_car');
+            $table->string('type_frame');
             $table->string('image');
             $table->string('damage_severity');
             $table->string('estimated_cost');
